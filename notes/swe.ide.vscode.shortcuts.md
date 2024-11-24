@@ -2,11 +2,13 @@
 id: 4j098buseynpqbpw6h8xf1e
 title: Vscode
 desc: ""
-updated: 1732457858192
+updated: 1732485458434
 created: 1732414567971
 ---
 
 ## Shortcuts
+
+### Editor
 
 - **Search in editor**:
 
@@ -51,6 +53,20 @@ CTRL + P
 ```sh
 CTRL + 1 # 2, 3, ...
 ```
+
+- **Move an editor to split left**:
+
+```sh
+CTL + ALT + LeftArrowKey
+```
+
+- **Move an editor to split right**:
+
+```sh
+CTL + ALT + RightArrowKey
+```
+
+### Terminal
 
 - **Split a terminal**:
 
