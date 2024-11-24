@@ -2,7 +2,7 @@
 id: 4j098buseynpqbpw6h8xf1e
 title: Vscode
 desc: ""
-updated: 1732414678501
+updated: 1732457858192
 created: 1732414567971
 ---
 
@@ -56,6 +56,18 @@ CTRL + 1 # 2, 3, ...
 
 ```sh
 CTRL + SHIFT + 5
+```
+
+-**Navigate to right split terminal**:
+
+```sh
+ALT + RightArrowKey
+```
+
+-**Navigate to left split terminal**:
+
+```sh
+ALT + LeftArrowKey
 ```
 
 #VSCodeShortCuts
