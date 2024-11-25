@@ -2,10 +2,12 @@
 id: 61bucp2xli97pewjr14uxau
 title: Cycle
 desc: ""
-updated: 1732486809098
+updated: 1732551595271
 created: 1732486763002
 ---
 
-Red, Green, Refactor
+- Red
+- Green
+- Refactor
 
-#TDD
+#SWE #TDD

@@ -2,7 +2,7 @@
 id: 9621qgyhc5h6dy90akywghm
 title: Rendering Patterns
 desc: ""
-updated: 1732536528029
+updated: 1732551561980
 created: 1732534954991
 ---
 
@@ -36,4 +36,4 @@ timeline
 
 [[swe.frontend.ssr-vs-spa]]
 
-#FrontEnd #RenderingPatterns #SSR #SPA
+#SWE #FrontEnd #RenderingPatterns #SSR #SPA
