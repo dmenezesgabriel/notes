@@ -1,8 +1,8 @@
 ---
 id: fwxa5kxwi8lu2gvozb65b7y
 title: Basic Auth
-desc: ''
-updated: 1732738379408
+desc: ""
+updated: 1732740698930
 created: 1732738245344
 ---
 
@@ -13,3 +13,5 @@ O usuário precisa enviar as credencias no cabeçalho (headers) de cada requisi�
 ```sh
 Authentication: Basic {Credenciais em base64 no formato user:password}
 ```
+
+#SWE #Web #Authentication #BasicAuth
