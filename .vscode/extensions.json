@@ -1,0 +1,26 @@
+{
+    "recommendations": [
+        "shardulm94.trailing-spaces",
+        "miguelsolorio.symbols",
+        "esbenp.prettier-vscode",
+        "miguelsolorio.min-theme",
+        "marp-team.marp-vscode",
+        "bierner.markdown-yaml-preamble",
+        "bierner.markdown-mermaid",
+        "bierner.markdown-preview-github-styles",
+        "bierner.markdown-footnotes",
+        "bierner.markdown-emoji",
+        "bierner.markdown-checkbox",
+        "tyriar.luna-paint",
+        "bierner.github-markdown-preview",
+        "foam.foam-vscode",
+        "hediet.vscode-drawio",
+        "dendron.dendron-paste-image",
+        "dendron.dendron",
+        "bierner.color-info",
+        "naumovs.color-highlight",
+        "streetsidesoftware.code-spell-checker",
+        "streetsidesoftware.code-spell-checker-portuguese-brazilian",
+        "bierner.emojisense"
+    ]
+}
