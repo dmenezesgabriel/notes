@@ -2,7 +2,7 @@
 id: xifi64t8gcfr0gxw0dd3jcc
 title: Requirements
 desc: ''
-updated: 1732551544183
+updated: 1733140656128
 created: 1732414412769
 ---
 
@@ -12,4 +12,4 @@ created: 1732414412769
 - Regras de Negocio
 - Requisitos Nao Funcionais: Requisitos técnicos
 
-#SWE #DefinitionOfDone
+#SWE #DevOps #AgileConcepts #DefinitionOfDone
