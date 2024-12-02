@@ -1,7 +1,7 @@
 ---
 id: wf47pb4ghz7p2fm04cau277
 title: Ssr Vs Spa
-desc: ""
+desc: ''
 updated: 1732551860129
 created: 1732535580033
 ---
@@ -35,6 +35,6 @@ graph LR
     end
 ```
 
-[[swe.frontend.rendering-patterns]]
+[[swe.frontend.concepts.rendering-patterns]]
 
 #SWE #FrontEnd #RenderingPatterns #SSR #SPA

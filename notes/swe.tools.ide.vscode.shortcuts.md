@@ -1,7 +1,7 @@
 ---
 id: 4j098buseynpqbpw6h8xf1e
-title: Vscode
-desc: ""
+title: Shortcuts
+desc: ''
 updated: 1732551570279
 created: 1732414567971
 ---

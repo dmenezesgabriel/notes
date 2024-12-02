@@ -1,7 +1,7 @@
 ---
 id: 11iyuls8x9w5ux8ajsi2jt4
 title: Bundlers
-desc: ""
+desc: ''
 updated: 1732551555630
 created: 1732536554896
 ---

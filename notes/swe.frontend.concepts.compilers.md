@@ -1,7 +1,7 @@
 ---
 id: tdk4pnm134x014rd5m6ee1h
 title: Compilers
-desc: ""
+desc: ''
 updated: 1732551558499
 created: 1732536417189
 ---
