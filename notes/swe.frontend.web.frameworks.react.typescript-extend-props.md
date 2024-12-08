@@ -2,19 +2,25 @@
 id: y4olesvojqr2ovza93uliyo
 title: TypeScript Extend Props
 desc: ""
-updated: 1733670393481
+updated: 1733671055317
 created: 1733670291262
 ---
 
 ```tsx
-import { ComponentProps } from "react";
+import { ImgHTMLAttributes } from "react";
+import styles from "./Avatar.module.css";
 
-interface AvatarProps extends ComponentProps<"img"> {
-  src: string;
+interface AvatarProps extends ImgHTMLAttributes<HTMLImageElement> {
+  hasBorder?: boolean;
 }
 
-export function Avatar({ src, ...props }: AvatarProps) {
-  return <img src={src} {...props} />;
+export function Avatar({ hasBorder = true, ...props }: AvatarProps) {
+  return (
+    <img
+      className={hasBorder ? styles.avatarWithBorder : styles.avatar}
+      {...props}
+    />
+  );
 }
 ```
 
