@@ -2,11 +2,11 @@
 id: soda9bfmi3nn6qguf1kd46v
 title: React Use Effect Hook
 desc: ""
-updated: 1734208636082
+updated: 1734210245153
 created: 1734207281754
 ---
 
-# Renderiza componente novamente
+## Renderiza componente novamente
 
 - Primeiro carregamento de tela
 - Mudança de variável
@@ -57,7 +57,34 @@ export function App() {
 }
 ```
 
-- Outros exemplos:
+## Reset estados
+
+```jsx
+import { useEffect } from "react";
+
+export function App() {
+  const [thingsHappening, setThingsHappening] = useEffect([]);
+  const [activeThingId, setActiveThingId] = useEffect("");
+
+  const currentlyThingHappening = thingsHappening.filter(
+    (thing) => thing.id === activeThingId
+  );
+
+  useEffect(() => {
+    let interval;
+
+    interval = setInterval(() => {
+      // do something
+    }, 1000);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [currentlyThingHappening]);
+}
+```
+
+## Outros exemplos
 
 ```jsx
 import { useEffect } from "react";
@@ -74,6 +101,7 @@ export function App() {
       });
   }, []);
 
+  // filteredList not needs to be a state
   const filteredList = list.filter((item) => item.includes(filter));
 
   return (
