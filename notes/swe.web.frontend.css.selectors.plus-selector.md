@@ -1,7 +1,7 @@
 ---
 id: 4vt9i20fdixfxr7j8akg3fq
 title: Plus Selector
-desc: ""
+desc: ''
 updated: 1733590671994
 created: 1733590283024
 ---

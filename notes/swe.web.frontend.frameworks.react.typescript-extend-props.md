@@ -1,7 +1,7 @@
 ---
 id: y4olesvojqr2ovza93uliyo
 title: TypeScript Extend Props
-desc: ""
+desc: ''
 updated: 1733671055317
 created: 1733670291262
 ---

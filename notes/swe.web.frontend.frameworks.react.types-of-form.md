@@ -1,7 +1,7 @@
 ---
 id: x8r3ogq4ng4rolz1apwi1kw
 title: Types of Form
-desc: ""
+desc: ''
 updated: 1734185817815
 created: 1734185016512
 ---

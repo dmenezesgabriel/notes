@@ -1,7 +1,7 @@
 ---
 id: nlv1y19lb0upaojq2obclsi
 title: Before Pseudo Class
-desc: ""
+desc: ''
 updated: 1733594976648
 created: 1733594745074
 ---

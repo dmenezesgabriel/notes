@@ -1,7 +1,7 @@
 ---
 id: o40memcjc7mydf9f306905e
 title: Greater than Selector
-desc: ""
+desc: ''
 updated: 1733590659671
 created: 1733590501265
 ---
