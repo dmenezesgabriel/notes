@@ -4,35 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "5f307a37811bf406",
+        "id": "b936012e84996645",
         "type": "tabs",
         "children": [
           {
-            "id": "aba28043592213a9",
+            "id": "6bab88941a1f53b7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "root.md",
+                "file": "as-code.tools.slides-editors.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "root"
+              "title": "as-code.tools.slides-editors"
             }
           },
           {
-            "id": "03eccd15fa73ae21",
+            "id": "1552de9e00e5521e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "test.hello.md",
+                "file": "swe.language.typescript.configuration.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "test.hello"
+              "title": "swe.language.typescript.configuration"
             }
           }
         ],
@@ -110,7 +110,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "root.md",
+            "file": "as-code.tools.slides-editors.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -159,9 +159,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "40b745b8f0ce0a8d",
+  "active": "1552de9e00e5521e",
   "lastOpenFiles": [
+    "as-code.tools.slides-editors.md",
+    "swe.language.typescript.configuration.md",
+    "Untitled.md",
+    "swe.frontend.concepts.ssr-vs-spa.md",
+    "as-code.tools.diagram-editors.md",
     "root.md",
+    "swe.language.nodejs.version-managers.md",
+    "swe.frontend.compilers.md",
+    "swe.agile.dod.requirements.md",
+    "swe.frontend.ssr-vs-spa.md",
+    "swe.frontend.rendering-patterns.md",
+    "swe.frontend.bundlers.md",
+    "notes.zettlekasten.md",
     "test.hello.md",
     "Untitled"
   ]
