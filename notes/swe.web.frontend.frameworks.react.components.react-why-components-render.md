@@ -1,7 +1,7 @@
 ---
 id: h9bfds6l0mtvwe1ic2mr029
-title: React Why Components Rerender
-desc: ""
+title: React Why Components Render
+desc: ''
 updated: 1734821576297
 created: 1734821485385
 ---
