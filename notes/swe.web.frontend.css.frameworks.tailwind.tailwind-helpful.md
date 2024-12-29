@@ -2,7 +2,7 @@
 id: ftbhdusoc47s84cn4pbw3x9
 title: Tailwind Helpful
 desc: ""
-updated: 1735504719367
+updated: 1735505037108
 created: 1735503286287
 ---
 
@@ -10,7 +10,14 @@ created: 1735503286287
 
 ### min-h-screen
 
-Below is an iframe displaying a simple HTML page styled with Tailwind CSS.
+```html
+<body
+  class="flex flex-col items-center justify-center min-h-screen bg-zinc-800"
+>
+  <h1 class="text-emerald-400 text-4xl font-bold">min-h-screen</h1>
+  <p class="text-sm text-zinc-300">It occupies entire screen</p>
+</body>
+```
 
 <iframe
   width='100%'
