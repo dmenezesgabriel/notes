@@ -2,7 +2,7 @@
 id: 4hxkj8u7sh62ft5xl7nbncm
 title: Digital Garden References
 desc: ""
-updated: 1738583414382
+updated: 1738603473440
 created: 1738583212145
 ---
 
@@ -15,3 +15,4 @@ created: 1738583212145
 - [seanv](https://seanv.dev/posts)
 - [christopherbiscardi](https://www.christopherbiscardi.com/garden)
 - [simonswiss](https://simonswiss.com/)
+- [motherduck](https://motherduck.com/blog/)
