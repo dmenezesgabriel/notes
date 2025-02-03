@@ -1,8 +1,8 @@
 ---
 id: 72pgopv0qv2j02e3ukxvzxi
 title: Video Editors
-desc: ''
-updated: 1732883295212
+desc: ""
+updated: 1738543034963
 created: 1732883206513
 ---
 
@@ -11,5 +11,6 @@ created: 1732883206513
 - [Remotion](https://www.remotion.dev/)
 - [Motion Canvas](https://motioncanvas.io/)
 - [Revideo](https://re.video/)
+- [Manim](https://www.manim.community/)
 
 #AsCode #VideoEditing #CreatingContent
