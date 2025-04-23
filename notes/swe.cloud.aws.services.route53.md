@@ -2,7 +2,7 @@
 id: 8oureh3nlkzucss70qm96q4
 title: Route53
 desc: ""
-updated: 1745435408381
+updated: 1745440794413
 created: 1745429616752
 ---
 
@@ -35,8 +35,9 @@ created: 1745429616752
 
 - **Simple**: direciona a um único recurso, mesmo podendo ter vários valores especificados em um mesmo registro, um deles sera escolhido aleatoriamente
 - **Weighted**: controla o % de requisições feitas a cada recurso
-- **Failover**
-- **Latency based**: redireciona ao recurso que possui a menor latência
-- **Geolocation**
+- **Failover**: Os recursos sao associados ao Health Check se o primeiro falha, o segundo sera escolhido
+- **Latency-based**: redireciona ao recurso que possui a menor latência
+- **Geolocation**: baseado na localização do usuário
 - **Multi-Value Answer**
 - **Geoproximity**
+- **IP-based routing**
