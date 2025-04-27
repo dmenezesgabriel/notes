@@ -1,7 +1,7 @@
 ---
 id: 4rj8pll9cjvp17zqi9tcq2e
 title: Network Ipv4
-desc: ""
+desc: ''
 updated: 1744495993382
 created: 1744495971185
 ---

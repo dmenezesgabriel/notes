@@ -1,7 +1,7 @@
 ---
 id: oo0jt1127dedfrlsgm0eind
 title: Tsconfig Base Configuration
-desc: ""
+desc: ''
 updated: 1734184636309
 created: 1734184554416
 ---

@@ -1,7 +1,7 @@
 ---
 id: soda9bfmi3nn6qguf1kd46v
 title: React Use Effect Hook
-desc: ""
+desc: ''
 updated: 1734794426009
 created: 1734207281754
 ---

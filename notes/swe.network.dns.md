@@ -1,7 +1,7 @@
 ---
 id: h1wzl4atgq977i6hcyompua
 title: DNS
-desc: ""
+desc: ''
 updated: 1745430641861
 created: 1745427106230
 ---

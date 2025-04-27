@@ -1,7 +1,7 @@
 ---
 id: 6cml7lgqjf773649u5kbj44
 title: Game Dev Pixel Artists
-desc: ""
+desc: ''
 updated: 1744496733097
 created: 1744496704768
 ---

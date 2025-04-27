@@ -1,7 +1,7 @@
 ---
 id: 6352sqo0skla6kg3ld5cobq
 title: React Query Optimistic Interface
-desc: ""
+desc: ''
 updated: 1736109494434
 created: 1736109333421
 ---

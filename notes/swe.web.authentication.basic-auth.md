@@ -1,7 +1,7 @@
 ---
 id: fwxa5kxwi8lu2gvozb65b7y
 title: Basic Auth
-desc: ""
+desc: ''
 updated: 1732740698930
 created: 1732738245344
 ---

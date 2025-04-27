@@ -1,7 +1,7 @@
 ---
 id: mbd6uocxi75xwqiv1dhsdya
 title: JWT
-desc: ""
+desc: ''
 updated: 1732740685616
 created: 1732738460921
 ---

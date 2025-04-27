@@ -1,7 +1,7 @@
 ---
 id: iv4s57l766qqo5p5u0vu597
 title: Ec2 Ebs
-desc: ""
+desc: ''
 updated: 1745098536308
 created: 1745011157699
 ---

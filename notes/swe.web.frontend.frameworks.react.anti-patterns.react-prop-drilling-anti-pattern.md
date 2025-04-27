@@ -1,7 +1,7 @@
 ---
 id: do6up1fmnhtyrw7imcz8ve1
 title: React Prop Drilling Anti Pattern
-desc: ""
+desc: ''
 updated: 1734216743687
 created: 1734216504694
 ---

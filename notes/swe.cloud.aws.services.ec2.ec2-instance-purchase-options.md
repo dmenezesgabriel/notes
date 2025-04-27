@@ -1,7 +1,7 @@
 ---
 id: qxg0hp65n1b9fyvl4q5bchi
 title: Ec2 Instance Purchase Options
-desc: ""
+desc: ''
 updated: 1744578223567
 created: 1744563591149
 ---

@@ -1,7 +1,7 @@
 ---
 id: r4nr26e29smt3uo6rngia32
 title: Aurora
-desc: ""
+desc: ''
 updated: 1745269705880
 created: 1745261496357
 ---

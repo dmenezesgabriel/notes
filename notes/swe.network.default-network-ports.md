@@ -1,7 +1,7 @@
 ---
 id: vqyi81rzgkljszpu9hz80ou
 title: Default Network Ports
-desc: ""
+desc: ''
 updated: 1744495857915
 created: 1744495727206
 ---

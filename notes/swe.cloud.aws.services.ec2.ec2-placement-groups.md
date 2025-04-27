@@ -1,7 +1,7 @@
 ---
 id: qqct2016sj9fygidiajtfv6
 title: Ec2 Placement Groups
-desc: ""
+desc: ''
 updated: 1745007394314
 created: 1744837456954
 ---

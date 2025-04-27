@@ -1,7 +1,7 @@
 ---
 id: 5m0btzngvaii24cc5qvrsfx
 title: React Rich Text Editor Components
-desc: ""
+desc: ''
 updated: 1738542851878
 created: 1738542781009
 ---

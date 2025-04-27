@@ -1,7 +1,7 @@
 ---
 id: y58n70g4xqbqyl5m7jlww35
 title: Ec2 Security Groups
-desc: ""
+desc: ''
 updated: 1744496121190
 created: 1744495172970
 ---

@@ -1,7 +1,7 @@
 ---
 id: oln8s940ru4sbuz9dmsfexf
 title: Ec2 Instances
-desc: ""
+desc: ''
 updated: 1744563470178
 created: 1744491168175
 ---

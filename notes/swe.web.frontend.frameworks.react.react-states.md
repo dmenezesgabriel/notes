@@ -1,7 +1,7 @@
 ---
 id: kptwsda5lf0i6ue6fosqhgs
 title: React States
-desc: ""
+desc: ''
 updated: 1736108514220
 created: 1736108428047
 ---

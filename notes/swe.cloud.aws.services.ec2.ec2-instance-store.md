@@ -1,7 +1,7 @@
 ---
 id: z27amtmcvkvp8vcfp5bi3o0
 title: Ec2 Instance Store
-desc: ""
+desc: ''
 updated: 1745010703090
 created: 1745010573330
 ---

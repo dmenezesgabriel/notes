@@ -1,7 +1,7 @@
 ---
 id: 4na8hk20jo0hz41nv82e677
 title: Pnpm save Exact Config
-desc: ""
+desc: ''
 updated: 1734352628657
 created: 1734352528984
 ---

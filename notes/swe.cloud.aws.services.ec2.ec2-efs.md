@@ -1,7 +1,7 @@
 ---
 id: q6z50c5cdccsr0v4c78aibi
 title: Ec2 Efs
-desc: ""
+desc: ''
 updated: 1745096865044
 created: 1745096373200
 ---

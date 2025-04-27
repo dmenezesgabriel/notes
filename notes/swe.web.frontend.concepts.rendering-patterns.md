@@ -1,7 +1,7 @@
 ---
 id: 9621qgyhc5h6dy90akywghm
 title: Rendering Patterns
-desc: ""
+desc: ''
 updated: 1734207321208
 created: 1732534954991
 ---
