@@ -46,13 +46,3 @@ architecture-beta
     consumer2:R --> B:database
     consumer1:R --> T:database
 ```
-
-## Segurança
-
-- Criptografia: SSE-SQS (SQS Key), SSE-KMS (Key Management service key), client side
-- IAM polices
-- SQS Access polices
-
-## Message Visibility Timeout
-
-Depois da mensagem ser "vista" pelo consumidor, ela se torna invisível para outros consumidores, caso a mensagem não seja processada em 30 segundos ela sera visível novamente para todos consumidores que derem o "poll messages" podendo causar processamento duplicado, a não ser que o consumidor utilize a api `ChangeMessageVisibility` para estender o tempo de processamento.
