@@ -24,3 +24,7 @@ architecture-beta
     vpce:R -- L:s3
 
 ```
+
+[[swe.cloud.aws.services.s3]]
+
+#SWE #Cloud #AWS #AWSServices #AmazonS3

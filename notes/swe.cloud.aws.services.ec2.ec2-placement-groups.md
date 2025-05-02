@@ -19,3 +19,5 @@ diferentes zonas de disponibilidade (máximo de 7 instancias por grupo por AZ).
 ## Partition
 
 Diferentes partições de um hardware. Ideal para Hadoop, Cassandra, Kafka.
+
+#SWE #Cloud #AWS #AWSServices #AmazonEC2

@@ -16,3 +16,5 @@ created: 1745113145267
 - Instancias EC2
 - Endereços de IP
 - Application Load Balancer
+
+#SWE #Cloud #AWS #AWSServices #AmazonELB

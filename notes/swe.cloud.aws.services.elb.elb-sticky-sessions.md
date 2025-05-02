@@ -10,3 +10,5 @@ O client sera direcionado para a mesma instancia em que foi conectado anteriorme
 
 - Application-based Cookies: gerado pelo client
 - Duration-based Cookies: gerado pelo load balancer
+
+#SWE #Cloud #AWS #AWSServices #AmazonELB

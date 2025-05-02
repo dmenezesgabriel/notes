@@ -53,3 +53,5 @@ created: 1744563591149
 - reserva instancias On-Demand em uma availability zone especifica por qualquer duração de tempo
 - pode ser combinado com Regional Reserved instances ou Savings Plan
 - curto prazo e cargas de trabalho ininterruptas em uma zona de disponibilidade especifica
+
+#SWE #Cloud #AWS #AWSServices #AmazonEC2

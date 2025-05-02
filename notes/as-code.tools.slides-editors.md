@@ -1,7 +1,7 @@
 ---
 id: 7bj1f7u0itxqo0x6p09jx1h
 title: Slides Editors
-desc: ""
+desc: ''
 updated: 1738543082526
 created: 1732883324577
 ---

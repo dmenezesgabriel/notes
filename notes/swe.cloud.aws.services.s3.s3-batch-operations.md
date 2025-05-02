@@ -26,3 +26,7 @@ created: 1745860984236
 
 - Um job consiste em uma lista de objetos, uma ação e parâmetros opcionais
 - Pode ser utilizado o S3 Inventory para objetos os objetos, então o Athena para consulta-los e filtra-los
+
+[[swe.cloud.aws.services.s3]]
+
+#SWE #Cloud #AWS #AWSServices #AmazonS3

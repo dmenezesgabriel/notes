@@ -1,7 +1,7 @@
 ---
 id: wcwfhmmvepzkowfesht29t8
 title: Data Mesh
-desc: ""
+desc: ''
 updated: 1737150722399
 created: 1736168286033
 ---

@@ -8,4 +8,4 @@ created: 1732410276594
 
 [zettelkasten](https://zettelkasten.de/overview/)
 
-#NotesConcepts
+#Notes #NotesConcepts #Zettlekasten

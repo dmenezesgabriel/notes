@@ -1,7 +1,7 @@
 ---
 id: vbr0qpv5ytea3y8uzdex81c
 title: SQL Commands
-desc: ""
+desc: ''
 updated: 1737150697112
 created: 1737150372548
 ---

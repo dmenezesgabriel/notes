@@ -11,3 +11,5 @@ Transferir arquivos para amazon S3 ou EFS usando protocolo FTP
 - FTP: File Transfer Protocol
 - FTPS: File Transfer Protocol over SSL
 - SFTP: Secure File Transfer Protocol
+
+#SWE #Cloud #AWS #AWSServices #AmazonTransferFamily

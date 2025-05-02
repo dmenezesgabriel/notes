@@ -1,7 +1,7 @@
 ---
 id: 8oureh3nlkzucss70qm96q4
 title: Route53
-desc: ''
+desc: ""
 updated: 1745440794413
 created: 1745429616752
 ---
@@ -41,3 +41,5 @@ created: 1745429616752
 - **Multi-Value Answer**
 - **Geoproximity**
 - **IP-based routing**
+
+#SWE #Cloud #AWS #AWSServices #AmazonRoute53

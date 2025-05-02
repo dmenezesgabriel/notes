@@ -18,3 +18,5 @@ created: 1745181396815
 
 - Desabilitado por padrão
 - Com custos para transferência de dados entre zonas de disponibilidade se habilitado
+
+#SWE #Cloud #AWS #AWSServices #AmazonELB

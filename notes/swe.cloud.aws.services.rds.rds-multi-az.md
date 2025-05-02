@@ -1,7 +1,7 @@
 ---
 id: kqo9ekwjd6hs2utbq1xd7ey
 title: Rds Multi Az
-desc: ''
+desc: ""
 updated: 1745199745247
 created: 1745199209786
 ---
@@ -15,3 +15,5 @@ created: 1745199209786
 - Zero downtime
 - apenas clicar em modificar no painel da base de dados
 - processo e feito via snapshot e restauração, então sincronização
+
+#SWE #Cloud #AWS #AWSServices #AmazonRDS

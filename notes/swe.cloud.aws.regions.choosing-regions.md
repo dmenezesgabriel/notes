@@ -10,3 +10,5 @@ created: 1744563692343
 - Proximidade
 - Custos
 - DIsponibilidade de serviço
+
+#SWE #Cloud #AWS #AWSRegions

@@ -1,7 +1,7 @@
 ---
 id: d7r4j0xvyl7mds5llebqh5q
 title: Examples
-desc: ""
+desc: ''
 updated: 1737241447777
 created: 1737241371094
 ---

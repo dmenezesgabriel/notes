@@ -16,3 +16,5 @@ Permite coletar e processar dados em "edge locations" e migrar os dados posterio
 ## AWS Snowcone
 
 ## AWS Snowmobile
+
+#SWE #Cloud #AWS #AWSServices #AmazonSnowFamily

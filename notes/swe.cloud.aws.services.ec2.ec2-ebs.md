@@ -13,3 +13,5 @@ Conectar o mesmo EBS a diversas instancias ec2 na mesma zona de disponibilidade
 - familia io1, io2
 - ate 16 instancias
 - mesma AZ
+
+#SWE #Cloud #AWS #AWSServices #AmazonEC2

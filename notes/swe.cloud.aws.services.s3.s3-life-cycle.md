@@ -8,3 +8,7 @@ created: 1745711863733
 
 - Transition Actions: transacionar entre outras classes de armazenamento
 - Expiration Actions: configurar objetos para serem deletados depois de determinado período
+
+[[swe.cloud.aws.services.s3]]
+
+#SWE #Cloud #AWS #AWSServices #AmazonS3

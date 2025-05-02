@@ -7,3 +7,5 @@ created: 1745695497409
 ---
 
 AMI customizada do ec2 para tornar o processo de inicialização mais rápido
+
+#SWE #Cloud #AWS #AWSServices #AmazonEC2

@@ -19,3 +19,5 @@ Controlam o trafego para dentro _(Inbound)_ ou fora _(outbound)_ de instancias E
 Causas comuns de erros:
 
 - Timeout em acesso ao EC2, configuração incorreta de Security Group
+
+#SWE #Cloud #AWS #AWSServices #AmazonEC2

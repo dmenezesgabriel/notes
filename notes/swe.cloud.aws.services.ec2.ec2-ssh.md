@@ -7,3 +7,5 @@ created: 1744496557663
 ---
 
 - Usuário padrão `ec2-user`
+
+#SWE #Cloud #AWS #AWSServices #AmazonEC2

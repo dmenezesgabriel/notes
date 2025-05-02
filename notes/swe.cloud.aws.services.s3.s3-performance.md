@@ -20,3 +20,7 @@ created: 1745860370620
 
 - Requisitar um arquivo por range de bytes
 - É possível paralelizar as requisições
+
+[[swe.cloud.aws.services.s3]]
+
+#SWE #Cloud #AWS #AWSServices #AmazonS3

@@ -7,3 +7,7 @@ created: 1745702767371
 ---
 
 - http://bucket-name.s3-website-aws-region.amazonaws.com ou http://bucket-name.s3-website.aws-region.amazonaws.com
+
+[[swe.cloud.aws.services.s3]]
+
+#SWE #Cloud #AWS #AWSServices #AmazonS3

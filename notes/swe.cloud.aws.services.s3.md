@@ -15,3 +15,5 @@ created: 1745696116353
 - Tamanho máximo de um objeto: 5TB
 - Para fazer o upload de mais de 5GB é necessário utilizar o "multi-part upload"
 - O nome de um bucket deve ser único em todas regiões globalmente, porem é um serviço regional
+
+#SWE #Cloud #AWS #AWSServices #AmazonS3

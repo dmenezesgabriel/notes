@@ -9,3 +9,5 @@ created: 1745193758936
 ## Server Name Indication (SNI)
 
 Permite carregar múltiplos certificados SSL em um único listener
+
+#SWE #Cloud #AWS #AWSServices #AmazonELB

@@ -10,4 +10,4 @@ created: 1733140200274
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Transclusion)
 
-#NotesConcepts
+#Notes #NotesConcepts #Transclusion

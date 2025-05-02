@@ -22,3 +22,5 @@ created: 1745261496357
 ## Reader Endpoint
 
 - Balanceamento de carga de conexão
+
+#SWE #Cloud #AWS #AWSServices #AmazonAurora

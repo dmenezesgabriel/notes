@@ -1,7 +1,7 @@
 ---
 id: 6u858ptiw17rvbhtlm4ooju
 title: Machine Learning Training Types
-desc: ""
+desc: ''
 updated: 1737394436125
 created: 1737394325792
 ---

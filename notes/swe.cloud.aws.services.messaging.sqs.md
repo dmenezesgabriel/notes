@@ -46,3 +46,5 @@ architecture-beta
     consumer2:R --> B:database
     consumer1:R --> T:database
 ```
+
+#SWE #Cloud #AWS #AWSServices #AmazonSQS

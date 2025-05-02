@@ -7,3 +7,5 @@ created: 1744563212794
 ---
 
 Alternative to SSH, access terminal on browser.
+
+#SWE #Cloud #AWS #AWSServices #AmazonEC2

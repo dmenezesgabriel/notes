@@ -22,3 +22,5 @@ Podem ser:
 ## Header X-Forwarded-For
 
 Mostra o IP do cliente que esta requisitando o backend, uma vez que o IP da solicitação ao backend sera o do ALB
+
+#SWE #Cloud #AWS #AWSServices #AmazonELB

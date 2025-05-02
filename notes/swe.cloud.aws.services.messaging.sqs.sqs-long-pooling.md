@@ -10,3 +10,5 @@ Caso não hajam mensagens na fila o consumidor espera escutando ativamente a fil
 
 - 1 a 20 segundos
 - Parâmetro `WaitTimeSeconds`
+
+#SWE #Cloud #AWS #AWSServices #AmazonSQS

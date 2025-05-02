@@ -1,7 +1,7 @@
 ---
 id: k8in430fgy6hcqvgt1p0n6n
 title: SQL
-desc: ""
+desc: ''
 updated: 1738542704729
 created: 1738542605410
 ---

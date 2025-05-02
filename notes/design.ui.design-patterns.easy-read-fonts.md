@@ -1,7 +1,7 @@
 ---
 id: q1oz331p8yyks7g8e624s5q
 title: Easy Read Fonts
-desc: ""
+desc: ''
 updated: 1737208285837
 created: 1737208220751
 ---
@@ -10,3 +10,5 @@ created: 1737208220751
 - Open Sans
 - Roboto
 - Inter
+
+#Design #UIDesignPatterns #Fonts

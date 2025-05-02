@@ -30,3 +30,5 @@ Permite provisionar sistemas de arquivos de alta performance na aws
 
 - NFS
 - Point in Time cloning
+
+#SWE #Cloud #AWS #AWSServices #AmazonFSX

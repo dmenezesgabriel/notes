@@ -1,7 +1,7 @@
 ---
 id: atgcbm5h9nmfmndhxvsksq9
 title: Rds
-desc: ''
+desc: ""
 updated: 1745194443612
 created: 1745194261071
 ---
@@ -23,3 +23,5 @@ pros:
 contras:
 
 - Nao e possível acessar a maquina via SSH
+
+#SWE #Cloud #AWS #AWSServices #AmazonRDS

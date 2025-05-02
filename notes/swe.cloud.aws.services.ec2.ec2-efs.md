@@ -16,3 +16,5 @@ created: 1745096373200
 - Standard
 - Infrequent access
 - Archive
+
+#SWE #Cloud #AWS #AWSServices #AmazonEC2

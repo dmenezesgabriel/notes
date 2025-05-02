@@ -1,7 +1,7 @@
 ---
 id: kwkygzwi0qa664ab6b1ov1r
 title: Rds Read Replicas
-desc: ''
+desc: ""
 updated: 1745199330994
 created: 1745198580124
 ---
@@ -11,3 +11,5 @@ created: 1745198580124
 - ASYNC (eventualmente consistente)
 - mesma região, diferentes AZs nao ha taxa de replicação, diferentes regiões ha taxa
 - podem ser configuradas como multi AZ no caso de disaster recovery
+
+#SWE #Cloud #AWS #AWSServices #AmazonRDS

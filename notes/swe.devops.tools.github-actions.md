@@ -1,7 +1,7 @@
 ---
 id: 2l2dn81fcgbnsca1t7pmxbx
 title: GitHub Actions
-desc: ""
+desc: ''
 updated: 1733142629910
 created: 1733141703995
 ---

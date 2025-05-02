@@ -25,3 +25,5 @@ created: 1746117624597
 ## Tape Gateway
 
 - Virtual Tape Library (VTL)
+
+#SWE #Cloud #AWS #AWSServices #AmazonStorageGateway

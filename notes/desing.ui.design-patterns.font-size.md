@@ -1,7 +1,7 @@
 ---
 id: uvrrpmybs87de9m2vzi24b3
 title: Font Size
-desc: ""
+desc: ''
 updated: 1737208450086
 created: 1737208386974
 ---
@@ -13,3 +13,5 @@ created: 1737208386974
 ## Double sequence
 
 6pt, 10pt, 16pt, 26pt, 42pt, 68pt
+
+#Design #UIDesignPatterns #FontSize

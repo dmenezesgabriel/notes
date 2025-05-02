@@ -1,7 +1,7 @@
 ---
 id: 3cpmhhmqx4xhl8mop427urd
 title: Cloudfront
-desc: ""
+desc: ''
 updated: 1746048424648
 created: 1746048424648
 ---
@@ -29,3 +29,5 @@ architecture-beta
     vpce:R -- L:ec2
 
 ```
+
+#SWE #Cloud #AWS #AWSServices #AmazonCloudfront

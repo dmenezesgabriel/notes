@@ -1,7 +1,7 @@
 ---
 id: gmqfjfl0grsq4mx6qrwweu8
 title: Data Modeling Cardinality
-desc: ""
+desc: ''
 updated: 1746034213253
 created: 1746031502916
 ---
@@ -38,3 +38,5 @@ erDiagram
 - Cardinalidade máxima: Representa a cardinalidade do relacionamento
   - 0: Possibilidade de não participação ou opcionalidade
   - 1: Indica a obrigatoriedade de participação
+
+#DataEngineer #DataModelingConcepts #DataModelingCardinality

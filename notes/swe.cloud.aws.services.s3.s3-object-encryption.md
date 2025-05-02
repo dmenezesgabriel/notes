@@ -13,3 +13,7 @@ created: 1745864398365
 - SSE-C: Chaves gerenciadas pelo usuário
 
 ## Client-Side Encryption
+
+[[swe.cloud.aws.services.s3]]
+
+#SWE #Cloud #AWS #AWSServices #AmazonS3

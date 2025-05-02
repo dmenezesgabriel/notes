@@ -39,3 +39,7 @@ created: 1745709784143
 ## Amazon S3 Intelligent Tiering
 
 - auto-tiering
+
+[[swe.cloud.aws.services.s3]]
+
+#SWE #Cloud #AWS #AWSServices #AmazonS3

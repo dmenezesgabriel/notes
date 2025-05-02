@@ -12,3 +12,5 @@ First In First Out
 - 300 mensagens/segundo sem envio em lote e 3000 mensagens/segundo com envio em lote
 - Remoção de mensagens duplicadas dentro de um range de 5 minutos com _Deduplication ID_
 - O nome da fila deve ter o sufixo `.fifo`
+
+#SWE #Cloud #AWS #AWSServices #AmazonSQS
