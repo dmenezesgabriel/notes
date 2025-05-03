@@ -2,7 +2,7 @@
 id: gmqfjfl0grsq4mx6qrwweu8
 title: Data Modeling Cardinality
 desc: ""
-updated: 1746193447455
+updated: 1746215413337
 created: 1746031502916
 ---
 
@@ -51,6 +51,35 @@ erDiagram
     string codigo_aluno
     date data_inscricao
     float valor_media_final
+  }
+```
+
+## Auto relacionamento
+
+```mermaid
+erDiagram
+  Funcionario ||--o{ Funcionario : lidera
+  Funcionario {
+    string codigo_funcionario
+    string nome_funcionario
+    string nome_cargo_funcionario
+    string codigo_funcionario_superior
+  }
+```
+
+- Auto relacionamento M:N
+
+```mermaid
+erDiagram
+  PecaAutomotiva ||--o{ ComposicaoPeca : componente
+  PecaAutomotiva ||--o{ ComposicaoPeca : componente
+  PecaAutomotiva {
+    string codigo_peca
+    string nome_peca
+  }
+  ComposicaoPeca {
+    string codigo_peca
+    string codigo_peca_componente
   }
 ```
 
