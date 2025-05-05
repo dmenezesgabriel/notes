@@ -1,7 +1,7 @@
 ---
 id: gmqfjfl0grsq4mx6qrwweu8
 title: Data Modeling Cardinality
-desc: ""
+desc: ''
 updated: 1746453948597
 created: 1746031502916
 ---
