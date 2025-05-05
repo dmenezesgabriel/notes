@@ -10,4 +10,6 @@ traitIds:
 
 - Modelagem relacional - Herança [[data-engineer.concepts.data-modeling.data-modeling-inheritance]]
 - Modelagem relacional - Normalização [[data-engineer.concepts.data-modeling.data-modeling-normalization]]
+- Estudos AWS Certified Solutions Architect - Associate
+- AWS Lambda [[swe.cloud.aws.services.serverless.lambda]]
 - Pizza Legends - 01, Drew Conley
