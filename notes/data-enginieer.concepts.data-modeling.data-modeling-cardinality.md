@@ -2,7 +2,7 @@
 id: gmqfjfl0grsq4mx6qrwweu8
 title: Data Modeling Cardinality
 desc: ""
-updated: 1746279412425
+updated: 1746453948597
 created: 1746031502916
 ---
 
@@ -11,6 +11,10 @@ Indica o numero de vezes em que um elemento de uma entidade pode se associar com
 ## 1:1
 
 ```mermaid
+---
+title: 1:1
+---
+
 erDiagram
   direction LR
   Pessoa ||--|| Passaporte : possui
@@ -19,6 +23,10 @@ erDiagram
 ## 1:N
 
 ```mermaid
+---
+title: 1:N
+---
+
 erDiagram
   direction LR
   Departamento ||--o{ Funcionário : possui
@@ -27,6 +35,10 @@ erDiagram
 ## M:N
 
 ```mermaid
+---
+title: M:N
+---
+
 erDiagram
   direction LR
   Aluno }o--o{ Curso : matricula
@@ -35,6 +47,10 @@ erDiagram
 - Entidade associativa
 
 ```mermaid
+---
+title: Entidade Associativa
+---
+
 erDiagram
   Aluno ||--o{ Frequencia : frequenta
   Curso ||--o{ Frequencia : possui
