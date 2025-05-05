@@ -12,5 +12,6 @@ traitIds:
 - ECS [[swe.cloud.aws.services.containers.ecs]]
 - ECR [[swe.cloud.aws.services.containers.ecr]]
 - EKS [[swe.cloud.aws.services.containers.eks]]
+- App Runner [[swe.cloud.aws.services.containers.app-runner]]
 
 #SWE #Cloud #AWS #AWSServices #AmazonECS #AmazonECR #AmazonEKS
