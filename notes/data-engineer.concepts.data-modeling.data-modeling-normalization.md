@@ -2,7 +2,7 @@
 id: efw0m8b2ndfs1v9zsxz37oi
 title: Data Modeling Normalization
 desc: ""
-updated: 1746457561614
+updated: 1746469852974
 created: 1746454427494
 ---
 
@@ -42,6 +42,6 @@ erDiagram
     Papel ||--o{ Alocacao_Funcionario_Projeto : ""
 ```
 
-[[data-engineer.concepts.data-modeling.data-modeling-normalization-first-norm]]
+[[data-engineer.concepts.data-modeling.data-modeling-normalization-first-form]]
 
 #DataEngineer #DataModelingConcepts #DataModelingNormalization

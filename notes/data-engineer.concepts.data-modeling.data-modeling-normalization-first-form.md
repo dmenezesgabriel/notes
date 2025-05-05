@@ -1,7 +1,7 @@
 ---
 id: wudekg95drgrg16fh2tb77p
-title: Data Modeling Normalization First Norm
-desc: ""
+title: Data Modeling Normalization First Form
+desc: ''
 updated: 1746457559096
 created: 1746457479702
 ---
