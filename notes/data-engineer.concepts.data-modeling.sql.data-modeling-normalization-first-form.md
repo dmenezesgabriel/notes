@@ -45,6 +45,6 @@ created: 1746457479702
       Cliente ||--o{ Cliente_Telefone : ""
   ```
 
-[[data-engineer.concepts.data-modeling.data-modeling-normalization]]
+[[data-engineer.concepts.data-modeling.sql.data-modeling-normalization]]
 
 #DataEngineer #DataModelingConcepts #DataModelingNormalization

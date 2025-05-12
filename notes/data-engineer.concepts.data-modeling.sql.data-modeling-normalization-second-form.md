@@ -1,12 +1,12 @@
 ---
 id: 4maaydx13cmqio2sdoowesr
 title: Data Modeling Normalization Second Form
-desc: ""
+desc: ''
 updated: 1746470630094
 created: 1746469756047
 ---
 
-- Deve estar aderente a primeira forma normal [[data-engineer.concepts.data-modeling.data-modeling-normalization-first-form]]
+- Deve estar aderente a primeira forma normal [[data-engineer.concepts.data-modeling.sql.data-modeling-normalization-first-form]]
 - Seus atributos não chave devem depender da chave primaria completa, todos atributos que não compõem a chave primaria devem ser funcionalmente dependentes de todos os campos que compõem a chave. Ex:
 
   ```mermaid

@@ -1,7 +1,7 @@
 ---
 id: 55yt75rwjdxsiw1zyjik2a9
 title: Data Modeling Inheritance
-desc: ""
+desc: ''
 updated: 1746454149771
 created: 1746448380404
 ---

@@ -1,7 +1,7 @@
 ---
 id: ifhuoy9yageak5qfezvidcl
 title: Data Modeling Normalization Third Form
-desc: ""
+desc: ''
 updated: 1746475680463
 created: 1746474675502
 ---
@@ -44,5 +44,5 @@ Vendedor {
 Vendedor ||--o{ Pedido : "vende"
 ```
 
-- [[data-engineer.concepts.data-modeling.data-modeling-normalization-first-form]]
-- [[data-engineer.concepts.data-modeling.data-modeling-normalization-second-form]]
+- [[data-engineer.concepts.data-modeling.sql.data-modeling-normalization-first-form]]
+- [[data-engineer.concepts.data-modeling.sql.data-modeling-normalization-second-form]]
