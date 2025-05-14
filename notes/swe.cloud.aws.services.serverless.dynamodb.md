@@ -2,7 +2,7 @@
 id: 7dvtb8w2k4qab6lly0mhdwi
 title: Dynamodb
 desc: ""
-updated: 1747085279837
+updated: 1747225155070
 created: 1747085279837
 ---
 
@@ -32,3 +32,7 @@ created: 1747085279837
 - Escala automaticamente
 - Não há necessidade de planejamento prévio
 - Cargas de trabalho imprevisíveis e com picos de acessos
+
+[[daily.journal.2025.05.14]]
+
+#SWE #Cloud #AWS #AWSServices #Serverless #AmazonDynamoDB
