@@ -16,3 +16,8 @@ traitIds:
 - TTL [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-ttl]]
 - Disaster Recovery [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-disaster-recovery]]
 - S3 integration [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-s3-integration]]
+
+## API Gateway
+
+- [[swe.cloud.aws.services.serverless.api-gateway]]
+- Integrations [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-integrations]]
