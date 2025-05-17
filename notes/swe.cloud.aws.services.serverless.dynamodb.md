@@ -2,7 +2,7 @@
 id: 7dvtb8w2k4qab6lly0mhdwi
 title: Dynamodb
 desc: ""
-updated: 1747225155070
+updated: 1747486661579
 created: 1747085279837
 ---
 
@@ -33,6 +33,17 @@ created: 1747085279837
 - Não há necessidade de planejamento prévio
 - Cargas de trabalho imprevisíveis e com picos de acessos
 
-[[daily.journal.2025.05.14]]
+## Advanced Features
+
+- Dax [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-accelerator]]
+- Stream [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-streams]]
+- Global Tables [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-global-tables]]
+- TTL [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-ttl]]
+- Disaster Recovery [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-disaster-recovery]]
+- S3 integration [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-s3-integration]]
+
+## Relacionado
+
+- [[daily.journal.2025.05.14]]
 
 #SWE #Cloud #AWS #AWSServices #Serverless #AmazonDynamoDB
