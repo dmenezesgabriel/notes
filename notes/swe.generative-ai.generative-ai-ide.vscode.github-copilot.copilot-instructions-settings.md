@@ -2,7 +2,7 @@
 id: 0f1me7bliquc8nxji3uapoj
 title: Copilot Instructions Settings
 desc: ""
-updated: 1747501544660
+updated: 1747502303953
 created: 1747500210563
 ---
 
@@ -11,6 +11,7 @@ Além do arquivo `.vscode/copilot-instructions.md`, outros arquivos podem ser ad
 ```json
 {
   "github.copilot.chat.codeGeneration.instructions": [
+    // https://github.com/microsoft/vscode-docs/blob/main/release-notes/v1_93.md#code-generation-instructions
     {
       "file": "docs/code-style.md"
     },
@@ -28,6 +29,7 @@ Além do arquivo `.vscode/copilot-instructions.md`, outros arquivos podem ser ad
     }
   ],
   "github.copilot.chat.testGeneration.instructions": [
+    // https://github.com/microsoft/vscode-docs/blob/main/release-notes/v1_93.md#generate-tests-based-on-test-coverage-experimental
     {
       "file": "docs/testing.md"
     },
