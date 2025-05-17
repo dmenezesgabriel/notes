@@ -1,12 +1,14 @@
 ---
 id: 3cpmhhmqx4xhl8mop427urd
 title: Cloudfront
-desc: ''
-updated: 1746048424648
+desc: ""
+updated: 1747510027130
 created: 1746048424648
 ---
 
 Content Delivery Network/Cache
+
+- Distribui conteúdos de buckets S3 globalmente, por exemplo um site estático uma vez que os conteúdos de um bucket sao regionais
 
 ## Preço
 
@@ -29,5 +31,9 @@ architecture-beta
     vpce:R -- L:ec2
 
 ```
+
+## Relacionado
+
+- [[swe.cloud.aws.services.s3]]
 
 #SWE #Cloud #AWS #AWSServices #AmazonCloudfront

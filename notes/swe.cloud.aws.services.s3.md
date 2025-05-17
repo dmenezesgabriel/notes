@@ -2,10 +2,11 @@
 id: 6xx697ifvzjbkuco7qb86hs
 title: S3
 desc: ""
-updated: 1745698356167
+updated: 1747510050538
 created: 1745696116353
 ---
 
+- Buckets S3 são regionais
 - Objects: arquivos
 - Key: caminho completo de um arquivo. Ex:
   - s3://my-bucket/my_file.txt
