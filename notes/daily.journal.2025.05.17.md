@@ -2,7 +2,7 @@
 id: k5s3929ux6ekd6gof2f6hm1
 title: "2025-05-17"
 desc: ""
-updated: 1747486673117
+updated: 1747494207184
 created: 1747483582227
 traitIds:
   - journalNote
@@ -21,3 +21,4 @@ traitIds:
 
 - [[swe.cloud.aws.services.serverless.api-gateway]]
 - Integrations [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-integrations]]
+- Security - [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-security]]

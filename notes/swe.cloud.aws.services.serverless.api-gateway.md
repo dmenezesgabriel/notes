@@ -2,13 +2,13 @@
 id: kcv32awnmroqe94bi9z5qas
 title: API Gateway
 desc: ""
-updated: 1747490223635
+updated: 1747494197307
 created: 1747490223635
 ---
 
 ## Casos de Uso
 
-- AWS Lambda [[swe.cloud.aws.services.serverless.lambda]] + API GATeway: sem necessidade de gerenciar infraestrutura
+- AWS Lambda ([[swe.cloud.aws.services.serverless.lambda]]) + API GATeway: sem necessidade de gerenciar infraestrutura
 
 ## Features
 
@@ -48,5 +48,8 @@ architecture-beta
 ## Relacionado
 
 - [[daily.journal.2025.05.17]]
+- [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-integrations]]
+- [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-endpoint-types]]
+- [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-security]]
 
 #SWE #Cloud #AWS #AWSServices #Serverless #AmazonAPIGateway
