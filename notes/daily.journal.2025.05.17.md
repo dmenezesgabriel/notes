@@ -32,3 +32,7 @@ traitIds:
 - [[swe.cloud.aws.services.serverless.cognito]]
 - [[swe.cloud.aws.services.serverless.cognito-cognito-user-pools]]
 - [[swe.cloud.aws.services.serverless.cognito-cognito-identity-pools]]
+
+## Game Dev
+
+- [Pizza Legends - 03, Drew Conley](https://www.youtube.com/watch?v=Bu0jT7xmdqI&list=PLcjhmZ8oLT0r9dSiIK6RB_PuBWlG1KSq_&index=3)
