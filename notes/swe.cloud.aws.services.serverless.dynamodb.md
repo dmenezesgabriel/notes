@@ -45,5 +45,6 @@ created: 1747085279837
 ## Relacionado
 
 - [[daily.journal.2025.05.14]]
+- [[swe.cloud.aws.services.databases]]
 
 #SWE #Cloud #AWS #AWSServices #Serverless #AmazonDynamoDB

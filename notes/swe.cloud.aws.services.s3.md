@@ -2,7 +2,7 @@
 id: 6xx697ifvzjbkuco7qb86hs
 title: S3
 desc: ""
-updated: 1747510050538
+updated: 1747593637863
 created: 1745696116353
 ---
 
@@ -16,5 +16,36 @@ created: 1745696116353
 - Tamanho máximo de um objeto: 5TB
 - Para fazer o upload de mais de 5GB é necessário utilizar o "multi-part upload"
 - O nome de um bucket deve ser único em todas regiões globalmente, porem é um serviço regional
+
+## Features
+
+- Versionamento
+- Criptografia
+- Replicação
+- MFA-Delete
+- Logs de acesso
+
+## Casos de Uso
+
+- Armazenamento de grandes objetos
+- Arquivos estáticos
+- hospedagem de websites
+
+## Relacionado
+
+- [[swe.cloud.aws.services.s3.s3-access-points]]
+- [[swe.cloud.aws.services.s3.s3-batch-operations]]
+- [[swe.cloud.aws.services.s3.s3-cors]]
+- [[swe.cloud.aws.services.s3.s3-glacier-vault-lock-policy]]
+- [[swe.cloud.aws.services.s3.s3-life-cycle]]
+- [[swe.cloud.aws.services.s3.s3-object-encryption]]
+- [[swe.cloud.aws.services.s3.s3-object-lambda]]
+- [[swe.cloud.aws.services.s3.s3-object-lock]]
+- [[swe.cloud.aws.services.s3.s3-performance]]
+- [[swe.cloud.aws.services.s3.s3-security]]
+- [[swe.cloud.aws.services.s3.s3-static-hosting]]
+- [[swe.cloud.aws.services.s3.s3-storage-classes]]
+- [[swe.cloud.aws.services.s3.s3-storage-lens]]
+- [[swe.cloud.aws.services.databases]]
 
 #SWE #Cloud #AWS #AWSServices #AmazonS3
