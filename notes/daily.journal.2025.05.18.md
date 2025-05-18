@@ -13,6 +13,8 @@ traitIds:
 - [[swe.cloud.aws.services.databases]]
 - [[swe.cloud.aws.services.document-db]]
 - [[swe.cloud.aws.services.neptune]]
+- [[swe.cloud.aws.services.keyspaces]]
+- [[swe.cloud.aws.services.timestream]]
 
 ## Projetos paralelos
 

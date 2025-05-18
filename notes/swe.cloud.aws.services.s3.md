@@ -17,6 +17,12 @@ created: 1745696116353
 - Para fazer o upload de mais de 5GB é necessário utilizar o "multi-part upload"
 - O nome de um bucket deve ser único em todas regiões globalmente, porem é um serviço regional
 
+## Casos de Uso
+
+- Armazenamento de grandes objetos
+- Arquivos estáticos
+- hospedagem de websites
+
 ## Features
 
 - Versionamento
@@ -24,12 +30,6 @@ created: 1745696116353
 - Replicação
 - MFA-Delete
 - Logs de acesso
-
-## Casos de Uso
-
-- Armazenamento de grandes objetos
-- Arquivos estáticos
-- hospedagem de websites
 
 ## Relacionado
 

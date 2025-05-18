@@ -15,7 +15,7 @@ created: 1745860984236
 - Restaurar objetos do S3 Glacier
 - Invocar uma função lambda para realizar ações customizadas em objetos
 
-## Funcionalidades
+## Features
 
 - Retentava
 - Progresso

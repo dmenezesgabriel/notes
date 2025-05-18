@@ -8,7 +8,7 @@ created: 1745261496357
 
 Cluster de banco de dados otimizado para cloud.
 
-## Funcionalidades
+## Features
 
 - Suporte a PostgresSQL e MySQL
 - Armazenamento cresce automaticamente conforme a necessidade de 10GB a 128TB

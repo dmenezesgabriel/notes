@@ -8,6 +8,14 @@ created: 1747485132576
 
 - Stream ordenado de todas modificações que ocorrem na tabela (create/update/delete)
 
+## Casos de Uso
+
+- Reagir a mudanças em tempo real (Mensagem de boas vindas a novos usuários por email)
+- Estatísticas de uso dos usuários de uma aplicação em tempo real para analytics
+- Inserir em tabelas derivadas
+- Replicação _cross region_
+- Invocar AWS Lambda ([[swe.cloud.aws.services.serverless.lambda]]) ao ocorrerem mudanças a tabela do DynamoDB
+
 ## Features
 
 - 24 horas de retenção
@@ -19,14 +27,6 @@ Alternativamente pode se utilizar o _Kinesis Data Stream_ ([[swe.cloud.aws.servi
 - 1 ano de retenção
 - Alto numero de consumidores
 - Processamento por AWS Lambda, Kinesis Data Analytics, Data Firehose, AWS Glue Streaming ETL
-
-## Casos de Uso
-
-- Reagir a mudanças em tempo real (Mensagem de boas vindas a novos usuários por email)
-- Estatísticas de uso dos usuários de uma aplicação em tempo real para analytics
-- Inserir em tabelas derivadas
-- Replicação _cross region_
-- Invocar AWS Lambda ([[swe.cloud.aws.services.serverless.lambda]]) ao ocorrerem mudanças a tabela do DynamoDB
 
 ## Relacionado
 

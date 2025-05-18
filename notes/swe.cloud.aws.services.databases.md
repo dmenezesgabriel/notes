@@ -21,7 +21,7 @@ Não possui joins ou linguagem SQL
 - ElastiCache (Key/Value pairs) [[swe.cloud.aws.services.elasticache]]
 - Neptune (Grafos) [[swe.cloud.aws.services.neptune]]
 - DocumentDB (MongoDB) [[swe.cloud.aws.services.document-db]]
-- Keyspaces (Apache Cassandra)
+- Keyspaces (Apache Cassandra) [[swe.cloud.aws.services.keyspaces]]
 
 ## Object Store
 
@@ -52,10 +52,10 @@ Relacionamento entre dados
 
 ## Ledger
 
-- Amazon Quantum Ledger Database
+- Amazon Quantum Ledger Database [[swe.cloud.aws.services.qldb]]
 
 ## Time Series
 
-- Amazon Timestream
+- Amazon Timestream [[swe.cloud.aws.services.timestream]]
 
 #SWE #Cloud #AWS #AWSServices #Databases

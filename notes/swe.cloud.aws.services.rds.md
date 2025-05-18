@@ -16,7 +16,7 @@ Banco relacional gerenciado
 - MariaDB
 - _Custom_
 
-## Funcionalidades
+## Features
 
 - Autoscaling para armazenamento
 - Suporte a read replicas [[swe.cloud.aws.services.rds.rds-read-replicas]]

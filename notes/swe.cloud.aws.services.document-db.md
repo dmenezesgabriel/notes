@@ -8,6 +8,10 @@ created: 1747593693719
 
 Da mesma forma que o _Amazon Aurora_ implementa PostgreSQL e MySQL, DocumentDB implementa uma interface compatível com **MongoDB**
 
+## Casos de Uso
+
+- Armazenar e consultar dados em JSON indexados
+
 ## Features
 
 - Gerenciado pela AWS
@@ -15,10 +19,6 @@ Da mesma forma que o _Amazon Aurora_ implementa PostgreSQL e MySQL, DocumentDB i
 - Altamente disponível com replicação entre 3 zonas de disponibilidade
 - Automaticamente "cresce" seu armazenamento em incrementos de 10Gb
 - Escala automaticamente com cargas de milhões de requisições por segundo
-
-## Casos de Uso
-
-- Armazenar e consultar dados em JSON indexados
 
 ## Relacionado
 

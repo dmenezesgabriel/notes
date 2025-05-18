@@ -8,6 +8,14 @@ created: 1745374010454
 
 Redis/ Memcached gerenciado pela AWS assim como RDS, porém para cache
 
+## Casos de Uso
+
+- Armazenamento Kei/Value pair
+- Leituras frequentes
+- Menos escritas
+- Cache de resultados para consultas em bancos de dados
+- Armazenamento de sessão para web sites
+
 ## Features
 
 - Armazenamento em memória
@@ -19,14 +27,6 @@ Redis/ Memcached gerenciado pela AWS assim como RDS, porém para cache
 - Manutenção agendada gerenciada pela AWS
 
 _Importante: requer alterações no código da aplicação_
-
-## Casos de Uso
-
-- Armazenamento Kei/Value pair
-- Leituras frequentes
-- Menos escritas
-- Cache de resultados para consultas em bancos de dados
-- Armazenamento de sessão para web sites
 
 ## Relacionado
 
