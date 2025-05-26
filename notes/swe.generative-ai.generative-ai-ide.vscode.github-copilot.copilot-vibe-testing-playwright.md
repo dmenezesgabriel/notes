@@ -1,6 +1,6 @@
 ---
 id: 2o050mmm0fy4lwzx6bnitl8
-title: Copilot Vibe Testing Playright
+title: Copilot Vibe Testing Playwright
 desc: ""
 updated: 1748263761273
 created: 1748263672198
