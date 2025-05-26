@@ -2,7 +2,7 @@
 id: 0f1me7bliquc8nxji3uapoj
 title: Copilot Instructions Settings
 desc: ""
-updated: 1747502303953
+updated: 1748263573118
 created: 1747500210563
 ---
 
@@ -52,3 +52,4 @@ Além do arquivo `.vscode/copilot-instructions.md`, outros arquivos podem ser ad
 ## Referencias
 
 - [Getting the most out of GitHub Copilot's free tier](https://www.youtube.com/watch?v=z7JVTxiVcNk)
+- [gain-control-over-commit-messages-generated-by-github-copilot](https://timdeschryver.dev/blog/gain-control-over-commit-messages-generated-by-github-copilot)
