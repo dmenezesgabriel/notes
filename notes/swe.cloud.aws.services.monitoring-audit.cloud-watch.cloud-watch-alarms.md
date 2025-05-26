@@ -9,6 +9,7 @@ created: 1748280282878
 ## Features
 
 - Alarmes compostos com condições _AND_ e _OR_
+- Podem ser criados baseados em uma Métrica do CloudWatch
 
 # Status de um alarme
 

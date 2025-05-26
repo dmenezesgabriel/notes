@@ -12,3 +12,4 @@ traitIds:
 - [[swe.generative-ai.generative-ai-ide.vscode.github-copilot.copilot-vibe-testing-playwright]]
 - [[swe.cloud.aws.services.monitoring-audit]]
 - [[swe.cloud.aws.services.monitoring-audit]]
+- [[swe.cloud.aws.services.monitoring-audit.event-bridge]]
