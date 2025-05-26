@@ -10,3 +10,5 @@ traitIds:
 
 - [[swe.cloud.aws.services.machine-learning]]
 - [[swe.generative-ai.generative-ai-ide.vscode.github-copilot.copilot-vibe-testing-playwright]]
+- [[swe.cloud.aws.services.monitoring-audit]]
+- [[swe.cloud.aws.services.monitoring-audit]]
