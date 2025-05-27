@@ -2,7 +2,7 @@
 id: wufcfq1z3bwhkamm1lf459n
 title: "2025-05-26"
 desc: ""
-updated: 1748264043389
+updated: 1748295246315
 created: 1748264012892
 traitIds:
   - journalNote
@@ -13,3 +13,4 @@ traitIds:
 - [[swe.cloud.aws.services.monitoring-audit]]
 - [[swe.cloud.aws.services.monitoring-audit]]
 - [[swe.cloud.aws.services.monitoring-audit.event-bridge]]
+- [[swe.cloud.aws.services.monitoring-audit.cloud-trail]]
