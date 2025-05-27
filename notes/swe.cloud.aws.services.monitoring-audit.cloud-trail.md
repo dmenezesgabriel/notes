@@ -2,7 +2,7 @@
 id: s2o77dvre2te5wwzqe33i5m
 title: Cloud Trail
 desc: ""
-updated: 1748304228205
+updated: 1748311326248
 created: 1748295188850
 ---
 
@@ -38,6 +38,10 @@ Detecta atividade incomum na conta. Ex: falta de manutenção periódica, _burst
 
 - Eventos são armazenados por 90 dias
 - Para retenção a longo prazo é necessário enviar os logs a um bucket S3
+
+## Event Bridge
+
+- Interceptar chamadas a API da AWS e enviar eventos via event bridge + SNS
 
 ## Relacionado
 
