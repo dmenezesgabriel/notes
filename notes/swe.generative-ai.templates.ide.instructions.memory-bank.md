@@ -6,7 +6,7 @@ updated: 1748436436683
 created: 1748436436683
 ---
 
-# Memory Bank
+## Memory Bank
 
 This file (.github/copilot-instructions.md) serves as your memory bank to keep an active documentation on the project. The goal is to facilitate your agentic approach on new tasks.
 
