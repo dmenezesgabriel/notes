@@ -2,7 +2,7 @@
 id: 78phz3p4cq7lp4k63hmhnz6
 title: Agent Tools
 desc: ""
-updated: 1747499514936
+updated: 1748434607610
 created: 1747498487420
 ---
 
@@ -34,4 +34,4 @@ Model Context Protocol
 
 ## Relacionado
 
-- [[swe.generative-ai.mcp.mcp-servers]]
+- [[swe.generative-ai.protocols.mcp.mcp-servers]]
