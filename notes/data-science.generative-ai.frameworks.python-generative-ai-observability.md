@@ -8,5 +8,6 @@ created: 1748302040205
 
 - [Phoenix Arize](https://docs.arize.com/phoenix)
 - [LangFuse](https://langfuse.com/)
+- [Helicone](https://github.com/Helicone/helicone)
 
 #DataScience #GenerativeAi #GenerativeAiFrameworks #PythonGenerativeAI

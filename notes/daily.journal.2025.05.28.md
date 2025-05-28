@@ -10,3 +10,4 @@ traitIds:
 
 - [[swe.generative-ai.agents.build-agents]]
 - [[swe.generative-ai.protocols.ag-ui]]
+- [[swe.generative-ai.templates.ide.instructions.instructions-react-ts]]

@@ -12,6 +12,8 @@ created: 1747488001083
 
 ![[swe.generative-ai.templates.ide.instructions.project-awareness-context#project-awareness-and-context]]
 
+![[swe.generative-ai.templates.ide.instructions.task-completion#task-completion]]
+
 ![[swe.generative-ai.templates.ide.instructions.key-principles#key-principles]]
 
 ![[swe.generative-ai.templates.ide.instructions.language-specific.language-specific-typescript#typescript-usage]]
@@ -27,5 +29,12 @@ created: 1747488001083
 ![[swe.generative-ai.templates.ide.instructions.memory-bank#memory-bank]]
 
 ![[swe.generative-ai.templates.ide.instructions.mcps-usage#mcps-usage]]
+
+![[swe.generative-ai.templates.ide.instructions.documentation-explainability#documentation-and-explainability]]
+
+## Planning & Tasks
+
+- [[swe.generative-ai.templates.ide.instructions.planning]]
+- [[swe.generative-ai.templates.ide.instructions.tasks]]
 
 #SWE #GenerativeAI #Templates #IDE #Instructions

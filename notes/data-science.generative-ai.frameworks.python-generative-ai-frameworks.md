@@ -13,5 +13,6 @@ created: 1748301830447
 - [Instructor](https://github.com/567-labs/instructor)
 - [Google agent kit](https://google.github.io/adk-docs/get-started/quickstart)
 - [MLflow](https://mlflow.org/docs/latest/index.html)
+- [mem0](https://mem0.ai/)
 
 #DataScience #GenerativeAi #GenerativeAiFrameworks #PythonGenerativeAI

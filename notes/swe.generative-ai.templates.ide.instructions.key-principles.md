@@ -8,7 +8,12 @@ created: 1748435951772
 
 ## Key Principles
 
-- Focus on readability over being performant.
+- **Never** assume missing context. Ask questions if uncertain.
+- **Never** hallucinate libraries or functions - only use known, verified packages.
+- **Never** delete or overwrite existing code unless explicitly instructed to or if part of a task from `TASK.md`.
+- **Always** Focus on readability over being performant.
+- **Always** follow clean code naming practices.
+- **Always** follow SOLID programming principles.
 - Fully implement all requested functionality.
 - Leave NO todo's, placeholders or missing pieces.
 - Be sure to reference file names.
@@ -17,7 +22,5 @@ created: 1748435951772
 - Only write code that is necessary to complete the task.
 - Rewrite the complete code only if necessary.
 - Update relevant tests or create new tests if necessary.
-- follow clean code naming practices.
-- follow SOLID programming principles.
 
 #SWE #GenerativeAI #Templates #IDE #Instructions
