@@ -16,7 +16,7 @@ created: 1747488001083
 
 ![[swe.generative-ai.templates.ide.instructions.key-principles#key-principles]]
 
-![[swe.generative-ai.templates.ide.instructions.language-specific.language-specific-typescript#typescript-usage]]
+![[swe.generative-ai.templates.ide.instructions.language-conventions.language-conventions-typescript#language-conventions]]
 
 ![[swe.generative-ai.templates.ide.instructions.naming-conventions.naming-conventions-react#naming-conventions]]
 

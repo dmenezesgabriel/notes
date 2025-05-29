@@ -1,6 +1,6 @@
 ---
 id: 4u26rhhe3ociebqgyid5tfn
-title: Build Agents
+title: Agent Nodes
 desc: ""
 updated: 1748434712819
 created: 1748432976307
