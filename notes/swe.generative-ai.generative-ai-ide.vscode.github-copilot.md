@@ -2,7 +2,7 @@
 id: p82v2384q841djc1jugdbm1
 title: GitHub Copilot
 desc: ""
-updated: 1748696127749
+updated: 1748722581278
 created: 1747399670863
 ---
 
@@ -69,7 +69,7 @@ created: 1747399670863
 
   - `CTRL + SHIFT + P -> Chat: New Prompt File`
 
-  Ex: components.instructions.md
+  Ex: components.prompt.md
 
   ```md
   ---
@@ -91,9 +91,10 @@ created: 1747399670863
     ...
   ```
 
-- mcp (Model Context Protocol) [[swe.generative-ai.protocols.mcp.mcp-servers]]-servers]]
+- mcp (Model Context Protocol) [[swe.generative-ai.protocols.mcp.mcp-servers]]
 - _chat extensions_ Ex:vscode-mermAId, escrever no chat `@mermAId` quando um arquivo está selecionado.
 
 ## Reference
 
 - [copilot-customization](https://code.visualstudio.com/docs/copilot/copilot-customization)
+- [Customizing Copilot in VS Code](https://www.youtube.com/watch?v=WdZCv4OZcxM&list=WL&index=3)
