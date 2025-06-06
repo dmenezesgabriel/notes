@@ -2,7 +2,7 @@
 id: k83y9z9om0xqazysew826m8
 title: Iam
 desc: ""
-updated: 1748380192472
+updated: 1749211017372
 created: 1748359292419
 ---
 
@@ -34,3 +34,9 @@ created: 1748359292419
   "Resource": "arn:aws:s3:::test/*" // Object Level permission
 }
 ```
+
+## Relacionado
+
+- [[swe.cloud.aws.services.iam.directory-services]]
+
+#SWE #Cloud #AWS #AWSServices #AWSIAM
