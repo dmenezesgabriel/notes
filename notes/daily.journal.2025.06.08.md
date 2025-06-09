@@ -11,3 +11,4 @@ traitIds:
 - [[swe.cloud.aws.services.security.secrets-manager]]
 - [[swe.cloud.aws.services.security.acm]]
 - [[swe.cloud.aws.services.security.waf]]
+- [[swe.cloud.aws.services.security.shield]]

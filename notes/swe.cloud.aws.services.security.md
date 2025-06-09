@@ -11,5 +11,6 @@ created: 1749410810120
 - [[swe.cloud.aws.services.security.kms]]
 - [[swe.cloud.aws.services.security.acm]]
 - [[swe.cloud.aws.services.security.waf]]
+- [[swe.cloud.aws.services.security.shield]]
 
 #SWE #Cloud #AWS #AWSServices #Security
