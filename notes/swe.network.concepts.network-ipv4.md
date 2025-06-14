@@ -2,7 +2,7 @@
 id: 4rj8pll9cjvp17zqi9tcq2e
 title: Network Ipv4
 desc: ""
-updated: 1744495993382
+updated: 1749919741261
 created: 1744495971185
 ---
 
@@ -10,7 +10,9 @@ created: 1744495971185
 
 - 0.0.0.0/0: Qualquer lugar.
 
-## CIDR (Classless Inter-Domain Routing)
+## CIDR
+
+> Classless Inter-Domain Routing
 
 um método para alocar endereços de IP
 
@@ -37,6 +39,16 @@ composto por dois componentes:
 | 192.168.0.0 | /24         | permite 256 IPs (2⁸)         | 192.168.0.0 → 192.168.0.255   |
 | 192.168.0.0 | /16         | permite 65.536 IPs (2¹⁶)     | 192.168.0.0 → 192.168.255.255 |
 | 10.0.0.0    | /8          | permite 16.777.216 IPs (2²⁴) | 10.0.0.0 → 10.255.255.255     |
+
+## IPs Privados
+
+- **Internet Assigned Numbers Authority (IANA)** estabeleceu certos blocos de endereços IPv4 para o uso de endereços privados (LAN) e públicos (Internet)
+
+| Faixa de IP                   | Máscara CIDR   | Descrição               |
+| ----------------------------- | -------------- | ----------------------- |
+| 10.0.0.0 - 10.255.255.255     | 10.0.0.0/8     | Grandes redes           |
+| 172.16.0.0 - 172.31.255.255   | 172.16.0.0/12  | Range de IPs padrão AWS |
+| 192.168.0.0 - 192.168.255.255 | 192.168.0.0/16 | Redes residenciais      |
 
 ## Links úteis
 
