@@ -1,7 +1,7 @@
 ---
 id: vqyi81rzgkljszpu9hz80ou
 title: Default Network Ports
-desc: ''
+desc: ""
 updated: 1744495857915
 created: 1744495727206
 ---
@@ -12,3 +12,5 @@ created: 1744495727206
 - 80: HTTP: Sites sem segurança
 - 443: HTTPS: Sites seguros
 - 3389: RDP (Remote Desktop Protocol)
+
+#SWE #Network #Concepts #Ports

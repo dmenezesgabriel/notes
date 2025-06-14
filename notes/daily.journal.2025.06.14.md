@@ -10,3 +10,4 @@ traitIds:
 
 - [[swe.cloud.aws.services.security.guard-duty]]
 - [[swe.cloud.aws.services.security.macie]]
+- [[swe.network.concepts.network-ipv4]]

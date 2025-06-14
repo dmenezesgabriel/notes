@@ -1,0 +1,45 @@
+---
+id: 4rj8pll9cjvp17zqi9tcq2e
+title: Network Ipv4
+desc: ""
+updated: 1744495993382
+created: 1744495971185
+---
+
+# IPv4
+
+- 0.0.0.0/0: Qualquer lugar.
+
+## CIDR (Classless Inter-Domain Routing)
+
+um método para alocar endereços de IP
+
+composto por dois componentes:
+
+- **Base IP**:
+
+  - Representa um IP contido no intervalo (xx.xx.xx.xx) Ex: 10.0.0.0, 192.168.0.1
+
+- **Subnet Mask**:
+
+  - Define quantos bits podem mudar no IP. Ex: /8, /16, /24, /32, ...
+
+| IP Base     | Subnet Mask | Descrição                    | Range de IPs                  |
+| ----------- | ----------- | ---------------------------- | ----------------------------- |
+| 192.168.0.0 | /32         | permite 1 IP (2⁰)            | 192.168.0.0                   |
+| 192.168.0.0 | /31         | permite 2 IPs (2¹)           | 192.168.0.0 → 192.168.0.1     |
+| 192.168.0.0 | /30         | permite 4 IPs (2²)           | 192.168.0.0 → 192.168.0.3     |
+| 192.168.0.0 | /29         | permite 8 IPs (2³)           | 192.168.0.0 → 192.168.0.7     |
+| 192.168.0.0 | /28         | permite 16 IPs (2⁴)          | 192.168.0.0 → 192.168.0.15    |
+| 192.168.0.0 | /27         | permite 32 IPs (2⁵)          | 192.168.0.0 → 192.168.0.31    |
+| 192.168.0.0 | /26         | permite 64 IPs (2⁶)          | 192.168.0.0 → 192.168.0.63    |
+| 192.168.0.0 | /25         | permite 128 IPs (2⁷)         | 192.168.0.0 → 192.168.0.127   |
+| 192.168.0.0 | /24         | permite 256 IPs (2⁸)         | 192.168.0.0 → 192.168.0.255   |
+| 192.168.0.0 | /16         | permite 65.536 IPs (2¹⁶)     | 192.168.0.0 → 192.168.255.255 |
+| 10.0.0.0    | /8          | permite 16.777.216 IPs (2²⁴) | 10.0.0.0 → 10.255.255.255     |
+
+## Links úteis
+
+- [ipaddressguide - cidr](https://www.ipaddressguide.com/cidr)
+
+#SWE #Network #Concepts #IPv4
