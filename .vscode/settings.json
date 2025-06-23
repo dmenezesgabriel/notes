@@ -3,5 +3,8 @@
         {
             "file": "docs/commit-message-instructions.md"
         },
+    ],
+    "cSpell.words": [
+        "Onfiguracao"
     ]
 }

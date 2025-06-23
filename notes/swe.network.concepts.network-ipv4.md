@@ -54,4 +54,8 @@ composto por dois componentes:
 
 - [ipaddressguide - cidr](https://www.ipaddressguide.com/cidr)
 
+## Relacionado
+
+- [[swe.network.concepts.network-ipv6]]
+
 #SWE #Network #Concepts #IPv4
