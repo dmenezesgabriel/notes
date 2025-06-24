@@ -61,7 +61,7 @@ jobs:
         run: "(test -d .next) && ls .next || echo 'no next file'"
 
       - name: Restore Next cache
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: .next/.next/cache
           key: ${{ runner.os }}-nextjs-${{ hashFiles('.next/pnpm-lock.yaml') }}-${{ hashFiles('.next/**.[jt]s', '.next/**.[jt]sx') }}-1
