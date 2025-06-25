@@ -2,7 +2,7 @@
 id: qh4lftiupxyxw4gf5jhyzfi
 title: Dms
 desc: ""
-updated: 1750871867554
+updated: 1750873324235
 created: 1750868661302
 ---
 
@@ -43,6 +43,20 @@ created: 1750868661302
 - _Amazon Neptune_ [[swe.cloud.aws.services.neptune]]
 - _Redis_
 - _Babelfish_
+
+## Exceções
+
+### RDS & Aurora MYSQL/PostgresSQL
+
+Migração RDS para Aurora MySQL
+
+- Snapshot: Mais barato com downtime
+- Replica: Mais caro sem downtime
+
+#### MYSQL
+
+- Percona XtraBackup
+- mysqldump
 
 ## Relacionado
 
