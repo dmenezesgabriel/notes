@@ -1,4 +1,4 @@
-name: Build Dendron Static Site
+name: publish-to-github-pages
 
 on:
   workflow_dispatch:
@@ -7,75 +7,56 @@ on:
       - master
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v4
 
       - name: Install pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
-          version: 8
+          version: 9.15.4
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: 22
           cache: "pnpm"
 
-      - name: Restore Node modules cache
-        uses: actions/cache@v3
-        id: node-modules-cache
-        with:
-          path: |
-            node_modules
-            .next/*
-            !.next/.next/cache
-            !.next/.env.*
-          key: ${{ runner.os }}-dendronv2-${{ hashFiles('**/pnpm-lock.yaml') }}-4
-
-      - name: Contents of next
-        run: "(test -d .next) && ls .next || echo 'no next file'"
-
       - name: Install dependencies
+        shell: bash
         run: pnpm install
 
-      - name: Initialize or pull nextjs template
-        run: |
-          if [ -d .next ]; then
-            echo "updating dendron next..."
-            cd .next
-            git reset --hard
-            git pull
-            pnpm install
-            cd ..
-          else
-            echo "init dendron next"
-            pnpm dendron publish init
-          fi
+      - name: Setup pages
+        uses: actions/configure-pages@v4
 
-      - name: Contents of next
-        run: "(test -d .next) && ls .next || echo 'no next file'"
+      - name: Build with Next.js
+        run: pnpm dendron publish export
 
-      - name: Restore Next cache
-        uses: actions/cache@v3
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: .next/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('.next/pnpm-lock.yaml') }}-${{ hashFiles('.next/**.[jt]s', '.next/**.[jt]sx') }}-1
+          path: ./next/out
 
-      - name: Export notes
-        run: pnpm dendron publish export --target github --yes
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
-      - name: Deploy site
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: pages
-          publish_dir: docs/
-          force_orphan: true
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Publish to GitHub pages
+        id: deployment
+        uses: actions/deploy-pages@v4
