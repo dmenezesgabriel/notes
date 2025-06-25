@@ -2,7 +2,7 @@
 id: boa98tz45pgzhj0h1dsz8p3
 title: Document Db
 desc: ""
-updated: 1747594061390
+updated: 1750870332686
 created: 1747593693719
 ---
 
@@ -23,5 +23,3 @@ Da mesma forma que o _Amazon Aurora_ implementa PostgreSQL e MySQL, DocumentDB i
 ## Relacionado
 
 - [[swe.cloud.aws.services.databases]]
-
-#SWE #Cloud #AWS #AWSServices #AmazonDocumentDB

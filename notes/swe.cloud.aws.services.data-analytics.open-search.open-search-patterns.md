@@ -2,7 +2,7 @@
 id: 8foet5hgn2179kdqa9b920l
 title: Open Search Patterns
 desc: ""
-updated: 1748206166478
+updated: 1750870307022
 created: 1748205542731
 ---
 
@@ -37,5 +37,3 @@ graph LR
 ## Relacionado
 
 - [[swe.cloud.aws.services.data-analytics.open-search]]
-
-#SWE #Cloud #AWS #AWSServices #DataAnalytics #AmazonOpenSearch

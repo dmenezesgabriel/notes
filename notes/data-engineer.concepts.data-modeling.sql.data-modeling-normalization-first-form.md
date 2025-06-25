@@ -1,8 +1,8 @@
 ---
 id: wudekg95drgrg16fh2tb77p
 title: Data Modeling Normalization First Form
-desc: ''
-updated: 1746457559096
+desc: ""
+updated: 1750870116218
 created: 1746457479702
 ---
 
@@ -46,5 +46,3 @@ created: 1746457479702
   ```
 
 [[data-engineer.concepts.data-modeling.sql.data-modeling-normalization]]
-
-#DataEngineer #DataModelingConcepts #DataModelingNormalization

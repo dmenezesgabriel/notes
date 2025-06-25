@@ -2,7 +2,7 @@
 id: iho91fcijq31g3jq2agg3nq
 title: Self Managed Nodes
 desc: ""
-updated: 1746391433857
+updated: 1750870264906
 created: 1746391433857
 ---
 
@@ -11,5 +11,3 @@ created: 1746391433857
 - Suporta instancias _On-Demand_ ou _Spot_
 
 [[swe.cloud.aws.services.containers.eks.managed-node-groups]]
-
-#SWE #Cloud #AWS #AWSServices #AmazonEKS

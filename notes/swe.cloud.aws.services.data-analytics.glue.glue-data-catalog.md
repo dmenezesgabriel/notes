@@ -2,7 +2,7 @@
 id: 6p0fcq4adbdmajg409kcxt3
 title: Glue Data Catalog
 desc: ""
-updated: 1748210042456
+updated: 1750870287502
 created: 1748210042456
 ---
 
@@ -17,5 +17,3 @@ Catalogar conjuntos de dados
 - [[swe.cloud.aws.services.data-analytics.athena]]
 - [[swe.cloud.aws.services.data-analytics.redshift.redshift-spectrum]]
 - [[swe.cloud.aws.services.data-analytics.emr]]
-
-#SWE #Cloud #AWS #AWSServices #DataAnalytics #AmazonGlue

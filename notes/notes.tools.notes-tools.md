@@ -1,8 +1,8 @@
 ---
 id: t1vdv141n5j4o1e048909m0
 title: Notes Tools
-desc: ''
-updated: 1746117054668
+desc: ""
+updated: 1750870205145
 created: 1732410354180
 ---
 
@@ -20,5 +20,3 @@ created: 1732410354180
 
 - [MGit](https://github.com/maks/MGit)
 - [Syncthing](https://syncthing.net/)
-
-#Notes #NotesTools

@@ -2,7 +2,7 @@
 id: teh9ymoc14egqomeoyn1tgv
 title: Redshift Data Ingestion
 desc: ""
-updated: 1748203222231
+updated: 1750870316937
 created: 1748094697894
 ---
 
@@ -13,5 +13,3 @@ created: 1748094697894
 ## Relacionado
 
 - [[swe.cloud.aws.services.data-analytics.redshift]]
-
-#SWE #Cloud #AWS #AWSServices #DataAnalytics #AmazonRedshift

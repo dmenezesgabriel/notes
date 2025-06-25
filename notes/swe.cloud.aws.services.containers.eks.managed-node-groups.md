@@ -2,7 +2,7 @@
 id: m2fzlvsxq9m18pb3rftk1vs
 title: Managed Node Groups
 desc: ""
-updated: 1746391284297
+updated: 1750870256462
 created: 1746391284297
 ---
 
@@ -11,5 +11,3 @@ created: 1746391284297
 - Suporta instancias _On-Demand_ ou _Spot_
 
 [[swe.cloud.aws.services.containers.eks.self-managed-nodes]]
-
-#SWE #Cloud #AWS #AWSServices #AmazonEKS

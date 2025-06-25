@@ -1,8 +1,8 @@
 ---
 id: wcwfhmmvepzkowfesht29t8
 title: Data Mesh
-desc: ''
-updated: 1737150722399
+desc: ""
+updated: 1750870100144
 created: 1736168286033
 ---
 
@@ -54,5 +54,3 @@ graph LR
         C2 --> C3
     end
 ```
-
-#DataEngineer #DataMeshConcepts

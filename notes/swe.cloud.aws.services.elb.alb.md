@@ -1,8 +1,8 @@
 ---
 id: im3oha955b21kdb93bq06f8
 title: Alb
-desc: ''
-updated: 1745193488557
+desc: ""
+updated: 1750870396261
 created: 1745111354356
 ---
 
@@ -22,5 +22,3 @@ Podem ser:
 ## Header X-Forwarded-For
 
 Mostra o IP do cliente que esta requisitando o backend, uma vez que o IP da solicitação ao backend sera o do ALB
-
-#SWE #Cloud #AWS #AWSServices #AmazonELB

@@ -2,7 +2,7 @@
 id: kyn49xtglxu2z7bi0j3ho8c
 title: Databases
 desc: ""
-updated: 1747593703243
+updated: 1750870329907
 created: 1747588823467
 ---
 
@@ -57,5 +57,3 @@ Relacionamento entre dados
 ## Time Series
 
 - Amazon Timestream [[swe.cloud.aws.services.timestream]]
-
-#SWE #Cloud #AWS #AWSServices #Databases

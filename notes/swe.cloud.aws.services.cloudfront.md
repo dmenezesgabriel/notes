@@ -2,7 +2,7 @@
 id: 3cpmhhmqx4xhl8mop427urd
 title: Cloudfront
 desc: ""
-updated: 1747510027130
+updated: 1750870230318
 created: 1746048424648
 ---
 
@@ -35,5 +35,3 @@ architecture-beta
 ## Relacionado
 
 - [[swe.cloud.aws.services.s3]]
-
-#SWE #Cloud #AWS #AWSServices #AmazonCloudfront

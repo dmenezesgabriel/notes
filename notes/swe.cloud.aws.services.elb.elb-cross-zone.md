@@ -1,8 +1,8 @@
 ---
 id: k2a9s8knzvyc8h33rzqyr5f
 title: Elb Cross Zone
-desc: ''
-updated: 1745181603239
+desc: ""
+updated: 1750870400134
 created: 1745181396815
 ---
 
@@ -18,5 +18,3 @@ created: 1745181396815
 
 - Desabilitado por padrão
 - Com custos para transferência de dados entre zonas de disponibilidade se habilitado
-
-#SWE #Cloud #AWS #AWSServices #AmazonELB

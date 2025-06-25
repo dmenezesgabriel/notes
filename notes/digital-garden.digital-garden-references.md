@@ -1,8 +1,8 @@
 ---
 id: 4hxkj8u7sh62ft5xl7nbncm
 title: Digital Garden References
-desc: ''
-updated: 1745698905201
+desc: ""
+updated: 1750870187480
 created: 1738583212145
 ---
 
@@ -16,5 +16,3 @@ created: 1738583212145
 - [christopherbiscardi](https://www.christopherbiscardi.com/garden)
 - [simonswiss](https://simonswiss.com/)
 - [motherduck](https://motherduck.com/blog/)
-
-#DigitalGarden #DigitalGardenReferences

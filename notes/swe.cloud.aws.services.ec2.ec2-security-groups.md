@@ -1,8 +1,8 @@
 ---
 id: y58n70g4xqbqyl5m7jlww35
 title: Ec2 Security Groups
-desc: ''
-updated: 1744496121190
+desc: ""
+updated: 1750870378294
 created: 1744495172970
 ---
 
@@ -19,5 +19,3 @@ Controlam o trafego para dentro _(Inbound)_ ou fora _(outbound)_ de instancias E
 Causas comuns de erros:
 
 - Timeout em acesso ao EC2, configuração incorreta de Security Group
-
-#SWE #Cloud #AWS #AWSServices #AmazonEC2

@@ -2,7 +2,7 @@
 id: aexpe8g1lpew8x80fppqqsx
 title: Emr
 desc: ""
-updated: 1748206695647
+updated: 1750870284625
 created: 1748206695647
 ---
 
@@ -33,5 +33,3 @@ created: 1748206695647
 - _On-demand_
 - _Reserved_
 - _Spot Instances_
-
-#SWE #Cloud #AWS #AWSServices #DataAnalytics #AmazonEMR

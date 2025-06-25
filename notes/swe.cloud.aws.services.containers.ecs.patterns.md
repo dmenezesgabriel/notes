@@ -2,7 +2,7 @@
 id: 9h62nczf299gk68vglq2g26
 title: Patterns
 desc: ""
-updated: 1746388149963
+updated: 1750870247193
 created: 1746388149963
 ---
 
@@ -28,5 +28,3 @@ created: 1746388149963
 
 - Uma vez que uma tarefa ECS é parada um evento é recebido pelo `Event Bridge`
 - O `Event Bridge` aciona o `SNS` e envia um E-mail ao administrador
-
-#SWE #Cloud #AWS #AWSServices #AmazonECS

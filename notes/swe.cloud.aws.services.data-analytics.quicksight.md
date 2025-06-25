@@ -2,7 +2,7 @@
 id: vjkw5dqqo2rasuaz6lvpf87
 title: Quicksight
 desc: ""
-updated: 1748207442842
+updated: 1750870310037
 created: 1748207442842
 ---
 
@@ -25,5 +25,3 @@ created: 1748207442842
 ## Relacionado
 
 - [[daily.journal.2025.05.25]]
-
-#SWE #Cloud #AWS #AWSServices #DataAnalytics #AmazonQuickSight

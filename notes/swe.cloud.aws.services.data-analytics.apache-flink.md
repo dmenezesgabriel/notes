@@ -2,7 +2,7 @@
 id: acc4khz1schnh2wu367gdpm
 title: Apache Flink
 desc: ""
-updated: 1748224133523
+updated: 1750870268256
 created: 1748224133523
 ---
 
@@ -13,5 +13,3 @@ created: 1748224133523
 
 - Ler dados do Kinesis Data Stream ou Amazon MSK
 - Não lê dados do Amazon Data Firehose [[swe.cloud.aws.services.integration.data-firehose]]
-
-#SWE #Cloud #AWS #AWSServices #DataAnalytics #AmazonApacheFLink

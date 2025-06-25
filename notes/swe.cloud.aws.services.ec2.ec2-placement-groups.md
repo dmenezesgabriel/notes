@@ -1,8 +1,8 @@
 ---
 id: qqct2016sj9fygidiajtfv6
 title: Ec2 Placement Groups
-desc: ''
-updated: 1745007394314
+desc: ""
+updated: 1750870373918
 created: 1744837456954
 ---
 
@@ -19,5 +19,3 @@ diferentes zonas de disponibilidade (máximo de 7 instancias por grupo por AZ).
 ## Partition
 
 Diferentes partições de um hardware. Ideal para Hadoop, Cassandra, Kafka.
-
-#SWE #Cloud #AWS #AWSServices #AmazonEC2

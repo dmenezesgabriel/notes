@@ -1,8 +1,8 @@
 ---
 id: q6z50c5cdccsr0v4c78aibi
 title: Ec2 Efs
-desc: ''
-updated: 1745096865044
+desc: ""
+updated: 1750870343721
 created: 1745096373200
 ---
 
@@ -16,5 +16,3 @@ created: 1745096373200
 - Standard
 - Infrequent access
 - Archive
-
-#SWE #Cloud #AWS #AWSServices #AmazonEC2

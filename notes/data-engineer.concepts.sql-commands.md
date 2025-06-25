@@ -1,8 +1,8 @@
 ---
 id: vbr0qpv5ytea3y8uzdex81c
 title: SQL Commands
-desc: ''
-updated: 1737150697112
+desc: ""
+updated: 1750870136834
 created: 1737150372548
 ---
 
@@ -49,5 +49,3 @@ Transaction Control Language
 - SAVEPOINT
 - SET
 - TRANSACTION
-
-#DataEngineer #SQLConcepts #SQLCommands

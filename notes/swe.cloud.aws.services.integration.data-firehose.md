@@ -2,7 +2,7 @@
 id: 5yidr1xyddjerlwl3r1nrfb
 title: Data Firehose
 desc: ""
-updated: 1746320187222
+updated: 1750870429940
 created: 1746287788620
 ---
 
@@ -13,5 +13,3 @@ created: 1746287788620
 - pay per use
 - near real time (buffer)
 - suporta CSV, JSON, Parquet, Avro, Raw Text, Dados binários
-
-#SWE #Cloud #AWS #AWSServices #AmazonFirehose

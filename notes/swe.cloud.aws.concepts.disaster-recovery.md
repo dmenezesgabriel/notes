@@ -2,7 +2,7 @@
 id: q324gr7482ulhsnbsh1g9zy
 title: Disaster Recovery
 desc: ""
-updated: 1750816778014
+updated: 1750870213696
 created: 1750814310508
 ---
 
@@ -66,5 +66,3 @@ Downtime (RTO) é calculado o tempo entre o desastre e a recuperação
 ## Relacionado
 
 - [[daily.journal.2025.06.24]]
-
-#SWE #Cloud #AWS #Concepts #DisasterRecovery

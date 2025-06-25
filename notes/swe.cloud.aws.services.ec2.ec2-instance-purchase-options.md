@@ -1,8 +1,8 @@
 ---
 id: qxg0hp65n1b9fyvl4q5bchi
 title: Ec2 Instance Purchase Options
-desc: ''
-updated: 1744578223567
+desc: ""
+updated: 1750870360941
 created: 1744563591149
 ---
 
@@ -53,5 +53,3 @@ created: 1744563591149
 - reserva instancias On-Demand em uma availability zone especifica por qualquer duração de tempo
 - pode ser combinado com Regional Reserved instances ou Savings Plan
 - curto prazo e cargas de trabalho ininterruptas em uma zona de disponibilidade especifica
-
-#SWE #Cloud #AWS #AWSServices #AmazonEC2

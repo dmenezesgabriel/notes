@@ -2,7 +2,7 @@
 id: cil5jwer4esirnradcsxvp9
 title: Asg
 desc: ""
-updated: 1746387944164
+updated: 1750870237545
 created: 1746386101026
 ---
 
@@ -17,5 +17,3 @@ created: 1746386101026
 - Target Tracking: Escala baseado em métrica especifica do `CloudWatch`
 - Step Scaling: Escala baseado em alarme especifico do `CloudWatch`
 - Scheduled Scaling: Escala baseado em data e hora (mudanças previsíveis)
-
-#SWE #Cloud #AWS #AWSServices #AmazonECS

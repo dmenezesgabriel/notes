@@ -2,7 +2,7 @@
 id: cnnq1iwqe28rr9wlcqip3iw
 title: Control Tower
 desc: ""
-updated: 1749211758565
+updated: 1750870413142
 created: 1749211041944
 ---
 
@@ -20,5 +20,3 @@ created: 1749211041944
 
 - **Preventive**: SCP (Security Control Policies). Ex: Restringir regiões em todas as suas contas
 - **Detective**: AWS Config. Ex: identificar recursos não tagueados
-
-#SWE #Cloud #AWS #AWSServices #AWSIAM #AWSControlTower

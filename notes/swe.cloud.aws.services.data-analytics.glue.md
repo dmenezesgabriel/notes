@@ -2,7 +2,7 @@
 id: s5p26vpss9c7mxo5n0skrw5
 title: Glue
 desc: ""
-updated: 1748208136129
+updated: 1750870293217
 created: 1748208136129
 ---
 
@@ -28,5 +28,3 @@ Serverless ETL
 - [[swe.cloud.aws.services.rds]]
 - [[swe.cloud.aws.services.data-analytics.redshift]]
 - [[swe.cloud.aws.services.data-analytics.athena]]
-
-#SWE #Cloud #AWS #AWSServices #DataAnalytics #AmazonGlue

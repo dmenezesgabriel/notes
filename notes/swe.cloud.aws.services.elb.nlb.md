@@ -1,8 +1,8 @@
 ---
 id: ht7nec9zxsltd8ycbg1jr3j
 title: Nlb
-desc: ''
-updated: 1745113300407
+desc: ""
+updated: 1750870409132
 created: 1745113145267
 ---
 
@@ -16,5 +16,3 @@ created: 1745113145267
 - Instancias EC2
 - Endereços de IP
 - Application Load Balancer
-
-#SWE #Cloud #AWS #AWSServices #AmazonELB

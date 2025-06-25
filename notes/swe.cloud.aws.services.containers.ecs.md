@@ -2,7 +2,7 @@
 id: uky4oz5fhqi4l6x5ugi7bi0
 title: Ecs
 desc: ""
-updated: 1746386078615
+updated: 1750870240805
 created: 1746381080618
 ---
 
@@ -25,5 +25,3 @@ created: 1746381080618
 
 - Service: Aplicação Ex: Web
 - Task: Batch Job
-
-#SWE #Cloud #AWS #AWSServices #AmazonECS

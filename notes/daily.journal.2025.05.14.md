@@ -2,7 +2,7 @@
 id: kpcfnuykmkvqc4ki83m2oho
 title: "2025-05-14"
 desc: ""
-updated: 1747225161029
+updated: 1750870072519
 created: 1747224877475
 traitIds:
   - journalNote
@@ -16,5 +16,3 @@ traitIds:
 - [Sparse Index](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-indexes-general-sparse-indexes.html)
 
 [[swe.cloud.aws.services.serverless.dynamodb]]
-
-#SWE #Cloud #AWS #AWSServices #Serverless #AmazonDynamoDB

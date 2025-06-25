@@ -2,7 +2,7 @@
 id: 9vrbz9iw5gndoncdrust2ek
 title: Msk
 desc: ""
-updated: 1748224540722
+updated: 1750870300473
 created: 1748224540722
 ---
 
@@ -15,5 +15,3 @@ Apache Kafka gerenciado pela AWS, possui função similar ao Kinesis Data Stream
 - Recuperação automática de falhas comuns do Apache Kafka
 - Dados são armazenados em um volume EBS
 - MSK serverless, definição de capacidade e _auto-scaling_ automáticas
-
-#SWE #Cloud #AWS #AWSServices #DataAnalytics #AmazonApacheKafka

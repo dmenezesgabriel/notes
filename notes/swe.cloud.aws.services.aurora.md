@@ -2,7 +2,7 @@
 id: r4nr26e29smt3uo6rngia32
 title: Aurora
 desc: ""
-updated: 1747591479688
+updated: 1750870224545
 created: 1745261496357
 ---
 
@@ -61,5 +61,3 @@ Criar um novo cluster baseado em um existente (mais rápido que restaurar um sna
 ## Relacionado
 
 - [[swe.cloud.aws.services.databases]]
-
-#SWE #Cloud #AWS #AWSServices #AmazonAurora

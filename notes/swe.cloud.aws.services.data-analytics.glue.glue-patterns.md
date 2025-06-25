@@ -2,7 +2,7 @@
 id: vavs4x2eosx0ncy2k28mdzh
 title: Glue Patterns
 desc: ""
-updated: 1748209682036
+updated: 1750870289981
 created: 1748209682036
 ---
 
@@ -23,5 +23,3 @@ graph LR
 ## Relacionado
 
 - [[swe.cloud.aws.services.data-analytics.glue]]
-
-#SWE #Cloud #AWS #AWSServices #DataAnalytics #AmazonGlue

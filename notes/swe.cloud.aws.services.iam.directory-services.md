@@ -2,7 +2,7 @@
 id: tsy3soaos9104chwd6ssn1h
 title: Directory Services
 desc: ""
-updated: 1749210958898
+updated: 1750870417265
 created: 1749210090352
 ---
 
@@ -23,5 +23,3 @@ created: 1749210090352
 - Não utiliza o _Active Directory_ da Microsoft
 - Não conecta com o _Active Directory_ da Microsoft
 - Suporte a MFA (Multiple Factor Authentication)
-
-#SWE #Cloud #AWS #AWSServices #AWSIAM #AWSActiveDirectory

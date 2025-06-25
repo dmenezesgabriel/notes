@@ -2,7 +2,7 @@
 id: 578vynz20kt7izav75bop3m
 title: Athena
 desc: ""
-updated: 1747965212989
+updated: 1750870278018
 created: 1747964230357
 ---
 
@@ -30,5 +30,3 @@ created: 1747964230357
 
 - [[swe.cloud.aws.services.data-analytics.athena.athena-performance]]
 - [[swe.cloud.aws.services.data-analytics.athena.athena-federated-query]]
-
-#SWE #Cloud #AWS #AWSServices #DataAnalytics #AmazonAthena

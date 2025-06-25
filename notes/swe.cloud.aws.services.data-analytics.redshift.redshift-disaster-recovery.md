@@ -2,7 +2,7 @@
 id: mwcm6drkmlcrflfzhpua75l
 title: Redshift Disaster Recovery
 desc: ""
-updated: 1748094597711
+updated: 1750870320063
 created: 1748094201049
 ---
 
@@ -20,5 +20,3 @@ created: 1748094201049
 ## Relacionado
 
 - [[swe.cloud.aws.services.data-analytics.redshift]]
-
-#SWE #Cloud #AWS #AWSServices #DataAnalytics #AmazonRedshift

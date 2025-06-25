@@ -2,7 +2,7 @@
 id: 5hc9gwpom02byxccoweiiu2
 title: Elasticache
 desc: ""
-updated: 1747593005719
+updated: 1750870387235
 created: 1745374010454
 ---
 
@@ -31,5 +31,3 @@ _Importante: requer alterações no código da aplicação_
 ## Relacionado
 
 - [[swe.cloud.aws.services.databases]]
-
-#SWE #Cloud #AWS #AWSServices #AmazonElasticache

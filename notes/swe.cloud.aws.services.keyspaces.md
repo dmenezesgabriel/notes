@@ -2,7 +2,7 @@
 id: me39a2obvlooi1a9jb07x2i
 title: Keyspaces
 desc: ""
-updated: 1747604447500
+updated: 1750870435333
 created: 1747604447500
 ---
 
@@ -32,5 +32,3 @@ Um serviço gerenciado de Apache Cassandra
 ## Relacionado
 
 - [[swe.cloud.aws.services.databases]]
-
-#SWE #Cloud #AWS #AWSServices #AmazonKeyspaces

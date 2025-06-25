@@ -1,8 +1,8 @@
 ---
 id: efw0m8b2ndfs1v9zsxz37oi
 title: Data Modeling Normalization
-desc: ''
-updated: 1746469852974
+desc: ""
+updated: 1750870125657
 created: 1746454427494
 ---
 
@@ -43,5 +43,3 @@ erDiagram
 ```
 
 [[data-engineer.concepts.data-modeling.sql.data-modeling-normalization-first-form]]
-
-#DataEngineer #DataModelingConcepts #DataModelingNormalization

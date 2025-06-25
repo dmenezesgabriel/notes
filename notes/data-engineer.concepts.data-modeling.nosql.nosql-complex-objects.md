@@ -1,7 +1,7 @@
 ---
 id: nid7mqt7kn9kvai4695z5za
 title: Nosql Complex Objects
-desc: ''
+desc: ""
 updated: 1747345294185
 created: 1747082210104
 ---

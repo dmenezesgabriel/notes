@@ -2,7 +2,7 @@
 id: gxb3i2bacvde9ktxi8gaz3x
 title: Eks
 desc: ""
-updated: 1746390009646
+updated: 1750870260193
 created: 1746390009646
 ---
 
@@ -17,5 +17,3 @@ created: 1746390009646
 
 - EC2 [[swe.cloud.aws.services.ec2]]
 - Fargate
-
-#SWE #Cloud #AWS #AWSServices #AmazonEKS

@@ -1,8 +1,8 @@
 ---
 id: l09k4o3kdziwierrz4wbq87
 title: Athena Performance
-desc: ''
-updated: 1747965013980
+desc: ""
+updated: 1750870274059
 created: 1747964689403
 ---
 
@@ -15,5 +15,3 @@ created: 1747964689403
 ## Relacionado
 
 - [[swe.cloud.aws.services.data-analytics.athena]]
-
-#SWE #Cloud #AWS #AWSServices #DataAnalytics #AmazonAthena

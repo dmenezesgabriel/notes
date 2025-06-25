@@ -2,7 +2,7 @@
 id: rgx8itxdnt8fen03fzbtw9e
 title: Redshift Spectrum
 desc: ""
-updated: 1748204444348
+updated: 1750870323627
 created: 1748204157294
 ---
 
@@ -13,5 +13,3 @@ created: 1748204157294
 ## Relacionado
 
 - [[swe.cloud.aws.services.data-analytics.redshift]]
-
-#SWE #Cloud #AWS #AWSServices #DataAnalytics #AmazonRedshift
