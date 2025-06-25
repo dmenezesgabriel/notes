@@ -81,7 +81,8 @@ preview:
   enableKatex: true
   automaticallyShowPreview: false
 publishing:
-  siteUrl: https://dmenezesgabriel.github.io
+  assetsPrefix: /notes
+  siteUrl: https://dmenezesgabriel.github.io/notes
   enableFMTitle: true
   enableNoteTitleForLink: true
   enablePrettyRefs: true
