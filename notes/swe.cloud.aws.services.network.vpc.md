@@ -2,7 +2,7 @@
 id: x9v88ylgar6gatdp1hfpjfn
 title: Vpc
 desc: ""
-updated: 1749919931771
+updated: 1750813694728
 created: 1749911321642
 ---
 
@@ -63,7 +63,7 @@ created: 1749911321642
   Configura um Customer Gateway no data center e um Virtual Private Gateway na VPC, estabelecendo uma VPN site-to-site pela Internet pública.
 
 - **AWS VPN CloudHub**
-  Modelo de VPN em estrela (hub-and-spoke) para conectar múltiplos sites.
+  Modelo de VPN em estrela (hub-and-spoke) para conectar múltiplos sites on-premise.
 
 - **Direct Connect**
   Configura um Virtual Private Gateway na VPC e estabelece uma conexão privada direta com um AWS Direct Connect Location.

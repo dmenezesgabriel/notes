@@ -2,11 +2,11 @@
 id: cl2ph4aqeset5n2y72nqanw
 title: Site to Site Vpn
 desc: ""
-updated: 1750018501642
+updated: 1750813511455
 created: 1750018501642
 ---
 
-- VPN Gateway -> Customer Gateway (Dispositivo on-premises)
+- Virtual Private Gateway (Ponto de entrada VPC) -> Customer Gateway (Dispositivo on-premises)
 
 ## Casos de Uso
 
