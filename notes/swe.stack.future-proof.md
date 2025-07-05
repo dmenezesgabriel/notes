@@ -2,23 +2,70 @@
 id: 8h0sybqrodb8ikbykuhc1ob
 title: Future Proof
 desc: ""
-updated: 1751674792285
+updated: 1751731688416
 created: 1750856338753
 ---
 
 # Future Proof Stack
 
-## Tech
+## Languages
 
-- Python
 - Java
-- Node
+- C#
+- Python
+- Typescript
+
+## Backend
+
+### Architectures
+
+- Serverless
+- Event Driven
+- Microservices
+- API Restful
+
+### Frameworks
+
+- Springboot
+- FastAPI
+- Nest.js
+- .NET
+
+## Frontend
+
+### Frameworks
+
 - Angular
 - React
-- Web Components (Lit Elements)
+
+### Architectures
+
+- Microfrontends
+- Serverless
+
+### Concepts
+
+- Web Components
+
+## SRE
+
+- Docker
 - IaC (Terraform)
+- Github Actions
+- CI/CD
+- DataDog
+- Prometheus
+- Grafana
 
 ## Databases
+
+### Language
+
+- SQL
+
+### Concepts
+
+- Database Modeling
 
 ### OLTP Databases
 
@@ -29,11 +76,57 @@ created: 1750856338753
 
 - DuckDB
 
+### NoSQL
+
+- DynamoDB
+- MongoDB
+- Redis
+
 ## Concepts
 
-- Micro Frontend
-- Serverless
+- SOLID
+- API Modeling (OpenAPI/Swagger)
+
+## Quality Assurance
+
+- Unit tests
+- Integration tests
+- End to end tests
+- BDD
+- Chaos tests
+- TaaC (Test as Code)
 
 ## Cloud
 
-- AWS
+### Best Practices
+
+- FinOps
+
+## Data
+
+- PySpark
+
+### AWS
+
+#### Services
+
+- IAM
+- VPC
+- CloudWatch
+- EC2
+- ECS
+- EKS
+- ELB
+- SQS
+- SNS
+- Step Functions
+- Lambda
+- API Gateway
+- DynamoDB
+- RDS
+- Elasticache
+- Cloud Front
+- S3
+- Glue
+- Athena
+- Sagemaker

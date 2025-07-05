@@ -2,7 +2,7 @@
 id: qh4lftiupxyxw4gf5jhyzfi
 title: Dms
 desc: ""
-updated: 1750873324235
+updated: 1751720652869
 created: 1750868661302
 ---
 
@@ -12,6 +12,7 @@ created: 1750868661302
 
 - Migração segura e rápida de bancos de dados na _AWS_, resiliente e _self healing_
 - Replicação Multi-AZ (Replica provisionada pelo _DMS_)
+- S3 para Kineses Data Stream
 
 ## Features
 

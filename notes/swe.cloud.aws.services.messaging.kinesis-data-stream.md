@@ -2,9 +2,16 @@
 id: t4lwoks5g5xnvdwezkr626g
 title: Kinesis Data Stream
 desc: ""
-updated: 1746320176982
+updated: 1751726284114
 created: 1746279466196
 ---
+
+## Casos de Uso
+
+- Alternativa ao Apache Kafka
+- Mover dados rapidamente de produtores de dados e, em seguida, processá-los continuamente, seja para transformá-los antes de emiti-los para um armazenamento de dados,
+
+## Features
 
 - Dados em _tempo real_ (Stream)
 - Retenção de dados por 365 dias
@@ -13,6 +20,8 @@ created: 1746279466196
 - Criptografia KMS/HTTP
 - Kinesis Producer Library (KPL) para escrever uma aplicação producer otimizada
 - Kinesis Client Library (KCL) para escrever uma aplicação consumer otimizada
+
+## Arquitetura
 
 ```mermaid
 architecture-beta
@@ -49,4 +58,4 @@ architecture-beta
 - Não é necessário provisionar ou gerenciar a capacidade
 - Capacidade padrão provisionada de entrada (4MB/s ou 4000 registros por segundo)
 
-#SWE #Cloud #AWS #AWSServices #AmazonKinesis
+## Enhanced Fanout

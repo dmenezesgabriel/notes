@@ -2,7 +2,7 @@
 id: atgcbm5h9nmfmndhxvsksq9
 title: Rds
 desc: ""
-updated: 1747590623406
+updated: 1751720141293
 created: 1745194261071
 ---
 
@@ -35,7 +35,7 @@ Banco relacional gerenciado
 
 ## Segurança
 
-- IAM, Security Groups, KMS, _SSL in transit_
+- IAM, Security Groups, KMS, **SSL** para _in transit security_
 
 ## Provisionamento
 

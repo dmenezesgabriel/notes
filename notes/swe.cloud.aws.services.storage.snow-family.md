@@ -2,7 +2,7 @@
 id: ry4n72vm2nciasd9hc3xkvv
 title: Snow Family
 desc: ""
-updated: 1746115849639
+updated: 1751726419730
 created: 1746115662044
 ---
 
@@ -17,4 +17,6 @@ Permite coletar e processar dados em "edge locations" e migrar os dados posterio
 
 ## AWS Snowmobile
 
-#SWE #Cloud #AWS #AWSServices #AmazonSnowFamily
+## Snowball Edge
+
+- Não é possível copiar dados diretamente de dispositivos AWS Snowball Edge para o Amazon S3 Glacier, apenas para Amazon S3 e depois move-los ao Glacier.

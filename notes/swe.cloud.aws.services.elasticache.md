@@ -2,7 +2,7 @@
 id: 5hc9gwpom02byxccoweiiu2
 title: Elasticache
 desc: ""
-updated: 1750870387235
+updated: 1751719922301
 created: 1745374010454
 ---
 
@@ -18,6 +18,9 @@ Redis/ Memcached gerenciado pela AWS assim como RDS, porém para cache
 
 ## Features
 
+- Criptografia
+- **Conformidade com HIPAA (Health Insurance Portability and Accountability Act)**
+- **Conformidade com PCI DSS**
 - Armazenamento em memória
 - latência sub-milissegundos
 - escolha do tipo de instância. Ex: cache.m6g.large
