@@ -2,7 +2,7 @@
 id: 8h0sybqrodb8ikbykuhc1ob
 title: Future Proof
 desc: ""
-updated: 1750856601113
+updated: 1751674792285
 created: 1750856338753
 ---
 
@@ -10,7 +10,6 @@ created: 1750856338753
 
 ## Tech
 
-- Generative AI
 - Python
 - Java
 - Node
@@ -21,18 +20,12 @@ created: 1750856338753
 
 ## Databases
 
-## Graph Databases
-
-- Neo4J
-
-## Vector Databases
-
-## OLTP Databases
+### OLTP Databases
 
 - SQLite
 - PostgreSQL
 
-## OLAP Databases
+### OLAP Databases
 
 - DuckDB
 
