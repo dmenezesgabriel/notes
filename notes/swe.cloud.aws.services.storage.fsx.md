@@ -2,7 +2,7 @@
 id: rwphsa7nh649ub6eu6jbiuz
 title: Fsx
 desc: ""
-updated: 1746117323100
+updated: 1751739887438
 created: 1746116412473
 ---
 
@@ -12,7 +12,7 @@ Permite provisionar sistemas de arquivos de alta performance na aws
 
 ## Fsx for Lustre
 
-- Sistema de arquivos distribuído
+- Sistema de arquivos **distribuído**
 - HPC (High Performance Computing)
 - Machine Learning
 - Integração com S3
@@ -30,5 +30,3 @@ Permite provisionar sistemas de arquivos de alta performance na aws
 
 - NFS
 - Point in Time cloning
-
-#SWE #Cloud #AWS #AWSServices #AmazonFSX

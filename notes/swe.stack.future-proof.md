@@ -2,7 +2,7 @@
 id: 8h0sybqrodb8ikbykuhc1ob
 title: Future Proof
 desc: ""
-updated: 1751731688416
+updated: 1751735146069
 created: 1750856338753
 ---
 
@@ -56,6 +56,8 @@ created: 1750856338753
 - DataDog
 - Prometheus
 - Grafana
+- Deploy Blue Green
+- Deploy Canary
 
 ## Databases
 

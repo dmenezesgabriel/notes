@@ -2,7 +2,7 @@
 id: v051cpikxq03296oxqee447
 title: Cloud Watch Alarms
 desc: ""
-updated: 1748280282878
+updated: 1751739882855
 created: 1748280282878
 ---
 
@@ -10,8 +10,14 @@ created: 1748280282878
 
 - Alarmes compostos com condições _AND_ e _OR_
 - Podem ser criados baseados em uma Métrica do CloudWatch
+- Alarmes podem disparar ações para por exemplo reiniciar uma instancia EC2 [[swe.cloud.aws.services.ec2]]
 
-# Status de um alarme
+## CloudWatch Alarm Action
+
+- EC2 Reboot
+- ...
+
+## Status de um alarme
 
 - `OK`
 - `INSUFFICIENT_DATA`
@@ -25,5 +31,3 @@ created: 1748280282878
 ## Relacionado
 
 - [[swe.cloud.aws.services.monitoring-audit.cloud-watch]]
-
-#SWE #Cloud #AWS #AWSServices #Monitoring #AmazonCloudWatch

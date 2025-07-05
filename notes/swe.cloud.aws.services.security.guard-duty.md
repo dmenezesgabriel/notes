@@ -2,7 +2,7 @@
 id: pk8gp67ff9l3lyx678lbnsz
 title: Guard Duty
 desc: ""
-updated: 1749904602095
+updated: 1751739875528
 created: 1749902544666
 ---
 
@@ -25,5 +25,3 @@ Utiliza **Machine Learning** para detecção inteligente de ameças
 
 - [[daily.journal.2025.06.14]]
 - [[swe.cloud.aws.services.security]]
-
-#SWE #Cloud #AWS #AWSServices #Security #AmazonGuardDuty

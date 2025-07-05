@@ -2,7 +2,7 @@
 id: cl2ph4aqeset5n2y72nqanw
 title: Site to Site Vpn
 desc: ""
-updated: 1750813511455
+updated: 1751734030760
 created: 1750018501642
 ---
 
@@ -14,7 +14,7 @@ created: 1750018501642
 
 ## AWS VPN Cloud Hub
 
-- Fornece comunicação segura entre múltiplos sites caso você tenha múltiplas conexões VPN
+- Fornece comunicação segura entre múltiplos sites caso você tenha múltiplas conexões AWS Site-to-Site VPN. Sites que usam conexões do AWS Direct Connect com virtual private gateway também podem fazer parte do AWS VPN CloudHub.
 
 ## Relacionado
 
