@@ -1,8 +1,8 @@
 ---
 id: 4j098buseynpqbpw6h8xf1e
 title: Shortcuts
-desc: ''
-updated: 1732551570279
+desc: ""
+updated: 1751732013851
 created: 1732414567971
 ---
 
@@ -85,5 +85,3 @@ ALT + RightArrowKey
 ```sh
 ALT + LeftArrowKey
 ```
-
-#SWE #VSCodeShortCuts

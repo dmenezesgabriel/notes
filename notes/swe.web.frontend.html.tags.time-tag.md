@@ -1,8 +1,8 @@
 ---
 id: cginitixh42ggnlahqwf3tb
 title: Time Tag
-desc: ''
-updated: 1733590163121
+desc: ""
+updated: 1751731844342
 created: 1733590106119
 ---
 
@@ -11,5 +11,3 @@ created: 1733590106119
   Publicado ha 1h
 </time>
 ```
-
-#SWE #Frontend #HTMLTags #HTMLAccessibility

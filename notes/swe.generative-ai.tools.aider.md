@@ -2,7 +2,7 @@
 id: orh8nz24eejhxw0ybmwlp01
 title: Aider
 desc: ""
-updated: 1749661369735
+updated: 1751732078250
 created: 1749661265002
 ---
 
@@ -37,5 +37,3 @@ aider --model gemini-exp
 ## Relacionado
 
 - [[daily.journal.2025.06.11]]
-
-#SWE #GenerativeAI #Tools

@@ -1,8 +1,8 @@
 ---
 id: soda9bfmi3nn6qguf1kd46v
 title: React Use Effect Hook
-desc: ''
-updated: 1734794426009
+desc: ""
+updated: 1751731914329
 created: 1734207281754
 ---
 
@@ -148,5 +148,3 @@ export function App() {
   );
 }
 ```
-
-#SWE #Web #FrontendFrameworks #ReactHooks #ReactHooksUseEffect

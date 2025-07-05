@@ -1,8 +1,8 @@
 ---
 id: mbd6uocxi75xwqiv1dhsdya
 title: JWT
-desc: ''
-updated: 1732740685616
+desc: ""
+updated: 1751731995126
 created: 1732738460921
 ---
 
@@ -67,5 +67,3 @@ graph TD
 ## Recursos
 
 - [JWT.io](https://jwt.io/)
-
-#SWE #Web #Authentication #JWT

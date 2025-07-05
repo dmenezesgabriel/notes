@@ -1,8 +1,8 @@
 ---
 id: o40memcjc7mydf9f306905e
 title: Greater than Selector
-desc: ''
-updated: 1733590659671
+desc: ""
+updated: 1751731938454
 created: 1733590501265
 ---
 
@@ -17,5 +17,3 @@ Aplica estilos apenas ao primeiro elemento filho daquele tipo dentro do elemento
   justify-content: space-between;
 }
 ```
-
-#SWE #Frontend #CSSSelectors

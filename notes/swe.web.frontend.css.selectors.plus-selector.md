@@ -1,8 +1,8 @@
 ---
 id: 4vt9i20fdixfxr7j8akg3fq
 title: Plus Selector
-desc: ''
-updated: 1733590671994
+desc: ""
+updated: 1751731934314
 created: 1733590283024
 ---
 
@@ -13,5 +13,3 @@ Adiciona a estilização apenas caso haja um elemento HTML com classe `.post` an
   margin-top: 2rem;
 }
 ```
-
-#SWE #Frontend #CSSSelectors

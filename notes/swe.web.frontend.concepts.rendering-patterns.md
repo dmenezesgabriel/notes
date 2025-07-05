@@ -1,8 +1,8 @@
 ---
 id: 9621qgyhc5h6dy90akywghm
 title: Rendering Patterns
-desc: ''
-updated: 1734207321208
+desc: ""
+updated: 1751731964754
 created: 1732534954991
 ---
 
@@ -34,6 +34,4 @@ timeline
     2023-09-01 : SolidStart introduced by Solid.js for highly efficient rendering
 ```
 
-[[swe.web.frontend.concepts.ssr-vs-spa]]pa]]
-
-#SWE #FrontEnd #RenderingPatterns #SSR #SPA
+[[swe.web.frontend.concepts.ssr-vs-spa]]

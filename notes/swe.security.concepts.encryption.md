@@ -2,7 +2,7 @@
 id: 5zwxoppztrm5ana0wltja75
 title: Encryption
 desc: ""
-updated: 1749226692835
+updated: 1751732032738
 created: 1749226095622
 ---
 
@@ -17,5 +17,3 @@ created: 1749226095622
 - Dados são criptografados após serem recebidos pelo servidor e então armazenados de forma segura
 - Dados são descriptografados antes de serem enviados
 - Os dados são criptografados utilizado uma chave de criptografia
-
-#SWE #Security #SecurityConcepts #Encryption

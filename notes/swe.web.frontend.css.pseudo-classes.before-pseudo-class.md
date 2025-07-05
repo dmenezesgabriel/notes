@@ -1,8 +1,8 @@
 ---
 id: nlv1y19lb0upaojq2obclsi
 title: Before Pseudo Class
-desc: ''
-updated: 1733594976648
+desc: ""
+updated: 1751731946115
 created: 1733594745074
 ---
 
@@ -14,5 +14,3 @@ span::before {
   padding: 0 0.25rem;
 }
 ```
-
-#SWE #Frontend #CSSSelectors

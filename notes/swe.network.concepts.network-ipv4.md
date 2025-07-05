@@ -2,7 +2,7 @@
 id: 4rj8pll9cjvp17zqi9tcq2e
 title: Network Ipv4
 desc: ""
-updated: 1750811854858
+updated: 1751732047602
 created: 1744495971185
 ---
 
@@ -57,5 +57,3 @@ composto por dois componentes:
 ## Relacionado
 
 - [[swe.network.concepts.network-ipv6]]
-
-#SWE #Network #Concepts #IPv4

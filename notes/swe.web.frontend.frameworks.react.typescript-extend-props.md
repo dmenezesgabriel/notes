@@ -1,8 +1,8 @@
 ---
 id: y4olesvojqr2ovza93uliyo
 title: TypeScript Extend Props
-desc: ''
-updated: 1733671055317
+desc: ""
+updated: 1751731849491
 created: 1733670291262
 ---
 
@@ -23,5 +23,3 @@ export function Avatar({ hasBorder = true, ...props }: AvatarProps) {
   );
 }
 ```
-
-#SWE #FrontendWebFrameworks #ReactTypescript

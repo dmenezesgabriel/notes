@@ -1,8 +1,8 @@
 ---
 id: x8r3ogq4ng4rolz1apwi1kw
 title: Types of Form
-desc: ''
-updated: 1734185817815
+desc: ""
+updated: 1751731855103
 created: 1734185016512
 ---
 
@@ -53,5 +53,3 @@ export function someForm() {
 
 Para: formulários mais simples
 Contra: menos controle. Ex: Nao e possível pegar letra a letra sendo digitada em tempo real.
-
-#SWE #FrontendWebFrameworks #ReactTypesOfForms

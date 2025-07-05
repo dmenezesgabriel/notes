@@ -2,7 +2,7 @@
 id: 91hlfm7nc55npt5ssrts29o
 title: Sqs Fifo
 desc: ""
-updated: 1751720317131
+updated: 1751731819016
 created: 1746137345699
 ---
 
@@ -13,5 +13,3 @@ First In First Out
 - Remoção de mensagens duplicadas dentro de um range de 5 minutos com _Deduplication ID_
 - O nome da fila deve ter o sufixo `.fifo`
 - **Para converter uma fila _standard_ em _FIFO_ é necessário deleta-la e recria-la como _FIFO_**
-
-#SWE #Cloud #AWS #AWSServices #AmazonSQS
