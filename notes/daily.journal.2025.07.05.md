@@ -11,3 +11,4 @@ traitIds:
 - [[swe.web.api.concepts.throttling]]
 - [[swe.cloud.aws.services.global-accelerator]]
 - [[swe.cloud.aws.services.vpc.vpc-sharing]]
+- [[swe.open -source.self-hosting]]
