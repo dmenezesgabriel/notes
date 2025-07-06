@@ -2,9 +2,11 @@
 id: iv4s57l766qqo5p5u0vu597
 title: Ec2 Ebs
 desc: ""
-updated: 1750870341016
+updated: 1751750226963
 created: 1745011157699
 ---
+
+- Custo por capacidade provisionada
 
 ## Multi-attach
 

@@ -2,7 +2,7 @@
 id: 6xx697ifvzjbkuco7qb86hs
 title: S3
 desc: ""
-updated: 1747593637863
+updated: 1751751858432
 created: 1745696116353
 ---
 
@@ -47,5 +47,4 @@ created: 1745696116353
 - [[swe.cloud.aws.services.s3.s3-storage-classes]]
 - [[swe.cloud.aws.services.s3.s3-storage-lens]]
 - [[swe.cloud.aws.services.databases]]
-
-#SWE #Cloud #AWS #AWSServices #AmazonS3
+- [[swe.cloud.aws.services.s3.s3-versioning]]
