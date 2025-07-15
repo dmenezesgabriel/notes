@@ -1,7 +1,7 @@
 ---
 id: mdfipkni0rghfypfu5x4h03
-title: "2025-06-30"
-desc: ""
+title: '2025-06-30'
+desc: ''
 updated: 1751311347461
 created: 1751309096086
 traitIds:
@@ -19,7 +19,7 @@ traitIds:
 - [[swe.cloud.aws.services.cost-explorer]]
 - [[swe.cloud.aws.services.cost-anomaly-detection]]
 - [[swe.cloud.aws.services.outposts]]
-- [[swe.cloud.services.aws.batch]]
+- [[swe.cloud.aws.services.batch]]
 - [[swe.cloud.aws.services.app-flow]]
 - [[swe.cloud.aws.services.amplify]]
 - [[swe.cloud.aws.services.solutions.instance-scheduler]]

@@ -2,7 +2,7 @@
 id: 6xx697ifvzjbkuco7qb86hs
 title: S3
 desc: ""
-updated: 1751751858432
+updated: 1752415434233
 created: 1745696116353
 ---
 
@@ -16,6 +16,7 @@ created: 1745696116353
 - Tamanho máximo de um objeto: 5TB
 - Para fazer o upload de mais de 5GB é necessário utilizar o "multi-part upload"
 - O nome de um bucket deve ser único em todas regiões globalmente, porem é um serviço regional
+- Por padrão é dona de um objeto s3 a conta que fez o upload ou o criou, caso o bucket seja de outra conta o dono do bucket nao tera acesso ao objeto
 
 ## Casos de Uso
 
