@@ -2,7 +2,7 @@
 id: 8h0sybqrodb8ikbykuhc1ob
 title: Future Proof
 desc: ""
-updated: 1752783607693
+updated: 1752783714264
 created: 1750856338753
 ---
 
@@ -82,6 +82,7 @@ created: 1750856338753
 - REST
 - Design Patterns
 - API Modeling (OpenAPI/Swagger)
+- Oauth
 
 ## Quality Assurance
 
