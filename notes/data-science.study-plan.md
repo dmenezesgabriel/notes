@@ -2,7 +2,7 @@
 id: s5dbyyhgpczjf9iddg4w36q
 title: Study Plan
 desc: ""
-updated: 1748897964609
+updated: 1752711817995
 created: 1748897878657
 ---
 
@@ -83,6 +83,7 @@ created: 1748897878657
 - Conceitos fundamentais de IA Generativa
 - Conceitos fundamentais de NLP
 - Arquitetura Transformer
+- In context learning
 - LLMs (Large Language Models)
 - RAGs e bancos de dados vetoriais
 - Técnicas de Engenharia de Prompt

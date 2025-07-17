@@ -2,7 +2,7 @@
 id: j00qhkt9uubylyd7u1jvqu7
 title: Internet Gateway
 desc: ""
-updated: 1749922920929
+updated: 1752628634974
 created: 1749921524113
 ---
 
@@ -14,6 +14,7 @@ created: 1749921524113
 
 - Escala horizontalmente
 - Altamente disponível e redundante
+- Funciona como _Network Address Translation (NAT)_ para instancias com IPv4
 
 ## Relacionado
 

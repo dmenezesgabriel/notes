@@ -2,7 +2,7 @@
 id: 8h0sybqrodb8ikbykuhc1ob
 title: Future Proof
 desc: ""
-updated: 1751735146069
+updated: 1752783607693
 created: 1750856338753
 ---
 
@@ -10,8 +10,7 @@ created: 1750856338753
 
 ## Languages
 
-- Java
-- C#
+- Go
 - Python
 - Typescript
 
@@ -22,14 +21,6 @@ created: 1750856338753
 - Serverless
 - Event Driven
 - Microservices
-- API Restful
-
-### Frameworks
-
-- Springboot
-- FastAPI
-- Nest.js
-- .NET
 
 ## Frontend
 
@@ -47,9 +38,10 @@ created: 1750856338753
 
 - Web Components
 
-## SRE
+## Devops
 
 - Docker
+- Kubernetes
 - IaC (Terraform)
 - Github Actions
 - CI/CD
@@ -87,6 +79,8 @@ created: 1750856338753
 ## Concepts
 
 - SOLID
+- REST
+- Design Patterns
 - API Modeling (OpenAPI/Swagger)
 
 ## Quality Assurance
@@ -103,10 +97,6 @@ created: 1750856338753
 ### Best Practices
 
 - FinOps
-
-## Data
-
-- PySpark
 
 ### AWS
 
