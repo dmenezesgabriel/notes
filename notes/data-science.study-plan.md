@@ -2,7 +2,7 @@
 id: s5dbyyhgpczjf9iddg4w36q
 title: Study Plan
 desc: ""
-updated: 1752974657467
+updated: 1752975762056
 created: 1748897878657
 ---
 
@@ -70,6 +70,23 @@ created: 1748897878657
 **Álgebra**
 
 - Matrizes e vetores
+  - [Vetores | Capítulo 1, Essência da álgebra linear](https://www.youtube.com/watch?v=fNk_zzaMoSs)
+  - [Intro to Matrices](https://www.youtube.com/watch?v=yRwQ7A6jVLk)
+  - [Vectors - Precalculus](https://www.youtube.com/watch?v=iXdMpXMuEGI)
+  - [Scalars and Vectors](https://www.youtube.com/watch?v=rcDXQ-5H8mk)
+  - [Matrix multiplication](https://www.youtube.com/watch?v=iJERwUVuwtY)
+  - [Multiplying Matrices](https://www.youtube.com/watch?v=vzt9c7iWPxs)
+  - [Multiplying Matrices - Easy and fast](https://www.youtube.com/watch?v=2spTnAiQg4M)
+  - [Multiplying Matrices - Python](https://www.youtube.com/watch?v=RzePfrH0XNM)
+  - [How to Calculate the Inverse of a Matrix in Python Using Numpy](https://www.youtube.com/watch?v=wfHaKrmMbFk)
+  - [Determinant of 3x3 Matrices, 2x2 Matrix, Precalculus Video Tutorial](https://www.youtube.com/watch?v=3ROzG6n4yMc)
+  - [How to Compute the Determinant of a Matrix in Python (Beginner Friendly)](https://www.youtube.com/watch?v=0V2Nv3DlJEQ)
+  - [Adding and subtracting matrices](https://www.youtube.com/watch?v=QXUbFzEd3Ww)
+  - [Rank of a Matrix in Python: Learn the Basics and Solve with Numpy](https://www.youtube.com/watch?v=bzJthYkqO2o)
+  - [Gaussian Elimination & Row Echelon Form](https://www.youtube.com/watch?v=eDb6iugi6Uk)
+  - [Reduced row echelon form](https://www.youtube.com/watch?v=12hpWB3cmzg)
+  - [Augmented matrix](https://www.youtube.com/watch?v=wDrAPOPUIMY)
+  - [How to Find the Transpose of a Matrix in Python Using Numpy](https://www.youtube.com/watch?v=1BQbxkv6n4w)
 - Álgebra matricial
 - Distâncias e produto interno
 
@@ -155,3 +172,8 @@ created: 1748897878657
     - O que é
     - GAP e Best Bound
     - Solvers
+
+## Recursos
+
+- [Ryan & Matt Data Science](https://www.youtube.com/@RyanAndMattDataScience)
+- [The Organic Chemistry Tutor](https://www.youtube.com/@TheOrganicChemistryTutor)
