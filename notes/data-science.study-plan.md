@@ -2,7 +2,7 @@
 id: s5dbyyhgpczjf9iddg4w36q
 title: Study Plan
 desc: ""
-updated: 1752711817995
+updated: 1752974657467
 created: 1748897878657
 ---
 
@@ -18,10 +18,54 @@ created: 1748897878657
 **Estatística Básica**
 
 - Variáveis aleatórias contínuas e discretas
-- Função densidade de probabilidade e distribuição acumulada
+  - [Continuous vs discrete data](https://www.youtube.com/watch?v=cz4nPSA9rlc)
+  - [Understanding Discrete and Continuous Variables in Python for Data Analysis](https://www.youtube.com/watch?v=QAzBUZX7r2I)
+- Função densidade de probabilidade (pdf) e distribuição acumulada (cdf)
+  - [Cumulative distribution functions and probability density function](https://www.youtube.com/watch?v=3xAIWiTJCvE)
+  - [Normal Distribution (PDF, CDF, PPF) in 3 Minutes](https://www.youtube.com/watch?v=3VYupIsbLlY)
+  - [Probability distribution functions (PMF, PDF, CDF)](https://www.youtube.com/watch?v=YXLVjCKVP7U)
+  - [PDF, CDF Python](https://www.youtube.com/watch?v=A0HDHtgrg2I)
 - Propriedades das distribuições: médias, medianas, quartis, moda, variância, etc.
+  - [Quartiles, Deciles, & Percentiles With Cumulative Relative Frequency - Data & Statistics](https://www.youtube.com/watch?v=40o82o3uNfk)
+  - [Mean, median, mode](https://www.youtube.com/watch?v=zjHfAhcU6kE)
+  - [Mean, Median, Mode, and Range - How To Find It!](https://www.youtube.com/watch?v=A1mQ9kD-i9I)
+  - [Standard Deviation Formula, Statistics, Variance, Sample and Population Mean](https://www.youtube.com/watch?v=Uk98hiMQgN0)
+  - [How to calculate variance](https://www.youtube.com/watch?v=deIQeQzPK08)
+  - [How to Calculate Standard Deviation & Variance in Python](https://www.youtube.com/watch?v=p4H2b2x_nWc)
+  - [Understanding Quantiles in Python: A Step-by-Step Guide (Numpy & Pandas)](https://www.youtube.com/watch?v=ISTkD1rXH6E)
 - Testes de hipóteses
+  - [Hypothesis Testing EXPLAINED](https://www.youtube.com/watch?v=1g3pCE_B12E)
+  - [Z Test](https://www.youtube.com/watch?v=6_svhNN1doI)
+  - [How to Perform the Shapiro-Wilk Test for Normality in Python (Scipy)](https://www.youtube.com/watch?v=e0lum-6vuw4)
+  - [Performing a Chi-Square Test for Independence in Python with Scipy](https://www.youtube.com/watch?v=Jb9sxlnhZMo)
+  - [How to Perform a One-Sample T-Test in Python (Scipy & Numpy)](https://www.youtube.com/watch?v=1I3JKTAwfcY&t=4s)
+  - [How to Perform Levene’s Test in Python for Equal Variances (Scipy & Numpy)](https://www.youtube.com/watch?v=CkNGg64f20w)
+  - [How to Perform a Paired T-Test in Python (Scipy & Numpy)](https://www.youtube.com/watch?v=4_2G9wu3wVY)
+  - [Performing Python Welch's T Test (Independent Two Sample) in Python](https://www.youtube.com/watch?v=wmZ8wOHhPc0)
+  - [How to Perform the Kruskal-Wallis H Test in Python for Non-Parametric Analysis](https://www.youtube.com/watch?v=fNQX6Io760A)
+  - [Teste KPSS](https://www.youtube.com/watch?v=K_TzArMixvA)
+  - [How to Perform a One-Sample Sign Test in Python for Non-Parametric Analysis](https://www.youtube.com/watch?v=mXKALjVuxuY)
+  - [Paired Wilcoxon Signed Rank Test with Python: When and How to Use It](https://www.youtube.com/watch?v=ZkA1fZETQEs)
+  - [Independent Two-Sample T-Test (Same Variance) in Python: A Step-by-Step Guide](https://www.youtube.com/watch?v=VUINlWBEs1Y)
+  - [Chi-Square Goodness of Fit Test in Python: A Step-by-Step Guide (Scipy & Numpy)](https://www.youtube.com/watch?v=Fv-U-pZ4HbI)
+  - [How to Perform a Paired Sign Test in Python for Non-Parametric Analysis](https://www.youtube.com/watch?v=NoLyDRChxrU)
+  - [How to Perform a One-Sample Wilcoxon Signed Rank Test in Python (Scipy & Numpy)](https://www.youtube.com/watch?v=1td0ihzVOx4)
+  - [Mann-Whitney U Test in Action: Python Code & Statistical Insights](https://www.youtube.com/watch?v=wLIqJg_4aV8)
+  - [How to Perform One-Way ANOVA in Python (Scipy & Numpy)](https://www.youtube.com/watch?v=wRvuJVAS5SM)
+  - [Z test 2 samples](https://www.youtube.com/watch?v=EiDemzaNbBI)
+  - [ADF Test](https://www.youtube.com/watch?v=2cWsi6dfJ90)
 - Principais distribuições: Normal, Bernoulli, Binomial, Uniforme, Poisson, Geométrica
+  - [Introduction to Poisson Distribution - Probability & Statistics](https://www.youtube.com/watch?v=m0o-585xwW0)
+  - [Poisson Distribution in Python: Hands-On Example with Scipy & Numpy](https://www.youtube.com/watch?v=MFGF31Ar3FI)
+  - [Understanding Bernoulli Distribution in Python (Numpy & Scipy)](https://www.youtube.com/watch?v=scizFgXy-SI)
+  - [Normal Distribution & Probability Problems](https://www.youtube.com/watch?v=gHBL5Zau3NE)
+  - [Normal Distribution in Python: A Beginner's Guide with Scipy & Numpy](https://www.youtube.com/watch?v=_Q-CAxnd69U)
+  - [Finding The Probability of a Binomial Distribution Plus Mean & Standard Deviation](https://www.youtube.com/watch?v=3PWKQiLK41M)
+  - [Binomial Distribution in Python: A Beginner's Guide with Scipy & Numpy](https://www.youtube.com/watch?v=bZfnCdLLxAI)
+  - [Problemas de distribuição uniforme de probabilidade contínua](https://www.youtube.com/watch?v=KfunVw-0AH0)
+  - [Mastering Uniform Distribution in Python: A Step-by-Step Guide (Numpy & Scipy)](https://www.youtube.com/watch?v=6hI_8rqHhD8&t=7s)
+  - [Geometric Distribution - Probability, Mean, Variance, & Standard Deviation](https://www.youtube.com/watch?v=d5iAWPnrH6w)
+  - [Python Geometric Distribution: A Beginner’s Guide with Numpy & Scipy](https://www.youtube.com/watch?v=F8ylt-PUUjc)
 
 **Álgebra**
 
