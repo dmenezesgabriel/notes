@@ -2,7 +2,7 @@
 id: cil5jwer4esirnradcsxvp9
 title: Asg
 desc: ""
-updated: 1750870237545
+updated: 1753024800404
 created: 1746386101026
 ---
 
@@ -14,6 +14,7 @@ created: 1746386101026
 
 ## Tipos
 
+- Predictive Scaling: Utiliza Machine Learning para analisar histórico e prever utilização, deve ser combinado com `Target Tracking` ou `Step Scaling`
 - Target Tracking: Escala baseado em métrica especifica do `CloudWatch`
 - Step Scaling: Escala baseado em alarme especifico do `CloudWatch`
 - Scheduled Scaling: Escala baseado em data e hora (mudanças previsíveis)

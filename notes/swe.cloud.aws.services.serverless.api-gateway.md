@@ -2,7 +2,7 @@
 id: kcv32awnmroqe94bi9z5qas
 title: API Gateway
 desc: ""
-updated: 1747494197307
+updated: 1753024783302
 created: 1747490223635
 ---
 
@@ -21,29 +21,7 @@ created: 1747490223635
 - Possibilidade de utilização dos schemas de Swagger/OpenAPI para definição de apis
 - Transformar e validar requisições e respostas
 - Gerar especificações de SDK e API
-- Armazenar em Cache respostas da API
-
-## Diagramas
-
-- **Arquitetura Serverless**:
-
-```mermaid
-architecture-beta
-
-    service s3(logos:aws-s3)[S3]
-    service apigateway(logos:aws-api-gateway)[apigateway]
-    service lambda(logos:aws-lambda)[Lambda]
-    service dynamodb(logos:aws-dynamodb)[DynamoDB]
-
-    %% Static site
-    s3:R -- L:apigateway
-
-    %% Proxy requests
-    apigateway:R -- L:lambda
-
-    %% CRUD
-    lambda:R -- L:dynamodb
-```
+- Armazenar em Cache respostas da API com TTL máximo de 3600 segundos
 
 ## Relacionado
 
@@ -51,5 +29,3 @@ architecture-beta
 - [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-integrations]]
 - [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-endpoint-types]]
 - [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-security]]
-
-#SWE #Cloud #AWS #AWSServices #Serverless #AmazonAPIGateway

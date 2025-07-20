@@ -2,10 +2,18 @@
 id: d3jl5wlxud6qpa6707vqhi2
 title: S3 Object Lock
 desc: ""
-updated: 1746046181765
+updated: 1753031730381
 created: 1746046181765
 ---
 
-[[swe.cloud.aws.services.s3]]
+## Casos de Uso
 
-#SWE #Cloud #AWS #AWSServices #AmazonS3
+- Dados auditáveis, imutáveis com possibilidade de acesso imediato
+
+## Features
+
+- Modo Compliance, _Write Once, read many(WORM)_
+
+## Relacionado
+
+[[swe.cloud.aws.services.s3]]

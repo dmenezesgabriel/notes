@@ -2,7 +2,7 @@
 id: 3l00cyyb84pgrrhzb53veb7
 title: Storage Gateway
 desc: ""
-updated: 1746124678859
+updated: 1753034911738
 created: 1746117624597
 ---
 
@@ -25,5 +25,3 @@ created: 1746117624597
 ## Tape Gateway
 
 - Virtual Tape Library (VTL)
-
-#SWE #Cloud #AWS #AWSServices #AmazonStorageGateway

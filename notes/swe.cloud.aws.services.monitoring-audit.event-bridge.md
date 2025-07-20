@@ -2,7 +2,7 @@
 id: 5730cutmk0lscw2c03si36u
 title: Event Bridge
 desc: ""
-updated: 1748291086465
+updated: 1753032433285
 created: 1748283426750
 ---
 
@@ -10,6 +10,7 @@ created: 1748283426750
 
 - Agendar _Cron Jobs_ (AWS Lambda functions)
 - _Event Pattern_: Reagir a um evento de algum serviço
+- Integração com serviços _SAAS_ terceiros fora da AWS para desacoplamento de arquitetura e comunicação assíncrona
 
 ## Features
 

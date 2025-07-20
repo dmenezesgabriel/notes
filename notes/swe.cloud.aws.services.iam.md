@@ -2,13 +2,22 @@
 id: k83y9z9om0xqazysew826m8
 title: Iam
 desc: ""
-updated: 1750870425523
+updated: 1753024298253
 created: 1748359292419
 ---
 
 ## Features
 
 - Identity Center (AWS Single Sign-On)
+
+## Tipos de policies
+
+- Identity-based policies
+- Resource-based policies
+- Permissions boundaries
+- AWS Organizations SCPs
+- ACLs
+- Session policies.
 
 ## Roles & policies
 
