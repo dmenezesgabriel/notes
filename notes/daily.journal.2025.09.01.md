@@ -23,3 +23,6 @@ traitIds:
 - [[data-science.machine-learning.data-pre-processing.one-hot-encoding]]
 - [[data-science.machine-learning.data-pre-processing.ordinal-encoding]]
 - [[data-science.machine-learning.train.data-split]]
+- [[data-science.machine-learning.data-enrichment]]
+- [[data-engineer.concepts.data-modeling]]
+- [[data-science.machine-learning.overfitting]]

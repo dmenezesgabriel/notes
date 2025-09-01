@@ -11,6 +11,10 @@ created: 1756753587365
 - Acurácia
 - Precisão
 - Recall
+- F1-Score
+- AUC-ROC
+- MSE
+- RMSE
 
 ## Técnicas
 
