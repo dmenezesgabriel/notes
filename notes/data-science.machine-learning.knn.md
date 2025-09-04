@@ -37,13 +37,11 @@ Nós costumamos a julgar as pessoas pelo grupo ao qual elas se relacionam.
 
 ## Etapas
 
-1. Calcule a [distância](#distâncias) entre o novo objeto sem classificação e todos objetos classificados existentes
+1. Calcule a [distância](#distâncias) entre o novo objeto sem classificação e todos objetos classificados existentes, estas distâncias serão armazenadas em memória
 2. Ordene de forma ascendente as distâncias calculadas
-3. Realize a somatória das classes ate K exemplares
-4. Atribua a classe ganhadora ao novo objeto
-
-- Para evitar empate entre as classes escolha um valor de `K` impar
-- Escolha um K pequeno
+3. Armazene os _K_ pontos mais próximos
+4. Calcule a proporção de cada classe e armazene em memória
+5. Atribua a classe com maior proporção
 
 ### Distâncias
 
@@ -98,7 +96,7 @@ $$
 ## Contras
 
 - Não possui uma fase de treino, então o custo computacional pode ser alto na fase de predição. Toda vez que uma predição é feita, o algoritmo precisa calcular a distância entre o ponto a ser classificado e todos os outros pontos do conjunto de dados de treinamento. Isso pode ser melhorado com estruturas de dados como _KD-Trees_ ou _Ball-Trees_, mas ainda sim pode ser inssuficiente para conjuntos de dados muito grandes.
-- ALto requerimento de memória uma vez que o KNN precisa armazenar todos pontos de dados
+- Alto requerimento de memória uma vez que o KNN precisa armazenar todos pontos de dados
 - A eficiência do algoritmo diminui a medida que o conjunto de dados aumenta
 - O algoritmo não lida bem com _missings_, sendo necessário preencher os dados faltantes
 - Sofre de distribuição desigual de classes (classes majoritárias tendem a dominar a classificação)
@@ -123,13 +121,17 @@ $$
 ## Dicas
 
 - Comece pelo KNN quando o tipo de distribuição não é conhecida
+- Para evitar empate entre as classes escolha um valor de `K` impar
+- Escolha um K pequeno
 - o Knn não gera uma função de saída, então uma alternativa é calcular centroids para cada classe, gerando um objeto único para cada classe. Logo o K será igual a 1 e o que estiver mais próximo definirá a classe
 - O KNN pode ser implementado utilizando somente SQL e pode se beneficiar da indexação do banco de dados
 - Utilize _Weighted voting_
 - Normalize os dados
-- Reduza a dimensionalidade
+- Reduza a dimensionalidade via _PCA (Principal Component Analysis)_
 - Aproxime os vizinhos mais próximos utilizando _k-d trees_ para armazenar observações de treino e reduzir o tempo de teste quando houver menos de 20 dimensões
 - Caso a dimensionalidade seja muito alta utilize LHS (sensitive hashing)
+- Utilize K-means para reduzir o número de pontos utilizados para computar a distância
+- Utilize uma amostra aleatória para reduzir o conjunto de dados
 
 ## Utilização
 
@@ -149,3 +151,4 @@ knn.predict(new_object)
 
 - [KNN EXEMPLO COMPLETO](https://www.youtube.com/watch?v=zvmbB3315Ko)
 - [k-nearest-neighbors-knn](https://medium.datadriveninvestor.com/k-nearest-neighbors-knn-7b4bd0128da7)
+- [interview-case-study-1-sampling-methods-and-parameter-changes](https://cornell-data.medium.com/interview-case-study-1-sampling-methods-and-parameter-changes-4799c580aa42)
