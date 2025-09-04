@@ -1,10 +1,9 @@
-br---
+---
 id: dljgg78sqhlvb49l6jqoyg0
 title: Knn
 desc: ""
 updated: 1757010539226
 created: 1756993971315
-
 ---
 
 > "Diga-me com quem andas, que te direi quem és". Provérbio
