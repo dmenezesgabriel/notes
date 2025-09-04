@@ -1,10 +1,13 @@
----
+br---
 id: dljgg78sqhlvb49l6jqoyg0
 title: Knn
 desc: ""
-updated: 1757009229828
+updated: 1757010539226
 created: 1756993971315
+
 ---
+
+> "Diga-me com quem andas, que te direi quem és". Provérbio
 
 ## O que é?
 
@@ -12,8 +15,8 @@ created: 1756993971315
 
 Nós costumamos a julgar as pessoas pelo grupo ao qual elas se relacionam.
 
-- Um método de aprendizagem supervisionada uma vez que sua variável alvo é conhecida.
-- Algoritmo _Lazy_ (Não há fase de treinamento, apenas armazenamento dos dados)
+- Um método de aprendizagem supervisionada uma vez que sua variável alvo é conhecida
+- Algoritmo _Lazy_ (Não há fase de treinamento, apenas armazenamento dos dados), Logo ele não aprende, mas memoriza
 - Cálculo de distância entre os dados para realizar a classificação (similaridade entre features)
 
 ### Características
@@ -23,8 +26,6 @@ Nós costumamos a julgar as pessoas pelo grupo ao qual elas se relacionam.
 - Baseado em instâncias (Instance-based learning)
 
 ## Hiperparâmetro K
-
-É o número de vizinhos mais próximos a serem considerados na classificação.
 
 - K comumente é um número ímpar para evitar empates em classificação binária
 - Quanto menor o K, maior o risco de _Overfitting_ [[data-science.machine-learning.overfitting]]
@@ -52,6 +53,17 @@ Nós costumamos a julgar as pessoas pelo grupo ao qual elas se relacionam.
 $$
 d(p,q) = \sqrt{\sum_{i=1}^{n} (p_i - q_i)^2}
 $$
+
+| Customer | Age | Income | No. credit cards | Class | Distance from John (Formula)            |
+| -------- | --- | ------ | ---------------- | ----- | --------------------------------------- |
+| George   | 35  | 35K    | 3                | No    | $$\sqrt{(35-37)^2+(35-50)^2+(3-2)^2}$$  |
+| Rachel   | 22  | 50K    | 2                | Yes   | $$\sqrt{(22-37)^2+(50-50)^2+(2-2)^2}$$  |
+| Steve    | 63  | 200K   | 1                | No    | $$\sqrt{(63-37)^2+(200-50)^2+(1-2)^2}$$ |
+| Tom      | 59  | 170K   | 1                | No    | $$\sqrt{(59-37)^2+(170-50)^2+(1-2)^2}$$ |
+| Anne     | 25  | 40K    | 4                | Yes   | $$\sqrt{(25-37)^2+(40-50)^2+(4-2)^2}$$  |
+| John     | 37  | 50K    | 2                | YES   | -                                       |
+
+</br>
 
 ![euclidean-distance](./assets/machine-learning-euclidean-distance.png)
 
@@ -111,6 +123,7 @@ $$
 
 ## Dicas
 
+- Comece pelo KNN quando o tipo de distribuição não é conhecida
 - o Knn não gera uma função de saída, então uma alternativa é calcular centroids para cada classe, gerando um objeto único para cada classe. Logo o K será igual a 1 e o que estiver mais próximo definirá a classe
 - O KNN pode ser implementado utilizando somente SQL e pode se beneficiar da indexação do banco de dados
 
