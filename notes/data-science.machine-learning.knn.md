@@ -65,6 +65,18 @@ $$
 
 ![euclidean-distance](./assets/machine-learning-euclidean-distance.png)
 
+Cálculo da distância em `python` utilizando o pacote `scipy`:
+
+```py
+from scipy.spatial import distance
+
+point_1 = (1, 2, 3)
+point_2 = (4, 5, 6)
+
+euclidean_distance = distance.euclidean(point_1, point_2)
+print('Euclidean Distance b/w', point_1, 'and', point_2, 'is: ', euclidean_distance)
+```
+
 #### Manhattan
 
 _Geometria do taxi_, Lembra as ruas de Manhattan.
@@ -75,11 +87,35 @@ $$
 
 ![euclidean-distance](./assets/machine-learning-manhattan-distance.png)
 
+Cálculo da distância em `python` utilizando o pacote `scipy`:
+
+```py
+from scipy.spatial import distance
+
+point_1 = (1, 2, 3)
+point_2 = (4, 5, 6)
+
+manhattan_distance = distance.cityblock(point_1, point_2)
+print('Manhattan Distance b/w', point_1, 'and', point_2, 'is: ', manhattan_distance)
+```
+
 #### Minkowski
 
 $$
 d(p, q) = \left( \sum_{i=1}^{n} \lvert p_i - q_i \rvert^m \right)^{\tfrac{1}{m}}
 $$
+
+Cálculo da distância em `python` utilizando o pacote `scipy`:
+
+```py
+from scipy.spatial import distance
+
+point_1 = (1, 2, 3)
+point_2 = (4, 5, 6)
+
+minkowski_distance = distance.minkowski(point_1, point_2, p=3)
+print('Minkowski Distance b/w', point_1, 'and', point_2, 'is: ', minkowski_distance)
+```
 
 #### Jaccard
 
