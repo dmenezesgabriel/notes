@@ -30,6 +30,7 @@ Nós costumamos a julgar as pessoas pelo grupo ao qual elas se relacionam.
 - Quanto menor o K, maior o risco de _Overfitting_ [[data-science.machine-learning.overfitting]]
 - Quanto maior o K, maior o risco de _Underfitting_
 - K pode ser ajustado com validação cruzada
+- K tem uma relação inversa com variância, uma vez que o K aumenta a variância diminui
 
 ### Como escolher o valor de K?
 
@@ -126,7 +127,7 @@ $$
 - o Knn não gera uma função de saída, então uma alternativa é calcular centroids para cada classe, gerando um objeto único para cada classe. Logo o K será igual a 1 e o que estiver mais próximo definirá a classe
 - O KNN pode ser implementado utilizando somente SQL e pode se beneficiar da indexação do banco de dados
 - Utilize _Weighted voting_
-- Normalize os dados
+- Features precisam ter a mesma escala, normalize ou padronize os dados
 - Reduza a dimensionalidade via _PCA (Principal Component Analysis)_
 - Aproxime os vizinhos mais próximos utilizando _k-d trees_ para armazenar observações de treino e reduzir o tempo de teste quando houver menos de 20 dimensões
 - Caso a dimensionalidade seja muito alta utilize LHS (sensitive hashing)
