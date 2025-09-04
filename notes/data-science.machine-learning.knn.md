@@ -24,23 +24,41 @@ created: 1756993971315
 
 ## Etapas
 
-1. Recebe dados não classificados
-2. Calcula a distância entre os dados não classificados e os dados classificados
-3. Obtém as X menores distâncias (Variável X é o Hiperparâmetro K)
-4. Verifica a classe de cada um dos dados que tiveram a menor distância e atribui a classe mais frequente para o dado não classificado
-5. Atribui ao dado não classificado a classe mais frequente entre os K vizinhos mais próximos
+1. Calcule a distância entre o novo objeto sem classificação e todos objetos classificados existentes
+2. Ordene de forma ascendente as distâncias calculadas
+3. Realize a somatória das classes ate K exemplares
+4. Atribua a classe ganhadora ao novo objeto
+
+- Para evitar empate entre as classes escolha um valor de `K` impar
+- Escolha um K pequeno
 
 ### Distâncias
 
 #### Euclidiana
 
-$d(p,q) = \sqrt{\sum_{i=1}^{n} (p_i - q_i)^2}$
+$$
+d(p,q) = \sqrt{\sum_{i=1}^{n} (p_i - q_i)^2}
+$$
+
+![euclidean-distance](./assets/machine-learning-euclidean-distance.png)
 
 #### Manhattan
 
-#### Mikowski
+Geometria do taxi
 
-#### Hamming
+$$
+d(p, q) = \sum_{i=1}^{n} \lvert p_i - q_i \rvert
+$$
+
+![euclidean-distance](./assets/machine-learning-manhattan-distance.png)
+
+#### Minkowski
+
+$$
+d(p, q) = \left( \sum_{i=1}^{n} \lvert p_i - q_i \rvert^m \right)^{\tfrac{1}{m}}
+$$
+
+#### Jaccard
 
 ## Prós
 
@@ -60,3 +78,7 @@ $d(p,q) = \sqrt{\sum_{i=1}^{n} (p_i - q_i)^2}$
 - Reconhecimento de video
 - Reconhecimento de imagem
 - Reconhecimento de escrita de mão
+
+## Links úteis
+
+- [KNN EXEMPLO COMPLETO](https://www.youtube.com/watch?v=zvmbB3315Ko)
