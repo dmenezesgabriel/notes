@@ -126,6 +126,11 @@ $$
 - Comece pelo KNN quando o tipo de distribuição não é conhecida
 - o Knn não gera uma função de saída, então uma alternativa é calcular centroids para cada classe, gerando um objeto único para cada classe. Logo o K será igual a 1 e o que estiver mais próximo definirá a classe
 - O KNN pode ser implementado utilizando somente SQL e pode se beneficiar da indexação do banco de dados
+- Utilize _Weighted voting_
+- Normalize os dados
+- Reduza a dimensionalidade
+- Aproxime os vizinhos mais próximos utilizando _k-d trees_ para armazenar observações de treino e reduzir o tempo de teste quando houver menos de 20 dimensões
+- Caso a dimensionalidade seja muito alta utilize LHS (sensitive hashing)
 
 ## Utilização
 
