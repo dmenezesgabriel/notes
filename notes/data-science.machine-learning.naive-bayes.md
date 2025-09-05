@@ -2,7 +2,7 @@
 id: ubosu2uvi6qakbbi07fysqh
 title: Naive Bayes
 desc: ""
-updated: 1757106423966
+updated: 1757107724730
 created: 1757093595992
 ---
 
@@ -10,7 +10,7 @@ created: 1757093595992
 
 ## O que é?
 
-- ALgoritmo de classificação que prevê a categoria de um ponto de dado utilizando probabilidade
+- Algoritmo de classificação que prevê a categoria de um ponto de dado utilizando probabilidade
 
 $$
 p(y \mid X)
