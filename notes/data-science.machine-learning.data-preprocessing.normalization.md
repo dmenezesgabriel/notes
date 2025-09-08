@@ -6,4 +6,4 @@ updated: 1756754529411
 created: 1756754529411
 ---
 
-Normalização - escala entre 0 e 1
+Escala os atributos para que fiquem em uma escala especifica, geralmente entre 0 e 1

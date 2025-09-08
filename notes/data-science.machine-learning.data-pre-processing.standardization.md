@@ -6,4 +6,4 @@ updated: 1756754640559
 created: 1756754640559
 ---
 
-Padronização - média 0 e desvio padrão 1
+Transformam atributos para que tenham média 0 e desvio padrão 1
