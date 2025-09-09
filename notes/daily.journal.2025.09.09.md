@@ -12,3 +12,6 @@ traitIds:
 - [[data-science.machine-learning.learning-method.random-forest]]
 - [[data-science.machine-learning.learning-method.regression-tree]]
 - [[data-science.machine-learning.learning-method.gradient-boost]]
+- [[data-science.machine-learning.learning-method.ada-boost]]
+- [[data-science.machine-learning.glossary.residual]]
+- [[data-science.machine-learning.glossary.stump]]
