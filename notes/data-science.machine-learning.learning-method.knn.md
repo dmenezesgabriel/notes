@@ -1,8 +1,8 @@
 ---
 id: dljgg78sqhlvb49l6jqoyg0
 title: Knn
-desc: ""
-updated: 1757010539226
+desc: ''
+updated: 1757437158368
 created: 1756993971315
 ---
 
@@ -24,10 +24,12 @@ Nós costumamos a julgar as pessoas pelo grupo ao qual elas se relacionam.
 - Multi classe e binária
 - Baseado em instâncias (Instance-based learning)
 
+## Complexidade
+
 ## Hiperparâmetro K
 
 - K comumente é um número ímpar para evitar empates em classificação binária
-- Quanto menor o K, maior o risco de _Overfitting_ [[data-science.machine-learning.overfitting]]
+- Quanto menor o K, maior o risco de _Overfitting_ [[data-science.machine-learning.glossary.overfitting]]
 - Quanto maior o K, maior o risco de _Underfitting_
 - K pode ser ajustado com validação cruzada
 - K tem uma relação inversa com variância, uma vez que o K aumenta a variância diminui

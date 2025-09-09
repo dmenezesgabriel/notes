@@ -2,7 +2,7 @@
 id: ubosu2uvi6qakbbi07fysqh
 title: Naive Bayes
 desc: ""
-updated: 1757107724730
+updated: 1757437172516
 created: 1757093595992
 ---
 
@@ -35,6 +35,8 @@ $$
 - Os dados não devem conter valores nulos
 - Método generativo, ou algoritmo de aprendizado generativo
 - Aprendizado Supervisionado
+
+## Complexidade
 
 ## Hiperparâmetro
 

@@ -25,4 +25,4 @@ traitIds:
 - [[data-science.machine-learning.train.data-split]]
 - [[data-science.machine-learning.data-enrichment]]
 - [[data-engineer.concepts.data-modeling]]
-- [[data-science.machine-learning.overfitting]]
+- [[data-science.machine-learning.glossary.overfitting]]

@@ -1,7 +1,7 @@
 ---
 id: 5z6q1fwa51q9hor2ewhtq8d
 title: Optimization
-desc: ""
+desc: ''
 updated: 1756753433897
 created: 1756753433897
 ---
@@ -17,7 +17,7 @@ created: 1756753433897
 ### Tipos de parâmetros
 
 - Parâmetros: Aprendidos pelo modelo durante o treinamento
-- Hiperparametros: Ajudam o modelo no processo de treinamento e precisam ser definidos previamente [[data-science.machine-learning.hiperparams]]
+- Hiperparametros: Ajudam o modelo no processo de treinamento e precisam ser definidos previamente [[data-science.machine-learning.glossary.hiperparams]]
 
 ## Métodos Comuns de otimização
 

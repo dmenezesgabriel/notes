@@ -1,7 +1,7 @@
 ---
 id: 3mnrpsfqnkkkhlpdob8qd1s
 title: Feature Store
-desc: ""
+desc: ''
 updated: 1757346766191
 created: 1757346766191
 ---
@@ -73,6 +73,6 @@ created: 1757346766191
 
 - Reduzem a complexidade do modelo
 - Reduzem tempo e custo de treinamento
-- Reduz risco de Overfitting[[data-science.machine-learning.overfitting]]
+- Reduz risco de Overfitting[[data-science.machine-learning.glossary.overfitting]]
 - Melhora a generalização
 - Tornam o modelo mais fácil de ser interpretado

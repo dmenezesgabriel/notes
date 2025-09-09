@@ -1,7 +1,7 @@
 ---
 id: wnhem4wn97rttgzg7fcytem
 title: Hiperparams
-desc: ""
+desc: ''
 updated: 1756761192808
 created: 1756761192808
 ---
