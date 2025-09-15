@@ -1,7 +1,7 @@
 ---
 id: 93dou2le4im39bn3o5t6ftm
-title: "2025-09-09"
-desc: ""
+title: '2025-09-09'
+desc: ''
 updated: 1757444554851
 created: 1757437184787
 traitIds:
@@ -12,6 +12,6 @@ traitIds:
 - [[data-science.machine-learning.learning-method.random-forest]]
 - [[data-science.machine-learning.learning-method.regression-tree]]
 - [[data-science.machine-learning.learning-method.gradient-boost]]
-- [[data-science.machine-learning.learning-method.ada-boost]]
+- [[data-science.machine-learning.ensembles.ada-boost]]
 - [[data-science.machine-learning.glossary.residual]]
 - [[data-science.machine-learning.glossary.stump]]

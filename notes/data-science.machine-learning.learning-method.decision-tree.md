@@ -2,7 +2,7 @@
 id: jyyvynlzk0gtl43nourtlhx
 title: Decision Tree
 desc: ""
-updated: 1757949398001
+updated: 1757960152669
 created: 1757437162403
 ---
 
@@ -126,6 +126,5 @@ Iterative Dichotomiser 3
 
 ## Links úteis
 
-```
-
-```
+- [math-behind-decision-tree-algorithm](https://ankitnitjsr13.medium.com/math-behind-decision-tree-algorithm-2aa398561d6d)
+- [gini-impurity](https://victorzhou.com/blog/gini-impurity/)
