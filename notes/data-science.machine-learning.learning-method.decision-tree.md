@@ -2,7 +2,7 @@
 id: jyyvynlzk0gtl43nourtlhx
 title: Decision Tree
 desc: ""
-updated: 1757948493638
+updated: 1757949398001
 created: 1757437162403
 ---
 
@@ -14,6 +14,39 @@ São algoritmos de machine learning que dividem os conjuntos de dados progressiv
 - Regressão (variável dependente continua ou quantitativa)
 - Supervisionado (variável dependente categórica ou qualitativa)
 - Não paramétrico
+
+<div style="display: flex; gap: 20px">
+<div>
+
+| Weather | Weekend | New Bike | Ride |
+| :-----: | :-----: | :------: | :--: |
+|    0    |    0    |    0     |  0   |
+|    0    |    0    |    1     |  0   |
+|    0    |    1    |    0     |  0   |
+|    0    |    1    |    1     |  0   |
+|    1    |    0    |    0     |  0   |
+|    1    |    0    |    1     |  1   |
+|    1    |    1    |    0     |  1   |
+|    1    |    1    |    1     |  1   |
+
+</div>
+<div>
+
+```mermaid
+graph TD
+    A[Is Weather Sunny?] -->|No| B(Don't Ride);
+    A -->|Yes| C{Is it Weekend?};
+
+    C -->|Yes| D(Go for a Ride!);
+    C -->|No| E{Do you have a New Bike?};
+
+    E -->|Yes| F(Go for a Ride!);
+    E -->|No| G(Don't Ride);
+
+```
+
+</div>
+</div>
 
 ### Características
 
@@ -92,3 +125,7 @@ Iterative Dichotomiser 3
 ## Utilização
 
 ## Links úteis
+
+```
+
+```
