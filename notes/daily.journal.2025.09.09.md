@@ -9,7 +9,7 @@ traitIds:
 ---
 
 - [[data-science.machine-learning.learning-method.decision-tree]]
-- [[data-science.machine-learning.learning-method.random-forest]]
+- [[data-science.machine-learning.ensemble-method.random-forest]]
 - [[data-science.machine-learning.learning-method.regression-tree]]
 - [[data-science.machine-learning.learning-method.gradient-boost]]
 - [[data-science.machine-learning.ensemble-method.ada-boost]]
