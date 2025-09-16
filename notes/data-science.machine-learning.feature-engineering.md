@@ -1,7 +1,7 @@
 ---
 id: fzx7jmp0gonuiavgnc5r3ol
 title: Feature Engineering
-desc: ""
+desc: ''
 updated: 1757341175990
 created: 1756753207454
 ---
@@ -49,7 +49,7 @@ Derivação de novos atributos a partir de variáveis de tempo como hora do dia,
 
 - [[data-science.machine-learning.data-pre-processing.one-hot-encoding]]
 - [[data-science.machine-learning.data-pre-processing.ordinal-encoding]]
-- [[data-science.machine-learning.frequency-encoding]]
+- [[data-science.machine-learning.data-pre-processing.frequency-encoding]]
 - [[data-science.machine-learning.target-encoding]]
 
 ## Normalização e Padronização

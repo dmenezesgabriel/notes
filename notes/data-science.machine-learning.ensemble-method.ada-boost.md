@@ -1,7 +1,7 @@
 ---
 id: 5m230r23d7wf789yfa6g4qq
 title: Ada Boost
-desc: ""
+desc: ''
 updated: 1757964594869
 created: 1757445270720
 ---

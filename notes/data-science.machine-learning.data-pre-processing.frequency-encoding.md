@@ -1,7 +1,7 @@
 ---
 id: 1lu29stbmru2feiq9fiv13f
 title: Frequency Encoding
-desc: ""
+desc: ''
 updated: 1757341148879
 created: 1757341116889
 ---
