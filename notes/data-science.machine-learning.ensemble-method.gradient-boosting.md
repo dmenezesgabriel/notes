@@ -2,7 +2,7 @@
 id: w01v1edxblnxupgtuows1ly
 title: Gradient Boosting
 desc: ""
-updated: 1758061002664
+updated: 1758294744289
 created: 1758032451933
 ---
 
@@ -12,6 +12,8 @@ Método de boosting aplicado em _árvores de decisão_
 
 ### Características
 
+- Utiliza _gradient descendent_ para otimizar funções de perda a cada iteração
+
 ## Etapas
 
 ## Prós
@@ -19,6 +21,8 @@ Método de boosting aplicado em _árvores de decisão_
 ## Contras
 
 ## Aplicação
+
+- Datasets complexos e tarefas de regressão
 
 ## Comparação
 

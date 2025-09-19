@@ -2,7 +2,7 @@
 id: zn0e99kxr9hdgnoof51j1dx
 title: Bagging Vs Boosting
 desc: ""
-updated: 1758061277448
+updated: 1758304392846
 created: 1757961460237
 ---
 
@@ -11,6 +11,10 @@ created: 1757961460237
 Reduz a variância combinando modelos independentes como _Random Forest_ [[data-science.machine-learning.ensemble-method.random-forest]], utilizado em detecção de fraudes.
 
 Injeta aleatoriedade utilizando amostragem de inicialização (Bootstrap sampling) e fazendo a média dos resultados.
+
+Utiliza estimativas de erro _out-of-bag_
+
+_out-of-bag_ objetos fora da amostra
 
 ## Boosting
 
