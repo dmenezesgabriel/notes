@@ -2,11 +2,13 @@
 id: sem5txdyskkdwuoinyk0tbs
 title: Ensemble Method
 desc: ""
-updated: 1758305904279
+updated: 1758545907309
 created: 1758305089473
 ---
 
 > The wisdom of the crowd is the collective option of a group of individuas rather than of a single expert.
+
+Aprendizado em conjunto!
 
 _Ensemble methods_ se baseiam na ideia de "wisdom of the crowd" e utilizam múltiplos algoritmos de machine learning para obter melhor performance preditiva.
 

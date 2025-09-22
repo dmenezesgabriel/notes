@@ -2,7 +2,7 @@
 id: xsumev39g03y7f3jz9x3mao
 title: Deploy
 desc: ""
-updated: 1756753074073
+updated: 1758555532908
 created: 1756753074073
 ---
 
@@ -17,7 +17,24 @@ created: 1756753074073
 
 - [[data-science.machine-learning.model.deploy.tools]]
 
-## Tipos de Deploy
+## Tipos de Disponibilização
+
+|                                     | **OFFLINE** (Aprendizagem Estática)                              | **ONLINE** (Aprendizagem Dinâmica)                              |
+| :---------------------------------- | :--------------------------------------------------------------- | :-------------------------------------------------------------- |
+| **ON-DEMAND** (Dados em tempo real) | - Microserviços <br> - REST API                                  | - Análise de streaming em tempo real <br> - Aprendizagem online |
+| **BATCH** (Dados históricos)        | - Previsão (Forecast) <br> - Predição em lote (Batch Prediction) | - Machine Learning automatizado (Auto ML)                       |
+
+### Forecast
+
+Tanto o treinamento quanto a execução do modelo ocorre em dados históricos. Sua aplicabilidade é maior no campo de pesquisas acadêmicas ou educação
+
+### Web Service
+
+A arquitetura de deploy mais comum para modelos de _Machine Learning_ são **Web Services**. O serviço recebe um input de dado e devolve como output o resultado da predição.
+
+O modelo é treinado _offline_ com dados históricos, mas utilizada dados vivos para para realizar predições.
+
+## Tipos de deploy
 
 ### Deploy de modelo Offline
 
@@ -47,3 +64,7 @@ Exemplos de inferência em tempo real:
 
 - Canary Deploy [[devops.deploy.canary]]
 - Blue Green Deploy
+
+## Links Úteis
+
+- [three-levels-of-ml-software](https://ml-ops.org/content/three-levels-of-ml-software)

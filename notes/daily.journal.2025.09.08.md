@@ -11,7 +11,7 @@ traitIds:
 - [[data-science.machine-learning.data-pre-processing.frequency-encoding]]
 - [[data-science.machine-learning.target-encoding]]
 - [[data-science.machine-learning.feature-store]]
-- [[data-science.machine-learning.model.serialization]]
+- [[data-science.machine-learning.model.packaging]]
 - [[data-science.machine-learning.model.deploy]]
 - [[data-science.machine-learning.model.deploy.tools]] -[[data-science.machine-learning.model.monitoring]]
 - [[devops.virtualization.containers]]

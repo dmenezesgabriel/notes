@@ -1,11 +1,13 @@
 ---
 id: tr08hbk86p3z70dbmi736oi
-title: Serialization
-desc: ""
-updated: 1757347739686
+title: Packaging
+desc: ''
+updated: 1758553805105
 created: 1757347739686
 ---
 
 ## Tipos de serialização de modelo
 
-- onnx
+- ONNX
+- PMML
+- PFA
