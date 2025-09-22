@@ -2,7 +2,7 @@
 id: xsumev39g03y7f3jz9x3mao
 title: Deploy
 desc: ""
-updated: 1758555532908
+updated: 1758562795857
 created: 1756753074073
 ---
 
@@ -17,7 +17,7 @@ created: 1756753074073
 
 - [[data-science.machine-learning.model.deploy.tools]]
 
-## Tipos de Disponibilização
+## Modelos de aprendizagem vs modelos preditivos
 
 |                                     | **OFFLINE** (Aprendizagem Estática)                              | **ONLINE** (Aprendizagem Dinâmica)                              |
 | :---------------------------------- | :--------------------------------------------------------------- | :-------------------------------------------------------------- |
