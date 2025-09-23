@@ -2,7 +2,7 @@
 id: sem5txdyskkdwuoinyk0tbs
 title: Ensemble Method
 desc: ""
-updated: 1758545907309
+updated: 1758638767209
 created: 1758305089473
 ---
 
@@ -29,10 +29,32 @@ Média dos valores de output dos modelos
 
 ## Métodos
 
-- Bagging
-- Boosting
-- Blending
-- Stacking
+- [Bagging](#bagging)
+- [Boosting](#boosting)
+- [Blending](#blending)
+- [Stacking](#stacking)
+
+### Bagging
+
+O termo **Bagging** vem de _bootstrap aggregating_, onde fornecemos a cada modelo em nosso conjunto, uma amostra gerada de maneira aleatória com base no conjunto original, e são permitidos valores duplicados.
+
+Neste método são utilizados modelos de um mesmo tipo, e eles são executados em paralelo.
+
+1. É escolhida uma amostra do conjunto de dados original de forma aleatória.
+2. Esta amostra é inserida no conjunto de dados _bootstrap_.
+3. Os passos 1 e 2 são repetidos até que sejam formadas **N** amostras do mesmo tamanho do conjunto de dados original no conjunto de dados _bootstrap_.
+
+Então os modelos recebem os conjuntos de dados e realizam predições o resultado final é dado pela média do resultado dos modelos ou pelos resultados de maior frequência.
+
+Árvores de decisão são suscetíveis a Overfitting [[data-science.machine-learning.glossary.overfitting]] e o método _bagging_ introduz _bias_ o que acaba gerando um equilíbrio.
+
+### Boosting
+
+Neste método os modelos são executadas de forma sequencial invés de paralela. Os erros de um modelo do conjunto de modelos são corrigidos pelo próximo.
+
+### Blending
+
+### Stacking
 
 ## Links Úteis
 
