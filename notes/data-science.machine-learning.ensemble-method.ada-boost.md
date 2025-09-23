@@ -2,7 +2,7 @@
 id: 5m230r23d7wf789yfa6g4qq
 title: Ada Boost
 desc: ""
-updated: 1758294697515
+updated: 1758639902239
 created: 1757445270720
 ---
 
@@ -19,9 +19,9 @@ Método de _boosting_ aplicado em arvores de decisão
 
 ## Etapas
 
-## Prós
+## Vantagens
 
-## Contras
+## Desvantagens
 
 ## Aplicação
 

@@ -2,7 +2,7 @@
 id: atgcbm5h9nmfmndhxvsksq9
 title: Rds
 desc: ""
-updated: 1751731824067
+updated: 1758639902293
 created: 1745194261071
 ---
 
@@ -57,7 +57,7 @@ pros:
 - Capacidade de escala horizontal e vertical
 - Armazenamento em EBS
 
-contras:
+Desvantagens:
 
 - Nao e possível acessar a maquina via SSH
 

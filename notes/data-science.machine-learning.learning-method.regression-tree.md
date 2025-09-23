@@ -2,7 +2,7 @@
 id: 6wejysulpzpgkphay7mymah
 title: Regression Tree
 desc: ""
-updated: 1757444478307
+updated: 1758639902231
 created: 1757442996029
 ---
 
@@ -20,9 +20,9 @@ created: 1757442996029
 
 ## Etapas
 
-## Prós
+## Vantagens
 
-## Contras
+## Desvantagens
 
 ## Aplicação
 

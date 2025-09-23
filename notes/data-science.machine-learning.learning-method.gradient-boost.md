@@ -2,7 +2,7 @@
 id: x8e88qkkrcs0lmy1e3h7xlz
 title: Gradient Boost
 desc: ""
-updated: 1757444449390
+updated: 1758639902286
 created: 1757444331974
 ---
 
@@ -21,9 +21,9 @@ created: 1757444331974
 
 ## Etapas
 
-## Prós
+## Vantagens
 
-## Contras
+## Desvantagens
 
 ## Aplicação
 

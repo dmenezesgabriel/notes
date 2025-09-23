@@ -2,7 +2,7 @@
 id: w01v1edxblnxupgtuows1ly
 title: Gradient Boosting
 desc: ""
-updated: 1758294744289
+updated: 1758639902272
 created: 1758032451933
 ---
 
@@ -16,9 +16,9 @@ Método de boosting aplicado em _árvores de decisão_
 
 ## Etapas
 
-## Prós
+## Vantagens
 
-## Contras
+## Desvantagens
 
 ## Aplicação
 

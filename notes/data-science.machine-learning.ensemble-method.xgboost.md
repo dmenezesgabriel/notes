@@ -2,7 +2,7 @@
 id: xzfvp502vhb56yctfrel4ws
 title: Xgboost
 desc: ""
-updated: 1758294945897
+updated: 1758639902224
 created: 1758294826068
 ---
 
@@ -16,9 +16,9 @@ Método de boosting aplicado em _árvores de decisão_
 
 ## Etapas
 
-## Prós
+## Vantagens
 
-## Contras
+## Desvantagens
 
 ## Aplicação
 

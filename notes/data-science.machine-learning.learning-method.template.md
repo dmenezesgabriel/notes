@@ -1,8 +1,8 @@
 ---
 id: 7vbf1kx783gca7sezxr20th
 title: Template
-desc: ''
-updated: 1757437217029
+desc: ""
+updated: 1758639902247
 created: 1757093980713
 ---
 
@@ -18,9 +18,9 @@ created: 1757093980713
 
 ## Etapas
 
-## Prós
+## Vantagens
 
-## Contras
+## Desvantagens
 
 ## Aplicação
 

@@ -2,14 +2,14 @@
 id: x8r3ogq4ng4rolz1apwi1kw
 title: Types of Form
 desc: ""
-updated: 1751731855103
+updated: 1758639902307
 created: 1734185016512
 ---
 
 ## Controlado
 
 Para: formulários mais complexos
-Contras: menos performance, toda vez que o valor muda o componente e renderizado novamente.
+Desvantagens: menos performance, toda vez que o valor muda o componente e renderizado novamente.
 
 ```jsx
 import { useState } from "react";

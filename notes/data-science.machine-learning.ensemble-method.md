@@ -2,7 +2,7 @@
 id: sem5txdyskkdwuoinyk0tbs
 title: Ensemble Method
 desc: ""
-updated: 1758638767209
+updated: 1758640590819
 created: 1758305089473
 ---
 
@@ -10,22 +10,9 @@ created: 1758305089473
 
 Aprendizado em conjunto!
 
-_Ensemble methods_ se baseiam na ideia de "wisdom of the crowd" e utilizam múltiplos algoritmos de machine learning para obter melhor performance preditiva.
+_Ensemble methods_ são combinações de diferentes modelos conhecidos como _modelos fracos (eak learners)_ ou _modelos base_ para a criação de um modelo mais forte.
 
-A ideia é construir um conjunto de modelos para fazer predições mais acuradas e que os erros de um modelo serão corrigidos pelo de outro. Individualmente os modelos podem estar errados, mas quando combinados tem maior chance de um resultado acurado.
-
-Os modelos podem rodar em paralelo e serem combinados por:
-
-- [Classificação por votos](#Classificação-por-votos)
-- [Classificação por regressão](#Classificação-por-regressão)
-
-## Classificação por votos
-
-Agregação das respostas com escolha da opção em que os votos representam a maioria
-
-## Classificação por regressão
-
-Média dos valores de output dos modelos
+Quando se cria um modelo de machine learning é necessário encontrar um equilíbrio entre variância e viés. O _Ensemble_ é uma tentativa de encontrar esse equilíbrio.
 
 ## Métodos
 
@@ -48,9 +35,25 @@ Então os modelos recebem os conjuntos de dados e realizam predições o resulta
 
 Árvores de decisão são suscetíveis a Overfitting [[data-science.machine-learning.glossary.overfitting]] e o método _bagging_ introduz _bias_ o que acaba gerando um equilíbrio.
 
+#### Vantagens
+
+- Reduz a variância sem aumentar viés
+- Diversidade de dados de treino feita com base na amostragem aleatória
+- Funciona com conjuntos de dados pequenos
+
+#### Desvantagens
+
+- Melhora a acurácia a custo de interpretabilidade.
+- Há chance de features importantes nunca serem utilizadas.
+- _Out-of-bag_, há chance de dados ficarem fora das amostras aleatoriamente geradas
+
 ### Boosting
 
 Neste método os modelos são executadas de forma sequencial invés de paralela. Os erros de um modelo do conjunto de modelos são corrigidos pelo próximo.
+
+#### Vantagens
+
+#### Desvantagens
 
 ### Blending
 
@@ -59,3 +62,4 @@ Neste método os modelos são executadas de forma sequencial invés de paralela.
 ## Links Úteis
 
 - [ensemble-learning-methods-in-machine-learning](https://medium.com/analytics-vidhya/ensemble-learning-methods-in-machine-learning-5d2f849192f8)
+- [machine-learning-e-ensembles](https://medium.com/dados-e-saude/machine-learning-e-ensembles-780f3a8aa36d)

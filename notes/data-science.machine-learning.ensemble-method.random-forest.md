@@ -2,7 +2,7 @@
 id: gqdbpi1pucetfm2mpdjxcg2
 title: Random Forest
 desc: ""
-updated: 1758061693160
+updated: 1758639902299
 created: 1757441824494
 ---
 
@@ -34,13 +34,13 @@ Cada árvore da floresta classificara os dados (Processo de bagging [[data-scien
 - Média das árvores
 - Frequência de decisões Sim/Não
 
-## Prós
+## Vantagens
 
 - Explicabilidade
 - Menos propenso a overfitting [[data-science.machine-learning.glossary.overfitting]]
 - Modelo simples com poucos parâmetros
 
-## Contras
+## Desvantagens
 
 - Exige maior poder de processamento por precisar percorrer todas as árvores
 - Acurácia

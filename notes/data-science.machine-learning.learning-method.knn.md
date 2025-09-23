@@ -1,8 +1,8 @@
 ---
 id: dljgg78sqhlvb49l6jqoyg0
 title: Knn
-desc: ''
-updated: 1757437158368
+desc: ""
+updated: 1758639902280
 created: 1756993971315
 ---
 
@@ -146,14 +146,14 @@ print(
 
 - Utilizada para valores categóricos, nos diz se dois valores categóricos são iguais.
 
-## Prós
+## Vantagens
 
 - Algoritmo simples, fácil de se interpretar
 - Não paramétrico (não faz suposições sobre a distribuição dos dados)
 - Utilizado para classificação e regressão
 - Treinamento rápido comparado a outros algoritmos
 
-## Contras
+## Desvantagens
 
 - Não possui uma fase de treino, então o custo computacional pode ser alto na fase de predição. Toda vez que uma predição é feita, o algoritmo precisa calcular a distância entre o ponto a ser classificado e todos os outros pontos do conjunto de dados de treinamento. Isso pode ser melhorado com estruturas de dados como _KD-Trees_ ou _Ball-Trees_, mas ainda sim pode ser inssuficiente para conjuntos de dados muito grandes.
 - Alto requerimento de memória uma vez que o KNN precisa armazenar todos pontos de dados

@@ -2,7 +2,7 @@
 id: ubosu2uvi6qakbbi07fysqh
 title: Naive Bayes
 desc: ""
-updated: 1757437172516
+updated: 1758639902263
 created: 1757093595992
 ---
 
@@ -44,13 +44,13 @@ Não utiliza hiperparâmetro
 
 ## Etapas
 
-## Prós
+## Vantagens
 
 - Performa bem em conjuntos de dados pequenos
 - Pode ser utilizado em classificação multi-classe
 - Pode ser utilizado em treino incremental
 
-## Contras
+## Desvantagens
 
 - Se um valor categórico está presente no conjunto de dados de teste, mas não estava presente no conjunto de dados de treino, o modelo atribuirá probabilidade 0. Isso é conhecido como **Zero Frequency**. Para resolver isso podemos utilizar a estimativa de Laplace.
 - Na vida real é quase impossível um conjunto de preditores completamente independentes.

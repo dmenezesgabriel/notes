@@ -2,7 +2,7 @@
 id: jyyvynlzk0gtl43nourtlhx
 title: Decision Tree
 desc: ""
-updated: 1757960152669
+updated: 1758639902256
 created: 1757437162403
 ---
 
@@ -94,7 +94,7 @@ Iterative Dichotomiser 3
 
 É uma técnica para lidar com _overfitting_ [[data-science.machine-learning.glossary.overfitting]] removendo sessões da árvore
 
-## Prós
+## Vantagens
 
 - Fácil de entender/interpretar
 - Fácil de explicar o resultado do modelo
@@ -102,7 +102,7 @@ Iterative Dichotomiser 3
 - Toleram valores faltantes
 - Não requer feature scaling (normalização [[data-science.machine-learning.data-preprocessing.normalization]] ou padronização [[data-science.machine-learning.data-pre-processing.standardization]])
 
-## Contras
+## Desvantagens
 
 - Performam bem com os dados utilizados para cria-las, mas não são flexíveis na classificação de novas amostras
 - São propensos a overfitting e sensíveis a outliers
