@@ -6,10 +6,31 @@ updated: 1759005139123
 created: 1759004929771
 ---
 
-Medição da jornada de construção de modelos de ciência de dados.
+Metodologia de condução de projetos que envolvam dados e geração de conhecimento.
 
-- Entendimento do negócio
-- Entendimento dos dados
-- Preparação dos dados
-- Modelagem
-- Avaliação e implementação
+- Problemas de negócio
+- Dados (Insumos)
+- Modelo (Solução)
+
+## Etapas
+
+- [Entendimento do negócio](#entendimento-do-negócio)
+- [Entendimento dos dados](entendimento-dos-dados)
+- [Preparação dos dados](#preparação-dos-dados)
+- [Modelagem](#modelagem)
+- [Avaliação e implementação](avaliação-e-implementação)
+
+### Entendimento do negócio
+
+- Objetivos do negócio
+- Panorama da situação
+- Objetivos do projeto
+- Produzir um plano de projeto
+
+### Entendimento dos dados
+
+### Preparação dos dados
+
+### Modelagem
+
+### Avaliação e implementação

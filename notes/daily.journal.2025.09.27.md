@@ -14,3 +14,4 @@ traitIds:
 - [[swe.cloud.aws.concepts.well-architected-framework]]
 - [[data-science]]
 - [[data-science.machine-learning.data-preprocessing.missing-data]]
+- [[data-science.concepts.outlier]]
