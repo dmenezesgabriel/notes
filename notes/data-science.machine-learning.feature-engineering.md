@@ -1,7 +1,7 @@
 ---
 id: fzx7jmp0gonuiavgnc5r3ol
 title: Feature Engineering
-desc: ''
+desc: ""
 updated: 1757341175990
 created: 1756753207454
 ---
@@ -10,7 +10,7 @@ created: 1756753207454
 
 Técnica para selecionar, modificar ou criar novos atributos a partir de dados existentes para melhor representar padrões. Isso inclui transformações matemáticas, combinações nos dados, extração de características temporais e etc.
 
-Importante para lidar com ruídos, valores faltantes e tornar a informação relevante acessível aos modelos
+Importante para lidar com ruídos, valores faltantes [[data-science.machine-learning.data-preprocessing.missing-data]] e tornar a informação relevante acessível aos modelos
 
 - Seleção de atributos
 - Transformação de atributos

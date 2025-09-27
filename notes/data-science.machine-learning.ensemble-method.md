@@ -43,7 +43,7 @@ Então os modelos recebem os conjuntos de dados e realizam predições o resulta
 
 #### Desvantagens
 
-- Melhora a acurácia a custo de interpretabilidade.
+- Melhora a acurácia a custo de interpretabilidade [[data-science.machine-learning.concepts.interpretability]].
 - Há chance de features importantes nunca serem utilizadas.
 - _Out-of-bag_, há chance de dados ficarem fora das amostras aleatoriamente geradas
 

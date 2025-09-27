@@ -17,4 +17,6 @@ O treinamento offline é conhecido como _Batch_ ou _Aprendizado Estático_, onde
 
 ## Treinamento Online
 
-Também chamado de _Aprendizado Dinâmico_, onde o modelo é re-treinado regularmente conforme novos dados são recebidos (stream de dados). Aplicado por exemplo no uso de dados de sensores, series temporais, trading de ações
+Também chamado de _Aprendizado Dinâmico_, onde o modelo é re-treinado regularmente conforme novos dados são recebidos (stream de dados). Aplicado por exemplo no uso de dados de sensores, series temporais, trading de ações.
+
+O treinamento do modelo não é feito no sistema de deploy, na verdade o treinamento "online" é um treinamento incremental.

@@ -36,7 +36,7 @@ Cada árvore da floresta classificara os dados (Processo de bagging [[data-scien
 
 ## Vantagens
 
-- Explicabilidade
+- Explicabilidade [[data-science.machine-learning.concepts.explainability]]
 - Menos propenso a overfitting [[data-science.machine-learning.glossary.overfitting]]
 - Modelo simples com poucos parâmetros
 
