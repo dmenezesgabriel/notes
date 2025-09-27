@@ -15,3 +15,7 @@ traitIds:
 - [[data-science]]
 - [[data-science.machine-learning.data-preprocessing.missing-data]]
 - [[data-science.concepts.outlier]]
+- [[data-science.machine-learning.glossary.centroid]]
+- [[data-science.machine-learning.glossary.underfitting]]
+- [[data-science.machine-learning.glossary.seed]]
+- [[data-science.glossary.artificial-inteligence]]

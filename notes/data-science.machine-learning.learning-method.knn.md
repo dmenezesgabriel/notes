@@ -30,7 +30,7 @@ Nós costumamos a julgar as pessoas pelo grupo ao qual elas se relacionam.
 
 - K comumente é um número ímpar para evitar empates em classificação binária
 - Quanto menor o K, maior o risco de _Overfitting_ [[data-science.machine-learning.glossary.overfitting]]
-- Quanto maior o K, maior o risco de _Underfitting_
+- Quanto maior o K, maior o risco de _Underfitting_ [[data-science.machine-learning.glossary.underfitting]]
 - K pode ser ajustado com validação cruzada
 - K tem uma relação inversa com variância, uma vez que o K aumenta a variância diminui
 
