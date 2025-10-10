@@ -1,0 +1,22 @@
+/* my-custom-styles.css */
+body,
+.ant-layout {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #c6d0f5;
+  background-color: #232634;
+}
+
+h1,
+h2,
+h3 {
+  color: #eebebe;
+  padding-bottom: 0.3em;
+}
+
+a,
+a:hover,
+a:active {
+  /** Color for links, except ones that have been already visited. */
+  color: #99d1db;
+}

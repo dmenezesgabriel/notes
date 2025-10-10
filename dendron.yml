@@ -73,6 +73,7 @@ workspace:
   enableFullHierarchyNoteTitle: false
   enablePersistentHistory: false
 preview:
+  theme: custom
   enableFMTitle: true
   enableNoteTitleForLink: true
   enableFrontmatterTags: true

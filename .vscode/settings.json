@@ -15,5 +15,8 @@
         "overfitting",
         "Overfitting",
         "serialização"
+    ],
+    "markdown.styles": [
+        "custom.css"
     ]
 }
