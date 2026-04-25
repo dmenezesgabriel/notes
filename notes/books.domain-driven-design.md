@@ -19,6 +19,7 @@ According to notes/books.dev.md, this entry refers to Domain-Driven Design and c
 Short summary (needs verification): Domain-Driven Design is an approach to software design focused on aligning software models with domain experts and business concepts.
 
 Conflicts / Notes:
+
 - The source lists Vlad Khononov but also points to Eric Evans as the original author. This attribution should be verified against the cited sources.
 
 TODO: Add a fuller summary, primary-source citations (Eric Evans, Vlad Khononov), and resolve author attribution.
