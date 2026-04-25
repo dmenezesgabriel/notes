@@ -100,7 +100,7 @@ Iterative Dichotomiser 3
 - Fácil de explicar o resultado do modelo
 - Requer menos dados de treino comparado a outros modelos
 - Toleram valores faltantes
-- Não requer feature scaling (normalização [[data-science.machine-learning.data-preprocessing.normalization]] ou padronização [[data-science.machine-learning.data-pre-processing.standardization]])
+- Não requer feature scaling (normalização [[data-science.machine-learning.data-pre-processing.normalization]] ou padronização [[data-science.machine-learning.data-pre-processing.standardization]])
 
 ## Contras
 

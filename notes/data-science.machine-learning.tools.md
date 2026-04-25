@@ -1,6 +1,8 @@
 ---
 id: dgbm52rz75427hx5bioogcq
-title: Tools
+title: Tools (Machine Learning)
+aliases:
+  - "Tools (Machine Learning)"
 desc: ""
 updated: 1756752935298
 created: 1756752765740

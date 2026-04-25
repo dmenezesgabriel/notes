@@ -1,6 +1,8 @@
 ---
 id: xcx2we2k1x49hn5zfoxm5zl
-title: Clustering
+title: Clustering (ML)
+aliases:
+  - "Clustering (ML)"
 desc: ""
 updated: 1756993913275
 created: 1756993821379

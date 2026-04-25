@@ -4,6 +4,8 @@ title: Indepotency
 desc: ""
 updated: 1755736210896
 created: 1755736206490
+status: draft
+pageType: note
 ---
 
 # TODO

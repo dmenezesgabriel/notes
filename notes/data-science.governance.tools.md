@@ -1,6 +1,8 @@
 ---
 id: 8je5pf143oow4r3zcm1h0bi
-title: Tools
+title: Tools (Governance)
+aliases:
+  - "Tools (Governance)"
 desc: ""
 updated: 1756751096227
 created: 1756751064967

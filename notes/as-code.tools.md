@@ -1,6 +1,8 @@
 ---
 id: 0i9gqw4lvnrrlyx7oncgk18
-title: Tools
+title: Tools (As Code)
+aliases:
+  - "Tools (As Code)"
 desc: ""
 updated: 1750873815144
 created: 1750873760525

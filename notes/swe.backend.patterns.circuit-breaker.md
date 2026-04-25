@@ -4,6 +4,8 @@ title: Circuit Breaker
 desc: ""
 updated: 1755736300288
 created: 1755736293508
+status: draft
+pageType: note
 ---
 
 # TODO

@@ -15,7 +15,7 @@ created: 1746318720331
 - Ordenação garantida apenas em modo FIFO [[swe.cloud.aws.services.messaging.sqs.sqs-fifo]]
 - Possibilidade de adicionar delay
 
-## SNS [[swe.cloud.aws.services.messaging.sns.md]]
+## SNS [[swe.cloud.aws.services.messaging.sns]]
 
 - Publisher/Subscriber
 - Envia dados para muitos assinantes

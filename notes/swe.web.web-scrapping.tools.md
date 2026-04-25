@@ -1,6 +1,8 @@
 ---
 id: 9nyjtmpvqhg9jmd1sappewb
-title: Tools
+title: Tools (Web Scrapping)
+aliases:
+  - "Tools (Web Scrapping)"
 desc: ""
 updated: 1751731833866
 created: 1748449501247

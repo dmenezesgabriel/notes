@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@dendronhq/dendron-cli": "0.120.0"
+    "@dendronhq/dendron-cli": "0.120.0",
+    "@tobilu/qmd": "^2.1.0"
   }
 }

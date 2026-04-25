@@ -54,7 +54,7 @@ Derivação de novos atributos a partir de variáveis de tempo como hora do dia,
 
 ## Normalização e Padronização
 
-- [[data-science.machine-learning.data-preprocessing.normalization]]
+- [[data-science.machine-learning.data-pre-processing.normalization]]
 - [[data-science.machine-learning.data-pre-processing.standardization]]
 
 ## Dados Faltantes

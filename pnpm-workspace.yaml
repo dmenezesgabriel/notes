@@ -1,0 +1,9 @@
+ignoredBuiltDependencies:
+  - better-sqlite3
+  - node-llama-cpp
+  - sqlite3
+  - tree-sitter-go
+  - tree-sitter-javascript
+  - tree-sitter-python
+  - tree-sitter-rust
+  - tree-sitter-typescript

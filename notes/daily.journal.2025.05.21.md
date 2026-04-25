@@ -6,4 +6,6 @@ updated: 1747853336977
 created: 1747853334607
 traitIds:
   - journalNote
+status: draft
+pageType: note
 ---

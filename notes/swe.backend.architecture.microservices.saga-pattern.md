@@ -4,6 +4,8 @@ title: Saga Pattern
 desc: ""
 updated: 1755736262539
 created: 1755736256339
+status: draft
+pageType: note
 ---
 
 # TODO

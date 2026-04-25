@@ -12,3 +12,6 @@ created: 1732408067016
 
 - [VS Code Dendron](https://wiki.dendron.so/)
 - [Obsidian](https://obsidian.md/)
+
+## root
+- [[root]] — Root

@@ -1,6 +1,8 @@
 ---
 id: kcv32awnmroqe94bi9z5qas
-title: API Gateway
+title: API Gateway (AWS)
+aliases:
+  - "API Gateway (AWS)"
 desc: ""
 updated: 1753024783302
 created: 1747490223635
