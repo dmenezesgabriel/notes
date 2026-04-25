@@ -39,3 +39,7 @@ desc: "Chronological log of ingest and maintenance actions"
   2. Review the frequency-term candidates and create concept or tag pages for high-priority terms (I can create stubs for the top N if you want).
   3. If you want deeper contradiction analysis, pick a set of high-priority entities (e.g., VPC, S3, Lambda, DynamoDB) and I will run an LLM-based comparison across associated pages.
 
+## [2026-04-25] housekeeping | ingest | notes/books.dev.md
+- created: notes.books.pragmatic-programmer, notes.books.philosophy-of-software-design, notes.books.design-of-design, notes.books.domain-driven-design, notes.books.14-habitos-desenvolvedores-altamente-produtivos, notes.books.fundamentos-arquitetura-de-software, notes.books.software-architecture-hard-parts, notes.books.building-microservices, notes.books.system-design-interview, notes.books.chaos-engineering, notes.books.how-to-win-friends-and-influence-people
+- updated: notes/notes.md (added books index)
+- notes: flagged potential author-attribution issue on notes.books.domain-driven-design (source lists Vlad Khononov and also Eric Evans); status set to flagged/needs verification; created per-book stubs with sources pointing to notes/books.dev.md

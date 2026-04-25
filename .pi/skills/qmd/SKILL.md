@@ -6,7 +6,6 @@ compatibility: Requires qmd CLI or MCP server. Install via `npm install -g @tobi
 metadata:
   author: tobi
   version: "2.0.0"
-allowed-tools: Bash(qmd:*), mcp__qmd__*
 ---
 
 # QMD - Quick Markdown Search
