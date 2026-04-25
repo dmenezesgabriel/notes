@@ -4,6 +4,9 @@ title: Cloud Formation
 desc: ""
 updated: 1752539501031
 created: 1751309129394
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # AWS CloudFormation

@@ -1,0 +1,24 @@
+---
+id: cz53c6frve29gsgkd6rrsm8
+title: S3 Security
+desc: ""
+updated: 1745701591377
+created: 1745701591377
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
+---
+
+## User based
+
+- IAM policies
+
+## Resource based
+
+- Bucket policies
+- Object Access Control List (ACL)
+- Bucket Access Control List (ACL)
+
+[[swe.cloud.aws.services.s3]]
+
+#SWE #Cloud #AWS #AWSServices #AmazonS3

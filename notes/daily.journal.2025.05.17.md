@@ -10,18 +10,18 @@ traitIds:
 
 ## DynamoDB
 
-- DAX [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-accelerator]]
-- Stream [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-streams]]
-- Global Tables [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-global-tables]]
-- TTL [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-ttl]]
-- Disaster Recovery [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-disaster-recovery]]
-- S3 integration [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-s3-integration]]
+- DAX [[swe.cloud.aws.services.serverless.dynamodb.accelerator]]
+- Stream [[swe.cloud.aws.services.serverless.dynamodb.streams]]
+- Global Tables [[swe.cloud.aws.services.serverless.dynamodb.global-tables]]
+- TTL [[swe.cloud.aws.services.serverless.dynamodb.ttl]]
+- Disaster Recovery [[swe.cloud.aws.services.serverless.dynamodb.disaster-recovery]]
+- S3 integration [[swe.cloud.aws.services.serverless.dynamodb.s3-integration]]
 
 ## API Gateway
 
 - [[swe.cloud.aws.services.serverless.api-gateway]]
-- Integrations [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-integrations]]
-- Security - [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-security]]
+- Integrations [[swe.cloud.aws.services.serverless.api-gateway.integrations]]
+- Security - [[swe.cloud.aws.services.serverless.api-gateway.security]]
 
 ## Step Functions
 

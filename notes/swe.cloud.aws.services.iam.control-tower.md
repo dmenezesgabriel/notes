@@ -4,6 +4,9 @@ title: Control Tower
 desc: ""
 updated: 1750870413142
 created: 1749211041944
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Governar um ambiente multi-contas AWS seguro e baseado nas melhores práticas

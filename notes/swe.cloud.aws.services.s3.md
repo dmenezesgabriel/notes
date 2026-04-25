@@ -4,6 +4,9 @@ title: S3
 desc: ""
 updated: 1752415434233
 created: 1745696116353
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Buckets S3 são regionais
@@ -34,18 +37,18 @@ created: 1745696116353
 
 ## Relacionado
 
-- [[swe.cloud.aws.services.s3.s3-access-points]]
-- [[swe.cloud.aws.services.s3.s3-batch-operations]]
-- [[swe.cloud.aws.services.s3.s3-cors]]
-- [[swe.cloud.aws.services.s3.s3-glacier-vault-lock-policy]]
-- [[swe.cloud.aws.services.s3.s3-life-cycle]]
-- [[swe.cloud.aws.services.s3.s3-object-encryption]]
-- [[swe.cloud.aws.services.s3.s3-object-lambda]]
-- [[swe.cloud.aws.services.s3.s3-object-lock]]
-- [[swe.cloud.aws.services.s3.s3-performance]]
-- [[swe.cloud.aws.services.s3.s3-security]]
-- [[swe.cloud.aws.services.s3.s3-static-hosting]]
-- [[swe.cloud.aws.services.s3.s3-storage-classes]]
-- [[swe.cloud.aws.services.s3.s3-storage-lens]]
+- [[swe.cloud.aws.services.s3.access-points]]
+- [[swe.cloud.aws.services.s3.batch-operations]]
+- [[swe.cloud.aws.services.s3.cors]]
+- [[swe.cloud.aws.services.s3.glacier-vault-lock-policy]]
+- [[swe.cloud.aws.services.s3.life-cycle]]
+- [[swe.cloud.aws.services.s3.object-encryption]]
+- [[swe.cloud.aws.services.s3.object-lambda]]
+- [[swe.cloud.aws.services.s3.object-lock]]
+- [[swe.cloud.aws.services.s3.performance]]
+- [[swe.cloud.aws.services.s3.security]]
+- [[swe.cloud.aws.services.s3.static-hosting]]
+- [[swe.cloud.aws.services.s3.storage-classes]]
+- [[swe.cloud.aws.services.s3.storage-lens]]
 - [[swe.cloud.aws.services.databases]]
-- [[swe.cloud.aws.services.s3.s3-versioning]]
+- [[swe.cloud.aws.services.s3.versioning]]

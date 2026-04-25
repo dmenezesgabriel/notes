@@ -6,6 +6,9 @@ aliases:
 desc: ""
 updated: 1753024783302
 created: 1747490223635
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 ## Casos de Uso
@@ -28,6 +31,6 @@ created: 1747490223635
 ## Relacionado
 
 - [[daily.journal.2025.05.17]]
-- [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-integrations]]
-- [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-endpoint-types]]
-- [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-security]]
+- [[swe.cloud.aws.services.serverless.api-gateway.integrations]]
+- [[swe.cloud.aws.services.serverless.api-gateway.endpoint-types]]
+- [[swe.cloud.aws.services.serverless.api-gateway.security]]

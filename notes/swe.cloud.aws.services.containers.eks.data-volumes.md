@@ -4,11 +4,14 @@ title: Data Volumes
 desc: ""
 updated: 1750870251294
 created: 1746391782062
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Especificados no `StorageClass` manifest no cluster EKS
 - Utiliza o driver _Container Storage Interface (CSI)_
-- Suporta Amazon EBS [[swe.cloud.aws.services.ec2.ec2-ebs]]
-- Suporta Amazon EFS [[swe.cloud.aws.services.ec2.ec2-efs]]
+- Suporta Amazon EBS [[swe.cloud.aws.services.ec2.ebs]]
+- Suporta Amazon EFS [[swe.cloud.aws.services.ec2.efs]]
 - Suporta Amazon FSx for Lustre [[swe.cloud.aws.services.storage.fsx]]
 - Suporta Amazon FSx for NetApp ONTAP [[swe.cloud.aws.services.storage.fsx]]

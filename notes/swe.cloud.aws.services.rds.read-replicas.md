@@ -1,0 +1,18 @@
+---
+id: kwkygzwi0qa664ab6b1ov1r
+title: Rds Read Replicas
+desc: ""
+updated: 1745199330994
+created: 1745198580124
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
+---
+
+- ate 15 replicas
+- mesma AZ, cross AZ ou cross region
+- ASYNC (eventualmente consistente)
+- mesma região, diferentes AZs nao ha taxa de replicação, diferentes regiões ha taxa
+- podem ser configuradas como multi AZ no caso de disaster recovery
+
+#SWE #Cloud #AWS #AWSServices #AmazonRDS

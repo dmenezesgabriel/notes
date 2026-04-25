@@ -4,6 +4,9 @@ title: Machine Learning
 desc: ""
 updated: 1748264435945
 created: 1748264140829
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - **Rekognition**: detecção de rostos, rotulagem de imagens e reconhecimento de celebridades.

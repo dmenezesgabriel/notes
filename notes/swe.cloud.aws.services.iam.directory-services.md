@@ -4,6 +4,9 @@ title: Directory Services
 desc: ""
 updated: 1750870417265
 created: 1749210090352
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 ## Microsoft AD gerenciado pela AWS

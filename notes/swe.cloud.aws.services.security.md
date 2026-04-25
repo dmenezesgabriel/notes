@@ -4,6 +4,9 @@ title: Security
 desc: ""
 updated: 1749902652604
 created: 1749410810120
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - [[swe.cloud.aws.services.security.secrets-manager]]

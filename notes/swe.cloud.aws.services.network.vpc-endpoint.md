@@ -4,6 +4,9 @@ title: Vpc Endpoint
 desc: ""
 updated: 1750013485335
 created: 1750013485335
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # VPC Endpoints
@@ -17,7 +20,7 @@ created: 1750013485335
 ### Interface Endpoints
 
 - Utilizam _AWS Private Link_
-- Provisiona um ENI (Endereço de IP privado) como entrada e é necessário atrelar a um security group [[swe.cloud.aws.services.ec2.ec2-security-groups]]
+- Provisiona um ENI (Endereço de IP privado) como entrada e é necessário atrelar a um security group [[swe.cloud.aws.services.ec2.security-groups]]
 - Custos por hora e GB processado
 
 ### Gateway Endpoints

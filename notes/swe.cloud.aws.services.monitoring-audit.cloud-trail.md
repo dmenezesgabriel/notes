@@ -4,6 +4,9 @@ title: Cloud Trail
 desc: ""
 updated: 1748311326248
 created: 1748295188850
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Histórico de eventos / Chamadas de API feitas pela sua conta da AWS via console, SDK, CLI e Serviços

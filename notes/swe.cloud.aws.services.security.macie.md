@@ -4,6 +4,9 @@ title: Macie
 desc: ""
 updated: 1749909675547
 created: 1749909675547
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Utiliza machine learning para proteger dados sensíveis na AWS

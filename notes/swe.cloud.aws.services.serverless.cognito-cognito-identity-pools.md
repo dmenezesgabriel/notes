@@ -4,6 +4,9 @@ title: Cognito Cognito Identity Pools
 desc: ""
 updated: 1747508935808
 created: 1747508549368
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Fornece identidades a usuários para que tenham acesso temporário a credenciais da AWS

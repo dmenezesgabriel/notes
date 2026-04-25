@@ -4,6 +4,9 @@ title: Messaging
 desc: ""
 updated: 1746320164322
 created: 1746318720331
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 ## SQS [[swe.cloud.aws.services.messaging.sqs]]
@@ -12,7 +15,7 @@ created: 1746318720331
 - Consumidor "puxa" os dados
 - Dados são deletados após consumidos
 - Consumidores (Workers) ilimitados
-- Ordenação garantida apenas em modo FIFO [[swe.cloud.aws.services.messaging.sqs.sqs-fifo]]
+- Ordenação garantida apenas em modo FIFO [[swe.cloud.aws.services.messaging.sqs.fifo]]
 - Possibilidade de adicionar delay
 
 ## SNS [[swe.cloud.aws.services.messaging.sns]]
@@ -23,7 +26,7 @@ created: 1746318720331
 - Dados não sāo persistidos, e perdidos se não entregues
 - Até 100.000 tópicos
 - Integra com SQS para padrão Fan-Out
-- Integração com FIFO SQS [[swe.cloud.aws.services.messaging.sns.sns-fifo]]
+- Integração com FIFO SQS [[swe.cloud.aws.services.messaging.sns.fifo]]
 
 ## Kinesis [[swe.cloud.aws.services.messaging.kinesis-data-stream]]
 

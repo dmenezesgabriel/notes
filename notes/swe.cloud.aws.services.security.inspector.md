@@ -4,6 +4,9 @@ title: Inspector
 desc: ""
 updated: 1749909635309
 created: 1749904639305
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Avaliações de segurança automáticas

@@ -4,6 +4,9 @@ title: Disaster Recovery
 desc: ""
 updated: 1750870213696
 created: 1750814310508
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # Disaster Recovery
@@ -38,9 +41,9 @@ Downtime (RTO) é calculado o tempo entre o desastre e a recuperação
 
 ### Backup
 
-- Snapshots _EBS_[[swe.cloud.aws.services.ec2.ec2-ebs]], Backups automáticos _RDS_[[swe.cloud.aws.services.rds]], _Snapshots_ ...
+- Snapshots _EBS_[[swe.cloud.aws.services.ec2.ebs]], Backups automáticos _RDS_[[swe.cloud.aws.services.rds]], _Snapshots_ ...
 - Envios de dados regularmente ao S3, Glacier, ...
-- Para _On-premise_: _Snow Ball_ [[swe.cloud.aws.services.storage.snow-family]] ou _Storage Gateway_ [[swe.cloud.aws.services.storage.storage-gateway]]
+- Para _On-premise_: _Snow Ball_ [[swe.cloud.aws.services.storage.snow-family]] ou _Storage Gateway_ [[swe.cloud.aws.services.storage.gateway]]
 
 ### Alta disponibilidade
 

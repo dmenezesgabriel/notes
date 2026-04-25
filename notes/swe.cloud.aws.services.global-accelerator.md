@@ -4,6 +4,9 @@ title: Global Accelerator
 desc: ""
 updated: 1751734504555
 created: 1751734368354
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # AWS Global Accelerator

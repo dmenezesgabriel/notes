@@ -38,46 +38,46 @@ desc: "Index for swe domain"
 - [[swe.cloud.aws.services.cost-explorer]] — Cost Explorer
 - [[swe.cloud.aws.services.data-analytics.apache-flink]] — Apache Flink
 - [[swe.cloud.aws.services.data-analytics.athena]] — Athena
-- [[swe.cloud.aws.services.data-analytics.athena.athena-federated-query]] — Athena Federated Query
-- [[swe.cloud.aws.services.data-analytics.athena.athena-performance]] — Athena Performance
+- [[swe.cloud.aws.services.data-analytics.athena.federated-query]] — Athena Federated Query
+- [[swe.cloud.aws.services.data-analytics.athena.performance]] — Athena Performance
 - [[swe.cloud.aws.services.data-analytics.emr]] — Emr
 - [[swe.cloud.aws.services.data-analytics.glue]] — Glue
-- [[swe.cloud.aws.services.data-analytics.glue.glue-data-catalog]] — Glue Data Catalog
-- [[swe.cloud.aws.services.data-analytics.glue.glue-databrew]] — Glue Databrew
-- [[swe.cloud.aws.services.data-analytics.glue.glue-patterns]] — Glue Patterns
+- [[swe.cloud.aws.services.data-analytics.glue.data-catalog]] — Glue Data Catalog
+- [[swe.cloud.aws.services.data-analytics.glue.databrew]] — Glue Databrew
+- [[swe.cloud.aws.services.data-analytics.glue.patterns]] — Glue Patterns
 - [[swe.cloud.aws.services.data-analytics.lake-formation]] — Lake Formation
 - [[swe.cloud.aws.services.data-analytics.msk]] — Msk
 - [[swe.cloud.aws.services.data-analytics.open-search]] — Open Search
-- [[swe.cloud.aws.services.data-analytics.open-search.open-search-patterns]] — Open Search Patterns
+- [[swe.cloud.aws.services.data-analytics.open-search.patterns]] — Open Search Patterns
 - [[swe.cloud.aws.services.data-analytics.quicksight]] — Quicksight
 - [[swe.cloud.aws.services.data-analytics.redshift]] — Redshift
-- [[swe.cloud.aws.services.data-analytics.redshift.redshift-data-ingestion]] — Redshift Data Ingestion
-- [[swe.cloud.aws.services.data-analytics.redshift.redshift-disaster-recovery]] — Redshift Disaster Recovery
-- [[swe.cloud.aws.services.data-analytics.redshift.redshift-spectrum]] — Redshift Spectrum
+- [[swe.cloud.aws.services.data-analytics.redshift.data-ingestion]] — Redshift Data Ingestion
+- [[swe.cloud.aws.services.data-analytics.redshift.disaster-recovery]] — Redshift Disaster Recovery
+- [[swe.cloud.aws.services.data-analytics.redshift.spectrum]] — Redshift Spectrum
 - [[swe.cloud.aws.services.databases]] — Databases
 - [[swe.cloud.aws.services.dms]] — Dms
 - [[swe.cloud.aws.services.dms.dms.sct]] — Sct
 - [[swe.cloud.aws.services.document-db]] — Document Db
 - [[swe.cloud.aws.services.ec2]] — EC2
-- [[swe.cloud.aws.services.ec2.ec2-ami]] — Ec2 Ami
-- [[swe.cloud.aws.services.ec2.ec2-ebs]] — Ec2 Ebs
-- [[swe.cloud.aws.services.ec2.ec2-efs]] — Ec2 Efs
-- [[swe.cloud.aws.services.ec2.ec2-elastic-network-interface]] — Ec2 Elastic Network Interface
-- [[swe.cloud.aws.services.ec2.ec2-golden-ami]] — Ec2 Golden Ami
-- [[swe.cloud.aws.services.ec2.ec2-instance-connect]] — Ec2 Instance Connect
-- [[swe.cloud.aws.services.ec2.ec2-instance-purchase-options]] — Ec2 Instance Purchase Options
-- [[swe.cloud.aws.services.ec2.ec2-instance-store]] — Ec2 Instance Store
-- [[swe.cloud.aws.services.ec2.ec2-instances]] — Ec2 Instances
-- [[swe.cloud.aws.services.ec2.ec2-placement-groups]] — Ec2 Placement Groups
-- [[swe.cloud.aws.services.ec2.ec2-security-groups]] — Ec2 Security Groups
-- [[swe.cloud.aws.services.ec2.ec2-ssh]] — Ssh
+- [[swe.cloud.aws.services.ec2.ami]] — Ec2 Ami
+- [[swe.cloud.aws.services.ec2.ebs]] — Ec2 Ebs
+- [[swe.cloud.aws.services.ec2.efs]] — Ec2 Efs
+- [[swe.cloud.aws.services.ec2.elastic-network-interface]] — Ec2 Elastic Network Interface
+- [[swe.cloud.aws.services.ec2.golden-ami]] — Ec2 Golden Ami
+- [[swe.cloud.aws.services.ec2.instance-connect]] — Ec2 Instance Connect
+- [[swe.cloud.aws.services.ec2.instance-purchase-options]] — Ec2 Instance Purchase Options
+- [[swe.cloud.aws.services.ec2.instance-store]] — Ec2 Instance Store
+- [[swe.cloud.aws.services.ec2.instances]] — Ec2 Instances
+- [[swe.cloud.aws.services.ec2.placement-groups]] — Ec2 Placement Groups
+- [[swe.cloud.aws.services.ec2.security-groups]] — Ec2 Security Groups
+- [[swe.cloud.aws.services.ec2.ssh]] — Ssh
 - [[swe.cloud.aws.services.elasticache]] — Elasticache
 - [[swe.cloud.aws.services.elb]] — ELB
 - [[swe.cloud.aws.services.elb.alb]] — Alb
 - [[swe.cloud.aws.services.elb.alb-sni]] — Alb Sni
-- [[swe.cloud.aws.services.elb.elb-connection-draining]] — Elb Connection Draining
-- [[swe.cloud.aws.services.elb.elb-cross-zone]] — Elb Cross Zone
-- [[swe.cloud.aws.services.elb.elb-sticky-sessions]] — Elb Sticky Sessions
+- [[swe.cloud.aws.services.elb.connection-draining]] — Elb Connection Draining
+- [[swe.cloud.aws.services.elb.cross-zone]] — Elb Cross Zone
+- [[swe.cloud.aws.services.elb.sticky-sessions]] — Elb Sticky Sessions
 - [[swe.cloud.aws.services.elb.nlb]] — Nlb
 - [[swe.cloud.aws.services.global-accelerator]] — Global Accelerator
 - [[swe.cloud.aws.services.iac.cloud-formation]] — Cloud Formation
@@ -103,27 +103,27 @@ desc: "Index for swe domain"
 - [[swe.cloud.aws.services.messaging.amazon-mq]] — Amazon Mq
 - [[swe.cloud.aws.services.messaging.kinesis-data-stream]] — Kinesis Data Stream
 - [[swe.cloud.aws.services.messaging.sns]] — Sns
-- [[swe.cloud.aws.services.messaging.sns.sns-fifo]] — Sns Fifo
-- [[swe.cloud.aws.services.messaging.sns.sns-message-filtering]] — Sns Message Filtering
-- [[swe.cloud.aws.services.messaging.sns.sns-security]] — Sns Security
-- [[swe.cloud.aws.services.messaging.sns.sns-sqs-fan-out]] — Sns Sqs Fan Out
+- [[swe.cloud.aws.services.messaging.sns.fifo]] — Sns Fifo
+- [[swe.cloud.aws.services.messaging.sns.message-filtering]] — Sns Message Filtering
+- [[swe.cloud.aws.services.messaging.sns.security]] — Sns Security
+- [[swe.cloud.aws.services.messaging.sns.sqs-fan-out]] — Sns Sqs Fan Out
 - [[swe.cloud.aws.services.messaging.sqs]] — Sqs
-- [[swe.cloud.aws.services.messaging.sqs.sqs-asg]] — Sqs Asg
-- [[swe.cloud.aws.services.messaging.sqs.sqs-fifo]] — Sqs Fifo
-- [[swe.cloud.aws.services.messaging.sqs.sqs-long-pooling]] — Sqs Long Pooling
-- [[swe.cloud.aws.services.messaging.sqs.sqs-message-visibility-timeout]] — Sqs Message Visibility Timeout
-- [[swe.cloud.aws.services.messaging.sqs.sqs-security]] — Sqs Security
+- [[swe.cloud.aws.services.messaging.sqs.asg]] — Sqs Asg
+- [[swe.cloud.aws.services.messaging.sqs.fifo]] — Sqs Fifo
+- [[swe.cloud.aws.services.messaging.sqs.long-pooling]] — Sqs Long Pooling
+- [[swe.cloud.aws.services.messaging.sqs.message-visibility-timeout]] — Sqs Message Visibility Timeout
+- [[swe.cloud.aws.services.messaging.sqs.security]] — Sqs Security
 - [[swe.cloud.aws.services.monitoring-audit]] — Monitoring Audit
 - [[swe.cloud.aws.services.monitoring-audit.cloud-trail]] — Cloud Trail
 - [[swe.cloud.aws.services.monitoring-audit.cloud-watch]] — Cloud Watch
-- [[swe.cloud.aws.services.monitoring-audit.cloud-watch.cloud-watch-alarms]] — Cloud Watch Alarms
-- [[swe.cloud.aws.services.monitoring-audit.cloud-watch.cloud-watch-insights]] — Cloud Watch Insights
-- [[swe.cloud.aws.services.monitoring-audit.cloud-watch.cloud-watch-logs]] — Cloud Watch Logs
-- [[swe.cloud.aws.services.monitoring-audit.cloud-watch.cloud-watch-metrics]] — Cloud Watch Metrics
+- [[swe.cloud.aws.services.monitoring-audit.cloud-watch.alarms]] — Cloud Watch Alarms
+- [[swe.cloud.aws.services.monitoring-audit.cloud-watch.insights]] — Cloud Watch Insights
+- [[swe.cloud.aws.services.monitoring-audit.cloud-watch.logs]] — Cloud Watch Logs
+- [[swe.cloud.aws.services.monitoring-audit.cloud-watch.metrics]] — Cloud Watch Metrics
 - [[swe.cloud.aws.services.monitoring-audit.config]] — Config
 - [[swe.cloud.aws.services.monitoring-audit.event-bridge]] — Event Bridge
 - [[swe.cloud.aws.services.neptune]] — Neptune
-- [[swe.cloud.aws.services.neptune.neptune-streams]] — Neptune Streams
+- [[swe.cloud.aws.services.neptune.streams]] — Neptune Streams
 - [[swe.cloud.aws.services.network.direct-connect]] — Direct Connect
 - [[swe.cloud.aws.services.network.internet-gateway]] — Internet Gateway
 - [[swe.cloud.aws.services.network.internet-gateway-egress-only]] — Internet Gateway Egress Only
@@ -143,78 +143,78 @@ desc: "Index for swe domain"
 - [[swe.cloud.aws.services.pinpoint]] — Pinpoint
 - [[swe.cloud.aws.services.qldb]] — Qldb
 - [[swe.cloud.aws.services.rds]] — Rds
-- [[swe.cloud.aws.services.rds.rds-multi-az]] — Rds Multi Az
-- [[swe.cloud.aws.services.rds.rds-read-replicas]] — Rds Read Replicas
+- [[swe.cloud.aws.services.rds.multi-az]] — Rds Multi Az
+- [[swe.cloud.aws.services.rds.read-replicas]] — Rds Read Replicas
 - [[swe.cloud.aws.services.route53]] — Route53
 - [[swe.cloud.aws.services.s3]] — S3
-- [[swe.cloud.aws.services.s3.s3-access-points]] — S3 Access Points
-- [[swe.cloud.aws.services.s3.s3-batch-operations]] — S3 Batch Operations
-- [[swe.cloud.aws.services.s3.s3-cors]] — S3 Cors
-- [[swe.cloud.aws.services.s3.s3-glacier-vault-lock-policy]] — S3 Glacier Vault Lock Policy
-- [[swe.cloud.aws.services.s3.s3-life-cycle]] — S3 Life Cycle
-- [[swe.cloud.aws.services.s3.s3-object-encryption]] — S3 Object Encryption
-- [[swe.cloud.aws.services.s3.s3-object-lambda]] — S3 Object Lambda
-- [[swe.cloud.aws.services.s3.s3-object-lock]] — S3 Object Lock
-- [[swe.cloud.aws.services.s3.s3-performance]] — S3 Performance
-- [[swe.cloud.aws.services.s3.s3-security]] — S3 Security
-- [[swe.cloud.aws.services.s3.s3-static-hosting]] — S3 Static Hosting
-- [[swe.cloud.aws.services.s3.s3-storage-classes]] — S3 Storage Classes
-- [[swe.cloud.aws.services.s3.s3-storage-lens]] — S3 Storage Lens
-- [[swe.cloud.aws.services.s3.s3-versioning]] — S3 Versioning
+- [[swe.cloud.aws.services.s3.access-points]] — S3 Access Points
+- [[swe.cloud.aws.services.s3.batch-operations]] — S3 Batch Operations
+- [[swe.cloud.aws.services.s3.cors]] — S3 Cors
+- [[swe.cloud.aws.services.s3.glacier-vault-lock-policy]] — S3 Glacier Vault Lock Policy
+- [[swe.cloud.aws.services.s3.life-cycle]] — S3 Life Cycle
+- [[swe.cloud.aws.services.s3.object-encryption]] — S3 Object Encryption
+- [[swe.cloud.aws.services.s3.object-lambda]] — S3 Object Lambda
+- [[swe.cloud.aws.services.s3.object-lock]] — S3 Object Lock
+- [[swe.cloud.aws.services.s3.performance]] — S3 Performance
+- [[swe.cloud.aws.services.s3.security]] — S3 Security
+- [[swe.cloud.aws.services.s3.static-hosting]] — S3 Static Hosting
+- [[swe.cloud.aws.services.s3.storage-classes]] — S3 Storage Classes
+- [[swe.cloud.aws.services.s3.storage-lens]] — S3 Storage Lens
+- [[swe.cloud.aws.services.s3.versioning]] — S3 Versioning
 - [[swe.cloud.aws.services.security]] — Security
 - [[swe.cloud.aws.services.security.acm]] — Acm
 - [[swe.cloud.aws.services.security.firewall-manager]] — Firewall Manager
 - [[swe.cloud.aws.services.security.guard-duty]] — Guard Duty
 - [[swe.cloud.aws.services.security.inspector]] — Inspector
 - [[swe.cloud.aws.services.security.kms]] — Kms
-- [[swe.cloud.aws.services.security.kms.kms-key-policy]] — Kms Key Policy
-- [[swe.cloud.aws.services.security.kms.kms-key-types]] — Kms Key Types
-- [[swe.cloud.aws.services.security.kms.kms-keys-multi-region]] — Kms Keys Multi Region
+- [[swe.cloud.aws.services.security.kms.key-policy]] — Kms Key Policy
+- [[swe.cloud.aws.services.security.kms.key-types]] — Kms Key Types
+- [[swe.cloud.aws.services.security.kms.keys-multi-region]] — Kms Keys Multi Region
 - [[swe.cloud.aws.services.security.macie]] — Macie
 - [[swe.cloud.aws.services.security.secrets-manager]] — Secret Manager
 - [[swe.cloud.aws.services.security.shield]] — Shield
 - [[swe.cloud.aws.services.security.ssm-parameter-store]] — Ssm Parameter Store
 - [[swe.cloud.aws.services.security.waf]] — Waf
 - [[swe.cloud.aws.services.serverless.api-gateway]] — API Gateway
-- [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-endpoint-types]] — API Gateway Endpoint Types
-- [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-integrations]] — API Gateway Integrations
-- [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-security]] — API Gateway Security
+- [[swe.cloud.aws.services.serverless.api-gateway.endpoint-types]] — API Gateway Endpoint Types
+- [[swe.cloud.aws.services.serverless.api-gateway.integrations]] — API Gateway Integrations
+- [[swe.cloud.aws.services.serverless.api-gateway.security]] — API Gateway Security
 - [[swe.cloud.aws.services.serverless.cognito]] — Cognito
 - [[swe.cloud.aws.services.serverless.cognito-cognito-identity-pools]] — Cognito Cognito Identity Pools
 - [[swe.cloud.aws.services.serverless.cognito-cognito-user-pools]] — Cognito Cognito User Pools
 - [[swe.cloud.aws.services.serverless.dynamodb]] — Dynamodb
-- [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-accelerator]] — Dynamodb Accelerator
-- [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-disaster-recovery]] — Dynamodb Disaster Recovery
-- [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-global-tables]] — Dynamodb Global Tables
-- [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-s3-integration]] — Dynamodb S3 Integration
-- [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-streams]] — Dynamodb Streams
-- [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-ttl]] — Dynamodb Ttl
+- [[swe.cloud.aws.services.serverless.dynamodb.accelerator]] — Dynamodb Accelerator
+- [[swe.cloud.aws.services.serverless.dynamodb.disaster-recovery]] — Dynamodb Disaster Recovery
+- [[swe.cloud.aws.services.serverless.dynamodb.global-tables]] — Dynamodb Global Tables
+- [[swe.cloud.aws.services.serverless.dynamodb.s3-integration]] — Dynamodb S3 Integration
+- [[swe.cloud.aws.services.serverless.dynamodb.streams]] — Dynamodb Streams
+- [[swe.cloud.aws.services.serverless.dynamodb.ttl]] — Dynamodb Ttl
 - [[swe.cloud.aws.services.serverless.lambda]] — Lambda
-- [[swe.cloud.aws.services.serverless.lambda.lambda-concurrency]] — Lambda Concurrency
-- [[swe.cloud.aws.services.serverless.lambda.lambda-edge-function]] — Lambda Edge Function
-- [[swe.cloud.aws.services.serverless.lambda.lambda-in-vpc]] — Lambda in Vpc
-- [[swe.cloud.aws.services.serverless.lambda.lambda-limits]] — Lambda Limits
-- [[swe.cloud.aws.services.serverless.lambda.lambda-snap-start]] — Lambda Snap Start
+- [[swe.cloud.aws.services.serverless.lambda.concurrency]] — Lambda Concurrency
+- [[swe.cloud.aws.services.serverless.lambda.edge-function]] — Lambda Edge Function
+- [[swe.cloud.aws.services.serverless.lambda.in-vpc]] — Lambda in Vpc
+- [[swe.cloud.aws.services.serverless.lambda.limits]] — Lambda Limits
+- [[swe.cloud.aws.services.serverless.lambda.snap-start]] — Lambda Snap Start
 - [[swe.cloud.aws.services.serverless.step-functions]] — Step Functions
 - [[swe.cloud.aws.services.simple-email-service]] — Simple Email Service
 - [[swe.cloud.aws.services.solutions.instance-scheduler]] — Instance Scheduler
 - [[swe.cloud.aws.services.ssm]] — SSM
-- [[swe.cloud.aws.services.ssm.ssm-automation]] — Ssm Automation
-- [[swe.cloud.aws.services.ssm.ssm-maintenance-windows]] — Ssm Maintenance Windows
-- [[swe.cloud.aws.services.ssm.ssm-patch-manager]] — Ssm Patch Manager
-- [[swe.cloud.aws.services.ssm.ssm-run-command]] — Ssm Run Command
-- [[swe.cloud.aws.services.ssm.ssm-session-manager]] — Ssm Session Manager
+- [[swe.cloud.aws.services.ssm.automation]] — Ssm Automation
+- [[swe.cloud.aws.services.ssm.maintenance-windows]] — Ssm Maintenance Windows
+- [[swe.cloud.aws.services.ssm.patch-manager]] — Ssm Patch Manager
+- [[swe.cloud.aws.services.ssm.run-command]] — Ssm Run Command
+- [[swe.cloud.aws.services.ssm.session-manager]] — Ssm Session Manager
 - [[swe.cloud.aws.services.storage.data-sync]] — Data Sync
 - [[swe.cloud.aws.services.storage.fsx]] — Fsx
 - [[swe.cloud.aws.services.storage.snow-family]] — Snow Family
-- [[swe.cloud.aws.services.storage.storage-gateway]] — Storage Gateway
+- [[swe.cloud.aws.services.storage.gateway]] — Storage Gateway
 - [[swe.cloud.aws.services.storage.transfer-family]] — Transfer Family
 - [[swe.cloud.aws.services.summary-data-transfer]] — Summary Data Transfer
 - [[swe.cloud.aws.services.timestream]] — Timestream
 - [[swe.cloud.aws.services.trusted-advisor]] — Trusted Advisor
 - [[swe.cloud.aws.services.vmware-cloud]] — Vmware Cloud
 - [[swe.cloud.aws.services.vpc]] — VPC
-- [[swe.cloud.aws.services.vpc.vpc-sharing]] — Vpc Sharing
+- [[swe.cloud.aws.services.vpc.sharing]] — Vpc Sharing
 - [[swe.cloud.learning.learning-platforms]] — Learning Platforms
 - [[swe.cloud.patterns.cloud-serverless-patterns]] — Cloud Serverless Patterns
 

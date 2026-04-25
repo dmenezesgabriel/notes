@@ -4,6 +4,9 @@ title: Alb
 desc: ""
 updated: 1750870396261
 created: 1745111354356
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Layer 7 (HTTP)

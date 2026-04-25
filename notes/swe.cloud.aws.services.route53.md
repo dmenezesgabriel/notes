@@ -4,6 +4,9 @@ title: Route53
 desc: ""
 updated: 1745440794413
 created: 1745429616752
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Route 53 e um serviço de DNS gerenciado pela AWS

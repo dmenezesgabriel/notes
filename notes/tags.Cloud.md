@@ -21,24 +21,24 @@ desc: "Tag page for Cloud"
 - [[swe.cloud.aws.services.messaging]] — Messaging
 - [[swe.cloud.aws.services.messaging.amazon-mq]] — Amazon Mq
 - [[swe.cloud.aws.services.messaging.sns]] — Sns
-- [[swe.cloud.aws.services.messaging.sns.sns-fifo]] — Sns Fifo
-- [[swe.cloud.aws.services.messaging.sns.sns-message-filtering]] — Sns Message Filtering
-- [[swe.cloud.aws.services.messaging.sns.sns-security]] — Sns Security
-- [[swe.cloud.aws.services.messaging.sns.sns-sqs-fan-out]] — Sns Sqs Fan Out
+- [[swe.cloud.aws.services.messaging.sns.fifo]] — Sns Fifo
+- [[swe.cloud.aws.services.messaging.sns.message-filtering]] — Sns Message Filtering
+- [[swe.cloud.aws.services.messaging.sns.security]] — Sns Security
+- [[swe.cloud.aws.services.messaging.sns.sqs-fan-out]] — Sns Sqs Fan Out
 - [[swe.cloud.aws.services.messaging.sqs]] — Sqs
-- [[swe.cloud.aws.services.messaging.sqs.sqs-asg]] — Sqs Asg
-- [[swe.cloud.aws.services.messaging.sqs.sqs-long-pooling]] — Sqs Long Pooling
-- [[swe.cloud.aws.services.messaging.sqs.sqs-message-visibility-timeout]] — Sqs Message Visibility Timeout
-- [[swe.cloud.aws.services.messaging.sqs.sqs-security]] — Sqs Security
+- [[swe.cloud.aws.services.messaging.sqs.asg]] — Sqs Asg
+- [[swe.cloud.aws.services.messaging.sqs.long-pooling]] — Sqs Long Pooling
+- [[swe.cloud.aws.services.messaging.sqs.message-visibility-timeout]] — Sqs Message Visibility Timeout
+- [[swe.cloud.aws.services.messaging.sqs.security]] — Sqs Security
 - [[swe.cloud.aws.services.monitoring-audit]] — Monitoring Audit
 - [[swe.cloud.aws.services.monitoring-audit.cloud-trail]] — Cloud Trail
 - [[swe.cloud.aws.services.monitoring-audit.cloud-watch]] — Cloud Watch
-- [[swe.cloud.aws.services.monitoring-audit.cloud-watch.cloud-watch-insights]] — Cloud Watch Insights
-- [[swe.cloud.aws.services.monitoring-audit.cloud-watch.cloud-watch-logs]] — Cloud Watch Logs
-- [[swe.cloud.aws.services.monitoring-audit.cloud-watch.cloud-watch-metrics]] — Cloud Watch Metrics
+- [[swe.cloud.aws.services.monitoring-audit.cloud-watch.insights]] — Cloud Watch Insights
+- [[swe.cloud.aws.services.monitoring-audit.cloud-watch.logs]] — Cloud Watch Logs
+- [[swe.cloud.aws.services.monitoring-audit.cloud-watch.metrics]] — Cloud Watch Metrics
 - [[swe.cloud.aws.services.monitoring-audit.event-bridge]] — Event Bridge
 - [[swe.cloud.aws.services.neptune]] — Neptune
-- [[swe.cloud.aws.services.neptune.neptune-streams]] — Neptune Streams
+- [[swe.cloud.aws.services.neptune.streams]] — Neptune Streams
 - [[swe.cloud.aws.services.network.direct-connect]] — Direct Connect
 - [[swe.cloud.aws.services.network.internet-gateway]] — Internet Gateway
 - [[swe.cloud.aws.services.network.nacl]] — Nacl
@@ -54,50 +54,50 @@ desc: "Tag page for Cloud"
 - [[swe.cloud.aws.services.network.vpc-traffic-mirroring]] — Vpc Traffic Mirroring
 - [[swe.cloud.aws.services.organizations]] — Organizations
 - [[swe.cloud.aws.services.qldb]] — Qldb
-- [[swe.cloud.aws.services.rds.rds-multi-az]] — Rds Multi Az
-- [[swe.cloud.aws.services.rds.rds-read-replicas]] — Rds Read Replicas
+- [[swe.cloud.aws.services.rds.multi-az]] — Rds Multi Az
+- [[swe.cloud.aws.services.rds.read-replicas]] — Rds Read Replicas
 - [[swe.cloud.aws.services.route53]] — Route53
-- [[swe.cloud.aws.services.s3.s3-access-points]] — S3 Access Points
-- [[swe.cloud.aws.services.s3.s3-batch-operations]] — S3 Batch Operations
-- [[swe.cloud.aws.services.s3.s3-cors]] — S3 Cors
-- [[swe.cloud.aws.services.s3.s3-life-cycle]] — S3 Life Cycle
-- [[swe.cloud.aws.services.s3.s3-object-encryption]] — S3 Object Encryption
-- [[swe.cloud.aws.services.s3.s3-object-lambda]] — S3 Object Lambda
-- [[swe.cloud.aws.services.s3.s3-performance]] — S3 Performance
-- [[swe.cloud.aws.services.s3.s3-security]] — S3 Security
-- [[swe.cloud.aws.services.s3.s3-static-hosting]] — S3 Static Hosting
-- [[swe.cloud.aws.services.s3.s3-storage-classes]] — S3 Storage Classes
-- [[swe.cloud.aws.services.s3.s3-storage-lens]] — S3 Storage Lens
+- [[swe.cloud.aws.services.s3.access-points]] — S3 Access Points
+- [[swe.cloud.aws.services.s3.batch-operations]] — S3 Batch Operations
+- [[swe.cloud.aws.services.s3.cors]] — S3 Cors
+- [[swe.cloud.aws.services.s3.life-cycle]] — S3 Life Cycle
+- [[swe.cloud.aws.services.s3.object-encryption]] — S3 Object Encryption
+- [[swe.cloud.aws.services.s3.object-lambda]] — S3 Object Lambda
+- [[swe.cloud.aws.services.s3.performance]] — S3 Performance
+- [[swe.cloud.aws.services.s3.security]] — S3 Security
+- [[swe.cloud.aws.services.s3.static-hosting]] — S3 Static Hosting
+- [[swe.cloud.aws.services.s3.storage-classes]] — S3 Storage Classes
+- [[swe.cloud.aws.services.s3.storage-lens]] — S3 Storage Lens
 - [[swe.cloud.aws.services.security]] — Security
 - [[swe.cloud.aws.services.security.acm]] — Acm
 - [[swe.cloud.aws.services.security.firewall-manager]] — Firewall Manager
 - [[swe.cloud.aws.services.security.inspector]] — Inspector
 - [[swe.cloud.aws.services.security.kms]] — Kms
-- [[swe.cloud.aws.services.security.kms.kms-key-policy]] — Kms Key Policy
-- [[swe.cloud.aws.services.security.kms.kms-key-types]] — Kms Key Types
-- [[swe.cloud.aws.services.security.kms.kms-keys-multi-region]] — Kms Keys Multi Region
+- [[swe.cloud.aws.services.security.kms.key-policy]] — Kms Key Policy
+- [[swe.cloud.aws.services.security.kms.key-types]] — Kms Key Types
+- [[swe.cloud.aws.services.security.kms.keys-multi-region]] — Kms Keys Multi Region
 - [[swe.cloud.aws.services.security.macie]] — Macie
 - [[swe.cloud.aws.services.security.secrets-manager]] — Secret Manager
 - [[swe.cloud.aws.services.security.shield]] — Shield
 - [[swe.cloud.aws.services.security.ssm-parameter-store]] — Ssm Parameter Store
 - [[swe.cloud.aws.services.security.waf]] — Waf
-- [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-endpoint-types]] — API Gateway Endpoint Types
-- [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-integrations]] — API Gateway Integrations
-- [[swe.cloud.aws.services.serverless.api-gateway.api-gateway-security]] — API Gateway Security
+- [[swe.cloud.aws.services.serverless.api-gateway.endpoint-types]] — API Gateway Endpoint Types
+- [[swe.cloud.aws.services.serverless.api-gateway.integrations]] — API Gateway Integrations
+- [[swe.cloud.aws.services.serverless.api-gateway.security]] — API Gateway Security
 - [[swe.cloud.aws.services.serverless.cognito]] — Cognito
 - [[swe.cloud.aws.services.serverless.cognito-cognito-identity-pools]] — Cognito Cognito Identity Pools
 - [[swe.cloud.aws.services.serverless.cognito-cognito-user-pools]] — Cognito Cognito User Pools
 - [[swe.cloud.aws.services.serverless.dynamodb]] — Dynamodb
-- [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-accelerator]] — Dynamodb Accelerator
-- [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-disaster-recovery]] — Dynamodb Disaster Recovery
-- [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-global-tables]] — Dynamodb Global Tables
-- [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-s3-integration]] — Dynamodb S3 Integration
-- [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-streams]] — Dynamodb Streams
-- [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-ttl]] — Dynamodb Ttl
-- [[swe.cloud.aws.services.serverless.lambda.lambda-concurrency]] — Lambda Concurrency
-- [[swe.cloud.aws.services.serverless.lambda.lambda-edge-function]] — Lambda Edge Function
-- [[swe.cloud.aws.services.serverless.lambda.lambda-limits]] — Lambda Limits
-- [[swe.cloud.aws.services.serverless.lambda.lambda-snap-start]] — Lambda Snap Start
+- [[swe.cloud.aws.services.serverless.dynamodb.accelerator]] — Dynamodb Accelerator
+- [[swe.cloud.aws.services.serverless.dynamodb.disaster-recovery]] — Dynamodb Disaster Recovery
+- [[swe.cloud.aws.services.serverless.dynamodb.global-tables]] — Dynamodb Global Tables
+- [[swe.cloud.aws.services.serverless.dynamodb.s3-integration]] — Dynamodb S3 Integration
+- [[swe.cloud.aws.services.serverless.dynamodb.streams]] — Dynamodb Streams
+- [[swe.cloud.aws.services.serverless.dynamodb.ttl]] — Dynamodb Ttl
+- [[swe.cloud.aws.services.serverless.lambda.concurrency]] — Lambda Concurrency
+- [[swe.cloud.aws.services.serverless.lambda.edge-function]] — Lambda Edge Function
+- [[swe.cloud.aws.services.serverless.lambda.limits]] — Lambda Limits
+- [[swe.cloud.aws.services.serverless.lambda.snap-start]] — Lambda Snap Start
 - [[swe.cloud.aws.services.serverless.step-functions]] — Step Functions
 - [[swe.cloud.aws.services.storage.transfer-family]] — Transfer Family
 - [[swe.cloud.aws.services.timestream]] — Timestream

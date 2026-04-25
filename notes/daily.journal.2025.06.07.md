@@ -8,7 +8,7 @@ traitIds:
   - journalNote
 ---
 
-- [[swe.cloud.aws.services.security.kms.kms-key-types]]
-- [[swe.cloud.aws.services.security.kms.kms-key-policy]]
-- [[swe.cloud.aws.services.security.kms.kms-keys-multi-region]]
+- [[swe.cloud.aws.services.security.kms.key-types]]
+- [[swe.cloud.aws.services.security.kms.key-policy]]
+- [[swe.cloud.aws.services.security.kms.keys-multi-region]]
 - [[swe.cloud.aws.services.security.ssm-parameter-store]]

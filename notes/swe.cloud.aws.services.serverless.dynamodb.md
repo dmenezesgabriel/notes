@@ -4,6 +4,9 @@ title: Dynamodb
 desc: ""
 updated: 1747486661579
 created: 1747085279837
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - NoSQL
@@ -35,12 +38,12 @@ created: 1747085279837
 
 ## Advanced Features
 
-- Dax [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-accelerator]]
-- Stream [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-streams]]
-- Global Tables [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-global-tables]]
-- TTL [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-ttl]]
-- Disaster Recovery [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-disaster-recovery]]
-- S3 integration [[swe.cloud.aws.services.serverless.dynamodb.dynamodb-s3-integration]]
+- Dax [[swe.cloud.aws.services.serverless.dynamodb.accelerator]]
+- Stream [[swe.cloud.aws.services.serverless.dynamodb.streams]]
+- Global Tables [[swe.cloud.aws.services.serverless.dynamodb.global-tables]]
+- TTL [[swe.cloud.aws.services.serverless.dynamodb.ttl]]
+- Disaster Recovery [[swe.cloud.aws.services.serverless.dynamodb.disaster-recovery]]
+- S3 integration [[swe.cloud.aws.services.serverless.dynamodb.s3-integration]]
 
 ## Relacionado
 

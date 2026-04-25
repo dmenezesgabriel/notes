@@ -4,6 +4,9 @@ title: Internet Gateway Egress Only
 desc: ""
 updated: 1750694645621
 created: 1750694645621
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Similar ao _NAT Gateway_ [[swe.cloud.aws.services.network.nat-gateway]], mas apenas para IPv6 [[swe.network.concepts.network-ipv6]]

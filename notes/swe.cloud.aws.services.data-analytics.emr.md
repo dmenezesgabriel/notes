@@ -4,6 +4,9 @@ title: Emr
 desc: ""
 updated: 1750870284625
 created: 1748206695647
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Elastic Map Reduce (EMR)

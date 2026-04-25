@@ -4,6 +4,9 @@ title: Transcribe
 desc: ""
 updated: 1748264820176
 created: 1748264820176
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Converte fala para texto

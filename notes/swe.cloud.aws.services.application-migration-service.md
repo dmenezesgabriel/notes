@@ -4,6 +4,9 @@ title: Application Migration Service
 desc: ""
 updated: 1751135574806
 created: 1751135389905
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # AWS Application Migration Service (MGN)

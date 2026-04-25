@@ -4,6 +4,9 @@ title: Transit Gateway
 desc: ""
 updated: 1750679952625
 created: 1750677969351
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Configuração de quais _VPCs_ se comunicarão é feita via tabela de rotas

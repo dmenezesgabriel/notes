@@ -4,6 +4,9 @@ title: Aurora
 desc: ""
 updated: 1750870224545
 created: 1745261496357
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Cluster de banco de dados otimizado para cloud.

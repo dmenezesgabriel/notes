@@ -4,6 +4,9 @@ title: Step Functions
 desc: ""
 updated: 1747507717249
 created: 1747505295707
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Workflow visual serverless para orquestração de funções lambda

@@ -4,6 +4,9 @@ title: Well Architected Framework
 desc: ""
 updated: 1751590924046
 created: 1751590384952
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # AWS Well Architected Framework

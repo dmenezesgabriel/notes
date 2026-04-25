@@ -4,6 +4,9 @@ title: Vmware Cloud
 desc: ""
 updated: 1751135837172
 created: 1751135837172
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # VMware Cloud on AWS

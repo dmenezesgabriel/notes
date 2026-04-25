@@ -4,6 +4,9 @@ title: Comprehend
 desc: ""
 updated: 1748266513373
 created: 1748266513373
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 _NLP Natural language processing_

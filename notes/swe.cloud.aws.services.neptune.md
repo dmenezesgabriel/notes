@@ -4,6 +4,9 @@ title: Neptune
 desc: ""
 updated: 1747594128918
 created: 1747594128918
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Base de grafos gerenciada pela AWS
@@ -19,7 +22,7 @@ Base de grafos gerenciada pela AWS
 
 - Altamente disponível entre 3 _availability zones_, com até 15 replicas
 - Pode armazenar milhões de relacionamentos e consultar o grafo em milissegundos
-- Streams [[swe.cloud.aws.services.neptune.neptune-streams]]
+- Streams [[swe.cloud.aws.services.neptune.streams]]
 
 ## Relacionado
 

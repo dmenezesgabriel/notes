@@ -4,6 +4,9 @@ title: Document Db
 desc: ""
 updated: 1750870332686
 created: 1747593693719
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Da mesma forma que o _Amazon Aurora_ implementa PostgreSQL e MySQL, DocumentDB implementa uma interface compatível com **MongoDB**

@@ -4,6 +4,9 @@ title: Elasticache
 desc: ""
 updated: 1751719922301
 created: 1745374010454
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Redis/ Memcached gerenciado pela AWS assim como RDS, porém para cache

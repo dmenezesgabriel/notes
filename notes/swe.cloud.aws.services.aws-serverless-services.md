@@ -4,6 +4,9 @@ title: Serverless
 desc: ""
 updated: 1746480066048
 created: 1746479888516
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - AWS Lambda

@@ -4,6 +4,9 @@ title: Kendra
 desc: ""
 updated: 1748268101645
 created: 1748268101645
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Extração de respostas de documentos em texto, PDF, HTML, PowerPoint, Microsoft World e FAQs

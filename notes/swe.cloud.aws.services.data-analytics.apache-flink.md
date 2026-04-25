@@ -4,6 +4,9 @@ title: Apache Flink
 desc: ""
 updated: 1750870268256
 created: 1748224133523
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Framework para processar stream de dados

@@ -4,6 +4,9 @@ title: Connect
 desc: ""
 updated: 1748266297331
 created: 1748266297331
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Construção de _call centers_ virtuais

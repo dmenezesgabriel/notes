@@ -4,6 +4,9 @@ title: Self Managed Nodes
 desc: ""
 updated: 1750870264906
 created: 1746391433857
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Nós criados por você e registrados no cluster EKS são gerenciados por um _Auto Scaling Group_

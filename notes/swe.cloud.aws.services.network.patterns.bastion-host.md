@@ -4,6 +4,9 @@ title: Bastion Host
 desc: ""
 updated: 1749932132532
 created: 1749931998584
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 ```mermaid

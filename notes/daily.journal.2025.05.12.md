@@ -10,5 +10,5 @@ traitIds:
 
 - MCP + langgraph + FastAPI
 - Modelagem NoSQL [[data-engineer.concepts.nosql.nosql-databases]]
-- Aws Lambda [[swe.cloud.aws.services.serverless.lambda.lambda-in-vpc]]
+- Aws Lambda [[swe.cloud.aws.services.serverless.lambda.in-vpc]]
 - DynamoDB [[swe.cloud.aws.services.serverless.dynamodb]]

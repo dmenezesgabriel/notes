@@ -4,6 +4,9 @@ title: Ecs
 desc: ""
 updated: 1750870240805
 created: 1746381080618
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Elastic Container Service

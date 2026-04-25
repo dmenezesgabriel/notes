@@ -4,6 +4,9 @@ title: App Runner
 desc: ""
 updated: 1746406934139
 created: 1746406934139
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Serviço gerenciado pela AWS para deploy de apicaces WEB e APIs

@@ -4,6 +4,9 @@ title: Redshift
 desc: ""
 updated: 1750870313655
 created: 1748093120478
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Baseado no PostgreSQL
@@ -31,6 +34,6 @@ created: 1748093120478
 
 ## Relacionado
 
-- [[swe.cloud.aws.services.data-analytics.redshift.redshift-data-ingestion]]
-- [[swe.cloud.aws.services.data-analytics.redshift.redshift-disaster-recovery]]
-- [[swe.cloud.aws.services.data-analytics.redshift.redshift-spectrum]]
+- [[swe.cloud.aws.services.data-analytics.redshift.data-ingestion]]
+- [[swe.cloud.aws.services.data-analytics.redshift.disaster-recovery]]
+- [[swe.cloud.aws.services.data-analytics.redshift.spectrum]]

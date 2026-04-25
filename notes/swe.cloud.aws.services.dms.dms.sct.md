@@ -4,6 +4,9 @@ title: Sct
 desc: ""
 updated: 1750871690168
 created: 1750871116594
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # AWS Schema Conversion Tool (SCT)

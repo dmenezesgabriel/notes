@@ -4,6 +4,9 @@ title: Quicksight
 desc: ""
 updated: 1750870310037
 created: 1748207442842
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Serviço de _business intelligence_ para criar dashboards interativas

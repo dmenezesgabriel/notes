@@ -4,6 +4,9 @@ title: Summary Data Transfer
 desc: ""
 updated: 1751140747011
 created: 1751140747011
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # Data Management & Transfer

@@ -4,6 +4,9 @@ title: Nlb
 desc: ""
 updated: 1750870409132
 created: 1745113145267
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Layer 4

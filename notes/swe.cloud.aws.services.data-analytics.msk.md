@@ -4,6 +4,9 @@ title: Msk
 desc: ""
 updated: 1750870300473
 created: 1748224540722
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Apache Kafka gerenciado pela AWS, possui função similar ao Kinesis Data Stream

@@ -4,6 +4,9 @@ title: Rds
 desc: ""
 updated: 1751731824067
 created: 1745194261071
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Banco relacional gerenciado
@@ -19,8 +22,8 @@ Banco relacional gerenciado
 ## Features
 
 - Autoscaling para armazenamento
-- Suporte a read replicas [[swe.cloud.aws.services.rds.rds-read-replicas]]
-- Suporte a multi-az [[swe.cloud.aws.services.rds.rds-multi-az]]
+- Suporte a read replicas [[swe.cloud.aws.services.rds.read-replicas]]
+- Suporte a multi-az [[swe.cloud.aws.services.rds.multi-az]]
 - Backup automatizado com restauração _Point in Time_ (até 45 dias)
 - Snapshot manual para recuperação dos dados a longo prazo
 - Manutenção agendada gerenciada pela AWS (com Downtime)
@@ -40,7 +43,7 @@ Banco relacional gerenciado
 ## Provisionamento
 
 - Tamanho de instância
-- Tamanho de volume EBS [[swe.cloud.aws.services.ec2.ec2-ebs]]
+- Tamanho de volume EBS [[swe.cloud.aws.services.ec2.ebs]]
 - Tipo de volume EBS
 
 ## RDS over EC2
@@ -63,6 +66,6 @@ contras:
 
 ## Relacionado
 
-- [[swe.cloud.aws.services.rds.rds-multi-az]]
-- [[swe.cloud.aws.services.rds.rds-read-replicas]]
+- [[swe.cloud.aws.services.rds.multi-az]]
+- [[swe.cloud.aws.services.rds.read-replicas]]
 - [[swe.cloud.aws.services.databases]]

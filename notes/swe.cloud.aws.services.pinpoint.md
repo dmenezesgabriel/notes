@@ -4,6 +4,9 @@ title: Pinpoint
 desc: ""
 updated: 1751312872837
 created: 1751312508027
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # Amazon Pinpoint

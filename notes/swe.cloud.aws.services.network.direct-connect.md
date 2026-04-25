@@ -4,6 +4,9 @@ title: Direct Connect
 desc: ""
 updated: 1750677209972
 created: 1750019830016
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # Direct Connect DX

@@ -4,6 +4,9 @@ title: Textract
 desc: ""
 updated: 1748268930948
 created: 1748268930948
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Extrair dados de escrita a mão formulários e tabelas de qualquer tipo de documento

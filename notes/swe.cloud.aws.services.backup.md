@@ -4,6 +4,9 @@ title: Backup
 desc: ""
 updated: 1751130492453
 created: 1751129001662
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # AWS Backup
@@ -13,7 +16,7 @@ created: 1751129001662
 
 ## Features
 
-- Integração com diversos serviços da AWS principalmente voltados a armazenamento como _S3_ [[swe.cloud.aws.services.s3]], _RDS_ [[swe.cloud.aws.services.rds]], _EBS_ [[swe.cloud.aws.services.ec2.ec2-ebs]] e etc.
+- Integração com diversos serviços da AWS principalmente voltados a armazenamento como _S3_ [[swe.cloud.aws.services.s3]], _RDS_ [[swe.cloud.aws.services.rds]], _EBS_ [[swe.cloud.aws.services.ec2.ebs]] e etc.
 - Backups _cross-region_
 - Backups _cross-account_
 - _PITR (Point in Time Recovery)_

@@ -4,6 +4,9 @@ title: Sqs
 desc: ""
 updated: 1746128635714
 created: 1746128635714
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Simple Queue Service

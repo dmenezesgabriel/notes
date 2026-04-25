@@ -8,4 +8,4 @@ traitIds:
   - journalNote
 ---
 
-- [[swe.cloud.aws.services.elb.elb-connection-draining]]
+- [[swe.cloud.aws.services.elb.connection-draining]]

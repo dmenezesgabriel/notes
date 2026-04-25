@@ -4,6 +4,9 @@ title: Data Firehose
 desc: ""
 updated: 1751726111046
 created: 1746287788620
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Anteriormente chamado de _Kinesis Data Firehose_

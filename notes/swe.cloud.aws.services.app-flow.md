@@ -4,6 +4,9 @@ title: App Flow
 desc: ""
 updated: 1751315938402
 created: 1751315938402
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # Amazon AppFlow

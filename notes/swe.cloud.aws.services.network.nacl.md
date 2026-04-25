@@ -4,6 +4,9 @@ title: Nacl
 desc: ""
 updated: 1750011768452
 created: 1750010141868
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # Network ACL

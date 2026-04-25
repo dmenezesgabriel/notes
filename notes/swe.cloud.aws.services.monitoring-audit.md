@@ -4,6 +4,9 @@ title: Monitoring Audit
 desc: ""
 updated: 1748295456426
 created: 1748276165934
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 ## Relacionado

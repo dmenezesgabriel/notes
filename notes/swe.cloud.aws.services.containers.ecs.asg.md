@@ -4,6 +4,9 @@ title: Asg
 desc: ""
 updated: 1753024800404
 created: 1746386101026
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 **Métricas para autoscaling**:

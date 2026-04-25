@@ -4,6 +4,9 @@ title: Ecr
 desc: ""
 updated: 1746389658047
 created: 1746389658047
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Elastic Container Registry

@@ -10,9 +10,9 @@ desc: "Tag page for Security"
 - [[swe.cloud.aws.services.security.firewall-manager]] — Firewall Manager
 - [[swe.cloud.aws.services.security.inspector]] — Inspector
 - [[swe.cloud.aws.services.security.kms]] — Kms
-- [[swe.cloud.aws.services.security.kms.kms-key-policy]] — Kms Key Policy
-- [[swe.cloud.aws.services.security.kms.kms-key-types]] — Kms Key Types
-- [[swe.cloud.aws.services.security.kms.kms-keys-multi-region]] — Kms Keys Multi Region
+- [[swe.cloud.aws.services.security.kms.key-policy]] — Kms Key Policy
+- [[swe.cloud.aws.services.security.kms.key-types]] — Kms Key Types
+- [[swe.cloud.aws.services.security.kms.keys-multi-region]] — Kms Keys Multi Region
 - [[swe.cloud.aws.services.security.macie]] — Macie
 - [[swe.cloud.aws.services.security.secrets-manager]] — Secret Manager
 - [[swe.cloud.aws.services.security.shield]] — Shield

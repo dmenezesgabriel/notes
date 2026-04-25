@@ -4,6 +4,9 @@ title: Organizations
 desc: ""
 updated: 1748358101798
 created: 1748357242289
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Gerenciamento de múltiplas contas da AWS

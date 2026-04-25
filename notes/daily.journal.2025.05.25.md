@@ -8,7 +8,7 @@ traitIds:
   - journalNote
 ---
 
-- [[swe.cloud.aws.services.data-analytics.redshift.redshift-spectrum]]
+- [[swe.cloud.aws.services.data-analytics.redshift.spectrum]]
 - [[swe.cloud.aws.services.data-analytics.open-search]]
 - [[swe.cloud.aws.services.data-analytics.emr]]
 - [[swe.cloud.aws.services.data-analytics.quicksight]]

@@ -4,6 +4,9 @@ title: Nat Gateway
 desc: ""
 updated: 1751720912252
 created: 1749938588231
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # Network Address Translation (NAT)

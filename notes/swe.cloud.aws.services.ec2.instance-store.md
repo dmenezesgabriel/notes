@@ -1,0 +1,14 @@
+---
+id: z27amtmcvkvp8vcfp5bi3o0
+title: Ec2 Instance Store
+desc: ""
+updated: 1750870364809
+created: 1745010573330
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
+---
+
+- Melhor performance do que o EBS pois a conexão e feita via hardware e nao rede, mas seu armazenamento e efêmero então e perdido uma vez que a instancia e parada
+- Bom para buffer, cache, e conteúdo temporário
+- Risco de perda caso o hardware falhe

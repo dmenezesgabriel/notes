@@ -4,6 +4,9 @@ title: Site to Site Vpn
 desc: ""
 updated: 1751734030760
 created: 1750018501642
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Virtual Private Gateway (Ponto de entrada VPC) -> Customer Gateway (Dispositivo on-premises)

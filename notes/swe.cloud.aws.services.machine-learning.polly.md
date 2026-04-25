@@ -4,6 +4,9 @@ title: Polly
 desc: ""
 updated: 1748265263220
 created: 1748265263220
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Transforma texto em voz

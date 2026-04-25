@@ -4,6 +4,9 @@ title: Athena
 desc: ""
 updated: 1750870278018
 created: 1747964230357
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 **Serverless** SQL Engine
@@ -28,5 +31,5 @@ created: 1747964230357
 
 ## Relacionado
 
-- [[swe.cloud.aws.services.data-analytics.athena.athena-performance]]
-- [[swe.cloud.aws.services.data-analytics.athena.athena-federated-query]]
+- [[swe.cloud.aws.services.data-analytics.athena.performance]]
+- [[swe.cloud.aws.services.data-analytics.athena.federated-query]]

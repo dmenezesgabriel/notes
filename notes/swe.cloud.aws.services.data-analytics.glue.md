@@ -4,6 +4,9 @@ title: Glue
 desc: ""
 updated: 1751746197402
 created: 1748208136129
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Serverless ETL
@@ -22,10 +25,10 @@ Serverless ETL
 
 ## Relacionado
 
-- [[swe.cloud.aws.services.data-analytics.glue.glue-patterns]]
-- [[swe.cloud.aws.services.data-analytics.glue.glue-data-catalog]]
+- [[swe.cloud.aws.services.data-analytics.glue.patterns]]
+- [[swe.cloud.aws.services.data-analytics.glue.data-catalog]]
 - [[swe.cloud.aws.services.s3]]
 - [[swe.cloud.aws.services.rds]]
 - [[swe.cloud.aws.services.data-analytics.redshift]]
 - [[swe.cloud.aws.services.data-analytics.athena]]
-- [[swe.cloud.aws.services.data-analytics.glue.glue-databrew]]
+- [[swe.cloud.aws.services.data-analytics.glue.databrew]]

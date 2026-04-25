@@ -4,6 +4,9 @@ title: Fsx
 desc: ""
 updated: 1751739887438
 created: 1746116412473
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Permite provisionar sistemas de arquivos de alta performance na aws

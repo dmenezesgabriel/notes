@@ -4,6 +4,9 @@ title: Personalize
 desc: ""
 updated: 1748268307180
 created: 1748268307180
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Serviço gerenciado para construir aplicativos com recomendações personalizadas em tempo real

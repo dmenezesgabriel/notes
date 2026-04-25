@@ -4,6 +4,9 @@ title: Cost Anomaly Detection
 desc: ""
 updated: 1751315132811
 created: 1751315132811
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # AWS Cost Anomaly Detection

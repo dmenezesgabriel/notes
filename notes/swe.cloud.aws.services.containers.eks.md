@@ -4,6 +4,9 @@ title: Eks
 desc: ""
 updated: 1750870260193
 created: 1746390009646
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Elastic Kubernetes Service

@@ -4,6 +4,9 @@ title: Lake Formation
 desc: ""
 updated: 1750870296623
 created: 1748211223119
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Serviço gerenciado para construção de _Data Lakes_ construído com base no Glue [[swe.cloud.aws.services.data-analytics.glue]]

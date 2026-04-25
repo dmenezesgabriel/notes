@@ -4,6 +4,9 @@ title: Acm
 desc: ""
 updated: 1749430146119
 created: 1749415775119
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 ## Casos de Uso

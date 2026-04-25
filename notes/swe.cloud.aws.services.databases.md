@@ -4,6 +4,9 @@ title: Databases
 desc: ""
 updated: 1750870329907
 created: 1747588823467
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 ## RDBMS

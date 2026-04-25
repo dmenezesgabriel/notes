@@ -4,6 +4,9 @@ title: Lambda
 desc: ""
 updated: 1753034400182
 created: 1746480195002
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Pagamento por requisição e tempo de execução

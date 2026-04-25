@@ -10,7 +10,7 @@ traitIds:
 
 - [[swe.web.api.concepts.throttling]]
 - [[swe.cloud.aws.services.global-accelerator]]
-- [[swe.cloud.aws.services.vpc.vpc-sharing]]
+- [[swe.cloud.aws.services.vpc.sharing]]
 - [[swe.open -source.self-hosting]]
-- [[swe.cloud.aws.services.data-analytics.glue.glue-databrew]]
-- [[swe.cloud.aws.services.s3.s3-versioning]]
+- [[swe.cloud.aws.services.data-analytics.glue.databrew]]
+- [[swe.cloud.aws.services.s3.versioning]]

@@ -4,6 +4,9 @@ title: Guard Duty
 desc: ""
 updated: 1751739875528
 created: 1749902544666
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Utiliza **Machine Learning** para detecção inteligente de ameças

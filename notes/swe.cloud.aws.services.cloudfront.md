@@ -4,6 +4,9 @@ title: Cloudfront
 desc: ""
 updated: 1750870230318
 created: 1746048424648
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Content Delivery Network/Cache

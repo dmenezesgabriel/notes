@@ -4,11 +4,14 @@ title: Kms
 desc: ""
 updated: 1749304905551
 created: 1749226788247
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # Key Management Service
 
-- O escopo de chaves KMS é **regional**, caso necessário copiar um snapshot de _EBS_ [[swe.cloud.aws.services.ec2.ec2-ebs]], por exemplo, é necessário realizar a criptografia com uma chave diferente.
+- O escopo de chaves KMS é **regional**, caso necessário copiar um snapshot de _EBS_ [[swe.cloud.aws.services.ec2.ebs]], por exemplo, é necessário realizar a criptografia com uma chave diferente.
 
 ## Features
 
@@ -21,8 +24,8 @@ created: 1749226788247
 
 ## Relacionado
 
-- [[swe.cloud.aws.services.security.kms.kms-key-types]]
-- [[swe.cloud.aws.services.security.kms.kms-key-policy]]
-- [[swe.cloud.aws.services.security.kms.kms-keys-multi-region]]
+- [[swe.cloud.aws.services.security.kms.key-types]]
+- [[swe.cloud.aws.services.security.kms.key-policy]]
+- [[swe.cloud.aws.services.security.kms.keys-multi-region]]
 
 #SWE #Cloud #AWS #AWSServices #Security #AmazonKMS

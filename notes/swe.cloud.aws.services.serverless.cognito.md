@@ -4,6 +4,9 @@ title: Cognito
 desc: ""
 updated: 1747508570079
 created: 1747507771729
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 - Proporciona a usuários **externos** uma identidade para interagir com aplicações Web ou Mobile

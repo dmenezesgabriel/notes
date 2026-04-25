@@ -4,6 +4,9 @@ title: Ssm Parameter Store
 desc: ""
 updated: 1749306676354
 created: 1749306676354
+pageType: concept
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 # Systems Manager Parameter Store

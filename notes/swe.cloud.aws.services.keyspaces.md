@@ -4,6 +4,9 @@ title: Keyspaces
 desc: ""
 updated: 1750870435333
 created: 1747604447500
+pageType: entity
+lastUpdated: 2026-04-25T22:58:30Z
+status: draft
 ---
 
 Um serviço gerenciado de Apache Cassandra
