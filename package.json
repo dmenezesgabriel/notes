@@ -26,6 +26,9 @@
 
     "convert": "python3 scripts/convert_notes_for_mkdocs.py",
 
+    "check:playwright": "pnpm exec -- node scripts/playwright_check.mjs",
+    "check:playwright:full": "pnpm exec -- node scripts/playwright_check_full.mjs",
+
     "storybook": "pnpm --filter @notes/ui run storybook",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
