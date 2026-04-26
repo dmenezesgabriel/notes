@@ -1,6 +1,5 @@
 packages:
   - "site-next"
-  - "site-astro"
   - "packages/*"
   - "."
 

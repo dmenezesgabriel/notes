@@ -4,7 +4,6 @@
   "private": true,
   "workspaces": [
     "site-next",
-    "site-astro",
     "packages/*"
   ],
   "description": "",
@@ -17,8 +16,6 @@
     "site-next:build": "pnpm --filter site-next run build",
     "site-next:start": "pnpm --filter site-next run start",
 
-    "site-astro:dev": "pnpm --filter site-astro run dev",
-    "site-astro:build": "pnpm --filter site-astro run build",
 
     "ui:storybook": "pnpm --filter @notes/ui run storybook",
     "ui:build": "pnpm --filter @notes/ui run build",
