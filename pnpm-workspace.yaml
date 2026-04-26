@@ -1,5 +1,8 @@
 packages:
-  - '.'
+  - "site-next"
+  - "site-astro"
+  - "packages/*"
+  - "."
 
 ignoredBuiltDependencies:
   - better-sqlite3

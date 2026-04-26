@@ -1,9 +1,18 @@
 {
   "name": "notes",
   "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "site-next",
+    "site-astro",
+    "packages/*"
+  ],
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "pnpm -w -r --parallel dev",
+    "build": "pnpm -w -r build",
+    "storybook": "pnpm --filter @notes/ui run storybook",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -4,6 +4,8 @@ build
 seeds
 .next
 pods/service-connections
-.aider*
+.venv
 
+mkdocs_site
 *.env
+*.bak*
