@@ -1,0 +1,17 @@
+{
+    "mcpServers": {
+        "penpot": {
+            "type": "http",
+            "url": "http://localhost:4401/mcp"
+        },
+        "playwright": {
+            "command": "npx",
+            "args": [
+                "@playwright/mcp@latest"
+            ],
+            "env": {
+                "PLAYWRIGHT_MCP_HEADLESS": "1"
+            }
+        }
+    }
+}

@@ -1,74 +1,64 @@
-# Wiki
+# Project Guidelines
 
-This file describes the conventions and workflows the LLM agent should follow when ingesting sources, updating the wiki, and answering queries. Keep it short and prescriptive.
+This is a Digital Garden project.
 
-## Frontmatter conventions (YAML)
+## Stack
 
-- title: Human-friendly title
-- aliases: list of alternative short titles (optional)
-- desc: short description/synopsis
-- tags: list of tags (optional)
-- sources: list of source ids/paths used to build this page (optional)
-- lastUpdated: ISO timestamp
-- pageType: one of [entity, concept, index, note, log]
-- status: draft | verified | flagged
-- zettelId: optional unique id (when pageType: permanent) — format ZK-YYYYMMDDHHMMSS-XXX
+- Pnpm as package manager
+- Vite as build tool
+- React as UI library
+- Tailwind CSS as styling framework
+- TypeScript as programming language
+- Prettier for code formatting
+- ESLint for linting
+- Husky for Git hooks
+- Commitlint for commit message linting
+- Vitest for testing
+- V8 for code coverage
+- Storybook for UI component development
+- React Testing Library for testing React components
+- MSW for mocking API requests
+- Next.js for Static Site Generation (SSG)
+- StrikerJs for mutation testing
+- Playwright for end-to-end testing
 
-### Zettelkasten
+## Code Style
 
-- pageType: extend values to include [fleeting, literature, permanent]
-- zettelId: unique Zettelkasten id for evergreen notes (e.g. ZK-20260425183000-001)
-- Use pageType: literature for source summaries and include a `sources:` list in frontmatter.
-- Use pageType: permanent for atomic evergreen notes; include zettelId and link to related notes explicitly.
-- Keep fleeting notes short and ephemeral; review them and convert to literature/permanent as needed.
+- Use camelCase for variable and function names
+- Use PascalCase for component names
+- Use kebab-case for file names
+- Use single quotes for strings
+- Use semicolons at the end of statements
+- Use 2 spaces for indentation
+- Use trailing commas in objects and arrays
+- Use parentheses around arrow function parameters
+- Use template literals for string concatenation
+- Use descriptive variable and function names
+- Avoid using `any` type in TypeScript
+- Use interfaces for defining types in TypeScript
+- Use React hooks for state management and side effects
+- Use functional components instead of class components
+- Use PropTypes for type checking in React components
+- Use JSDoc comments for documenting functions and components
+- Use Storybook for developing and testing UI components in isolation
+- Use MSW for mocking API requests in tests
+- Use Next.js for Static Site Generation (SSG) to improve performance and SEO
+- Follow the principles of DRY (Don't Repeat Yourself) and KISS (Keep It Simple, Stupid)
 
-## File types
+## Testing
 
-- index.md (domain-level): catalog of pages for a domain. Updated on each ingest.
-- log.md: append-only chronological log of ingest/query/lint actions.
-- entity pages: pages that represent things (people, services, products) and aggregate references.
-- concept pages: explainers, comparisons, definitions.
+- Write unit tests for all components and functions
+- Write integration tests for critical user flows
+- Write end-to-end tests for the entire application
+- Aim for high test coverage, but prioritize meaningful tests over achieving 100% coverage
+- Use descriptive test names that clearly indicate what is being tested
+- Use Arrange-Act-Assert (AAA) pattern for structuring tests
+- Mock external dependencies and API calls in tests to ensure isolation
+- Use code coverage tools to identify untested code and improve test coverage
+- Cover edge cases and error handling in tests
 
-## Ingest workflow (prescriptive)
+## Way of Working
 
-1. Read full source S.
-2. Generate a 1-paragraph summary and a list of named entities/concepts mentioned.
-3. For each relevant entity/concept:
-   - If page exists: update page, append a one-line note to sources and add changed date.
-   - If not: create a stub page with frontmatter, a short summary, and links back to the source.
-4. Update domain index.md to include/refresh links to changed pages.
-5. Append an entry to log.md: e.g. "## [2026-04-24] ingest | <source title> — created 3 pages, updated 5 pages"
-6. Flag contradictions: if new source conflicts with previous claims, add a "Conflicts" section to affected pages and add a short explanation + source pointers.
-
-## Query workflow
-
-- Search index.md first to shortlist pages.
-- Use search to retrieve candidate pages and snippets.
-- Synthesize answer with explicit citations (page path + short excerpt).
-- When the answer is substantial, offer to file it as a new wiki page ("Would you like me to save this answer as a page?"). If yes, create page with frontmatter listing contributing sources.
-
-## Lint workflow (periodic or on-demand)
-
-- Detect orphan pages (no incoming links) and propose parent pages or index placement.
-- Detect duplicate titles and propose aliases or disambiguated titles.
-- Detect missing cross-references for frequent terms without pages.
-- Detect contradictions across pages and open a "conflicts" ticket in log.md.
-
-## Safety guardrails
-
-- Never assert factual claims without a source; prefer phrasing "According to [source], ..." for things not corroborated by >=2 sources.
-- When unsure, add "needs verification" to page status and add the investigative query to the log.
-- Keep the human in-the-loop for destructive edits: major renames, merges, or deletions require explicit human confirmation.
-
-## Operational notes
-
-- Index.md and log.md are the main control surfaces for the agent.
-- Keep a short list of canonical tag pages (notes/tags.<Tag>.md) for widely used tags.
-
-Example log entry format
-
-## [2026-04-24] ingest | Article Title
-
-- created: data-science/topic-x
-- updated: data-science/concept-y
-- notes: flagged contradiction between concept-y and concept-z (see links)
+- Plan work in small, manageable chunks
+- Use a TODO list to keep track of tasks and priorities, and update it regularly
+- Use a Test-Driven Development (TDD) approach to ensure code quality and maintainability

@@ -1,0 +1,22 @@
+FROM node:22-alpine
+
+RUN npm install -g pnpm
+
+# Pre-install so the container starts fast (no npx download at runtime)
+RUN npm install -g @penpot/mcp@latest
+
+# Plugin static file server (browser loads manifest.json from here)
+EXPOSE 4400
+# MCP HTTP / SSE endpoint (mcp-remote connects here)
+EXPOSE 4401
+# WebSocket server (Penpot browser plugin connects here)
+EXPOSE 4402
+
+ENV PENPOT_MCP_SERVER_HOST=0.0.0.0
+ENV PENPOT_MCP_SERVER_ADDRESS=localhost
+ENV PENPOT_MCP_SERVER_PORT=4401
+ENV PENPOT_MCP_WEBSOCKET_PORT=4402
+ENV PENPOT_MCP_PLUGIN_SERVER_HOST=0.0.0.0
+ENV PENPOT_MCP_LOG_LEVEL=info
+
+CMD ["npx", "@penpot/mcp@latest"]
