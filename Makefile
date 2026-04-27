@@ -11,7 +11,7 @@ down:
 
 
 penpot-init-user:
-	docker exec app-lab-penpot-backend-1 python3 manage.py create-profile \
+	docker exec notes-penpot-backend-1 python3 manage.py create-profile \
 		-e "$(PENPOT_INIT_EMAIL)" \
 		-n "$(PENPOT_INIT_NAME)" \
 		-p "$(PENPOT_INIT_PASSWORD)" \
