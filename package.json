@@ -1,42 +1,15 @@
 {
-  "name": "notes",
-  "version": "1.0.0",
-  "private": true,
-  "workspaces": [
-    "site-next",
-    "packages/*"
-  ],
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "dev": "pnpm -w -r --parallel dev",
-    "build": "pnpm -w -r build",
-
-    "site-next:dev": "pnpm --filter site-next run dev",
-    "site-next:build": "pnpm --filter site-next run build",
-    "site-next:start": "pnpm --filter site-next run start",
-
-
-    "ui:storybook": "pnpm --filter @notes/ui run storybook",
-    "ui:build": "pnpm --filter @notes/ui run build",
-    "ui:build-storybook": "pnpm --filter @notes/ui run build-storybook",
-
-    "convert": "python3 scripts/convert_notes_for_mkdocs.py",
-
-    "check:playwright": "pnpm exec -- node scripts/playwright_check.mjs",
-    "check:playwright:full": "pnpm exec -- node scripts/playwright_check_full.mjs",
-
-    "storybook": "pnpm --filter @notes/ui run storybook",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@dendronhq/dendron-cli": "0.120.0",
-    "@tobilu/qmd": "^2.1.0"
-  },
-  "devDependencies": {
-    "playwright": "1.41.1"
-  }
+    "name": "notes",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@dendronhq/dendron-cli": "0.120.0"
+    }
 }

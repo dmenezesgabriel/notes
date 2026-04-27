@@ -1,13 +1,8 @@
----
-name: housekeeping
-description: wiki housekeeping
----
-
-LLM Wiki - Schema & Guardrails (compact)
+# Wiki
 
 This file describes the conventions and workflows the LLM agent should follow when ingesting sources, updating the wiki, and answering queries. Keep it short and prescriptive.
 
-Frontmatter conventions (YAML)
+## Frontmatter conventions (YAML)
 
 - title: Human-friendly title
 - aliases: list of alternative short titles (optional)
@@ -19,7 +14,7 @@ Frontmatter conventions (YAML)
 - status: draft | verified | flagged
 - zettelId: optional unique id (when pageType: permanent) — format ZK-YYYYMMDDHHMMSS-XXX
 
-Zettelkasten (recommended additions)
+### Zettelkasten
 
 - pageType: extend values to include [fleeting, literature, permanent]
 - zettelId: unique Zettelkasten id for evergreen notes (e.g. ZK-20260425183000-001)
@@ -27,14 +22,14 @@ Zettelkasten (recommended additions)
 - Use pageType: permanent for atomic evergreen notes; include zettelId and link to related notes explicitly.
 - Keep fleeting notes short and ephemeral; review them and convert to literature/permanent as needed.
 
-File types
+## File types
 
 - index.md (domain-level): catalog of pages for a domain. Updated on each ingest.
 - log.md: append-only chronological log of ingest/query/lint actions.
 - entity pages: pages that represent things (people, services, products) and aggregate references.
 - concept pages: explainers, comparisons, definitions.
 
-Ingest workflow (prescriptive)
+## Ingest workflow (prescriptive)
 
 1. Read full source S.
 2. Generate a 1-paragraph summary and a list of named entities/concepts mentioned.
@@ -45,29 +40,28 @@ Ingest workflow (prescriptive)
 5. Append an entry to log.md: e.g. "## [2026-04-24] ingest | <source title> — created 3 pages, updated 5 pages"
 6. Flag contradictions: if new source conflicts with previous claims, add a "Conflicts" section to affected pages and add a short explanation + source pointers.
 
-Query workflow
+## Query workflow
 
 - Search index.md first to shortlist pages.
-- Use search (qmd lex+vec) to retrieve candidate pages and snippets.
+- Use search to retrieve candidate pages and snippets.
 - Synthesize answer with explicit citations (page path + short excerpt).
 - When the answer is substantial, offer to file it as a new wiki page ("Would you like me to save this answer as a page?"). If yes, create page with frontmatter listing contributing sources.
 
-Lint workflow (periodic or on-demand)
+## Lint workflow (periodic or on-demand)
 
 - Detect orphan pages (no incoming links) and propose parent pages or index placement.
 - Detect duplicate titles and propose aliases or disambiguated titles.
 - Detect missing cross-references for frequent terms without pages.
 - Detect contradictions across pages and open a "conflicts" ticket in log.md.
 
-Safety & hallucination guardrails (must-haves)
+## Safety guardrails
 
 - Never assert factual claims without a source; prefer phrasing "According to [source], ..." for things not corroborated by >=2 sources.
 - When unsure, add "needs verification" to page status and add the investigative query to the log.
 - Keep the human in-the-loop for destructive edits: major renames, merges, or deletions require explicit human confirmation.
 
-Operational notes
+## Operational notes
 
-- Use qmd for fast semantic+lexical retrieval and reranking. Keep qmd collection in sync with the notes folder.
 - Index.md and log.md are the main control surfaces for the agent.
 - Keep a short list of canonical tag pages (notes/tags.<Tag>.md) for widely used tags.
 
