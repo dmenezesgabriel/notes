@@ -1,15 +1,29 @@
 {
-    "name": "notes",
-    "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "@dendronhq/dendron-cli": "0.120.0"
-    }
+  "name": "notes",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "configs/*"
+  ],
+  "scripts": {
+    "dev:site": "pnpm -C apps/site dev",
+    "dev:storybook": "pnpm -C apps/storybook dev",
+    "build:content": "pnpm -C packages/content build",
+    "build:site": "pnpm -C apps/site build",
+    "build:all": "pnpm -C packages/content build && pnpm -C apps/site build",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "test": "pnpm -w -r -s test"
+  },
+  "devDependencies": {
+    "@notes/eslint-config": "workspace:*",
+    "@notes/prettier-config": "workspace:*",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "@dendronhq/dendron-cli": "0.120.0"
+  }
 }

@@ -4,23 +4,51 @@ This is a Digital Garden project.
 
 ## Stack
 
-- Pnpm as package manager
-- Vite as build tool
-- React as UI library
+- Pnpm as package manager (pnpm workspaces monorepo)
+- Vite as build tool (used in apps/storybook and packages/components)
+- Lit Elements as web component library (packages/components)
+- React / Next.js as UI library and SSG framework (apps/site — Next.js 15, App Router)
 - Tailwind CSS as styling framework
-- TypeScript as programming language
+- TypeScript as programming language (all configs are .ts, no .js config files)
 - Prettier for code formatting
 - ESLint for linting
 - Husky for Git hooks
 - Commitlint for commit message linting
 - Vitest for testing
 - V8 for code coverage
-- Storybook for UI component development
-- React Testing Library for testing React components
-- MSW for mocking API requests
-- Next.js for Static Site Generation (SSG)
-- StrikerJs for mutation testing
+- Storybook 10 for UI component development (apps/storybook — web-components/Vite)
 - Playwright for end-to-end testing
+
+## Monorepo Layout
+
+```
+notes/           ← Dendron markdown notes (single source of truth, never duplicated)
+packages/
+  content/       ← Next-agnostic content pipeline: scans notes/, emits manifest.json + search index
+  components/    ← Lit web components (TypeScript)
+apps/
+  site/          ← Next.js 15 (App Router) digital garden site
+  storybook/     ← Storybook 10 (web-components + Vite) component workbench
+```
+
+## Storybook MCP Server
+
+Storybook exposes an MCP server at **http://localhost:6006/mcp** (requires Storybook dev server running).
+It is registered as the `storybook` server in `.pi/mcp.json`.
+
+When working on UI components, always use the `storybook` MCP tools:
+
+- **CRITICAL: Never hallucinate component properties!** Before using ANY property on a Lit component, use the MCP tools to check if the property is documented for that component.
+- `list-all-documentation` — get an index of all documented components and stories
+- `get-documentation` — get detailed docs, props and example stories for a specific component
+- `get-documentation-for-story` — get the full story source and associated docs
+- `get-storybook-story-instructions` — fetch the latest instructions for creating or updating stories
+- `preview-stories` — render story previews directly in the agent's chat interface
+- `run-story-tests` — run component + interaction tests and return results (requires @storybook/addon-vitest)
+
+> **Note:** The docs toolset (list-all-documentation, get-documentation) is currently React-only in Storybook's manifest generation. Since this project uses the web-components renderer, component documentation will be limited until Storybook adds manifest support for web components. The development toolset (preview-stories, get-storybook-story-instructions) works with all renderers.
+
+To start Storybook: `pnpm -C apps/storybook dev`
 
 ## Code Style
 
@@ -60,5 +88,4 @@ This is a Digital Garden project.
 ## Way of Working
 
 - Plan work in small, manageable chunks
-- Use a TODO list to keep track of tasks and priorities, and update it regularly
 - Use a Test-Driven Development (TDD) approach to ensure code quality and maintainability

@@ -1,0 +1,4 @@
+{
+  "extends": "@notes/tsconfig/tsconfig.vite.json",
+  "include": ["src", ".storybook"]
+}

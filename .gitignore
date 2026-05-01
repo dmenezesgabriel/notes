@@ -9,3 +9,7 @@ pods/service-connections
 mkdocs_site
 *.env
 *.bak*
+dist
+.next
+.content
+.playwright-cli

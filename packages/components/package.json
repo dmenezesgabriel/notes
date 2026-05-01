@@ -1,0 +1,26 @@
+{
+  "name": "@notes/components",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "lit": "^2.6.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.0",
+    "@types/node": "^20.0.0",
+    "@notes/tsconfig": "workspace:~",
+    "@notes/eslint-config": "workspace:~",
+    "@notes/prettier-config": "workspace:~",
+    "eslint": "^9.0.0",
+    "prettier": "^3.0.0"
+  }
+}
