@@ -1,0 +1,974 @@
+<style>
+  :root {
+    --ds-accent: #c2633a;
+    --ds-accent-light: #f5e8e1;
+    --ds-accent-dark: #8b3e1f;
+    --ds-sage: #5c7a5c;
+    --ds-sage-light: #e6eee6;
+    --ds-sand: #f7f4ee;
+    --ds-ink: #1c1a16;
+    --ds-muted: #6b6860;
+    --ds-border: rgba(28, 26, 22, 0.12);
+    --ds-border-strong: rgba(28, 26, 22, 0.25);
+    --ds-surface: #ffffff;
+    --ds-page: #f7f4ee;
+    --ds-tag-bg: #eeeae0;
+    --ds-tag-text: #4a4640;
+    --ds-code-bg: #f0ede5;
+    --ds-code-text: #2e2c28;
+    --ds-toggle-bg: #e8e4d8;
+  }
+  [data-theme='dark'] {
+    --ds-accent: #e07a50;
+    --ds-accent-light: #3a2218;
+    --ds-accent-dark: #f0a080;
+    --ds-sage: #7aa87a;
+    --ds-sage-light: #1e2e1e;
+    --ds-sand: #1a1814;
+    --ds-ink: #f0ede5;
+    --ds-muted: #9e9b94;
+    --ds-border: rgba(240, 237, 229, 0.1);
+    --ds-border-strong: rgba(240, 237, 229, 0.22);
+    --ds-surface: #252320;
+    --ds-page: #1a1814;
+    --ds-tag-bg: #2e2c28;
+    --ds-tag-text: #c4bfb4;
+    --ds-code-bg: #2a2820;
+    --ds-code-text: #d4cfc6;
+    --ds-toggle-bg: #2e2c28;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body,
+  .ds-root {
+    font-family: var(--font-sans, system-ui, sans-serif);
+    background: var(--ds-page);
+    color: var(--ds-ink);
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .ds-root {
+    padding: 0 0 3rem;
+  }
+  .ds-nav {
+    background: var(--ds-surface);
+    border-bottom: 1px solid var(--ds-border);
+    padding: 0 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 52px;
+  }
+  .ds-nav-brand {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ds-ink);
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .ds-nav-brand-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ds-accent);
+    flex-shrink: 0;
+  }
+  .ds-nav-links {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+  }
+  .ds-nav-link {
+    font-size: 13px;
+    color: var(--ds-muted);
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    text-decoration: none;
+  }
+  .ds-nav-link:hover {
+    background: var(--ds-tag-bg);
+    color: var(--ds-ink);
+  }
+  .ds-nav-link.active {
+    color: var(--ds-accent);
+  }
+  .ds-toggle {
+    background: var(--ds-toggle-bg);
+    border: 1px solid var(--ds-border);
+    border-radius: 20px;
+    padding: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    margin-left: 8px;
+  }
+  .ds-toggle-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: var(--ds-muted);
+    font-size: 13px;
+  }
+  .ds-toggle-btn.active {
+    background: var(--ds-surface);
+    color: var(--ds-ink);
+  }
+  .ds-hero {
+    padding: 2.5rem 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--ds-border);
+    background: var(--ds-surface);
+  }
+  .ds-hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ds-accent);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  .ds-hero-title {
+    font-size: 28px;
+    font-weight: 500;
+    color: var(--ds-ink);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+  .ds-hero-sub {
+    font-size: 15px;
+    color: var(--ds-muted);
+    max-width: 480px;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+  }
+  .ds-hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .ds-tag {
+    font-size: 12px;
+    background: var(--ds-tag-bg);
+    color: var(--ds-tag-text);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-weight: 500;
+    border: 1px solid var(--ds-border);
+  }
+  .ds-tag.accent {
+    background: var(--ds-accent-light);
+    color: var(--ds-accent-dark);
+    border-color: transparent;
+  }
+  .ds-tag.sage {
+    background: var(--ds-sage-light);
+    color: var(--ds-sage);
+    border-color: transparent;
+  }
+  .ds-section {
+    padding: 1.75rem 1.25rem 0;
+  }
+  .ds-section-label {
+    font-size: 11px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ds-muted);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .ds-section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--ds-border);
+  }
+  .ds-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .ds-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+  .ds-card {
+    background: var(--ds-surface);
+    border: 1px solid var(--ds-border);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+  }
+  .ds-card-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ds-ink);
+    margin-bottom: 4px;
+  }
+  .ds-card-meta {
+    font-size: 12px;
+    color: var(--ds-muted);
+    margin-bottom: 0.6rem;
+  }
+  .ds-card-excerpt {
+    font-size: 13px;
+    color: var(--ds-muted);
+    line-height: 1.6;
+  }
+  .ds-card-footer {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+  }
+  .ds-card-featured {
+    border-left: 3px solid var(--ds-accent);
+    border-radius: 0 10px 10px 0;
+  }
+  .ds-article-preview {
+    background: var(--ds-surface);
+    border: 1px solid var(--ds-border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .ds-article-thumb {
+    height: 90px;
+    background: var(--ds-tag-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--ds-border);
+  }
+  .ds-article-thumb-inner {
+    display: grid;
+    grid-template-columns: repeat(6, 10px);
+    grid-template-rows: repeat(3, 10px);
+    gap: 3px;
+    opacity: 0.3;
+  }
+  .ds-pixel {
+    width: 10px;
+    height: 10px;
+    border-radius: 1px;
+    background: var(--ds-accent);
+  }
+  .ds-pixel.s {
+    background: var(--ds-sage);
+  }
+  .ds-pixel.i {
+    background: var(--ds-ink);
+    opacity: 0.4;
+  }
+  .ds-article-body {
+    padding: 0.875rem 1rem;
+  }
+  .ds-type-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--ds-border);
+  }
+  .ds-type-row:last-child {
+    border-bottom: none;
+  }
+  .ds-type-label {
+    font-size: 11px;
+    color: var(--ds-muted);
+    min-width: 80px;
+  }
+  .ds-type-sample {
+    color: var(--ds-ink);
+  }
+  .ds-palette-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .ds-swatch {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    border: 1px solid var(--ds-border);
+    position: relative;
+  }
+  .ds-swatch-label {
+    font-size: 11px;
+    color: var(--ds-muted);
+    margin-top: 4px;
+    text-align: center;
+    width: 32px;
+  }
+  .ds-swatch-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ds-code-block {
+    background: var(--ds-code-bg);
+    border: 1px solid var(--ds-border);
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: var(--font-mono, monospace);
+    font-size: 12px;
+    color: var(--ds-code-text);
+    line-height: 1.7;
+    overflow: hidden;
+  }
+  .ds-code-kw {
+    color: var(--ds-accent);
+  }
+  .ds-code-prop {
+    color: var(--ds-sage);
+  }
+  .ds-code-val {
+    color: var(--ds-muted);
+  }
+  .ds-callout {
+    border-left: 3px solid var(--ds-accent);
+    background: var(--ds-accent-light);
+    border-radius: 0 8px 8px 0;
+    padding: 0.75rem 1rem;
+    font-size: 13px;
+    color: var(--ds-ink);
+    margin-bottom: 10px;
+  }
+  .ds-callout-info {
+    border-left-color: var(--ds-sage);
+    background: var(--ds-sage-light);
+  }
+  .ds-breadcrumb {
+    font-size: 12px;
+    color: var(--ds-muted);
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+  .ds-breadcrumb-sep {
+    opacity: 0.4;
+  }
+  .ds-toc {
+    background: var(--ds-surface);
+    border: 1px solid var(--ds-border);
+    border-radius: 10px;
+    padding: 1rem;
+  }
+  .ds-toc-title {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ds-muted);
+    margin-bottom: 0.6rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  .ds-toc-item {
+    font-size: 13px;
+    color: var(--ds-muted);
+    padding: 3px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+  .ds-toc-item:hover {
+    color: var(--ds-ink);
+  }
+  .ds-toc-item.active {
+    color: var(--ds-accent);
+    font-weight: 500;
+  }
+  .ds-toc-item.sub {
+    padding-left: 12px;
+    font-size: 12px;
+  }
+  .ds-toc-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+  .ds-btn {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    border: 1px solid var(--ds-border-strong);
+    background: var(--ds-surface);
+    color: var(--ds-ink);
+    margin-right: 6px;
+  }
+  .ds-btn:hover {
+    background: var(--ds-tag-bg);
+  }
+  .ds-btn-primary {
+    background: var(--ds-accent);
+    color: #fff;
+    border-color: transparent;
+  }
+  .ds-btn-primary:hover {
+    background: var(--ds-accent-dark);
+  }
+  .ds-btn-ghost {
+    border-color: transparent;
+    background: transparent;
+    color: var(--ds-muted);
+  }
+  .ds-btn-ghost:hover {
+    color: var(--ds-ink);
+    background: var(--ds-tag-bg);
+  }
+  .ds-reading {
+    background: var(--ds-surface);
+    border: 1px solid var(--ds-border);
+    border-radius: 10px;
+    padding: 1.5rem;
+  }
+  .ds-reading-h {
+    font-size: 19px;
+    font-weight: 500;
+    color: var(--ds-ink);
+    margin-bottom: 0.4rem;
+    letter-spacing: -0.015em;
+  }
+  .ds-reading-p {
+    font-size: 14px;
+    color: var(--ds-muted);
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+  }
+  .ds-reading-h2 {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ds-ink);
+    margin: 1rem 0 0.3rem;
+  }
+  .ds-blockquote {
+    border-left: 3px solid var(--ds-border-strong);
+    padding: 0.4rem 0 0.4rem 1rem;
+    color: var(--ds-muted);
+    font-size: 14px;
+    font-style: italic;
+    margin: 0.75rem 0;
+  }
+  .ds-divider {
+    height: 1px;
+    background: var(--ds-border);
+    margin: 1.5rem 0;
+  }
+  .ds-search {
+    background: var(--ds-surface);
+    border: 1px solid var(--ds-border-strong);
+    border-radius: 8px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    cursor: text;
+  }
+  .ds-search-icon {
+    color: var(--ds-muted);
+    flex-shrink: 0;
+  }
+  .ds-search-text {
+    font-size: 14px;
+    color: var(--ds-muted);
+  }
+  .ds-search-kbd {
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--ds-muted);
+    background: var(--ds-tag-bg);
+    border: 1px solid var(--ds-border);
+    border-radius: 4px;
+    padding: 2px 6px;
+    font-family: monospace;
+  }
+  .ds-token-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .ds-token-table td {
+    padding: 6px 0;
+    font-size: 13px;
+    border-bottom: 1px solid var(--ds-border);
+  }
+  .ds-token-table tr:last-child td {
+    border-bottom: none;
+  }
+  .ds-token-table .label {
+    color: var(--ds-muted);
+    width: 50%;
+  }
+  .ds-token-table .value {
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--ds-accent);
+  }
+</style>
+
+<div class="ds-root" id="root">
+  <nav class="ds-nav">
+    <div class="ds-nav-brand">
+      <div class="ds-nav-brand-dot"></div>
+      garden.dev
+    </div>
+    <div class="ds-nav-links">
+      <a class="ds-nav-link active" href="#">notes</a>
+      <a class="ds-nav-link" href="#">wiki</a>
+      <a class="ds-nav-link" href="#">projects</a>
+      <a class="ds-nav-link" href="#">about</a>
+      <div class="ds-toggle" id="themeToggle">
+        <button class="ds-toggle-btn active" data-mode="light">☀</button>
+        <button class="ds-toggle-btn" data-mode="dark">☽</button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="ds-hero">
+    <div class="ds-breadcrumb">
+      <span>home</span>
+      <span class="ds-breadcrumb-sep">/</span>
+      <span>design system</span>
+      <span class="ds-breadcrumb-sep">/</span>
+      <span style="color: var(--ds-ink)">prototype</span>
+    </div>
+    <div class="ds-hero-eyebrow">design system · v0.1</div>
+    <div class="ds-hero-title">Cozy minimal — component library</div>
+    <div class="ds-hero-sub">
+      A warm, readable design language for long-form knowledge sites. Built for Lit + Next.js,
+      optimised for content and focus.
+    </div>
+    <div class="ds-hero-tags">
+      <span class="ds-tag accent">lit elements</span>
+      <span class="ds-tag sage">next.js ssg</span>
+      <span class="ds-tag">storybook</span>
+      <span class="ds-tag">responsive</span>
+      <span class="ds-tag">light / dark</span>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <div class="ds-section-label">search</div>
+    <div class="ds-search">
+      <svg
+        class="ds-search-icon"
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="1.5"
+      >
+        <circle cx="7" cy="7" r="4.5" />
+        <path d="m10.5 10.5 3 3" />
+      </svg>
+      <span class="ds-search-text">Search notes, wiki, projects…</span>
+      <span class="ds-search-kbd">⌘K</span>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <div class="ds-section-label">color tokens</div>
+    <div class="ds-card">
+      <div class="ds-palette-row">
+        <div class="ds-swatch-group">
+          <div class="ds-swatch" style="background: #c2633a"></div>
+          <div class="ds-swatch-label">accent</div>
+        </div>
+        <div class="ds-swatch-group">
+          <div class="ds-swatch" style="background: #f5e8e1"></div>
+          <div class="ds-swatch-label">acc·lt</div>
+        </div>
+        <div class="ds-swatch-group">
+          <div class="ds-swatch" style="background: #8b3e1f"></div>
+          <div class="ds-swatch-label">acc·dk</div>
+        </div>
+        <div class="ds-swatch-group">
+          <div class="ds-swatch" style="background: #5c7a5c"></div>
+          <div class="ds-swatch-label">sage</div>
+        </div>
+        <div class="ds-swatch-group">
+          <div class="ds-swatch" style="background: #e6eee6"></div>
+          <div class="ds-swatch-label">sage·lt</div>
+        </div>
+        <div class="ds-swatch-group">
+          <div class="ds-swatch" style="background: #f7f4ee"></div>
+          <div class="ds-swatch-label">sand</div>
+        </div>
+        <div class="ds-swatch-group">
+          <div class="ds-swatch" style="background: #1c1a16"></div>
+          <div class="ds-swatch-label">ink</div>
+        </div>
+        <div class="ds-swatch-group">
+          <div class="ds-swatch" style="background: #6b6860"></div>
+          <div class="ds-swatch-label">muted</div>
+        </div>
+      </div>
+      <div class="ds-token-table-wrap">
+        <table class="ds-token-table">
+          <tr>
+            <td class="label">--ds-accent</td>
+            <td class="value">#C2633A (terracotta)</td>
+          </tr>
+          <tr>
+            <td class="label">--ds-sage</td>
+            <td class="value">#5C7A5C (sage green)</td>
+          </tr>
+          <tr>
+            <td class="label">--ds-sand</td>
+            <td class="value">#F7F4EE (page bg)</td>
+          </tr>
+          <tr>
+            <td class="label">--ds-ink</td>
+            <td class="value">#1C1A16 (body text)</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <div class="ds-section-label">typography scale</div>
+    <div class="ds-card">
+      <div class="ds-type-row">
+        <span class="ds-type-label">display</span>
+        <span
+          class="ds-type-sample"
+          style="font-size: 24px; font-weight: 500; letter-spacing: -0.02em; color: var(--ds-ink)"
+          >The knowledge garden</span
+        >
+      </div>
+      <div class="ds-type-row">
+        <span class="ds-type-label">h1</span>
+        <span
+          class="ds-type-sample"
+          style="font-size: 20px; font-weight: 500; letter-spacing: -0.015em"
+          >Article title sits here</span
+        >
+      </div>
+      <div class="ds-type-row">
+        <span class="ds-type-label">h2</span>
+        <span class="ds-type-sample" style="font-size: 16px; font-weight: 500"
+          >Section heading</span
+        >
+      </div>
+      <div class="ds-type-row">
+        <span class="ds-type-label">body</span>
+        <span
+          class="ds-type-sample"
+          style="font-size: 15px; line-height: 1.75; color: var(--ds-muted)"
+          >Long-form prose at 15px / 1.75 — comfortable for extended reading sessions on both
+          desktop and mobile screens.</span
+        >
+      </div>
+      <div class="ds-type-row">
+        <span class="ds-type-label">caption</span>
+        <span class="ds-type-sample" style="font-size: 12px; color: var(--ds-muted)"
+          >Tags · metadata · timestamps · labels</span
+        >
+      </div>
+      <div class="ds-type-row">
+        <span class="ds-type-label">mono</span>
+        <span
+          class="ds-type-sample"
+          style="
+            font-size: 13px;
+            font-family: monospace;
+            color: var(--ds-code-text);
+            background: var(--ds-code-bg);
+            padding: 2px 8px;
+            border-radius: 4px;
+          "
+          >const garden = new Garden()</span
+        >
+      </div>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <div class="ds-section-label">note cards</div>
+    <div class="ds-grid-2">
+      <div class="ds-card ds-card-featured">
+        <div class="ds-card-title">On building a second brain</div>
+        <div class="ds-card-meta">3 days ago · 8 min read</div>
+        <div class="ds-card-excerpt">
+          The goal isn't to remember everything — it's to think better by offloading storage to a
+          trusted system.
+        </div>
+        <div class="ds-card-footer">
+          <span class="ds-tag accent">pkm</span>
+          <span class="ds-tag">zettelkasten</span>
+        </div>
+      </div>
+      <div class="ds-card">
+        <div class="ds-card-title">Lit elements vs React: a pragmatic view</div>
+        <div class="ds-card-meta">1 week ago · 5 min read</div>
+        <div class="ds-card-excerpt">
+          Web components shine when the goal is portability across stacks, not developer ergonomics
+          first.
+        </div>
+        <div class="ds-card-footer">
+          <span class="ds-tag sage">frontend</span>
+          <span class="ds-tag">lit</span>
+        </div>
+      </div>
+      <div class="ds-card">
+        <div class="ds-card-title">Synthwave palettes and why they work</div>
+        <div class="ds-card-meta">2 weeks ago · 4 min read</div>
+        <div class="ds-card-excerpt">
+          High contrast + neon against dark surfaces triggers the same visual comfort as CRT
+          phosphor glow.
+        </div>
+        <div class="ds-card-footer">
+          <span class="ds-tag">design</span>
+          <span class="ds-tag">color</span>
+        </div>
+      </div>
+      <div class="ds-card">
+        <div class="ds-card-title">Pixel art as a design constraint</div>
+        <div class="ds-card-meta">3 weeks ago · 6 min read</div>
+        <div class="ds-card-excerpt">
+          When every pixel costs effort, you're forced into clarity. The grid is the system.
+        </div>
+        <div class="ds-card-footer">
+          <span class="ds-tag">game design</span>
+          <span class="ds-tag sage">pixel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <div class="ds-section-label">article layout (specimen)</div>
+    <div style="display: grid; grid-template-columns: 1fr 180px; gap: 12px; align-items: start">
+      <div class="ds-reading">
+        <div class="ds-breadcrumb">notes / pkm</div>
+        <div class="ds-reading-h">On building a second brain</div>
+        <div
+          style="
+            font-size: 12px;
+            color: var(--ds-muted);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 10px;
+          "
+        >
+          <span>May 2026</span>
+          <span>·</span>
+          <span>8 min read</span>
+          <span>·</span>
+          <span style="color: var(--ds-sage)">pkm</span>
+        </div>
+        <div class="ds-reading-p">
+          The goal isn't to remember everything — it's to think better by offloading memory to a
+          trusted external system. Your brain is for generating ideas, not storing them.
+        </div>
+        <div class="ds-blockquote">
+          "We are what we repeatedly do. Excellence, then, is not an act, but a habit." — Aristotle
+        </div>
+        <div class="ds-reading-h2">The capture habit</div>
+        <div class="ds-reading-p">
+          Every note you capture is a future conversation with yourself. The format matters less
+          than the habit of externalising thinking before it disappears.
+        </div>
+        <div class="ds-callout">
+          <strong>Tip:</strong> Start with a weekly review — fifteen minutes every Sunday is enough
+          to close the loop.
+        </div>
+        <div class="ds-callout ds-callout-info">
+          <strong>Related:</strong> Zettelkasten, evergreen notes, PARA method, progressive
+          summarisation.
+        </div>
+        <div class="ds-code-block">
+          <span class="ds-code-kw">import</span> { <span class="ds-code-prop">Garden</span> }
+          <span class="ds-code-kw">from</span> <span class="ds-code-val">'@garden/core'</span>
+          <span class="ds-code-kw">const</span> <span class="ds-code-prop">g</span> =
+          <span class="ds-code-kw">new</span> <span class="ds-code-prop">Garden</span>({ theme:
+          <span class="ds-code-val">'cozy-minimal'</span> })
+        </div>
+      </div>
+      <div>
+        <div class="ds-toc">
+          <div class="ds-toc-title">on this page</div>
+          <div class="ds-toc-item active">
+            <div class="ds-toc-dot"></div>
+            Introduction
+          </div>
+          <div class="ds-toc-item sub">
+            <div class="ds-toc-dot"></div>
+            The capture habit
+          </div>
+          <div class="ds-toc-item sub">
+            <div class="ds-toc-dot"></div>
+            Organisation
+          </div>
+          <div class="ds-toc-item sub">
+            <div class="ds-toc-dot"></div>
+            Retrieval
+          </div>
+          <div class="ds-toc-item">
+            <div class="ds-toc-dot"></div>
+            See also
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <div class="ds-section-label">buttons &amp; actions</div>
+    <div class="ds-card" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+      <button class="ds-btn ds-btn-primary">Publish note</button>
+      <button class="ds-btn">Save draft</button>
+      <button class="ds-btn ds-btn-ghost">Cancel</button>
+      <button class="ds-btn" style="display: flex; align-items: center; gap: 6px">
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        >
+          <path d="M7 1v6M4 4l3-3 3 3M2 10v2h10v-2" />
+        </svg>
+        Export
+      </button>
+    </div>
+  </div>
+
+  <div class="ds-section" style="padding-bottom: 0">
+    <div class="ds-section-label">wiki article cards</div>
+    <div class="ds-grid-3">
+      <div class="ds-article-preview">
+        <div class="ds-article-thumb">
+          <div class="ds-article-thumb-inner">
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel"></div>
+          </div>
+        </div>
+        <div class="ds-article-body">
+          <div class="ds-card-title">Zettelkasten</div>
+          <div class="ds-card-meta">wiki · knowledge management</div>
+          <div class="ds-card-excerpt">
+            A slip-box method for networked thinking developed by Niklas Luhmann.
+          </div>
+        </div>
+      </div>
+      <div class="ds-article-preview">
+        <div class="ds-article-thumb">
+          <div class="ds-article-thumb-inner">
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel"></div>
+          </div>
+        </div>
+        <div class="ds-article-body">
+          <div class="ds-card-title">PARA method</div>
+          <div class="ds-card-meta">wiki · organisation</div>
+          <div class="ds-card-excerpt">
+            Projects, Areas, Resources, Archive — Tiago Forte's actionable structure.
+          </div>
+        </div>
+      </div>
+      <div class="ds-article-preview">
+        <div class="ds-article-thumb">
+          <div class="ds-article-thumb-inner">
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel i"></div>
+            <div class="ds-pixel"></div>
+            <div class="ds-pixel s"></div>
+            <div class="ds-pixel i"></div>
+          </div>
+        </div>
+        <div class="ds-article-body">
+          <div class="ds-card-title">Evergreen notes</div>
+          <div class="ds-card-meta">wiki · writing</div>
+          <div class="ds-card-excerpt">
+            Notes written to accumulate insight over time, not to record information once.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const root = document.getElementById('root');
+  const toggle = document.getElementById('themeToggle');
+  toggle.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-mode]');
+    if (!btn) return;
+    const mode = btn.dataset.mode;
+    root.setAttribute('data-theme', mode === 'dark' ? 'dark' : '');
+    toggle.querySelectorAll('.ds-toggle-btn').forEach((b) => {
+      b.classList.toggle('active', b.dataset.mode === mode);
+    });
+  });
+</script>
