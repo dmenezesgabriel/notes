@@ -9,10 +9,12 @@
     ".": "./dist/index.js"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@eslint/js": "^9.0.0",
+    "@next/eslint-plugin-next": ">=15.0.0",
     "eslint-plugin-lit": "^1.15.0",
     "eslint-plugin-simple-import-sort": "^12.0.0",
     "typescript-eslint": "^8.0.0"
@@ -21,6 +23,7 @@
     "eslint": "^9.0.0"
   },
   "devDependencies": {
+    "@notes/tsconfig": "workspace:~",
     "@types/node": "^20.0.0",
     "eslint": "^9.0.0",
     "typescript": "^5.1.0"

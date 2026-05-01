@@ -1,0 +1,47 @@
+[10:36:54.044] [INFO] storybook v10.3.6
+[10:36:55.459] [INFO] Loading main config failed as the file does not seem to be valid ESM. Trying a temporary fix, please ensure the main config is valid ESM.
+[10:36:56.404] [DEBUG] Getting package.json info for /home/gabrieldmenezes/Documents/repos/notes/apps/storybook/package.json...
+[10:36:56.479] [ERROR] [38;2;241;97;97mSB_CORE-SERVER_0002 (CriticalPresetLoadError): Storybook failed to load the following preset: ./.storybook/main.ts.
+
+Please check whether your setup is correct, the Storybook dependencies (and their peer dependencies) are installed correctly and there are no package version clashes.
+
+If you believe this is a bug, please open an issue on Github.
+
+ReferenceError: __dirname is not defined in ES module scope
+    at file://./.storybook/main.ts:7:36
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async importModule (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/_node-chunks/chunk-OWMIR4VJ.js:737:11)
+    at async loadMainConfig (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/_node-chunks/chunk-H4PWFMMO.js:11703:12)
+    at async buildDevStandalone (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/core-server/index.js:7953:16)
+    at async withTelemetry (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/_node-chunks/chunk-UYONHJJP.js:225:12)
+    at async dev (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/bin/core.js:2736:3)
+    at async _Command.<anonymous> (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/bin/core.js:2806:92)
+
+More info: 
+[39m
+    at loadPreset (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/_node-chunks/chunk-H4PWFMMO.js:10081:13)
+    at async Promise.all (index 1)
+    at async loadPresets (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/_node-chunks/chunk-H4PWFMMO.js:10090:73)
+    at async getPresets (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/_node-chunks/chunk-H4PWFMMO.js:10121:23)
+    at async buildDevStandalone (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/core-server/index.js:7967:52)
+    at async withTelemetry (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/_node-chunks/chunk-UYONHJJP.js:225:12)
+    at async dev (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/bin/core.js:2736:3)
+    at async _Command.<anonymous> (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/bin/core.js:2806:92)
+[10:36:56.493] [WARN] Broken build, fix the error above.
+You may need to refresh the browser.
+[10:36:57.712] [WARN]   Failed to load preset: "/home/gabrieldmenezes/Documents/repos/notes/apps/storybook/.storybook/main.ts"
+[10:36:57.712] [ERROR] [38;2;241;97;97mReferenceError: __dirname is not defined in ES module scope[39m
+    at file://./.storybook/main.ts:7:36
+    at ModuleJob.run (node:internal/modules/esm/module_job:437:25)
+    at async node:internal/modules/esm/loader:639:26
+    at async importModule (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/_node-chunks/chunk-OWMIR4VJ.js:737:11)
+    at async loadMainConfig (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/_node-chunks/chunk-H4PWFMMO.js:11703:12)
+    at async buildDevStandalone (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/core-server/index.js:7953:16)
+    at async withTelemetry (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/_node-chunks/chunk-UYONHJJP.js:225:12)
+    at async dev (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/bin/core.js:2736:3)
+    at async _Command.<anonymous> (file:///home/gabrieldmenezes/Documents/repos/notes/node_modules/.pnpm/storybook@10.3.6_@testing-library+dom@10.4.1_prettier@3.8.3_react-dom@19.2.5_react@19.2.5__react@19.2.5/node_modules/storybook/dist/bin/core.js:2806:92)
+[10:36:57.726] [INFO] Storybook collects completely anonymous usage telemetry. We use it to shape Storybook's roadmap and prioritize features. You can learn more, including how to opt out, at https://storybook.js.org/telemetry
+[10:36:57.741] [INFO] Loading main config failed as the file does not seem to be valid ESM. Trying a temporary fix, please ensure the main config is valid ESM.
+[10:36:58.613] [INFO] Loading main config failed as the file does not seem to be valid ESM. Trying a temporary fix, please ensure the main config is valid ESM.
+[10:36:58.658] [INFO] Loading main config failed as the file does not seem to be valid ESM. Trying a temporary fix, please ensure the main config is valid ESM.

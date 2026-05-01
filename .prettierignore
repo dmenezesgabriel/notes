@@ -1,0 +1,16 @@
+# Generated / third-party
+pnpm-lock.yaml
+**/dist/**
+**/.next/**
+**/.content/**
+**/node_modules/**
+**/coverage/**
+
+# Dendron notes vault — single source of truth, not formatted by Prettier
+notes/**
+
+# Playwright session logs
+.playwright-cli/**
+
+# Pi skills
+.pi/skills/**

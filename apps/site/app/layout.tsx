@@ -1,4 +1,5 @@
 import './globals.css';
+
 import RegisterWebComponents from './components/register-webcomponents';
 
 export const metadata = {

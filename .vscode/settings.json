@@ -1,25 +1,25 @@
 {
-    "github.copilot.chat.commitMessageGeneration.instructions": [
-        {
-            "file": "docs/commit-message-instructions.md"
-        }
-    ],
-    "cSpell.words": [
-        "hiperparâmetro",
-        "Hiperparâmetro",
-        "hiperparametros",
-        "hiperparâmetros",
-        "hiperpârametros",
-        "Microfrontends",
-        "Onfiguracao",
-        "overfitting",
-        "Overfitting",
-        "serialização"
-    ],
-    "editor.wordWrap": "on",
-    "editor.rulers": [80, 100],
-    "markdown.preview.fontSize": 16,
-    "markdown.preview.lineHeight": 1.6,
-    "editor.cursorBlinking": "smooth",
-    "editor.renderWhitespace": "none"
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "file": "docs/commit-message-instructions.md"
+    }
+  ],
+  "cSpell.words": [
+    "hiperparâmetro",
+    "Hiperparâmetro",
+    "hiperparametros",
+    "hiperparâmetros",
+    "hiperpârametros",
+    "Microfrontends",
+    "Onfiguracao",
+    "overfitting",
+    "Overfitting",
+    "serialização"
+  ],
+  "editor.wordWrap": "on",
+  "editor.rulers": [80, 100],
+  "markdown.preview.fontSize": 16,
+  "markdown.preview.lineHeight": 1.6,
+  "editor.cursorBlinking": "smooth",
+  "editor.renderWhitespace": "none"
 }

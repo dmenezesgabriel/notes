@@ -1,19 +1,25 @@
+import { type Note } from '@notes/content';
 import fs from 'fs';
-import path from 'path';
-import { notFound } from 'next/navigation';
 import matter from 'gray-matter';
-import { unified } from 'unified';
-import remarkParse from 'remark-parse';
-import remarkGfm from 'remark-gfm';
-import remarkRehype from 'remark-rehype';
+import { notFound } from 'next/navigation';
+import path from 'path';
 import rehypeRaw from 'rehype-raw';
 import rehypeStringify from 'rehype-stringify';
+import remarkGfm from 'remark-gfm';
+import remarkParse from 'remark-parse';
+import remarkRehype from 'remark-rehype';
+import { unified } from 'unified';
 
 // Notes live at {repo-root}/notes — from apps/site that is ../../notes
 const NOTES_DIR = path.join(process.cwd(), '..', '..', 'notes');
 const CONTENT_DIR = path.join(process.cwd(), '.content');
 
-function readManifest() {
+interface Manifest {
+  notes: Note[];
+  byId: Record<string, Note>;
+}
+
+function readManifest(): Manifest | null {
   const p = path.join(CONTENT_DIR, 'manifest.json');
   if (!fs.existsSync(p)) return null;
   return JSON.parse(fs.readFileSync(p, 'utf8'));
@@ -35,15 +41,15 @@ function rewriteWikiLinks(content: string): string {
       const display = (alias || target.split(/[./]/).slice(-1)[0] || target).trim();
       const slug = '/' + target.split('.').join('/');
       return `[${display}](${slug})`;
-    }
+    },
   );
 }
 
 export async function generateStaticParams() {
   const manifest = readManifest();
   if (!manifest) return [];
-  return manifest.notes.map((note: any) => ({
-    slug: note.slug.replace(/^\//, '').split('/')
+  return manifest.notes.map((note) => ({
+    slug: note.slug.replace(/^\//, '').split('/'),
   }));
 }
 

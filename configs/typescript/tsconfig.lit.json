@@ -7,8 +7,6 @@
     "moduleResolution": "Bundler",
     "lib": ["ES2020", "DOM"],
     "experimentalDecorators": true,
-    "useDefineForClassFields": false,
-    "outDir": "dist",
-    "rootDir": "src"
+    "useDefineForClassFields": false
   }
 }

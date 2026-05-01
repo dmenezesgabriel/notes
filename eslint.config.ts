@@ -5,7 +5,7 @@ const config: Linter.Config[] = [
   ...base,
   {
     // root-level ignores on top of those in the shared config
-    ignores: ['notes/**', '.content/**', '.playwright-cli/**'],
+    ignores: ['notes/**', '.content/**', '.playwright-cli/**', '**/next-env.d.ts'],
   },
 ];
 

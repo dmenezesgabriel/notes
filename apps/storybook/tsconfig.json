@@ -1,4 +1,7 @@
 {
   "extends": "@notes/tsconfig/tsconfig.vite.json",
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  },
   "include": ["src", ".storybook"]
 }

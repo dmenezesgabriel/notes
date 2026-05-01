@@ -1,5 +1,6 @@
 {
   "name": "notes",
+  "type": "module",
   "private": true,
   "version": "1.0.0",
   "workspaces": [
@@ -15,12 +16,17 @@
     "build:all": "pnpm -C packages/content build && pnpm -C apps/site build",
     "lint": "eslint .",
     "format": "prettier --write .",
-    "test": "pnpm -w -r -s test"
+    "typecheck": "pnpm -r run --if-present typecheck",
+    "test": "pnpm -w -r -s test",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@notes/eslint-config": "workspace:*",
     "@notes/prettier-config": "workspace:*",
     "eslint": "^9.0.0",
+    "husky": "^9.1.7",
+    "jiti": "^2.6.1",
+    "lint-staged": "^16.4.0",
     "prettier": "^3.0.0"
   },
   "dependencies": {
