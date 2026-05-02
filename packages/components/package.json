@@ -15,7 +15,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "lit": "^2.6.0"
+    "lit": "^2.6.0",
+    "mermaid": "11.14.0"
   },
   "devDependencies": {
     "@notes/eslint-config": "workspace:~",

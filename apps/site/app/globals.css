@@ -195,9 +195,10 @@ body {
   border-radius: var(--radius-sm);
 }
 
+/* ---- Code blocks --------------------------------------------------------- */
+/* Layout (applies to all <pre>) */
 .prose pre {
-  background: var(--ds-code-bg);
-  color: var(--ds-code-text);
+  font-family: var(--font-mono, 'DM Mono', monospace);
   padding: var(--space-4);
   border-radius: var(--radius-md);
   overflow-x: auto;
@@ -205,10 +206,43 @@ body {
   border: 1px solid var(--ds-border);
 }
 
-.prose pre code {
+/* Plain (un-highlighted) blocks */
+.prose pre:not(.shiki) {
+  background: var(--ds-code-bg);
+  color: var(--ds-code-text);
+  font-size: 13px;
+}
+
+.prose pre:not(.shiki) code {
   background: none;
   padding: 0;
   font-size: 13px;
+  color: inherit;
+}
+
+/* Shiki-highlighted blocks — light colours inlined by Shiki */
+.prose .shiki {
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+/* Shiki dark-mode: override inline light styles with dark CSS variables */
+[data-theme='dark'] .prose .shiki,
+[data-theme='dark'] .prose .shiki code {
+  background-color: var(--shiki-dark-bg) !important;
+  color: var(--shiki-dark) !important;
+}
+
+[data-theme='dark'] .prose .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg, transparent) !important;
+}
+
+/* Reset inline code inside shiki blocks */
+.prose .shiki code {
+  background: none;
+  padding: 0;
+  color: inherit;
 }
 
 .prose hr {

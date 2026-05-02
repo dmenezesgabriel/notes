@@ -1,4 +1,5 @@
 import type { Note } from '@notes/content';
+import rehypeShiki from '@shikijs/rehype';
 import { existsSync, readFileSync } from 'fs';
 import matter from 'gray-matter';
 import { notFound } from 'next/navigation';
@@ -14,6 +15,7 @@ import { unified } from 'unified';
 import { SiteBreadcrumb } from '../../components/site-breadcrumb';
 import { SiteToc } from '../../components/site-toc';
 import { categoryLabel, extractToc, rewriteWikiLinks } from '../../lib/notes';
+import { rehypeMermaid } from '../../lib/rehype-code';
 
 // Notes live at {repo-root}/notes — from apps/site that is ../../notes
 const NOTES_DIR = path.join(process.cwd(), '..', '..', 'notes');
@@ -108,6 +110,17 @@ export default async function NotePage({ params }: { params: Promise<{ slug: str
     .use(remarkGfm)
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
+    // ① Extract mermaid fences into <garden-mermaid> before Shiki runs
+    .use(rehypeMermaid)
+    // ② Syntax-highlight all remaining code blocks with dual light/dark themes
+    .use(rehypeShiki, {
+      themes: {
+        light: 'github-light',
+        dark: 'github-dark',
+      },
+      // 'light' colours are inlined; 'dark' is applied via CSS custom properties
+      defaultColor: 'light',
+    })
     .use(rehypeSlug) // adds id="" to h2/h3 for anchor links + TOC
     .use(rehypeStringify)
     .process(withLinks);

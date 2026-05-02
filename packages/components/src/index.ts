@@ -11,6 +11,7 @@ export type { CalloutVariant } from './garden-callout';
 export { GardenCallout } from './garden-callout';
 export type { CardVariant } from './garden-card';
 export { GardenCard } from './garden-card';
+export { GardenMermaid } from './garden-mermaid';
 export type { NavLink } from './garden-nav';
 export { GardenNav } from './garden-nav';
 export { GardenSearch } from './garden-search';

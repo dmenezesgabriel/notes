@@ -68,6 +68,10 @@ declare module 'react' {
           active?: boolean;
         }>;
       };
+
+      'garden-mermaid': React.HTMLAttributes<HTMLElement> & {
+        diagram?: string;
+      };
     }
   }
 }
