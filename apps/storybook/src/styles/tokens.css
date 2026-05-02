@@ -1,0 +1,84 @@
+/* Garden Storybook Global Styles
+   Imports design tokens and applies baseline page styles for story previews */
+
+/* Tokens from packages/components */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,400&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&display=swap');
+
+:root {
+  --ds-accent: #a85025;
+  --ds-accent-light: #f5e8e1;
+  --ds-accent-dark: #8b3e1f;
+  --ds-sage: #4d7350;
+  --ds-sage-light: #e6eee6;
+  --ds-sand: #f7f4ee;
+  --ds-ink: #1c1a16;
+  --ds-muted: #6b6860;
+  --ds-surface: #ffffff;
+  --ds-page: #f7f4ee;
+  --ds-border: rgba(28, 26, 22, 0.12);
+  --ds-border-strong: rgba(28, 26, 22, 0.25);
+  --ds-tag-bg: #eeeae0;
+  --ds-tag-text: #4a4640;
+  --ds-code-bg: #f0ede5;
+  --ds-code-text: #2e2c28;
+  --ds-toggle-bg: #e8e4d8;
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Lora', Georgia, serif;
+  --font-mono: 'DM Mono', 'Courier New', monospace;
+  --font-ui: system-ui, sans-serif;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 3px rgba(28, 26, 22, 0.08);
+  --shadow-md: 0 4px 12px rgba(28, 26, 22, 0.1);
+  --shadow-lg: 0 8px 24px rgba(28, 26, 22, 0.12);
+  --transition-fast: 120ms ease;
+  --transition-base: 200ms ease;
+  --transition-slow: 360ms ease;
+}
+
+[data-theme='dark'] {
+  --ds-accent: #e07a50;
+  --ds-accent-light: #3a2218;
+  --ds-accent-dark: #f0a080;
+  --ds-sage: #7aa87a;
+  --ds-sage-light: #1e2e1e;
+  --ds-sand: #1a1814;
+  --ds-ink: #f0ede5;
+  --ds-muted: #9e9b94;
+  --ds-border: rgba(240, 237, 229, 0.1);
+  --ds-border-strong: rgba(240, 237, 229, 0.22);
+  --ds-surface: #252320;
+  --ds-page: #1a1814;
+  --ds-tag-bg: #2e2c28;
+  --ds-tag-text: #c4bfb4;
+  --ds-code-bg: #2a2820;
+  --ds-code-text: #d4cfc6;
+  --ds-toggle-bg: #2e2c28;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-ui, system-ui, sans-serif);
+  background: var(--ds-page, #f7f4ee);
+  color: var(--ds-ink, #1c1a16);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}

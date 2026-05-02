@@ -10,8 +10,10 @@ const config: StorybookConfig = {
   framework: {
     name: '@storybook/nextjs-vite',
     options: {
-      // resolve Next.js config from apps/site
       nextConfigPath: resolve(__dirname, '../../site/next.config.ts'),
+      // Disable react-docgen: our stories use Lit web components,
+      // not React components, so prop extraction is not needed.
+      reactDocgen: false,
     },
   },
   stories: ['../src/**/*.stories.@(ts|tsx)'],
@@ -29,18 +31,20 @@ const config: StorybookConfig = {
   viteFinal: async (config) => {
     config.resolve ??= {};
 
-    // deduplicate Lit so only one version is loaded across all packages
+    // Deduplicate Lit so only one version loads across all packages
     config.resolve.dedupe = ['lit', '@lit/reactive-element', 'lit-html', 'lit-element'];
 
-    // pre-bundle @notes/components and its Lit deps so Vite does not try to
-    // serve raw TypeScript source files from outside the server root
+    // Pre-bundle @notes/components and its Lit deps.
+    // We intentionally resolve the package via its built dist/ output
+    // (package.json "main" field) — NOT from raw TypeScript source.
+    // Pointing Vite at the TS source triggers the Storybook Babel plugin
+    // which uses stage-3 decorators and chokes on Lit's legacy decorator syntax.
     config.optimizeDeps ??= {};
     config.optimizeDeps.include = [
       ...(config.optimizeDeps.include ?? []),
       '@notes/components',
       'lit',
       'lit/decorators.js',
-      '@lit/reactive-element',
     ];
 
     return config;

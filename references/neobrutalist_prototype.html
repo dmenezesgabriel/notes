@@ -1,0 +1,723 @@
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  :root {
+    --nb-bg: #f5f0e8;
+    --nb-surface: #ffffff;
+    --nb-ink: #0a0a0a;
+    --nb-muted: #444;
+    --nb-accent: #ffd000;
+    --nb-accent2: #ff3c00;
+    --nb-border: 2px solid #0a0a0a;
+    --nb-shadow: 3px 3px 0 #0a0a0a;
+    --nb-shadow-sm: 2px 2px 0 #0a0a0a;
+    --nb-green: #00c07a;
+    --nb-blue: #0057ff;
+  }
+  .nb {
+    font-family: var(--font-sans, system-ui, sans-serif);
+    background: var(--nb-bg);
+    color: var(--nb-ink);
+    font-size: 15px;
+    line-height: 1.6;
+    padding-bottom: 3rem;
+  }
+  .nb-nav {
+    background: var(--nb-accent);
+    border-bottom: var(--nb-border);
+    padding: 0 1.25rem;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nb-brand {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--nb-ink);
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nb-brand-sq {
+    width: 14px;
+    height: 14px;
+    background: var(--nb-ink);
+  }
+  .nb-nav-links {
+    display: flex;
+    gap: 2px;
+  }
+  .nb-nav-link {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--nb-ink);
+    padding: 5px 10px;
+    border: var(--nb-border);
+    background: transparent;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .nb-nav-link:hover,
+  .nb-nav-link.active {
+    background: var(--nb-ink);
+    color: var(--nb-accent);
+  }
+  .nb-hero {
+    padding: 2rem 1.25rem 1.5rem;
+    border-bottom: var(--nb-border);
+    background: var(--nb-surface);
+  }
+  .nb-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--nb-muted);
+    margin-bottom: 0.5rem;
+  }
+  .nb-title {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    color: var(--nb-ink);
+  }
+  .nb-title span {
+    background: var(--nb-accent);
+    padding: 0 4px;
+  }
+  .nb-sub {
+    font-size: 14px;
+    color: var(--nb-muted);
+    max-width: 480px;
+    margin-bottom: 1.25rem;
+  }
+  .nb-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .nb-tag {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border: var(--nb-border);
+    background: var(--nb-surface);
+    color: var(--nb-ink);
+  }
+  .nb-tag.a {
+    background: var(--nb-accent);
+    border-color: var(--nb-ink);
+  }
+  .nb-tag.b {
+    background: var(--nb-accent2);
+    color: #fff;
+  }
+  .nb-section {
+    padding: 1.5rem 1.25rem 0;
+  }
+  .nb-section-label {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--nb-muted);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .nb-section-label::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: var(--nb-ink);
+  }
+  .nb-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .nb-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+  .nb-card {
+    background: var(--nb-surface);
+    border: var(--nb-border);
+    padding: 1rem 1.1rem;
+    box-shadow: var(--nb-shadow);
+  }
+  .nb-card-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--nb-ink);
+    margin-bottom: 4px;
+  }
+  .nb-card-meta {
+    font-size: 12px;
+    color: var(--nb-muted);
+    margin-bottom: 0.5rem;
+  }
+  .nb-card-excerpt {
+    font-size: 13px;
+    color: var(--nb-muted);
+    line-height: 1.6;
+  }
+  .nb-card-footer {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+  }
+  .nb-card-featured {
+    border-left: 5px solid var(--nb-accent2);
+  }
+  .nb-search {
+    border: var(--nb-border);
+    background: var(--nb-surface);
+    padding: 9px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    box-shadow: var(--nb-shadow);
+  }
+  .nb-search-text {
+    font-size: 14px;
+    color: var(--nb-muted);
+  }
+  .nb-search-kbd {
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--nb-muted);
+    background: var(--nb-bg);
+    border: var(--nb-border);
+    padding: 2px 6px;
+    font-family: monospace;
+  }
+  .nb-type-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(10, 10, 10, 0.15);
+  }
+  .nb-type-row:last-child {
+    border-bottom: none;
+  }
+  .nb-type-label {
+    font-size: 11px;
+    color: var(--nb-muted);
+    min-width: 80px;
+  }
+  .nb-palette-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .nb-swatch-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nb-swatch {
+    width: 32px;
+    height: 32px;
+    border: var(--nb-border);
+  }
+  .nb-swatch-label {
+    font-size: 11px;
+    color: var(--nb-muted);
+    margin-top: 3px;
+    text-align: center;
+  }
+  .nb-code {
+    background: #0a0a0a;
+    border: var(--nb-border);
+    padding: 1rem;
+    font-family: monospace;
+    font-size: 12px;
+    color: #e8e8e8;
+    line-height: 1.7;
+    box-shadow: var(--nb-shadow);
+  }
+  .nb-code .kw {
+    color: var(--nb-accent);
+  }
+  .nb-code .prop {
+    color: var(--nb-green);
+  }
+  .nb-code .val {
+    color: #aaa;
+  }
+  .nb-callout {
+    border-left: 5px solid var(--nb-accent2);
+    background: var(--nb-surface);
+    border-top: var(--nb-border);
+    border-right: var(--nb-border);
+    border-bottom: var(--nb-border);
+    padding: 0.75rem 1rem;
+    font-size: 13px;
+    margin-bottom: 10px;
+    box-shadow: var(--nb-shadow-sm);
+  }
+  .nb-callout.info {
+    border-left-color: var(--nb-blue);
+  }
+  .nb-reading {
+    background: var(--nb-surface);
+    border: var(--nb-border);
+    padding: 1.5rem;
+    box-shadow: var(--nb-shadow);
+  }
+  .nb-reading-h {
+    font-size: 19px;
+    font-weight: 500;
+    letter-spacing: -0.015em;
+    margin-bottom: 0.4rem;
+  }
+  .nb-reading-h2 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 1rem 0 0.3rem;
+  }
+  .nb-reading-p {
+    font-size: 14px;
+    color: var(--nb-muted);
+    line-height: 1.75;
+    margin-bottom: 0.75rem;
+  }
+  .nb-blockquote {
+    border-left: 4px solid var(--nb-ink);
+    padding: 0.4rem 0 0.4rem 1rem;
+    color: var(--nb-muted);
+    font-size: 14px;
+    font-style: italic;
+    margin: 0.75rem 0;
+    background: var(--nb-bg);
+  }
+  .nb-toc {
+    background: var(--nb-surface);
+    border: var(--nb-border);
+    padding: 1rem;
+    box-shadow: var(--nb-shadow-sm);
+  }
+  .nb-toc-title {
+    font-size: 11px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--nb-muted);
+    margin-bottom: 0.6rem;
+  }
+  .nb-toc-item {
+    font-size: 13px;
+    color: var(--nb-muted);
+    padding: 3px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .nb-toc-item.active {
+    color: var(--nb-ink);
+    font-weight: 500;
+  }
+  .nb-toc-item.sub {
+    padding-left: 12px;
+    font-size: 12px;
+  }
+  .nb-toc-dot {
+    width: 6px;
+    height: 6px;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+  .nb-btn {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border: var(--nb-border);
+    background: var(--nb-surface);
+    color: var(--nb-ink);
+    cursor: pointer;
+    margin-right: 6px;
+    box-shadow: var(--nb-shadow-sm);
+  }
+  .nb-btn:hover {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+  }
+  .nb-btn-primary {
+    background: var(--nb-accent);
+    border-color: var(--nb-ink);
+  }
+  .nb-btn-ghost {
+    border-color: transparent;
+    box-shadow: none;
+    color: var(--nb-muted);
+  }
+  .nb-article-preview {
+    background: var(--nb-surface);
+    border: var(--nb-border);
+    box-shadow: var(--nb-shadow);
+  }
+  .nb-article-thumb {
+    height: 80px;
+    background: var(--nb-bg);
+    border-bottom: var(--nb-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .nb-article-body {
+    padding: 0.875rem 1rem;
+  }
+  .nb-stripe {
+    width: 100%;
+    height: 8px;
+    display: flex;
+  }
+  .nb-stripe div {
+    flex: 1;
+    background: var(--nb-ink);
+  }
+  .nb-stripe div:nth-child(even) {
+    background: var(--nb-accent);
+  }
+  .nb-breadcrumb {
+    font-size: 12px;
+    color: var(--nb-muted);
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    margin-bottom: 0.5rem;
+  }
+</style>
+<div class="nb">
+  <nav class="nb-nav">
+    <div class="nb-brand">
+      <div class="nb-brand-sq"></div>
+      garden.dev
+    </div>
+    <div class="nb-nav-links">
+      <a class="nb-nav-link active" href="#">notes</a>
+      <a class="nb-nav-link" href="#">wiki</a>
+      <a class="nb-nav-link" href="#">projects</a>
+      <a class="nb-nav-link" href="#">about</a>
+    </div>
+  </nav>
+  <div class="nb-stripe">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="nb-hero">
+    <div class="nb-eyebrow">design system · v0.1</div>
+    <div class="nb-title">The <span>knowledge</span> garden</div>
+    <div class="nb-sub">
+      A raw, high-contrast design language for long-form knowledge sites. No softness. Maximum
+      signal.
+    </div>
+    <div class="nb-tags">
+      <span class="nb-tag a">lit elements</span>
+      <span class="nb-tag b">next.js ssg</span>
+      <span class="nb-tag">storybook</span>
+      <span class="nb-tag">responsive</span>
+    </div>
+  </div>
+  <div class="nb-section">
+    <div class="nb-section-label">search</div>
+    <div class="nb-search">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#0A0A0A" stroke-width="2">
+        <circle cx="7" cy="7" r="4.5" />
+        <path d="m10.5 10.5 3 3" />
+      </svg>
+      <span class="nb-search-text">Search notes, wiki, projects…</span>
+      <span class="nb-search-kbd">⌘K</span>
+    </div>
+  </div>
+  <div class="nb-section">
+    <div class="nb-section-label">color tokens</div>
+    <div class="nb-card">
+      <div class="nb-palette-row">
+        <div class="nb-swatch-group">
+          <div class="nb-swatch" style="background: #ffd000"></div>
+          <div class="nb-swatch-label">yellow</div>
+        </div>
+        <div class="nb-swatch-group">
+          <div class="nb-swatch" style="background: #ff3c00"></div>
+          <div class="nb-swatch-label">red</div>
+        </div>
+        <div class="nb-swatch-group">
+          <div class="nb-swatch" style="background: #0057ff"></div>
+          <div class="nb-swatch-label">blue</div>
+        </div>
+        <div class="nb-swatch-group">
+          <div class="nb-swatch" style="background: #00c07a"></div>
+          <div class="nb-swatch-label">green</div>
+        </div>
+        <div class="nb-swatch-group">
+          <div class="nb-swatch" style="background: #0a0a0a"></div>
+          <div class="nb-swatch-label">ink</div>
+        </div>
+        <div class="nb-swatch-group">
+          <div class="nb-swatch" style="background: #f5f0e8"></div>
+          <div class="nb-swatch-label">paper</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nb-section">
+    <div class="nb-section-label">typography scale</div>
+    <div class="nb-card">
+      <div class="nb-type-row">
+        <span class="nb-type-label">display</span
+        ><span style="font-size: 24px; font-weight: 500; letter-spacing: -0.025em"
+          >The knowledge garden</span
+        >
+      </div>
+      <div class="nb-type-row">
+        <span class="nb-type-label">h1</span
+        ><span style="font-size: 20px; font-weight: 500">Article title sits here</span>
+      </div>
+      <div class="nb-type-row">
+        <span class="nb-type-label">h2</span
+        ><span style="font-size: 16px; font-weight: 500">Section heading</span>
+      </div>
+      <div class="nb-type-row">
+        <span class="nb-type-label">body</span
+        ><span style="font-size: 14px; line-height: 1.75; color: var(--nb-muted)"
+          >Long-form prose at 14px / 1.75 — ink on paper, no compromise on contrast.</span
+        >
+      </div>
+      <div class="nb-type-row">
+        <span class="nb-type-label">mono</span
+        ><span
+          style="
+            font-size: 13px;
+            font-family: monospace;
+            background: #0a0a0a;
+            color: var(--nb-accent);
+            padding: 2px 8px;
+          "
+          >const garden = new Garden()</span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="nb-section">
+    <div class="nb-section-label">note cards</div>
+    <div class="nb-grid-2">
+      <div class="nb-card nb-card-featured">
+        <div class="nb-card-title">On building a second brain</div>
+        <div class="nb-card-meta">3 days ago · 8 min read</div>
+        <div class="nb-card-excerpt">
+          The goal isn't to remember everything — it's to think better by offloading storage to a
+          trusted system.
+        </div>
+        <div class="nb-card-footer">
+          <span class="nb-tag a">pkm</span><span class="nb-tag">zettelkasten</span>
+        </div>
+      </div>
+      <div class="nb-card">
+        <div class="nb-card-title">Lit elements vs React: a pragmatic view</div>
+        <div class="nb-card-meta">1 week ago · 5 min read</div>
+        <div class="nb-card-excerpt">
+          Web components shine when the goal is portability across stacks, not developer ergonomics
+          first.
+        </div>
+        <div class="nb-card-footer">
+          <span class="nb-tag b">frontend</span><span class="nb-tag">lit</span>
+        </div>
+      </div>
+      <div class="nb-card">
+        <div class="nb-card-title">Synthwave palettes and why they work</div>
+        <div class="nb-card-meta">2 weeks ago</div>
+        <div class="nb-card-excerpt">
+          High contrast + neon against dark surfaces triggers the same visual comfort as CRT
+          phosphor glow.
+        </div>
+        <div class="nb-card-footer">
+          <span class="nb-tag">design</span><span class="nb-tag">color</span>
+        </div>
+      </div>
+      <div class="nb-card">
+        <div class="nb-card-title">Pixel art as a design constraint</div>
+        <div class="nb-card-meta">3 weeks ago</div>
+        <div class="nb-card-excerpt">
+          When every pixel costs effort, you're forced into clarity. The grid is the system.
+        </div>
+        <div class="nb-card-footer">
+          <span class="nb-tag">game design</span><span class="nb-tag a">pixel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nb-section">
+    <div class="nb-section-label">article layout</div>
+    <div style="display: grid; grid-template-columns: 1fr 180px; gap: 12px; align-items: start">
+      <div class="nb-reading">
+        <div class="nb-breadcrumb">notes / pkm</div>
+        <div class="nb-reading-h">On building a second brain</div>
+        <div
+          style="
+            font-size: 12px;
+            color: var(--nb-muted);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 10px;
+          "
+        >
+          <span>May 2026</span><span>·</span><span>8 min read</span><span>·</span
+          ><span
+            style="
+              background: var(--nb-accent);
+              padding: 0 5px;
+              color: var(--nb-ink);
+              font-weight: 500;
+            "
+            >pkm</span
+          >
+        </div>
+        <div class="nb-reading-p">
+          The goal isn't to remember everything — it's to think better by offloading memory to a
+          trusted external system.
+        </div>
+        <div class="nb-blockquote">"We are what we repeatedly do." — Aristotle</div>
+        <div class="nb-reading-h2">The capture habit</div>
+        <div class="nb-reading-p">
+          Every note you capture is a future conversation with yourself. The format matters less
+          than the habit.
+        </div>
+        <div class="nb-callout">
+          <strong>Tip:</strong> Start with a weekly review — fifteen minutes every Sunday is enough.
+        </div>
+        <div class="nb-callout info">
+          <strong>Related:</strong> Zettelkasten, evergreen notes, PARA method.
+        </div>
+        <div class="nb-code">
+          <span class="kw">import</span> { <span class="prop">Garden</span> }
+          <span class="kw">from</span> <span class="val">'@garden/core'</span>
+          <span class="kw">const</span> <span class="prop">g</span> = <span class="kw">new</span>
+          <span class="prop">Garden</span>({ theme: <span class="val">'neobrutalist'</span> })
+        </div>
+      </div>
+      <div class="nb-toc">
+        <div class="nb-toc-title">on this page</div>
+        <div class="nb-toc-item active">
+          <div class="nb-toc-dot"></div>
+          Introduction
+        </div>
+        <div class="nb-toc-item sub">
+          <div class="nb-toc-dot"></div>
+          The capture habit
+        </div>
+        <div class="nb-toc-item sub">
+          <div class="nb-toc-dot"></div>
+          Organisation
+        </div>
+        <div class="nb-toc-item">
+          <div class="nb-toc-dot"></div>
+          See also
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nb-section">
+    <div class="nb-section-label">buttons</div>
+    <div class="nb-card" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+      <button class="nb-btn nb-btn-primary">Publish note</button>
+      <button class="nb-btn">Save draft</button>
+      <button class="nb-btn nb-btn-ghost">Cancel</button>
+      <button class="nb-btn" style="display: flex; align-items: center; gap: 6px">
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path d="M7 1v6M4 4l3-3 3 3M2 10v2h10v-2" /></svg
+        >Export
+      </button>
+    </div>
+  </div>
+  <div class="nb-section">
+    <div class="nb-section-label">wiki article cards</div>
+    <div class="nb-grid-3">
+      <div class="nb-article-preview">
+        <div class="nb-article-thumb">
+          <div
+            style="font-size: 24px; font-weight: 500; color: var(--nb-ink); letter-spacing: -0.04em"
+          >
+            ZK
+          </div>
+        </div>
+        <div class="nb-article-body">
+          <div class="nb-card-title">Zettelkasten</div>
+          <div class="nb-card-meta">wiki · knowledge management</div>
+          <div class="nb-card-excerpt">
+            A slip-box method for networked thinking by Niklas Luhmann.
+          </div>
+        </div>
+      </div>
+      <div class="nb-article-preview">
+        <div class="nb-article-thumb" style="background: var(--nb-accent)">
+          <div
+            style="font-size: 24px; font-weight: 500; color: var(--nb-ink); letter-spacing: -0.04em"
+          >
+            PA
+          </div>
+        </div>
+        <div class="nb-article-body">
+          <div class="nb-card-title">PARA method</div>
+          <div class="nb-card-meta">wiki · organisation</div>
+          <div class="nb-card-excerpt">
+            Projects, Areas, Resources, Archive — Tiago Forte's structure.
+          </div>
+        </div>
+      </div>
+      <div class="nb-article-preview">
+        <div class="nb-article-thumb" style="background: var(--nb-accent2)">
+          <div style="font-size: 24px; font-weight: 500; color: #fff; letter-spacing: -0.04em">
+            EN
+          </div>
+        </div>
+        <div class="nb-article-body">
+          <div class="nb-card-title">Evergreen notes</div>
+          <div class="nb-card-meta">wiki · writing</div>
+          <div class="nb-card-excerpt">
+            Notes written to accumulate insight over time, not record once.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

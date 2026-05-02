@@ -1,0 +1,765 @@
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  :root {
+    --px-bg: #1a1a2e;
+    --px-surface: #16213e;
+    --px-panel: #0f3460;
+    --px-ink: #e8e8d0;
+    --px-muted: #8888aa;
+    --px-yellow: #ffe600;
+    --px-red: #ff4444;
+    --px-green: #44ff88;
+    --px-blue: #44aaff;
+    --px-pink: #ff88cc;
+    --px-border: 1px solid #3a3a5c;
+    --px-border-bright: 1px solid #6a6a9c;
+  }
+  .px {
+    font-family: var(--font-mono, monospace);
+    background: var(--px-bg);
+    color: var(--px-ink);
+    font-size: 13px;
+    line-height: 1.6;
+    padding-bottom: 3rem;
+  }
+  .px-scanline {
+    height: 3px;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 0, 0, 0.3) 1px,
+      rgba(0, 0, 0, 0.3) 2px
+    );
+    pointer-events: none;
+  }
+  .px-nav {
+    background: var(--px-surface);
+    border-bottom: 2px solid var(--px-yellow);
+    padding: 0 1.25rem;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .px-brand {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--px-yellow);
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .px-brand-icon {
+    width: 14px;
+    height: 14px;
+    background: var(--px-yellow);
+    image-rendering: pixelated;
+  }
+  .px-nav-links {
+    display: flex;
+    gap: 2px;
+  }
+  .px-nav-link {
+    font-size: 12px;
+    color: var(--px-muted);
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+  }
+  .px-nav-link:hover,
+  .px-nav-link.active {
+    border-color: var(--px-yellow);
+    color: var(--px-yellow);
+  }
+  .px-lives {
+    font-size: 12px;
+    color: var(--px-green);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 10px;
+  }
+  .px-hero {
+    padding: 2rem 1.25rem 1.5rem;
+    border-bottom: var(--px-border);
+    background: var(--px-surface);
+  }
+  .px-eyebrow {
+    font-size: 11px;
+    color: var(--px-muted);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+  }
+  .px-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--px-yellow);
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+  }
+  .px-cursor {
+    display: inline-block;
+    width: 14px;
+    height: 3px;
+    background: var(--px-yellow);
+    margin-left: 4px;
+    vertical-align: middle;
+    animation: blink 1s step-start infinite;
+  }
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  .px-sub {
+    font-size: 12px;
+    color: var(--px-muted);
+    max-width: 480px;
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+  }
+  .px-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .px-tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border: 1px solid var(--px-muted);
+    color: var(--px-muted);
+  }
+  .px-tag.y {
+    border-color: var(--px-yellow);
+    color: var(--px-yellow);
+  }
+  .px-tag.g {
+    border-color: var(--px-green);
+    color: var(--px-green);
+  }
+  .px-tag.b {
+    border-color: var(--px-blue);
+    color: var(--px-blue);
+  }
+  .px-section {
+    padding: 1.5rem 1.25rem 0;
+  }
+  .px-section-label {
+    font-size: 11px;
+    color: var(--px-green);
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .px-section-label::before {
+    content: '>';
+    color: var(--px-yellow);
+  }
+  .px-section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--px-border-bright);
+    margin-left: 8px;
+  }
+  .px-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .px-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  .px-card {
+    background: var(--px-panel);
+    border: var(--px-border);
+    border-top: 2px solid var(--px-blue);
+    padding: 0.875rem 1rem;
+  }
+  .px-card-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--px-ink);
+    margin-bottom: 4px;
+  }
+  .px-card-meta {
+    font-size: 11px;
+    color: var(--px-muted);
+    margin-bottom: 0.5rem;
+  }
+  .px-card-excerpt {
+    font-size: 12px;
+    color: var(--px-muted);
+    line-height: 1.6;
+  }
+  .px-card-footer {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+  }
+  .px-card-featured {
+    border-top-color: var(--px-yellow);
+  }
+  .px-search {
+    background: var(--px-surface);
+    border: var(--px-border-bright);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+  .px-search-text {
+    font-size: 12px;
+    color: var(--px-muted);
+  }
+  .px-search-kbd {
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--px-yellow);
+    border: 1px solid var(--px-yellow);
+    padding: 1px 6px;
+  }
+  .px-palette-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .px-swatch-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .px-swatch {
+    width: 28px;
+    height: 28px;
+    border: var(--px-border-bright);
+    image-rendering: pixelated;
+  }
+  .px-swatch-label {
+    font-size: 10px;
+    color: var(--px-muted);
+    margin-top: 3px;
+    text-align: center;
+  }
+  .px-type-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 0.5rem 0;
+    border-bottom: var(--px-border);
+  }
+  .px-type-row:last-child {
+    border-bottom: none;
+  }
+  .px-type-label {
+    font-size: 11px;
+    color: var(--px-muted);
+    min-width: 80px;
+  }
+  .px-code {
+    background: #0a0a0a;
+    border: var(--px-border);
+    border-top: 2px solid var(--px-green);
+    padding: 1rem;
+    font-size: 12px;
+    color: var(--px-ink);
+    line-height: 1.7;
+  }
+  .px-code .kw {
+    color: var(--px-pink);
+  }
+  .px-code .prop {
+    color: var(--px-green);
+  }
+  .px-code .val {
+    color: var(--px-blue);
+  }
+  .px-callout {
+    border-left: 3px solid var(--px-yellow);
+    background: rgba(255, 230, 0, 0.06);
+    border-top: var(--px-border);
+    border-right: var(--px-border);
+    border-bottom: var(--px-border);
+    padding: 0.75rem 1rem;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .px-callout.info {
+    border-left-color: var(--px-blue);
+    background: rgba(68, 170, 255, 0.06);
+  }
+  .px-reading {
+    background: var(--px-surface);
+    border: var(--px-border);
+    border-top: 2px solid var(--px-blue);
+    padding: 1.5rem;
+  }
+  .px-reading-h {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--px-yellow);
+    letter-spacing: 0.01em;
+    margin-bottom: 0.4rem;
+  }
+  .px-reading-h2 {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--px-green);
+    margin: 1rem 0 0.3rem;
+  }
+  .px-reading-p {
+    font-size: 12px;
+    color: var(--px-muted);
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+  }
+  .px-blockquote {
+    border-left: 3px solid var(--px-muted);
+    padding: 0.4rem 0 0.4rem 1rem;
+    color: var(--px-muted);
+    font-size: 12px;
+    font-style: italic;
+    margin: 0.75rem 0;
+  }
+  .px-toc {
+    background: var(--px-panel);
+    border: var(--px-border);
+    border-top: 2px solid var(--px-pink);
+    padding: 1rem;
+  }
+  .px-toc-title {
+    font-size: 11px;
+    color: var(--px-pink);
+    letter-spacing: 0.08em;
+    margin-bottom: 0.6rem;
+  }
+  .px-toc-item {
+    font-size: 12px;
+    color: var(--px-muted);
+    padding: 3px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .px-toc-item.active {
+    color: var(--px-yellow);
+  }
+  .px-toc-item.sub {
+    padding-left: 14px;
+    font-size: 11px;
+  }
+  .px-toc-dash {
+    color: var(--px-muted);
+  }
+  .px-btn {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 14px;
+    border: 1px solid var(--px-muted);
+    background: transparent;
+    color: var(--px-ink);
+    cursor: pointer;
+    margin-right: 6px;
+    letter-spacing: 0.03em;
+  }
+  .px-btn:hover {
+    border-color: var(--px-yellow);
+    color: var(--px-yellow);
+  }
+  .px-btn-primary {
+    border-color: var(--px-yellow);
+    color: var(--px-bg);
+    background: var(--px-yellow);
+  }
+  .px-btn-primary:hover {
+    background: transparent;
+    color: var(--px-yellow);
+  }
+  .px-hp {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+  }
+  .px-hp-block {
+    width: 10px;
+    height: 10px;
+    background: var(--px-red);
+  }
+  .px-hp-block.full {
+    background: var(--px-green);
+  }
+  .px-article-preview {
+    background: var(--px-surface);
+    border: var(--px-border);
+    border-top: 2px solid var(--px-pink);
+  }
+  .px-article-thumb {
+    height: 70px;
+    background: var(--px-bg);
+    border-bottom: var(--px-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .px-article-body {
+    padding: 0.75rem 0.875rem;
+  }
+  .px-pixel-art {
+    display: grid;
+    gap: 2px;
+    image-rendering: pixelated;
+  }
+  .px-breadcrumb {
+    font-size: 11px;
+    color: var(--px-muted);
+    display: flex;
+    gap: 6px;
+    margin-bottom: 0.5rem;
+  }
+</style>
+<div class="px">
+  <nav class="px-nav">
+    <div class="px-brand">
+      <div class="px-brand-icon"></div>
+      GARDEN.DEV
+    </div>
+    <div class="px-nav-links">
+      <a class="px-nav-link active" href="#">[NOTES]</a>
+      <a class="px-nav-link" href="#">[WIKI]</a>
+      <a class="px-nav-link" href="#">[PROJECTS]</a>
+      <a class="px-nav-link" href="#">[ABOUT]</a>
+      <div class="px-lives">
+        <div class="px-hp">
+          <div class="px-hp-block full"></div>
+          <div class="px-hp-block full"></div>
+          <div class="px-hp-block full"></div>
+          <div class="px-hp-block"></div>
+          <div class="px-hp-block"></div>
+        </div>
+        <span>42 notes</span>
+      </div>
+    </div>
+  </nav>
+  <div class="px-hero">
+    <div class="px-eyebrow">// design system · v0.1 · press START</div>
+    <div class="px-title">THE KNOWLEDGE GARDEN<span class="px-cursor"></span></div>
+    <div class="px-sub">
+      > A pixel-perfect design language for long-form knowledge sites. Mono everywhere. Grids
+      everywhere. Every element earns its place.
+    </div>
+    <div class="px-tags">
+      <span class="px-tag y">LIT_ELEMENTS</span>
+      <span class="px-tag g">NEXT_SSG</span>
+      <span class="px-tag b">STORYBOOK</span>
+      <span class="px-tag">RESPONSIVE</span>
+    </div>
+  </div>
+  <div class="px-section">
+    <div class="px-section-label">SEARCH</div>
+    <div class="px-search">
+      <svg
+        width="14"
+        height="14"
+        viewBox="0 0 14 14"
+        fill="none"
+        stroke="#8888AA"
+        stroke-width="1.5"
+      >
+        <circle cx="6" cy="6" r="4" />
+        <path d="m9 9 3 3" />
+      </svg>
+      <span class="px-search-text">_ search notes, wiki, projects...</span>
+      <span class="px-search-kbd">⌘K</span>
+    </div>
+  </div>
+  <div class="px-section">
+    <div class="px-section-label">COLOR TOKENS</div>
+    <div class="px-card">
+      <div class="px-palette-row">
+        <div class="px-swatch-group">
+          <div class="px-swatch" style="background: #ffe600"></div>
+          <div class="px-swatch-label">yellow</div>
+        </div>
+        <div class="px-swatch-group">
+          <div class="px-swatch" style="background: #ff4444"></div>
+          <div class="px-swatch-label">red</div>
+        </div>
+        <div class="px-swatch-group">
+          <div class="px-swatch" style="background: #44ff88"></div>
+          <div class="px-swatch-label">green</div>
+        </div>
+        <div class="px-swatch-group">
+          <div class="px-swatch" style="background: #44aaff"></div>
+          <div class="px-swatch-label">blue</div>
+        </div>
+        <div class="px-swatch-group">
+          <div class="px-swatch" style="background: #ff88cc"></div>
+          <div class="px-swatch-label">pink</div>
+        </div>
+        <div class="px-swatch-group">
+          <div class="px-swatch" style="background: #1a1a2e"></div>
+          <div class="px-swatch-label">void</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="px-section">
+    <div class="px-section-label">TYPOGRAPHY SCALE</div>
+    <div class="px-card">
+      <div class="px-type-row">
+        <span class="px-type-label">display</span
+        ><span
+          style="font-size: 20px; font-weight: 500; color: var(--px-yellow); letter-spacing: 0.02em"
+          >THE KNOWLEDGE GARDEN</span
+        >
+      </div>
+      <div class="px-type-row">
+        <span class="px-type-label">h1</span
+        ><span style="font-size: 15px; font-weight: 500; color: var(--px-ink)"
+          >ARTICLE TITLE SITS HERE</span
+        >
+      </div>
+      <div class="px-type-row">
+        <span class="px-type-label">h2</span
+        ><span style="font-size: 13px; font-weight: 500; color: var(--px-green)"
+          >> Section heading</span
+        >
+      </div>
+      <div class="px-type-row">
+        <span class="px-type-label">body</span
+        ><span style="font-size: 12px; line-height: 1.8; color: var(--px-muted)"
+          >Long-form prose at 12px mono. It reads like a terminal log, but for your thoughts.</span
+        >
+      </div>
+      <div class="px-type-row">
+        <span class="px-type-label">code</span
+        ><span
+          style="font-size: 12px; background: #0a0a0a; color: var(--px-green); padding: 2px 8px"
+          >const g = new Garden()</span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="px-section">
+    <div class="px-section-label">NOTE CARDS</div>
+    <div class="px-grid-2">
+      <div class="px-card px-card-featured">
+        <div class="px-card-title">On building a second brain</div>
+        <div class="px-card-meta">3d ago · LVL 8 · 8 min</div>
+        <div class="px-card-excerpt">
+          The goal isn't to remember everything — it's to think better by offloading storage to a
+          trusted system.
+        </div>
+        <div class="px-card-footer">
+          <span class="px-tag y">PKM</span><span class="px-tag">ZETTEL</span>
+        </div>
+      </div>
+      <div class="px-card">
+        <div class="px-card-title">Lit elements vs React: pragmatic view</div>
+        <div class="px-card-meta">1w ago · LVL 6 · 5 min</div>
+        <div class="px-card-excerpt">
+          Web components shine when the goal is portability across stacks, not developer ergonomics
+          first.
+        </div>
+        <div class="px-card-footer">
+          <span class="px-tag g">FRONTEND</span><span class="px-tag b">LIT</span>
+        </div>
+      </div>
+      <div class="px-card">
+        <div class="px-card-title">Synthwave palettes and why they work</div>
+        <div class="px-card-meta">2w ago · LVL 5</div>
+        <div class="px-card-excerpt">
+          High contrast + neon against dark triggers the same visual comfort as CRT phosphor glow.
+        </div>
+        <div class="px-card-footer">
+          <span class="px-tag">DESIGN</span><span class="px-tag">COLOR</span>
+        </div>
+      </div>
+      <div class="px-card">
+        <div class="px-card-title">Pixel art as a design constraint</div>
+        <div class="px-card-meta">3w ago · LVL 7</div>
+        <div class="px-card-excerpt">
+          When every pixel costs effort, you're forced into clarity. The grid is the system.
+        </div>
+        <div class="px-card-footer">
+          <span class="px-tag y">PIXEL</span><span class="px-tag">GAME_DESIGN</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="px-section">
+    <div class="px-section-label">ARTICLE LAYOUT</div>
+    <div style="display: grid; grid-template-columns: 1fr 175px; gap: 10px; align-items: start">
+      <div class="px-reading">
+        <div class="px-breadcrumb">
+          <span>ROOT</span><span>/</span><span>NOTES</span><span>/</span
+          ><span style="color: var(--px-yellow)">PKM</span>
+        </div>
+        <div class="px-reading-h">ON BUILDING A SECOND BRAIN</div>
+        <div
+          style="
+            font-size: 11px;
+            color: var(--px-muted);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 10px;
+          "
+        >
+          <span>2026-05</span><span>·</span><span>8 MIN</span><span>·</span
+          ><span style="color: var(--px-green)">PKM</span>
+        </div>
+        <div class="px-reading-p">
+          The goal isn't to remember everything — it's to think better by offloading memory to a
+          trusted external system. Your brain is for generating ideas, not storing them.
+        </div>
+        <div class="px-blockquote">"We are what we repeatedly do." — Aristotle</div>
+        <div class="px-reading-h2">> THE CAPTURE HABIT</div>
+        <div class="px-reading-p">
+          Every note you capture is a future conversation with yourself. The format matters less
+          than the habit of externalising thinking before it disappears.
+        </div>
+        <div class="px-callout">// TIP: Start with a weekly review — 15 min every Sunday.</div>
+        <div class="px-callout info">// SEE ALSO: Zettelkasten, evergreen notes, PARA method.</div>
+        <div class="px-code">
+          <span class="kw">import</span> { <span class="prop">Garden</span> }
+          <span class="kw">from</span> <span class="val">'@garden/core'</span>
+          <span class="kw">const</span> <span class="prop">g</span> = <span class="kw">new</span>
+          <span class="prop">Garden</span>({ theme: <span class="val">'pixel'</span> })
+        </div>
+      </div>
+      <div class="px-toc">
+        <div class="px-toc-title">// ON THIS PAGE</div>
+        <div class="px-toc-item active"><span class="px-toc-dash">></span> Introduction</div>
+        <div class="px-toc-item sub"><span class="px-toc-dash">-</span> Capture habit</div>
+        <div class="px-toc-item sub"><span class="px-toc-dash">-</span> Organisation</div>
+        <div class="px-toc-item"><span class="px-toc-dash">></span> See also</div>
+      </div>
+    </div>
+  </div>
+  <div class="px-section">
+    <div class="px-section-label">BUTTONS</div>
+    <div class="px-card" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+      <button class="px-btn px-btn-primary">[PUBLISH]</button>
+      <button class="px-btn">[SAVE]</button>
+      <button class="px-btn" style="border-color: transparent; color: var(--px-muted)">
+        [CANCEL]
+      </button>
+      <button class="px-btn">[EXPORT ^]</button>
+    </div>
+  </div>
+  <div class="px-section">
+    <div class="px-section-label">WIKI CARDS</div>
+    <div class="px-grid-3">
+      <div class="px-article-preview">
+        <div class="px-article-thumb">
+          <div
+            class="px-pixel-art"
+            style="grid-template-columns: repeat(8, 8px); grid-template-rows: repeat(5, 8px)"
+          >
+            <div style="background: transparent"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: transparent"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #1a1a2e"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #1a1a2e"></div>
+            <div style="background: #1a1a2e"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #1a1a2e"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #1a1a2e"></div>
+            <div style="background: #1a1a2e"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #1a1a2e"></div>
+            <div style="background: #1a1a2e"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: transparent"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: #ffe600"></div>
+            <div style="background: transparent"></div>
+          </div>
+        </div>
+        <div class="px-article-body">
+          <div class="px-card-title">Zettelkasten</div>
+          <div class="px-card-meta">wiki · knowledge mgmt</div>
+          <div class="px-card-excerpt">Slip-box method by Niklas Luhmann.</div>
+        </div>
+      </div>
+      <div class="px-article-preview" style="border-top-color: var(--px-green)">
+        <div class="px-article-thumb" style="border-bottom-color: var(--px-green)">
+          <div
+            style="
+              font-size: 20px;
+              font-weight: 500;
+              color: var(--px-green);
+              font-family: monospace;
+              letter-spacing: 0.1em;
+            "
+          >
+            PARA
+          </div>
+        </div>
+        <div class="px-article-body">
+          <div class="px-card-title">PARA method</div>
+          <div class="px-card-meta">wiki · organisation</div>
+          <div class="px-card-excerpt">Projects, Areas, Resources, Archive.</div>
+        </div>
+      </div>
+      <div class="px-article-preview" style="border-top-color: var(--px-pink)">
+        <div class="px-article-thumb" style="border-bottom-color: var(--px-pink)">
+          <div
+            style="
+              font-size: 20px;
+              font-weight: 500;
+              color: var(--px-pink);
+              font-family: monospace;
+              letter-spacing: 0.05em;
+            "
+          >
+            EVER
+          </div>
+        </div>
+        <div class="px-article-body">
+          <div class="px-card-title">Evergreen notes</div>
+          <div class="px-card-meta">wiki · writing</div>
+          <div class="px-card-excerpt">Notes that accumulate insight over time.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -8,6 +8,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "lint": "eslint .",
     "format": "prettier --write .",
     "typecheck": "tsc --noEmit"
@@ -16,12 +18,14 @@
     "lit": "^2.6.0"
   },
   "devDependencies": {
-    "typescript": "^5.1.0",
-    "@types/node": "^20.0.0",
-    "@notes/tsconfig": "workspace:~",
     "@notes/eslint-config": "workspace:~",
     "@notes/prettier-config": "workspace:~",
+    "@notes/tsconfig": "workspace:~",
+    "@types/node": "^20.0.0",
     "eslint": "^9.0.0",
-    "prettier": "^3.0.0"
+    "happy-dom": "^12.10.3",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.0",
+    "vitest": "^1.6.1"
   }
 }

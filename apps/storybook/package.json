@@ -1,6 +1,7 @@
 {
   "name": "apps-storybook",
   "version": "0.1.0",
+  "type": "module",
   "private": true,
   "scripts": {
     "dev": "storybook dev -p 6006",
@@ -26,11 +27,14 @@
     "@storybook/test-runner": "^0.24.3",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitest/browser": "^3.2.4",
     "eslint": "^9.0.0",
     "next": "^15.3.0",
+    "playwright": "^1.59.1",
     "prettier": "^3.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "storybook": "^10.0.0"
+    "storybook": "^10.0.0",
+    "vitest": "^3.2.4"
   }
 }

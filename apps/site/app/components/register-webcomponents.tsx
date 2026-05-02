@@ -3,6 +3,6 @@
 import '@notes/components';
 
 export default function RegisterWebComponents() {
-  // importing the package registers web components via decorators
+  // Side-effect import registers all Lit custom elements globally in the browser.
   return null;
 }

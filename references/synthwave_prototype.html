@@ -1,0 +1,882 @@
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  :root {
+    --sw-bg: #0d0d1a;
+    --sw-surface: #12122a;
+    --sw-panel: #1a1a35;
+    --sw-ink: #f0e8ff;
+    --sw-muted: #8080b0;
+    --sw-magenta: #ff2d9b;
+    --sw-cyan: #00f0ff;
+    --sw-purple: #a855f7;
+    --sw-amber: #ffb700;
+    --sw-green: #39ff14;
+    --sw-border: 1px solid rgba(168, 85, 247, 0.25);
+    --sw-border-bright: 1px solid rgba(0, 240, 255, 0.4);
+  }
+  .sw {
+    font-family: var(--font-sans, system-ui, sans-serif);
+    background: var(--sw-bg);
+    color: var(--sw-ink);
+    font-size: 14px;
+    line-height: 1.7;
+    padding-bottom: 3rem;
+  }
+  .sw-grid-horizon {
+    height: 36px;
+    overflow: hidden;
+    background: var(--sw-bg);
+    position: relative;
+    margin-bottom: 0;
+  }
+  .sw-horizon-lines {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0;
+  }
+  .sw-hline {
+    height: 1px;
+    background: rgba(255, 45, 155, 0.35);
+    width: 100%;
+  }
+  .sw-hline:nth-child(1) {
+    opacity: 0.15;
+  }
+  .sw-hline:nth-child(2) {
+    opacity: 0.25;
+    margin-top: 3px;
+  }
+  .sw-hline:nth-child(3) {
+    opacity: 0.4;
+    margin-top: 5px;
+  }
+  .sw-hline:nth-child(4) {
+    opacity: 0.6;
+    margin-top: 7px;
+  }
+  .sw-hline:nth-child(5) {
+    opacity: 0.9;
+    margin-top: 10px;
+  }
+  .sw-vlines {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  .sw-vline {
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 30%, rgba(255, 45, 155, 0.3) 100%);
+  }
+  .sw-nav {
+    background: var(--sw-surface);
+    border-bottom: 1px solid rgba(255, 45, 155, 0.4);
+    padding: 0 1.25rem;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .sw-brand {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--sw-cyan);
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .sw-brand-diamond {
+    width: 10px;
+    height: 10px;
+    background: var(--sw-magenta);
+    transform: rotate(45deg);
+    flex-shrink: 0;
+  }
+  .sw-nav-links {
+    display: flex;
+    gap: 4px;
+  }
+  .sw-nav-link {
+    font-size: 13px;
+    color: var(--sw-muted);
+    padding: 5px 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+  .sw-nav-link:hover {
+    border-color: rgba(0, 240, 255, 0.3);
+    color: var(--sw-cyan);
+  }
+  .sw-nav-link.active {
+    color: var(--sw-cyan);
+    border-color: rgba(0, 240, 255, 0.4);
+  }
+  .sw-hero {
+    padding: 2.5rem 1.25rem 1.5rem;
+    border-bottom: var(--sw-border);
+    background: var(--sw-surface);
+  }
+  .sw-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--sw-magenta);
+    font-weight: 500;
+    margin-bottom: 0.6rem;
+  }
+  .sw-title {
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    color: var(--sw-ink);
+  }
+  .sw-title .c {
+    color: var(--sw-cyan);
+  }
+  .sw-title .m {
+    color: var(--sw-magenta);
+  }
+  .sw-sub {
+    font-size: 14px;
+    color: var(--sw-muted);
+    max-width: 480px;
+    margin-bottom: 1.25rem;
+    line-height: 1.7;
+  }
+  .sw-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .sw-tag {
+    font-size: 12px;
+    padding: 3px 10px;
+    border: 1px solid rgba(168, 85, 247, 0.35);
+    color: var(--sw-purple);
+    border-radius: 3px;
+  }
+  .sw-tag.c {
+    border-color: rgba(0, 240, 255, 0.4);
+    color: var(--sw-cyan);
+  }
+  .sw-tag.m {
+    border-color: rgba(255, 45, 155, 0.4);
+    color: var(--sw-magenta);
+  }
+  .sw-section {
+    padding: 1.5rem 1.25rem 0;
+  }
+  .sw-section-label {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--sw-magenta);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sw-section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255, 45, 155, 0.3);
+  }
+  .sw-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .sw-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+  .sw-card {
+    background: var(--sw-panel);
+    border: var(--sw-border);
+    border-top: 1px solid rgba(0, 240, 255, 0.4);
+    padding: 0.875rem 1rem;
+    border-radius: 4px;
+  }
+  .sw-card-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--sw-ink);
+    margin-bottom: 4px;
+  }
+  .sw-card-meta {
+    font-size: 12px;
+    color: var(--sw-muted);
+    margin-bottom: 0.5rem;
+  }
+  .sw-card-excerpt {
+    font-size: 13px;
+    color: var(--sw-muted);
+    line-height: 1.65;
+  }
+  .sw-card-footer {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+  }
+  .sw-card-featured {
+    border-top-color: var(--sw-magenta);
+  }
+  .sw-search {
+    background: var(--sw-panel);
+    border: var(--sw-border-bright);
+    padding: 9px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    border-radius: 4px;
+  }
+  .sw-search-text {
+    font-size: 13px;
+    color: var(--sw-muted);
+  }
+  .sw-search-kbd {
+    margin-left: auto;
+    font-size: 11px;
+    color: var(--sw-cyan);
+    border: 1px solid rgba(0, 240, 255, 0.4);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: monospace;
+  }
+  .sw-palette-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  .sw-swatch-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sw-swatch {
+    width: 32px;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .sw-swatch-label {
+    font-size: 11px;
+    color: var(--sw-muted);
+    margin-top: 3px;
+    text-align: center;
+  }
+  .sw-type-row {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(168, 85, 247, 0.15);
+  }
+  .sw-type-row:last-child {
+    border-bottom: none;
+  }
+  .sw-type-label {
+    font-size: 11px;
+    color: var(--sw-muted);
+    min-width: 80px;
+  }
+  .sw-code {
+    background: #080810;
+    border: var(--sw-border);
+    border-top: 1px solid rgba(0, 240, 255, 0.3);
+    padding: 1rem;
+    font-family: monospace;
+    font-size: 12px;
+    color: var(--sw-ink);
+    line-height: 1.7;
+    border-radius: 0 0 4px 4px;
+  }
+  .sw-code .kw {
+    color: var(--sw-magenta);
+  }
+  .sw-code .prop {
+    color: var(--sw-cyan);
+  }
+  .sw-code .val {
+    color: var(--sw-purple);
+  }
+  .sw-callout {
+    border-left: 2px solid var(--sw-amber);
+    background: rgba(255, 183, 0, 0.06);
+    border-top: var(--sw-border);
+    border-right: var(--sw-border);
+    border-bottom: var(--sw-border);
+    padding: 0.75rem 1rem;
+    font-size: 13px;
+    margin-bottom: 10px;
+    border-radius: 0 4px 4px 0;
+  }
+  .sw-callout.info {
+    border-left-color: var(--sw-cyan);
+    background: rgba(0, 240, 255, 0.05);
+  }
+  .sw-reading {
+    background: var(--sw-surface);
+    border: var(--sw-border);
+    border-top: 1px solid rgba(0, 240, 255, 0.35);
+    padding: 1.5rem;
+    border-radius: 4px;
+  }
+  .sw-reading-h {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.4rem;
+    color: var(--sw-ink);
+  }
+  .sw-reading-h2 {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--sw-cyan);
+    margin: 1rem 0 0.3rem;
+  }
+  .sw-reading-p {
+    font-size: 13px;
+    color: var(--sw-muted);
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+  }
+  .sw-blockquote {
+    border-left: 2px solid var(--sw-purple);
+    padding: 0.4rem 0 0.4rem 1rem;
+    color: var(--sw-muted);
+    font-size: 13px;
+    font-style: italic;
+    margin: 0.75rem 0;
+  }
+  .sw-toc {
+    background: var(--sw-panel);
+    border: var(--sw-border);
+    border-top: 1px solid rgba(255, 45, 155, 0.4);
+    padding: 1rem;
+    border-radius: 4px;
+  }
+  .sw-toc-title {
+    font-size: 11px;
+    color: var(--sw-magenta);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .sw-toc-item {
+    font-size: 13px;
+    color: var(--sw-muted);
+    padding: 3px 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .sw-toc-item.active {
+    color: var(--sw-cyan);
+  }
+  .sw-toc-item.sub {
+    padding-left: 12px;
+    font-size: 12px;
+  }
+  .sw-toc-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: currentColor;
+    flex-shrink: 0;
+  }
+  .sw-btn {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 16px;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    background: transparent;
+    color: var(--sw-ink);
+    cursor: pointer;
+    margin-right: 6px;
+    border-radius: 4px;
+  }
+  .sw-btn:hover {
+    border-color: rgba(0, 240, 255, 0.5);
+    color: var(--sw-cyan);
+  }
+  .sw-btn-primary {
+    background: var(--sw-magenta);
+    border-color: var(--sw-magenta);
+    color: #fff;
+  }
+  .sw-btn-primary:hover {
+    background: transparent;
+    color: var(--sw-magenta);
+  }
+  .sw-btn-ghost {
+    border-color: transparent;
+    color: var(--sw-muted);
+  }
+  .sw-article-preview {
+    background: var(--sw-surface);
+    border: var(--sw-border);
+    border-top: 1px solid rgba(168, 85, 247, 0.5);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .sw-article-thumb {
+    height: 75px;
+    background: var(--sw-bg);
+    border-bottom: var(--sw-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .sw-thumb-grid {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: flex-end;
+  }
+  .sw-thumb-vline {
+    flex: 1;
+    border-right: 1px solid rgba(255, 45, 155, 0.15);
+    height: 100%;
+  }
+  .sw-article-body {
+    padding: 0.75rem 0.875rem;
+  }
+  .sw-breadcrumb {
+    font-size: 12px;
+    color: var(--sw-muted);
+    display: flex;
+    gap: 6px;
+    margin-bottom: 0.5rem;
+  }
+  .sw-breadcrumb .sep {
+    color: var(--sw-purple);
+  }
+  .sw-dot-sep {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--sw-magenta);
+    margin: 0 4px;
+    vertical-align: middle;
+  }
+</style>
+<div class="sw">
+  <div class="sw-grid-horizon">
+    <div class="sw-vlines">
+      <div class="sw-vline"></div>
+      <div class="sw-vline"></div>
+      <div class="sw-vline"></div>
+      <div class="sw-vline"></div>
+      <div class="sw-vline"></div>
+      <div class="sw-vline"></div>
+      <div class="sw-vline"></div>
+      <div class="sw-vline"></div>
+      <div class="sw-vline"></div>
+      <div class="sw-vline"></div>
+      <div class="sw-vline"></div>
+      <div class="sw-vline"></div>
+    </div>
+    <div class="sw-horizon-lines">
+      <div class="sw-hline"></div>
+      <div class="sw-hline"></div>
+      <div class="sw-hline"></div>
+      <div class="sw-hline"></div>
+      <div class="sw-hline"></div>
+    </div>
+  </div>
+  <nav class="sw-nav">
+    <div class="sw-brand">
+      <div class="sw-brand-diamond"></div>
+      garden.dev
+    </div>
+    <div class="sw-nav-links">
+      <a class="sw-nav-link active" href="#">notes</a>
+      <a class="sw-nav-link" href="#">wiki</a>
+      <a class="sw-nav-link" href="#">projects</a>
+      <a class="sw-nav-link" href="#">about</a>
+    </div>
+  </nav>
+  <div class="sw-hero">
+    <div class="sw-eyebrow">design system · v0.1</div>
+    <div class="sw-title">
+      The <span class="sw-c">knowledge</span> <span class="sw-m">garden</span>
+    </div>
+    <div class="sw-sub">
+      A synthwave design language for long-form knowledge sites. Dark by default. Neon by nature.
+      Built for focus and flow.
+    </div>
+    <div class="sw-tags">
+      <span class="sw-tag c">lit elements</span>
+      <span class="sw-tag m">next.js ssg</span>
+      <span class="sw-tag">storybook</span>
+      <span class="sw-tag">responsive</span>
+      <span class="sw-tag">light / dark</span>
+    </div>
+  </div>
+  <div class="sw-section">
+    <div class="sw-section-label">search</div>
+    <div class="sw-search">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        stroke="#8080B0"
+        stroke-width="1.5"
+      >
+        <circle cx="7" cy="7" r="4.5" />
+        <path d="m10.5 10.5 3 3" />
+      </svg>
+      <span class="sw-search-text">Search notes, wiki, projects…</span>
+      <span class="sw-search-kbd">⌘K</span>
+    </div>
+  </div>
+  <div class="sw-section">
+    <div class="sw-section-label">color tokens</div>
+    <div class="sw-card">
+      <div class="sw-palette-row">
+        <div class="sw-swatch-group">
+          <div class="sw-swatch" style="background: #ff2d9b"></div>
+          <div class="sw-swatch-label">magenta</div>
+        </div>
+        <div class="sw-swatch-group">
+          <div class="sw-swatch" style="background: #00f0ff"></div>
+          <div class="sw-swatch-label">cyan</div>
+        </div>
+        <div class="sw-swatch-group">
+          <div class="sw-swatch" style="background: #a855f7"></div>
+          <div class="sw-swatch-label">purple</div>
+        </div>
+        <div class="sw-swatch-group">
+          <div class="sw-swatch" style="background: #ffb700"></div>
+          <div class="sw-swatch-label">amber</div>
+        </div>
+        <div class="sw-swatch-group">
+          <div class="sw-swatch" style="background: #0d0d1a"></div>
+          <div class="sw-swatch-label">void</div>
+        </div>
+        <div class="sw-swatch-group">
+          <div class="sw-swatch" style="background: #f0e8ff"></div>
+          <div class="sw-swatch-label">star</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sw-section">
+    <div class="sw-section-label">typography scale</div>
+    <div class="sw-card">
+      <div class="sw-type-row">
+        <span class="sw-type-label">display</span
+        ><span
+          style="font-size: 22px; font-weight: 500; letter-spacing: -0.01em; color: var(--sw-ink)"
+          >The <span style="color: var(--sw-cyan)">knowledge</span>
+          <span style="color: var(--sw-magenta)">garden</span></span
+        >
+      </div>
+      <div class="sw-type-row">
+        <span class="sw-type-label">h1</span
+        ><span style="font-size: 18px; font-weight: 500; color: var(--sw-ink)"
+          >Article title sits here</span
+        >
+      </div>
+      <div class="sw-type-row">
+        <span class="sw-type-label">h2</span
+        ><span style="font-size: 14px; font-weight: 500; color: var(--sw-cyan)"
+          >Section heading</span
+        >
+      </div>
+      <div class="sw-type-row">
+        <span class="sw-type-label">body</span
+        ><span style="font-size: 13px; line-height: 1.8; color: var(--sw-muted)"
+          >Long-form prose at 13px / 1.8 — warm starlight on a dark surface, comfortable for long
+          reads.</span
+        >
+      </div>
+      <div class="sw-type-row">
+        <span class="sw-type-label">mono</span
+        ><span
+          style="
+            font-size: 12px;
+            font-family: monospace;
+            background: #080810;
+            color: var(--sw-cyan);
+            padding: 2px 8px;
+            border-radius: 3px;
+            border: 1px solid rgba(0, 240, 255, 0.2);
+          "
+          >const garden = new Garden()</span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="sw-section">
+    <div class="sw-section-label">note cards</div>
+    <div class="sw-grid-2">
+      <div class="sw-card sw-card-featured">
+        <div class="sw-card-title">On building a second brain</div>
+        <div class="sw-card-meta">3 days ago <span class="sw-dot-sep"></span> 8 min read</div>
+        <div class="sw-card-excerpt">
+          The goal isn't to remember everything — it's to think better by offloading storage to a
+          trusted system.
+        </div>
+        <div class="sw-card-footer">
+          <span class="sw-tag m">pkm</span><span class="sw-tag">zettelkasten</span>
+        </div>
+      </div>
+      <div class="sw-card">
+        <div class="sw-card-title">Lit elements vs React: pragmatic view</div>
+        <div class="sw-card-meta">1 week ago <span class="sw-dot-sep"></span> 5 min read</div>
+        <div class="sw-card-excerpt">
+          Web components shine when the goal is portability across stacks, not developer ergonomics
+          first.
+        </div>
+        <div class="sw-card-footer">
+          <span class="sw-tag c">frontend</span><span class="sw-tag">lit</span>
+        </div>
+      </div>
+      <div class="sw-card">
+        <div class="sw-card-title">Synthwave palettes and why they work</div>
+        <div class="sw-card-meta">2 weeks ago</div>
+        <div class="sw-card-excerpt">
+          High contrast + neon against dark surfaces triggers the same visual comfort as CRT
+          phosphor glow.
+        </div>
+        <div class="sw-card-footer">
+          <span class="sw-tag">design</span><span class="sw-tag">color</span>
+        </div>
+      </div>
+      <div class="sw-card">
+        <div class="sw-card-title">Pixel art as a design constraint</div>
+        <div class="sw-card-meta">3 weeks ago</div>
+        <div class="sw-card-excerpt">
+          When every pixel costs effort, you're forced into clarity. The grid is the system.
+        </div>
+        <div class="sw-card-footer">
+          <span class="sw-tag">game design</span><span class="sw-tag m">pixel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sw-section">
+    <div class="sw-section-label">article layout</div>
+    <div style="display: grid; grid-template-columns: 1fr 178px; gap: 12px; align-items: start">
+      <div class="sw-reading">
+        <div class="sw-breadcrumb">
+          <span>notes</span><span class="sep">/</span><span>pkm</span>
+        </div>
+        <div class="sw-reading-h">On building a second brain</div>
+        <div
+          style="
+            font-size: 12px;
+            color: var(--sw-muted);
+            margin-bottom: 1rem;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+          "
+        >
+          <span>May 2026</span><span class="sw-dot-sep"></span><span>8 min</span
+          ><span class="sw-dot-sep"></span><span style="color: var(--sw-magenta)">pkm</span>
+        </div>
+        <div class="sw-reading-p">
+          The goal isn't to remember everything — it's to think better by offloading memory to a
+          trusted external system. Your brain is for generating ideas, not storing them.
+        </div>
+        <div class="sw-blockquote">"We are what we repeatedly do." — Aristotle</div>
+        <div class="sw-reading-h2">The capture habit</div>
+        <div class="sw-reading-p">
+          Every note you capture is a future conversation with yourself. The format matters less
+          than the habit of externalising thinking before it disappears.
+        </div>
+        <div class="sw-callout">
+          <strong style="color: var(--sw-amber)">Tip:</strong> Start with a weekly review — fifteen
+          minutes every Sunday.
+        </div>
+        <div class="sw-callout info">
+          <strong style="color: var(--sw-cyan)">Related:</strong> Zettelkasten, evergreen notes,
+          PARA method.
+        </div>
+        <div class="sw-code">
+          <span class="kw">import</span> { <span class="prop">Garden</span> }
+          <span class="kw">from</span> <span class="val">'@garden/core'</span>
+          <span class="kw">const</span> <span class="prop">g</span> = <span class="kw">new</span>
+          <span class="prop">Garden</span>({ theme: <span class="val">'synthwave'</span> })
+        </div>
+      </div>
+      <div class="sw-toc">
+        <div class="sw-toc-title">on this page</div>
+        <div class="sw-toc-item active">
+          <div class="sw-toc-dot"></div>
+          Introduction
+        </div>
+        <div class="sw-toc-item sub">
+          <div class="sw-toc-dot"></div>
+          Capture habit
+        </div>
+        <div class="sw-toc-item sub">
+          <div class="sw-toc-dot"></div>
+          Organisation
+        </div>
+        <div class="sw-toc-item">
+          <div class="sw-toc-dot"></div>
+          See also
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sw-section">
+    <div class="sw-section-label">buttons</div>
+    <div class="sw-card" style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+      <button class="sw-btn sw-btn-primary">Publish note</button>
+      <button class="sw-btn">Save draft</button>
+      <button class="sw-btn sw-btn-ghost">Cancel</button>
+      <button class="sw-btn" style="display: flex; align-items: center; gap: 6px">
+        <svg
+          width="14"
+          height="14"
+          viewBox="0 0 14 14"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+        >
+          <path d="M7 1v6M4 4l3-3 3 3M2 10v2h10v-2" /></svg
+        >Export
+      </button>
+    </div>
+  </div>
+  <div class="sw-section">
+    <div class="sw-section-label">wiki article cards</div>
+    <div class="sw-grid-3">
+      <div class="sw-article-preview">
+        <div class="sw-article-thumb">
+          <div class="sw-thumb-grid">
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+          </div>
+          <span
+            style="
+              font-size: 13px;
+              font-weight: 500;
+              color: var(--sw-cyan);
+              z-index: 1;
+              letter-spacing: 0.05em;
+            "
+            >Zettelkasten</span
+          >
+        </div>
+        <div class="sw-article-body">
+          <div class="sw-card-title">Zettelkasten</div>
+          <div class="sw-card-meta">wiki · knowledge mgmt</div>
+          <div class="sw-card-excerpt">
+            Slip-box method for networked thinking by Niklas Luhmann.
+          </div>
+        </div>
+      </div>
+      <div class="sw-article-preview" style="border-top-color: rgba(255, 45, 155, 0.5)">
+        <div class="sw-article-thumb">
+          <div class="sw-thumb-grid">
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+          </div>
+          <span
+            style="
+              font-size: 13px;
+              font-weight: 500;
+              color: var(--sw-magenta);
+              z-index: 1;
+              letter-spacing: 0.05em;
+            "
+            >PARA method</span
+          >
+        </div>
+        <div class="sw-article-body">
+          <div class="sw-card-title">PARA method</div>
+          <div class="sw-card-meta">wiki · organisation</div>
+          <div class="sw-card-excerpt">
+            Projects, Areas, Resources, Archive — Tiago Forte's structure.
+          </div>
+        </div>
+      </div>
+      <div class="sw-article-preview" style="border-top-color: rgba(168, 85, 247, 0.5)">
+        <div class="sw-article-thumb">
+          <div class="sw-thumb-grid">
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+            <div class="sw-thumb-vline"></div>
+          </div>
+          <span
+            style="
+              font-size: 13px;
+              font-weight: 500;
+              color: var(--sw-purple);
+              z-index: 1;
+              letter-spacing: 0.05em;
+            "
+            >Evergreen notes</span
+          >
+        </div>
+        <div class="sw-article-body">
+          <div class="sw-card-title">Evergreen notes</div>
+          <div class="sw-card-meta">wiki · writing</div>
+          <div class="sw-card-excerpt">
+            Notes that accumulate insight over time, not record once.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
