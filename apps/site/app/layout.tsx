@@ -50,7 +50,28 @@ export const metadata: Metadata = {
 // ---------------------------------------------------------------------------
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${lora.variable} ${dmMono.variable}`}>
+    <html
+      lang="en"
+      className={`${fraunces.variable} ${lora.variable} ${dmMono.variable}`}
+      suppressHydrationWarning
+    >
+      {/*
+        Inline script runs synchronously before React hydration so that the
+        correct data-theme attribute is present on <html> from the very first
+        paint — no flash of the wrong theme.
+      */}
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){
+  try{
+    var t=localStorage.getItem('theme');
+    if(t==='dark'||t==='light') document.documentElement.setAttribute('data-theme',t);
+  }catch(e){}
+})();`,
+          }}
+        />
+      </head>
       <body>
         {/* Skip to main content (keyboard accessibility) */}
         <a href="#main-content" className="skip-link">

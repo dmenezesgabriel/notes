@@ -36,6 +36,16 @@ export class GardenNav extends LitElement {
   @property({ type: Array }) links: NavLink[] = [];
   @state() private _theme: 'light' | 'dark' = 'light';
 
+  override connectedCallback() {
+    super.connectedCallback();
+    // Initialise from whatever the document already has (set by the inline
+    // script in layout.tsx that reads localStorage before hydration).
+    const docTheme = document.documentElement.getAttribute('data-theme');
+    if (docTheme === 'dark' || docTheme === 'light') {
+      this._theme = docTheme;
+    }
+  }
+
   static styles = [
     baseStyles,
     css`
@@ -186,6 +196,11 @@ export class GardenNav extends LitElement {
         composed: true,
       }),
     );
+  }
+
+  /** Allow external code (site-nav) to imperatively sync the toggle UI. */
+  setTheme(theme: 'light' | 'dark') {
+    this._theme = theme;
   }
 
   render() {

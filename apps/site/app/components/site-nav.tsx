@@ -5,19 +5,41 @@ import { useEffect, useRef } from 'react';
 
 const NAV_LINKS = [
   { label: 'notes', href: '/' },
-  { label: 'books', href: '/books' },
-  { label: 'about', href: '/about' },
+  { label: 'books', href: '/notes/books' },
+  { label: 'about', href: '/notes/about' },
 ] as const;
 
 /**
  * SiteNav — client component wrapper for `<garden-nav>`.
- * Sets the `links` JS property (array) via ref after mount,
- * updating the active link based on the current pathname.
+ *
+ * - Sets the `links` JS property after mount (active link based on pathname).
+ * - Listens for `garden-theme-change` events and applies `data-theme` to
+ *   `<html>` + persists the choice in localStorage.
  */
 export function SiteNav() {
   const pathname = usePathname();
   const ref = useRef<HTMLElement>(null);
 
+  // ── Theme management ──────────────────────────────────────────────────────
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const handleThemeChange = (e: Event) => {
+      const theme = (e as CustomEvent<{ theme: 'light' | 'dark' }>).detail.theme;
+      document.documentElement.setAttribute('data-theme', theme);
+      try {
+        localStorage.setItem('theme', theme);
+      } catch {
+        // ignore – private browsing with full storage
+      }
+    };
+
+    el.addEventListener('garden-theme-change', handleThemeChange);
+    return () => el.removeEventListener('garden-theme-change', handleThemeChange);
+  }, []);
+
+  // ── Active-link hydration ─────────────────────────────────────────────────
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
@@ -33,7 +55,5 @@ export function SiteNav() {
     (el as any).links = links;
   }, [pathname]);
 
-  // `brand` is a plain string attribute — can be set server-side.
-  // `links` is an array — set via JS property in useEffect above.
   return <garden-nav ref={ref} brand="garden.dev" data-testid="site-nav" />;
 }

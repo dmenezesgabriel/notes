@@ -71,7 +71,7 @@ export async function generateStaticParams() {
   const manifest = readManifest();
   if (!manifest) return [];
   return manifest.notes.map((note) => ({
-    slug: note.slug.replace(/^\//, '').split('/'),
+    slug: note.slug.replace(/^\/notes\//, '').split('/'),
   }));
 }
 
@@ -122,7 +122,7 @@ export default async function NotePage({ params }: { params: Promise<{ slug: str
       ? [
           {
             label: categoryLabel(slug[0] ?? ''),
-            href: `/${slug[0]}`,
+            href: `/notes/${slug[0]}`,
           },
         ]
       : []),

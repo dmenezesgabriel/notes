@@ -44,8 +44,25 @@ export default function NotFound() {
         page.
       </p>
 
-      <Link href="/" style={{ textDecoration: 'none' }}>
-        <garden-button variant="primary">Back to home</garden-button>
+      <Link
+        href="/"
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: 6,
+          fontFamily: 'var(--font-ui, system-ui, sans-serif)',
+          fontSize: 13,
+          fontWeight: 500,
+          letterSpacing: '0.01em',
+          padding: '7px 20px',
+          borderRadius: 'var(--radius-md, 8px)',
+          background: 'var(--ds-accent, #a85025)',
+          color: '#fff',
+          textDecoration: 'none',
+          transition: 'background 120ms ease',
+        }}
+      >
+        Back to home
       </Link>
     </main>
   );

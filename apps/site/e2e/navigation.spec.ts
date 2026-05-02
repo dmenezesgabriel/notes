@@ -35,22 +35,32 @@ test.describe('Navigation', () => {
 
   test('back-to-home button on 404 navigates home', async ({ page }) => {
     await page.goto('/notes/definitely-does-not-exist');
+    // Ensure React hydration is complete before interacting.
+    await page.waitForLoadState('networkidle');
 
-    // Click the first <a href="/">
-    await page.locator('a[href="/"]').first().click();
-    await expect(page).toHaveURL('/');
+    // The back-to-home link is a styled <Link> — use accessible-name selector
+    // to target it unambiguously (the nav also has links to "/").
+    await page.getByRole('link', { name: 'Back to home' }).click();
+    await expect(page).toHaveURL('/', { timeout: 15_000 });
     await expect(page).toHaveTitle(/Digital Garden/);
   });
 
+  /**
+   * Clicking the "home" link inside garden-breadcrumb's shadow DOM.
+   *
+   * Previously used `page.evaluate` + `shadowRoot.querySelector` + `.click()`,
+   * which races Lit's async render cycle and bypasses Next.js router events.
+   *
+   * Playwright's locators auto-pierce shadow roots and dispatch real browser
+   * events, so the click reliably triggers client-side navigation.
+   */
   test('breadcrumb home link navigates to home page', async ({ page }) => {
     await page.goto('/notes/books/a-philosophy-of-software-design');
 
-    // Pierce shadow DOM to click the <a href="/"> inside garden-breadcrumb
-    await page.evaluate(() => {
-      const bc = document.querySelector('garden-breadcrumb');
-      const link = bc?.shadowRoot?.querySelector<HTMLAnchorElement>('a[href="/"]');
-      link?.click();
-    });
+    // `getByTestId('site-breadcrumb')` targets <garden-breadcrumb>;
+    // Playwright then pierces its shadow root to find the "home" link.
+    const breadcrumb = page.getByTestId('site-breadcrumb');
+    await breadcrumb.getByRole('link', { name: 'home' }).click();
 
     await expect(page).toHaveURL('/');
   });

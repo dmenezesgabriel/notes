@@ -37,7 +37,7 @@ function normalizeIdFromFile(filePath: string): string {
 }
 
 function idToSlug(id: string): string {
-  return '/' + id.split('.').join('/');
+  return '/notes/' + id.split('.').join('/');
 }
 
 export async function buildContent(opts: { notesDir?: string; outDir?: string } = {}) {

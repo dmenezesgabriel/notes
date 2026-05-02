@@ -19,6 +19,7 @@ export type TagVariant = 'default' | 'accent' | 'sage';
 @customElement('garden-tag')
 export class GardenTag extends LitElement {
   @property({ reflect: true }) variant: TagVariant = 'default';
+  @property() href?: string;
 
   static styles = [
     baseStyles,
@@ -42,6 +43,11 @@ export class GardenTag extends LitElement {
         letter-spacing: 0.01em;
         transition: background var(--transition-fast, 120ms ease);
         white-space: nowrap;
+        text-decoration: none;
+      }
+
+      [part='base']:hover {
+        background: var(--ds-tag-hover, #e5dfd5);
       }
 
       [part='base'].accent {
@@ -50,10 +56,18 @@ export class GardenTag extends LitElement {
         border-color: transparent;
       }
 
+      [part='base'].accent:hover {
+        background: var(--ds-accent-light-hover, #f0ddd5);
+      }
+
       [part='base'].sage {
         background: var(--ds-sage-light, #e6eee6);
         color: var(--ds-sage, #4d7350);
         border-color: transparent;
+      }
+
+      [part='base'].sage:hover {
+        background: var(--ds-sage-light-hover, #dce8dc);
       }
     `,
   ];
@@ -67,6 +81,14 @@ export class GardenTag extends LitElement {
       .filter(([, v]) => v)
       .map(([k]) => k)
       .join(' ');
+
+    if (this.href) {
+      return html`
+        <a part="base" class=${classStr} href=${this.href}>
+          <slot></slot>
+        </a>
+      `;
+    }
 
     return html`
       <span part="base" class=${classStr}>
