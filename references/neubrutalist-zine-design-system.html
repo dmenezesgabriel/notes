@@ -1,0 +1,1780 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NEU-BRUTALISM × PUNK ZINE — Design System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Elite&family=Permanent+Marker&family=Cutive+Mono&family=Black+Han+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ═══════════════════════════════════════════════════
+   ROOT TOKENS — Neu-Brutalism × Punk Zine
+   ═══════════════════════════════════════════════════ */
+      :root {
+        --zine-paper: #f2edd7;
+        --zine-paper-alt: #ede5c8;
+        --zine-aged: #d9cfa8;
+        --zine-ink: #0e0c07;
+        --zine-ink-faded: #2c2820;
+        --zine-muted: #6b6050;
+
+        --zine-red: #d42b2b;
+        --zine-red-dark: #8a0000;
+        --zine-yellow: #f5c800;
+        --zine-yellow-lt: #fdf0a0;
+        --zine-blue: #1a3c8f;
+        --zine-blue-lt: #4a80d4;
+        --zine-green: #1d6b2e;
+        --zine-green-lt: #a8d8a0;
+        --zine-pink: #e8317a;
+        --zine-orange: #e85d1a;
+
+        --zine-border: 3px solid #0e0c07;
+        --zine-shadow: 4px 4px 0 #0e0c07;
+        --zine-shadow-lg: 6px 6px 0 #0e0c07;
+        --zine-shadow-red: 4px 4px 0 #d42b2b;
+        --zine-shadow-blue: 4px 4px 0 #1a3c8f;
+
+        --font-display: 'Bebas Neue', sans-serif;
+        --font-body: 'Special Elite', serif;
+        --font-marker: 'Permanent Marker', cursive;
+        --font-mono: 'Cutive Mono', monospace;
+        --font-stamp: 'Black Han Sans', sans-serif;
+      }
+
+      /* ═══════════════════════════════════════════════════
+   RESET & BASE
+   ═══════════════════════════════════════════════════ */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: #2a2218;
+        background-image:
+          radial-gradient(circle at 20% 50%, rgba(90, 70, 30, 0.3) 0%, transparent 60%),
+          radial-gradient(circle at 80% 20%, rgba(60, 40, 10, 0.4) 0%, transparent 50%);
+        min-height: 100vh;
+        padding: 2rem 1rem;
+        font-family: var(--font-body);
+      }
+
+      /* ═══════════════════════════════════════════════════
+   GRAIN OVERLAY — xerox / photocopy texture
+   ═══════════════════════════════════════════════════ */
+      .grain::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
+        opacity: 0.12;
+        pointer-events: none;
+        z-index: 100;
+        mix-blend-mode: multiply;
+      }
+
+      /* ═══════════════════════════════════════════════════
+   MAIN WRAPPER — pinned to dark corkboard
+   ═══════════════════════════════════════════════════ */
+      .zine-root {
+        max-width: 820px;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      /* ═══════════════════════════════════════════════════
+   TAPE STRIPS — decorative diagonal elements
+   ═══════════════════════════════════════════════════ */
+      .tape {
+        display: inline-block;
+        background: rgba(245, 200, 0, 0.75);
+        padding: 3px 18px;
+        font-size: 10px;
+        font-family: var(--font-mono);
+        letter-spacing: 0.08em;
+        color: #0e0c07;
+        transform: rotate(-1.5deg);
+        position: absolute;
+        z-index: 20;
+        border: 1px solid rgba(0, 0, 0, 0.15);
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+      }
+      .tape-red {
+        background: rgba(212, 43, 43, 0.8);
+        color: #fff;
+      }
+      .tape-blue {
+        background: rgba(26, 60, 143, 0.85);
+        color: #fff;
+      }
+      .tape-white {
+        background: rgba(255, 255, 255, 0.85);
+      }
+
+      /* ═══════════════════════════════════════════════════
+   NAV — thick black bar, misregistered color
+   ═══════════════════════════════════════════════════ */
+      .zine-nav {
+        background: var(--zine-ink);
+        border: var(--zine-border);
+        border-bottom: 5px solid var(--zine-ink);
+        padding: 0 1.25rem;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        overflow: visible;
+        margin-bottom: 0;
+      }
+      .zine-nav::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--zine-red);
+        transform: translate(3px, 3px);
+        z-index: -1;
+      }
+      .zine-nav-brand {
+        font-family: var(--font-display);
+        font-size: 28px;
+        color: var(--zine-yellow);
+        letter-spacing: 0.04em;
+        line-height: 1;
+        position: relative;
+      }
+      .zine-nav-brand::after {
+        content: 'GARDEN.DEV';
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        color: var(--zine-blue-lt);
+        z-index: -1;
+        opacity: 0.6;
+      }
+      .zine-nav-links {
+        display: flex;
+        gap: 2px;
+        align-items: center;
+      }
+      .zine-nav-link {
+        font-family: var(--font-stamp);
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        color: #ccc;
+        padding: 5px 12px;
+        border: 2px solid transparent;
+        cursor: pointer;
+        text-decoration: none;
+        transition: none;
+        background: none;
+      }
+      .zine-nav-link:hover {
+        border-color: var(--zine-yellow);
+        color: var(--zine-yellow);
+      }
+      .zine-nav-link.active {
+        background: var(--zine-yellow);
+        color: var(--zine-ink);
+        border-color: var(--zine-yellow);
+      }
+
+      /* ═══════════════════════════════════════════════════
+   HERO — torn paper edge, collage headline
+   ═══════════════════════════════════════════════════ */
+      .zine-hero {
+        background: var(--zine-paper);
+        border: var(--zine-border);
+        border-top: none;
+        padding: 2.5rem 1.5rem 3rem;
+        position: relative;
+        overflow: visible;
+      }
+      /* torn bottom edge */
+      .zine-hero::after {
+        content: '';
+        position: absolute;
+        bottom: -18px;
+        left: 0;
+        right: 0;
+        height: 20px;
+        background: var(--zine-paper);
+        clip-path: polygon(
+          0% 0%,
+          3% 100%,
+          6% 20%,
+          9% 80%,
+          12% 10%,
+          15% 90%,
+          18% 30%,
+          21% 100%,
+          24% 15%,
+          27% 85%,
+          30% 5%,
+          33% 75%,
+          36% 25%,
+          39% 95%,
+          42% 10%,
+          45% 80%,
+          48% 0%,
+          51% 70%,
+          54% 20%,
+          57% 100%,
+          60% 15%,
+          63% 85%,
+          66% 30%,
+          69% 100%,
+          72% 5%,
+          75% 75%,
+          78% 25%,
+          81% 90%,
+          84% 10%,
+          87% 80%,
+          90% 0%,
+          93% 70%,
+          96% 20%,
+          100% 50%,
+          100% 0%
+        );
+        z-index: 5;
+      }
+      .zine-hero-eyebrow {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: var(--zine-red);
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .zine-hero-eyebrow::before {
+        content: '///';
+        color: var(--zine-muted);
+      }
+
+      /* Ransom-note headline: mixed fonts, sizes, rotations */
+      .zine-headline {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 6px;
+        margin-bottom: 1.25rem;
+        line-height: 1;
+      }
+      .zine-h-block {
+        display: inline-block;
+        background: var(--zine-ink);
+        color: var(--zine-paper);
+        font-family: var(--font-display);
+        font-size: 52px;
+        padding: 2px 10px 0;
+        transform: rotate(-1deg);
+        box-shadow: var(--zine-shadow);
+      }
+      .zine-h-block.yl {
+        background: var(--zine-yellow);
+        color: var(--zine-ink);
+        transform: rotate(1.5deg);
+      }
+      .zine-h-block.rd {
+        background: var(--zine-red);
+        color: var(--zine-paper);
+        transform: rotate(-0.5deg);
+        font-size: 38px;
+      }
+      .zine-h-block.outline {
+        background: transparent;
+        color: var(--zine-ink);
+        -webkit-text-stroke: 2px var(--zine-ink);
+        font-size: 44px;
+        box-shadow: none;
+        transform: rotate(0.8deg);
+      }
+      .zine-h-marker {
+        font-family: var(--font-marker);
+        font-size: 36px;
+        color: var(--zine-blue);
+        transform: rotate(-2deg);
+        display: inline-block;
+        text-shadow: 2px 2px 0 rgba(26, 60, 143, 0.2);
+      }
+      .zine-hero-sub {
+        font-family: var(--font-body);
+        font-size: 15px;
+        color: var(--zine-ink-faded);
+        max-width: 520px;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
+        border-left: 4px solid var(--zine-ink);
+        padding-left: 1rem;
+      }
+      .zine-tagrow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .zine-tag {
+        font-family: var(--font-stamp);
+        font-size: 11px;
+        letter-spacing: 0.06em;
+        padding: 4px 10px;
+        border: 2px solid var(--zine-ink);
+        background: var(--zine-paper);
+        color: var(--zine-ink);
+        cursor: default;
+        position: relative;
+        box-shadow: 2px 2px 0 var(--zine-ink);
+      }
+      .zine-tag:nth-child(odd) {
+        transform: rotate(-0.8deg);
+      }
+      .zine-tag:nth-child(even) {
+        transform: rotate(0.6deg);
+      }
+      .zine-tag.rd {
+        background: var(--zine-red);
+        color: #fff;
+        border-color: var(--zine-ink);
+      }
+      .zine-tag.yl {
+        background: var(--zine-yellow);
+        color: var(--zine-ink);
+      }
+      .zine-tag.bl {
+        background: var(--zine-blue);
+        color: #fff;
+        border-color: var(--zine-ink);
+      }
+      .zine-tag.gn {
+        background: var(--zine-green);
+        color: #fff;
+        border-color: var(--zine-ink);
+      }
+
+      /* ═══════════════════════════════════════════════════
+   SECTION WRAPPER — paper sheets pinned to corkboard
+   ═══════════════════════════════════════════════════ */
+      .zine-sheet {
+        background: var(--zine-paper);
+        border: var(--zine-border);
+        padding: 1.5rem;
+        position: relative;
+        margin-top: 2.5rem;
+        box-shadow: var(--zine-shadow-lg);
+      }
+      .zine-sheet::before {
+        /* pin / pushpin simulation */
+        content: '●';
+        position: absolute;
+        top: -10px;
+        left: 24px;
+        width: 18px;
+        height: 18px;
+        background: var(--zine-red);
+        border: 2px solid var(--zine-red-dark);
+        border-radius: 50%;
+        color: var(--zine-red-dark);
+        font-size: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+      }
+      .zine-sheet.pin-yellow::before {
+        background: var(--zine-yellow);
+        border-color: #a08800;
+      }
+      .zine-sheet.pin-blue::before {
+        background: var(--zine-blue-lt);
+        border-color: var(--zine-blue);
+      }
+      .zine-sheet.pin-green::before {
+        background: var(--zine-green-lt);
+        border-color: var(--zine-green);
+      }
+
+      .zine-section-label {
+        font-family: var(--font-display);
+        font-size: 22px;
+        color: var(--zine-ink);
+        letter-spacing: 0.08em;
+        margin-bottom: 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .zine-section-label .slash {
+        color: var(--zine-red);
+      }
+      .zine-section-label::after {
+        content: '';
+        flex: 1;
+        height: 3px;
+        background: var(--zine-ink);
+        margin-left: 8px;
+      }
+
+      /* ═══════════════════════════════════════════════════
+   SEARCH — typewriter aesthetic
+   ═══════════════════════════════════════════════════ */
+      .zine-search {
+        background: #fff;
+        border: 3px solid var(--zine-ink);
+        border-right-width: 5px;
+        border-bottom-width: 5px;
+        padding: 10px 14px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        position: relative;
+      }
+      .zine-search-icon {
+        color: var(--zine-ink);
+        flex-shrink: 0;
+      }
+      .zine-search-text {
+        font-family: var(--font-mono);
+        font-size: 14px;
+        color: var(--zine-muted);
+        flex: 1;
+      }
+      .zine-search-cursor {
+        display: inline-block;
+        width: 2px;
+        height: 16px;
+        background: var(--zine-ink);
+        animation: blink 1s step-start infinite;
+        vertical-align: middle;
+        margin-left: 1px;
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      .zine-search-kbd {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        background: var(--zine-ink);
+        color: var(--zine-yellow);
+        padding: 2px 7px;
+        letter-spacing: 0.05em;
+      }
+
+      /* ═══════════════════════════════════════════════════
+   COLOUR TOKENS — paint swatch blocks
+   ═══════════════════════════════════════════════════ */
+      .zine-palette-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 1rem;
+      }
+      .zine-swatch-block {
+        border: 3px solid var(--zine-ink);
+        border-right: 4px solid var(--zine-ink);
+        border-bottom: 4px solid var(--zine-ink);
+      }
+      .zine-swatch-color {
+        width: 52px;
+        height: 44px;
+      }
+      .zine-swatch-label {
+        font-family: var(--font-mono);
+        font-size: 9px;
+        padding: 3px 5px;
+        background: var(--zine-paper);
+        color: var(--zine-ink);
+        border-top: 2px solid var(--zine-ink);
+        letter-spacing: 0.04em;
+      }
+      .zine-token-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4px;
+      }
+      .zine-token-row {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        display: flex;
+        justify-content: space-between;
+        padding: 4px 6px;
+        border: 1px solid rgba(14, 12, 7, 0.15);
+        background: rgba(255, 255, 255, 0.4);
+      }
+      .zine-token-name {
+        color: var(--zine-ink-faded);
+      }
+      .zine-token-val {
+        color: var(--zine-red);
+        font-weight: bold;
+      }
+
+      /* ═══════════════════════════════════════════════════
+   TYPOGRAPHY SCALE — mix of display styles
+   ═══════════════════════════════════════════════════ */
+      .zine-type-specimen {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+      .zine-type-row {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding: 10px 0;
+        border-bottom: 2px solid rgba(14, 12, 7, 0.12);
+      }
+      .zine-type-row:last-child {
+        border-bottom: none;
+      }
+      .zine-type-meta {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--zine-muted);
+        min-width: 90px;
+        flex-shrink: 0;
+      }
+      .zine-type-rubber-stamp {
+        font-family: var(--font-stamp);
+        font-size: 32px;
+        color: var(--zine-red);
+        letter-spacing: 0.06em;
+        opacity: 0.85;
+        filter: blur(0.3px);
+      }
+      .zine-type-display {
+        font-family: var(--font-display);
+        font-size: 42px;
+        color: var(--zine-ink);
+        letter-spacing: 0.04em;
+      }
+      .zine-type-h1 {
+        font-family: var(--font-display);
+        font-size: 28px;
+        color: var(--zine-ink);
+        letter-spacing: 0.03em;
+      }
+      .zine-type-h2 {
+        font-family: var(--font-marker);
+        font-size: 20px;
+        color: var(--zine-blue);
+      }
+      .zine-type-body {
+        font-family: var(--font-body);
+        font-size: 15px;
+        color: var(--zine-ink-faded);
+        line-height: 1.7;
+        max-width: 400px;
+      }
+      .zine-type-mono {
+        font-family: var(--font-mono);
+        font-size: 13px;
+        color: var(--zine-ink);
+        background: rgba(14, 12, 7, 0.07);
+        padding: 3px 8px;
+        border-left: 3px solid var(--zine-ink);
+      }
+      .zine-type-caption {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--zine-muted);
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      /* ═══════════════════════════════════════════════════
+   NOTE CARDS — scrapbook torn edges, angled
+   ═══════════════════════════════════════════════════ */
+      .zine-grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+      .zine-grid-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 14px;
+      }
+
+      .zine-card {
+        background: var(--zine-paper);
+        border: var(--zine-border);
+        border-right: 5px solid var(--zine-ink);
+        border-bottom: 5px solid var(--zine-ink);
+        padding: 1rem;
+        position: relative;
+        transition: transform 0.15s ease;
+      }
+      .zine-card:nth-child(1) {
+        transform: rotate(-0.6deg);
+      }
+      .zine-card:nth-child(2) {
+        transform: rotate(0.8deg);
+      }
+      .zine-card:nth-child(3) {
+        transform: rotate(-0.4deg);
+      }
+      .zine-card:nth-child(4) {
+        transform: rotate(1.1deg);
+      }
+      .zine-card:hover {
+        transform: rotate(0) scale(1.01) !important;
+        z-index: 10;
+      }
+
+      .zine-card.featured {
+        background: var(--zine-yellow-lt);
+        border-top: 5px solid var(--zine-red);
+      }
+      .zine-card.featured::after {
+        content: '★ FEATURED';
+        position: absolute;
+        top: -14px;
+        right: 10px;
+        font-family: var(--font-stamp);
+        font-size: 10px;
+        background: var(--zine-red);
+        color: #fff;
+        padding: 2px 8px;
+        letter-spacing: 0.08em;
+        z-index: 5;
+      }
+      .zine-card-title {
+        font-family: var(--font-display);
+        font-size: 18px;
+        color: var(--zine-ink);
+        letter-spacing: 0.03em;
+        margin-bottom: 5px;
+        line-height: 1.2;
+      }
+      .zine-card-meta {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--zine-muted);
+        margin-bottom: 8px;
+        letter-spacing: 0.05em;
+      }
+      .zine-card-body {
+        font-family: var(--font-body);
+        font-size: 13px;
+        color: var(--zine-ink-faded);
+        line-height: 1.65;
+      }
+      .zine-card-footer {
+        display: flex;
+        gap: 5px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      /* scribble underline on card title */
+      .zine-card-title::after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 60%;
+        background: var(--zine-red);
+        margin-top: 3px;
+        transform: rotate(-0.5deg);
+      }
+
+      /* highlight marker effect */
+      .zine-highlight {
+        background: var(--zine-yellow);
+        padding: 0 3px;
+        display: inline;
+        box-decoration-break: clone;
+      }
+      .zine-highlight.bl {
+        background: var(--zine-blue-lt);
+        color: #fff;
+      }
+      .zine-highlight.rd {
+        background: var(--zine-red);
+        color: #fff;
+      }
+      .zine-highlight.gn {
+        background: var(--zine-green-lt);
+      }
+
+      /* ═══════════════════════════════════════════════════
+   ARTICLE LAYOUT — typewriter body + messy TOC
+   ═══════════════════════════════════════════════════ */
+      .zine-reading {
+        background: #fafaf2;
+        border: var(--zine-border);
+        border-right: 5px solid var(--zine-ink);
+        border-bottom: 5px solid var(--zine-ink);
+        padding: 1.75rem;
+        position: relative;
+      }
+      /* ruled lines like typewriter paper */
+      .zine-reading {
+        background-image: repeating-linear-gradient(
+          to bottom,
+          transparent,
+          transparent 31px,
+          rgba(100, 120, 200, 0.12) 31px,
+          rgba(100, 120, 200, 0.12) 32px
+        );
+        background-attachment: local;
+      }
+      .zine-reading-eyebrow {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--zine-muted);
+        margin-bottom: 6px;
+        letter-spacing: 0.1em;
+      }
+      .zine-reading-h {
+        font-family: var(--font-display);
+        font-size: 26px;
+        color: var(--zine-ink);
+        letter-spacing: 0.03em;
+        margin-bottom: 6px;
+        line-height: 1.15;
+      }
+      .zine-reading-meta {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--zine-muted);
+        margin-bottom: 1rem;
+        display: flex;
+        gap: 10px;
+        letter-spacing: 0.06em;
+      }
+      .zine-reading-meta .cat {
+        background: var(--zine-red);
+        color: #fff;
+        padding: 1px 7px;
+        font-family: var(--font-stamp);
+        font-size: 10px;
+      }
+      .zine-reading-p {
+        font-family: var(--font-body);
+        font-size: 14px;
+        color: var(--zine-ink-faded);
+        line-height: 1.8;
+        margin-bottom: 1rem;
+      }
+      .zine-reading-h2 {
+        font-family: var(--font-marker);
+        font-size: 18px;
+        color: var(--zine-blue);
+        margin: 1.25rem 0 0.5rem;
+        transform: rotate(-0.5deg);
+        display: inline-block;
+      }
+      .zine-blockquote {
+        border-left: 5px solid var(--zine-ink);
+        padding: 0.6rem 0 0.6rem 1rem;
+        font-family: var(--font-body);
+        font-size: 14px;
+        font-style: italic;
+        color: var(--zine-muted);
+        margin: 1rem 0;
+        background: rgba(14, 12, 7, 0.04);
+        position: relative;
+      }
+      .zine-blockquote::before {
+        content: '"';
+        font-family: var(--font-display);
+        font-size: 48px;
+        color: var(--zine-red);
+        position: absolute;
+        top: -10px;
+        left: -12px;
+        line-height: 1;
+        opacity: 0.5;
+      }
+
+      /* callouts — rubber stamp style */
+      .zine-callout {
+        border: 3px solid var(--zine-ink);
+        border-right: 4px solid var(--zine-ink);
+        border-bottom: 4px solid var(--zine-ink);
+        padding: 0.75rem 1rem;
+        font-family: var(--font-body);
+        font-size: 13px;
+        color: var(--zine-ink-faded);
+        margin-bottom: 10px;
+        position: relative;
+        background: var(--zine-yellow-lt);
+      }
+      .zine-callout.info {
+        background: #eaf0ff;
+        border-color: var(--zine-blue);
+        border-right-color: var(--zine-blue);
+        border-bottom-color: var(--zine-blue);
+      }
+      .zine-callout-label {
+        font-family: var(--font-stamp);
+        font-size: 10px;
+        color: var(--zine-red);
+        letter-spacing: 0.1em;
+        margin-bottom: 4px;
+        display: block;
+      }
+      .zine-callout.info .zine-callout-label {
+        color: var(--zine-blue);
+      }
+
+      /* code block — xeroxed terminal printout */
+      .zine-code {
+        background: var(--zine-ink);
+        border: var(--zine-border);
+        border-right: 5px solid var(--zine-ink);
+        border-bottom: 5px solid var(--zine-ink);
+        padding: 1rem 1.1rem;
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: #e8e0c8;
+        line-height: 1.8;
+        position: relative;
+        overflow: hidden;
+      }
+      .zine-code::before {
+        content: '// PASTE CODE HERE';
+        display: block;
+        font-size: 9px;
+        color: rgba(255, 255, 255, 0.2);
+        letter-spacing: 0.1em;
+        margin-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 5px;
+      }
+      .zine-code .kw {
+        color: var(--zine-yellow);
+      }
+      .zine-code .fn {
+        color: var(--zine-blue-lt);
+      }
+      .zine-code .st {
+        color: var(--zine-green-lt);
+      }
+      .zine-code .cm {
+        color: rgba(255, 255, 255, 0.3);
+        font-style: italic;
+      }
+
+      /* TOC — hand-drawn checklist vibe */
+      .zine-toc {
+        background: var(--zine-paper-alt);
+        border: var(--zine-border);
+        border-right: 5px solid var(--zine-ink);
+        border-bottom: 5px solid var(--zine-ink);
+        padding: 1rem;
+        transform: rotate(0.7deg);
+      }
+      .zine-toc-title {
+        font-family: var(--font-marker);
+        font-size: 15px;
+        color: var(--zine-ink);
+        margin-bottom: 0.8rem;
+        border-bottom: 3px solid var(--zine-ink);
+        padding-bottom: 6px;
+      }
+      .zine-toc-item {
+        font-family: var(--font-body);
+        font-size: 12px;
+        color: var(--zine-ink-faded);
+        padding: 4px 0;
+        display: flex;
+        align-items: flex-start;
+        gap: 6px;
+        border-bottom: 1px dashed rgba(14, 12, 7, 0.2);
+        cursor: pointer;
+        line-height: 1.4;
+      }
+      .zine-toc-item:last-child {
+        border-bottom: none;
+      }
+      .zine-toc-item.active {
+        color: var(--zine-red);
+        font-family: var(--font-marker);
+      }
+      .zine-toc-item.sub {
+        padding-left: 16px;
+        font-size: 11px;
+      }
+      .zine-toc-box {
+        width: 10px;
+        height: 10px;
+        border: 2px solid currentColor;
+        flex-shrink: 0;
+        margin-top: 2px;
+      }
+      .zine-toc-item.active .zine-toc-box {
+        background: var(--zine-red);
+        border-color: var(--zine-red);
+        position: relative;
+      }
+      .zine-toc-item.active .zine-toc-box::after {
+        content: '✕';
+        position: absolute;
+        top: -3px;
+        left: 0px;
+        font-size: 12px;
+        color: #fff;
+        line-height: 1;
+      }
+
+      /* ═══════════════════════════════════════════════════
+   BUTTONS — punk rubber stamp
+   ═══════════════════════════════════════════════════ */
+      .zine-btn {
+        font-family: var(--font-stamp);
+        font-size: 12px;
+        letter-spacing: 0.06em;
+        padding: 9px 18px;
+        border: 3px solid var(--zine-ink);
+        border-right: 5px solid var(--zine-ink);
+        border-bottom: 5px solid var(--zine-ink);
+        cursor: pointer;
+        background: var(--zine-paper);
+        color: var(--zine-ink);
+        margin-right: 6px;
+        margin-bottom: 6px;
+        position: relative;
+        transition:
+          transform 0.1s,
+          box-shadow 0.1s;
+      }
+      .zine-btn:hover {
+        transform: translate(-1px, -1px);
+      }
+      .zine-btn:active {
+        transform: translate(3px, 3px);
+        border-right-width: 3px;
+        border-bottom-width: 3px;
+      }
+      .zine-btn-primary {
+        background: var(--zine-red);
+        color: #fff;
+        border-color: var(--zine-red-dark);
+      }
+      .zine-btn-primary:hover {
+        background: var(--zine-red-dark);
+      }
+      .zine-btn-yellow {
+        background: var(--zine-yellow);
+        color: var(--zine-ink);
+      }
+      .zine-btn-blue {
+        background: var(--zine-blue);
+        color: #fff;
+      }
+      .zine-btn-ghost {
+        border-color: var(--zine-muted);
+        border-right-color: var(--zine-muted);
+        border-bottom-color: var(--zine-muted);
+        color: var(--zine-muted);
+        background: transparent;
+      }
+
+      /* ═══════════════════════════════════════════════════
+   WIKI CARDS — polaroid / zine clip style
+   ═══════════════════════════════════════════════════ */
+      .zine-wiki-card {
+        background: var(--zine-paper);
+        border: var(--zine-border);
+        border-right: 5px solid var(--zine-ink);
+        border-bottom: 5px solid var(--zine-ink);
+        overflow: hidden;
+        position: relative;
+      }
+      .zine-wiki-card:nth-child(1) {
+        transform: rotate(-1deg);
+      }
+      .zine-wiki-card:nth-child(2) {
+        transform: rotate(1.2deg);
+      }
+      .zine-wiki-card:nth-child(3) {
+        transform: rotate(-0.7deg);
+      }
+      .zine-wiki-card:hover {
+        transform: rotate(0) !important;
+        z-index: 10;
+      }
+
+      .zine-wiki-thumb {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        border-bottom: 3px solid var(--zine-ink);
+      }
+      /* hatching texture in thumbs */
+      .zine-wiki-thumb::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 4px,
+          rgba(14, 12, 7, 0.06) 4px,
+          rgba(14, 12, 7, 0.06) 5px
+        );
+      }
+      .zine-wiki-thumb-text {
+        font-family: var(--font-display);
+        font-size: 28px;
+        color: var(--zine-paper);
+        letter-spacing: 0.04em;
+        z-index: 1;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+      }
+      .zine-wiki-body {
+        padding: 0.75rem 0.875rem;
+      }
+      .zine-wiki-title {
+        font-family: var(--font-display);
+        font-size: 14px;
+        color: var(--zine-ink);
+        margin-bottom: 3px;
+        letter-spacing: 0.03em;
+      }
+      .zine-wiki-meta {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--zine-muted);
+        margin-bottom: 6px;
+        letter-spacing: 0.04em;
+      }
+      .zine-wiki-body-text {
+        font-family: var(--font-body);
+        font-size: 12px;
+        color: var(--zine-ink-faded);
+        line-height: 1.6;
+      }
+
+      /* ═══════════════════════════════════════════════════
+   DIVIDERS — hand-drawn style
+   ═══════════════════════════════════════════════════ */
+      .zine-divider {
+        height: 4px;
+        background: repeating-linear-gradient(
+          90deg,
+          var(--zine-ink) 0px,
+          var(--zine-ink) 8px,
+          transparent 8px,
+          transparent 12px
+        );
+        margin: 1.5rem 0;
+        opacity: 0.4;
+      }
+      .zine-divider.solid {
+        background: var(--zine-ink);
+        height: 3px;
+        opacity: 1;
+      }
+      .zine-divider.red {
+        background: var(--zine-red);
+        height: 3px;
+        opacity: 1;
+      }
+
+      /* ═══════════════════════════════════════════════════
+   MISREGISTRATION banner — xerox artifact
+   ═══════════════════════════════════════════════════ */
+      .zine-banner {
+        background: var(--zine-red);
+        padding: 10px 1.5rem;
+        position: relative;
+        overflow: hidden;
+        border-top: 3px solid var(--zine-ink);
+        border-bottom: 3px solid var(--zine-ink);
+        margin-top: 2.5rem;
+      }
+      .zine-banner::before {
+        content: attr(data-text);
+        position: absolute;
+        left: 3px;
+        top: 3px;
+        color: var(--zine-blue);
+        font-family: var(--font-display);
+        font-size: 15px;
+        letter-spacing: 0.25em;
+        opacity: 0.5;
+        white-space: nowrap;
+      }
+      .zine-banner-text {
+        font-family: var(--font-display);
+        font-size: 15px;
+        letter-spacing: 0.25em;
+        color: var(--zine-yellow);
+        text-transform: uppercase;
+        white-space: nowrap;
+        position: relative;
+        z-index: 1;
+        animation: marquee 18s linear infinite;
+      }
+      @keyframes marquee {
+        from {
+          transform: translateX(100vw);
+        }
+        to {
+          transform: translateX(-100%);
+        }
+      }
+
+      /* ═══════════════════════════════════════════════════
+   FOOTER NOTE
+   ═══════════════════════════════════════════════════ */
+      .zine-footer-note {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.3);
+        text-align: center;
+        margin-top: 3rem;
+        letter-spacing: 0.1em;
+      }
+
+      /* ═══════════════════════════════════════════════════
+   UTILITY
+   ═══════════════════════════════════════════════════ */
+      .mt-0 {
+        margin-top: 0 !important;
+      }
+      .row {
+        display: flex;
+        gap: 14px;
+        align-items: flex-start;
+      }
+      .col {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="zine-root">
+      <!-- ══ RUNNING BANNER ══ -->
+      <div
+        class="zine-banner"
+        data-text="NEU-BRUTALISM × PUNK ZINE × SCRAPBOOK · DESIGN SYSTEM V0.1 · GARDEN.DEV · DO IT YOURSELF ·"
+      >
+        <div class="zine-banner-text">
+          NEU-BRUTALISM × PUNK ZINE × SCRAPBOOK &nbsp;&nbsp;·&nbsp;&nbsp; DESIGN SYSTEM V0.1
+          &nbsp;&nbsp;·&nbsp;&nbsp; GARDEN.DEV &nbsp;&nbsp;·&nbsp;&nbsp; DO IT YOURSELF
+          &nbsp;&nbsp;·&nbsp;&nbsp; CUT &amp; PASTE &nbsp;&nbsp;·&nbsp;&nbsp; NO RULES
+          &nbsp;&nbsp;·&nbsp;&nbsp; LONG-FORM CONTENT &nbsp;&nbsp;·&nbsp;&nbsp;
+        </div>
+      </div>
+
+      <!-- ══ NAV ══ -->
+      <nav class="zine-nav">
+        <div class="zine-nav-brand">GARDEN.DEV</div>
+        <div class="zine-nav-links">
+          <a class="zine-nav-link active" href="#">NOTES</a>
+          <a class="zine-nav-link" href="#">WIKI</a>
+          <a class="zine-nav-link" href="#">PROJECTS</a>
+          <a class="zine-nav-link" href="#">ABOUT</a>
+        </div>
+      </nav>
+
+      <!-- ══ HERO ══ -->
+      <div class="zine-hero">
+        <div class="tape" style="top: -10px; right: 60px; transform: rotate(2.5deg)">
+          DESIGN SYSTEM · V0.1
+        </div>
+        <div class="tape tape-red" style="top: 18px; right: 10px; transform: rotate(-1deg)">
+          CUT HERE ✂
+        </div>
+
+        <div class="zine-hero-eyebrow">NEU-BRUTALISM × PUNK ZINE × SCRAPBOOK</div>
+
+        <div class="zine-headline">
+          <span class="zine-h-block">THE</span>
+          <span class="zine-h-marker">knowledge</span>
+          <span class="zine-h-block yl">GARDEN</span>
+          <span class="zine-h-block rd">×</span>
+          <span class="zine-h-block outline">WIKI</span>
+        </div>
+
+        <div class="zine-hero-sub">
+          A <span class="zine-highlight">raw, loud, opinionated</span> design language for long-form
+          knowledge sites. Built with Lit elements + Next.js SSG. Every component hand-stamped with
+          intent.
+        </div>
+
+        <div class="zine-tagrow">
+          <span class="zine-tag rd">LIT ELEMENTS</span>
+          <span class="zine-tag bl">NEXT.JS SSG</span>
+          <span class="zine-tag yl">STORYBOOK</span>
+          <span class="zine-tag gn">RESPONSIVE</span>
+          <span class="zine-tag">NO FRAMEWORK BS</span>
+          <span class="zine-tag">DO IT YOURSELF</span>
+        </div>
+      </div>
+
+      <!-- ══ SEARCH ══ -->
+      <div class="zine-sheet pin-yellow" style="margin-top: 3rem">
+        <div class="zine-section-label"><span class="slash">//</span> SEARCH</div>
+        <div class="zine-search">
+          <svg
+            class="zine-search-icon"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <circle cx="8" cy="8" r="5" />
+            <path d="m12 12 4 4" />
+          </svg>
+          <span class="zine-search-text"
+            >Search notes, wiki, projects…<span class="zine-search-cursor"></span
+          ></span>
+          <span class="zine-search-kbd">⌘K</span>
+        </div>
+      </div>
+
+      <!-- ══ COLOUR TOKENS ══ -->
+      <div class="zine-sheet">
+        <div class="tape tape-blue" style="top: -12px; left: 40px; transform: rotate(-1.5deg)">
+          PAINT SWATCHES
+        </div>
+        <div class="zine-section-label"><span class="slash">//</span> COLOUR TOKENS</div>
+        <div class="zine-palette-grid">
+          <div class="zine-swatch-block">
+            <div class="zine-swatch-color" style="background: #d42b2b"></div>
+            <div class="zine-swatch-label">--zine-red<br />#D42B2B</div>
+          </div>
+          <div class="zine-swatch-block">
+            <div class="zine-swatch-color" style="background: #f5c800"></div>
+            <div class="zine-swatch-label">--zine-yellow<br />#F5C800</div>
+          </div>
+          <div class="zine-swatch-block">
+            <div class="zine-swatch-color" style="background: #1a3c8f"></div>
+            <div class="zine-swatch-label">--zine-blue<br />#1A3C8F</div>
+          </div>
+          <div class="zine-swatch-block">
+            <div class="zine-swatch-color" style="background: #1d6b2e"></div>
+            <div class="zine-swatch-label">--zine-green<br />#1D6B2E</div>
+          </div>
+          <div class="zine-swatch-block">
+            <div class="zine-swatch-color" style="background: #e85d1a"></div>
+            <div class="zine-swatch-label">--zine-orange<br />#E85D1A</div>
+          </div>
+          <div class="zine-swatch-block">
+            <div class="zine-swatch-color" style="background: #e8317a"></div>
+            <div class="zine-swatch-label">--zine-pink<br />#E8317A</div>
+          </div>
+          <div class="zine-swatch-block">
+            <div class="zine-swatch-color" style="background: #0e0c07"></div>
+            <div class="zine-swatch-label">--zine-ink<br />#0E0C07</div>
+          </div>
+          <div class="zine-swatch-block">
+            <div class="zine-swatch-color" style="background: #f2edd7"></div>
+            <div class="zine-swatch-label">--zine-paper<br />#F2EDD7</div>
+          </div>
+        </div>
+        <div class="zine-divider"></div>
+        <div class="zine-token-list">
+          <div class="zine-token-row">
+            <span class="zine-token-name">--zine-shadow</span
+            ><span class="zine-token-val">4px 4px 0 #0E0C07</span>
+          </div>
+          <div class="zine-token-row">
+            <span class="zine-token-name">--zine-border</span
+            ><span class="zine-token-val">3px solid #0E0C07</span>
+          </div>
+          <div class="zine-token-row">
+            <span class="zine-token-name">--font-display</span
+            ><span class="zine-token-val">Bebas Neue</span>
+          </div>
+          <div class="zine-token-row">
+            <span class="zine-token-name">--font-body</span
+            ><span class="zine-token-val">Special Elite</span>
+          </div>
+          <div class="zine-token-row">
+            <span class="zine-token-name">--font-marker</span
+            ><span class="zine-token-val">Permanent Marker</span>
+          </div>
+          <div class="zine-token-row">
+            <span class="zine-token-name">--font-mono</span
+            ><span class="zine-token-val">Cutive Mono</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ TYPOGRAPHY ══ -->
+      <div class="zine-sheet pin-green">
+        <div class="tape" style="top: -10px; right: 80px; transform: rotate(1.8deg)">
+          RANSOM NOTE SYSTEM
+        </div>
+        <div class="zine-section-label"><span class="slash">//</span> TYPOGRAPHY SCALE</div>
+        <div class="zine-type-specimen">
+          <div class="zine-type-row">
+            <span class="zine-type-meta">rubber stamp</span>
+            <span class="zine-type-rubber-stamp">GARDEN.DEV</span>
+          </div>
+          <div class="zine-type-row">
+            <span class="zine-type-meta">display / Bebas</span>
+            <span class="zine-type-display">The knowledge garden</span>
+          </div>
+          <div class="zine-type-row">
+            <span class="zine-type-meta">h1 / display</span>
+            <span class="zine-type-h1">Article title sits here</span>
+          </div>
+          <div class="zine-type-row">
+            <span class="zine-type-meta">h2 / marker</span>
+            <span class="zine-type-h2">Section heading — handwritten</span>
+          </div>
+          <div class="zine-type-row">
+            <span class="zine-type-meta">body / typewriter</span>
+            <span class="zine-type-body"
+              >Long-form prose at 15px / 1.7 — Special Elite gives the feel of typewritten notes,
+              warm and intentional without being hard to read at length.</span
+            >
+          </div>
+          <div class="zine-type-row">
+            <span class="zine-type-meta">mono / code</span>
+            <span class="zine-type-mono">const garden = new Garden({ theme: 'zine' })</span>
+          </div>
+          <div class="zine-type-row">
+            <span class="zine-type-meta">caption / label</span>
+            <span class="zine-type-caption">tags · metadata · timestamps · xerox artifacts</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ NOTE CARDS ══ -->
+      <div class="zine-sheet pin-yellow" style="padding-bottom: 2rem">
+        <div class="zine-section-label"><span class="slash">//</span> NOTE CARDS</div>
+        <div class="zine-grid-2">
+          <div class="zine-card featured">
+            <div class="zine-card-title">On building a second brain</div>
+            <div class="zine-card-meta">3 DAYS AGO · 8 MIN READ · LVL.8</div>
+            <div class="zine-card-body">
+              The goal isn't to remember everything — it's to
+              <span class="zine-highlight">think better</span> by offloading storage to a trusted
+              system you actually use.
+            </div>
+            <div class="zine-card-footer">
+              <span class="zine-tag rd">PKM</span>
+              <span class="zine-tag">ZETTELKASTEN</span>
+            </div>
+          </div>
+
+          <div class="zine-card">
+            <div class="zine-card-title">Lit elements vs React: a pragmatic view</div>
+            <div class="zine-card-meta">1 WEEK AGO · 5 MIN READ</div>
+            <div class="zine-card-body">
+              Web components shine when the goal is portability across stacks, not developer
+              ergonomics first.
+            </div>
+            <div class="zine-card-footer">
+              <span class="zine-tag bl">FRONTEND</span>
+              <span class="zine-tag">LIT</span>
+            </div>
+          </div>
+
+          <div class="zine-card">
+            <div class="zine-card-title">Synthwave palettes and why they work</div>
+            <div class="zine-card-meta">2 WEEKS AGO · 4 MIN READ</div>
+            <div class="zine-card-body">
+              High contrast + neon against dark surfaces triggers the same visual comfort as
+              <span class="zine-highlight">CRT phosphor glow</span>.
+            </div>
+            <div class="zine-card-footer">
+              <span class="zine-tag">DESIGN</span>
+              <span class="zine-tag">COLOR</span>
+            </div>
+          </div>
+
+          <div class="zine-card">
+            <div class="zine-card-title">Pixel art as a design constraint</div>
+            <div class="zine-card-meta">3 WEEKS AGO · 6 MIN READ</div>
+            <div class="zine-card-body">
+              When every pixel costs effort, you're forced into clarity.
+              <span class="zine-highlight gn">The grid is the system.</span>
+            </div>
+            <div class="zine-card-footer">
+              <span class="zine-tag gn">GAME DESIGN</span>
+              <span class="zine-tag yl">PIXEL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ ARTICLE LAYOUT ══ -->
+      <div class="zine-sheet" style="padding-bottom: 2rem">
+        <div class="tape tape-red" style="top: -12px; left: 50px; transform: rotate(-2deg)">
+          ARTICLE · LONG FORM
+        </div>
+        <div class="zine-section-label"><span class="slash">//</span> ARTICLE LAYOUT</div>
+        <div class="row">
+          <div class="col">
+            <div class="zine-reading">
+              <div class="zine-reading-eyebrow">NOTES / PKM / SECOND-BRAIN</div>
+              <div class="zine-reading-h">On building a second brain</div>
+              <div class="zine-reading-meta">
+                <span>MAY 2026</span>
+                <span>·</span>
+                <span>8 MIN READ</span>
+                <span>·</span>
+                <span class="cat">PKM</span>
+              </div>
+              <div class="zine-reading-p">
+                The goal isn't to remember everything — it's to
+                <span class="zine-highlight">think better</span> by offloading memory to a trusted
+                external system. Your brain is for generating ideas, not for storing them
+                indefinitely.
+              </div>
+              <div class="zine-blockquote">
+                "We are what we repeatedly do. Excellence, then, is not an act, but a habit." —
+                Aristotle
+              </div>
+              <div class="zine-reading-h2">The capture habit</div>
+              <div class="zine-reading-p">
+                Every note you capture is a future conversation with yourself. The format matters
+                less than the habit of externalising thinking before it disappears.
+              </div>
+              <div class="zine-callout">
+                <span class="zine-callout-label">✦ TIP</span>
+                Start with a weekly review — fifteen minutes every Sunday is enough to close the
+                loop and trust the system.
+              </div>
+              <div class="zine-callout info">
+                <span class="zine-callout-label">→ RELATED</span>
+                Zettelkasten, evergreen notes, PARA method, progressive summarisation.
+              </div>
+              <div class="zine-code">
+                <span class="kw">import</span> { <span class="fn">Garden</span> }
+                <span class="kw">from</span> <span class="st">'@garden/core'</span>
+                <span class="cm">// the system</span> <span class="kw">const</span> g =
+                <span class="kw">new</span> <span class="fn">Garden</span>({ theme:
+                <span class="st">'neu-brutalist-zine'</span>, fonts:
+                <span class="st">'ransom-note'</span>, })
+              </div>
+            </div>
+          </div>
+          <div style="width: 170px; flex-shrink: 0">
+            <div class="zine-toc">
+              <div class="zine-toc-title">On this page</div>
+              <div class="zine-toc-item active">
+                <div class="zine-toc-box"></div>
+                Introduction
+              </div>
+              <div class="zine-toc-item sub">
+                <div class="zine-toc-box"></div>
+                Capture habit
+              </div>
+              <div class="zine-toc-item sub">
+                <div class="zine-toc-box"></div>
+                Organisation
+              </div>
+              <div class="zine-toc-item sub">
+                <div class="zine-toc-box"></div>
+                Retrieval
+              </div>
+              <div class="zine-toc-item">
+                <div class="zine-toc-box"></div>
+                See also
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ BUTTONS ══ -->
+      <div class="zine-sheet pin-blue">
+        <div class="zine-section-label"><span class="slash">//</span> BUTTONS &amp; ACTIONS</div>
+        <div style="display: flex; flex-wrap: wrap; gap: 0; align-items: center; padding: 0.5rem 0">
+          <button class="zine-btn zine-btn-primary">✦ PUBLISH NOTE</button>
+          <button class="zine-btn zine-btn-yellow">◆ SAVE DRAFT</button>
+          <button class="zine-btn zine-btn-blue">↑ EXPORT</button>
+          <button class="zine-btn">✂ CLIP</button>
+          <button class="zine-btn zine-btn-ghost">✕ CANCEL</button>
+        </div>
+        <div class="zine-divider" style="margin-top: 1rem"></div>
+        <div
+          style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 1rem; align-items: center"
+        >
+          <!-- stamp-style variants -->
+          <div
+            style="
+              font-family: var(--font-stamp);
+              font-size: 11px;
+              letter-spacing: 0.08em;
+              padding: 6px 14px;
+              background: transparent;
+              border: 3px solid var(--zine-ink);
+              color: var(--zine-ink);
+              transform: rotate(-1deg);
+              box-shadow: var(--zine-shadow);
+            "
+          >
+            DRAFT
+          </div>
+          <div
+            style="
+              font-family: var(--font-stamp);
+              font-size: 11px;
+              letter-spacing: 0.08em;
+              padding: 6px 14px;
+              background: var(--zine-green);
+              border: 3px solid var(--zine-ink);
+              color: #fff;
+              transform: rotate(0.8deg);
+              box-shadow: var(--zine-shadow);
+            "
+          >
+            PUBLISHED
+          </div>
+          <div
+            style="
+              font-family: var(--font-stamp);
+              font-size: 11px;
+              letter-spacing: 0.08em;
+              padding: 6px 14px;
+              background: var(--zine-red);
+              border: 3px solid var(--zine-ink);
+              color: #fff;
+              transform: rotate(-0.5deg);
+              box-shadow: var(--zine-shadow);
+              opacity: 0.8;
+            "
+          >
+            ARCHIVED
+          </div>
+          <div
+            style="
+              font-family: var(--font-marker);
+              font-size: 14px;
+              color: var(--zine-blue);
+              border-bottom: 3px solid var(--zine-blue);
+              padding-bottom: 2px;
+              transform: rotate(-1deg);
+            "
+          >
+            link →
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ WIKI ARTICLE CARDS ══ -->
+      <div class="zine-sheet pin-yellow" style="padding-bottom: 2rem">
+        <div class="tape tape-white" style="top: -11px; right: 100px; transform: rotate(1.5deg)">
+          WIKI INDEX
+        </div>
+        <div class="zine-section-label"><span class="slash">//</span> WIKI ARTICLE CARDS</div>
+        <div class="zine-grid-3">
+          <div class="zine-wiki-card">
+            <div class="zine-wiki-thumb" style="background: #d42b2b">
+              <span class="zine-wiki-thumb-text">ZK</span>
+            </div>
+            <div class="zine-wiki-body">
+              <div class="zine-wiki-title">Zettelkasten</div>
+              <div class="zine-wiki-meta">WIKI · KNOWLEDGE MGMT</div>
+              <div class="zine-wiki-body-text">
+                A slip-box method for networked thinking developed by Niklas Luhmann.
+              </div>
+            </div>
+          </div>
+
+          <div class="zine-wiki-card">
+            <div class="zine-wiki-thumb" style="background: #1a3c8f">
+              <span class="zine-wiki-thumb-text">PARA</span>
+            </div>
+            <div class="zine-wiki-body">
+              <div class="zine-wiki-title">PARA Method</div>
+              <div class="zine-wiki-meta">WIKI · ORGANISATION</div>
+              <div class="zine-wiki-body-text">
+                Projects, Areas, Resources, Archive — Tiago Forte's actionable structure.
+              </div>
+            </div>
+          </div>
+
+          <div class="zine-wiki-card">
+            <div class="zine-wiki-thumb" style="background: #1d6b2e">
+              <span class="zine-wiki-thumb-text">EVER</span>
+            </div>
+            <div class="zine-wiki-body">
+              <div class="zine-wiki-title">Evergreen Notes</div>
+              <div class="zine-wiki-meta">WIKI · WRITING</div>
+              <div class="zine-wiki-body-text">
+                Notes written to accumulate insight over time, not to record information once.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ COMPONENT FRAGMENTS — callouts, badges, misc ══ -->
+      <div class="zine-sheet pin-green">
+        <div class="zine-section-label">
+          <span class="slash">//</span> FRAGMENTS &amp; MICRO-COMPONENTS
+        </div>
+        <div class="row" style="flex-wrap: wrap; gap: 1.5rem">
+          <div class="col" style="min-width: 220px">
+            <div
+              style="
+                font-family: var(--font-stamp);
+                font-size: 12px;
+                letter-spacing: 0.08em;
+                color: var(--zine-muted);
+                margin-bottom: 8px;
+              "
+            >
+              CALLOUTS
+            </div>
+            <div class="zine-callout" style="margin-bottom: 10px">
+              <span class="zine-callout-label">✦ NOTE</span>
+              Start with a weekly review — fifteen minutes every Sunday.
+            </div>
+            <div class="zine-callout info">
+              <span class="zine-callout-label">→ SEE ALSO</span>
+              Zettelkasten, evergreen notes, PARA method.
+            </div>
+          </div>
+
+          <div class="col" style="min-width: 220px">
+            <div
+              style="
+                font-family: var(--font-stamp);
+                font-size: 12px;
+                letter-spacing: 0.08em;
+                color: var(--zine-muted);
+                margin-bottom: 8px;
+              "
+            >
+              BREADCRUMB
+            </div>
+            <div
+              style="
+                font-family: var(--font-mono);
+                font-size: 11px;
+                color: var(--zine-muted);
+                display: flex;
+                gap: 6px;
+                align-items: center;
+                margin-bottom: 1rem;
+                border: 2px solid var(--zine-ink);
+                padding: 5px 10px;
+                width: fit-content;
+                background: #fff;
+              "
+            >
+              <span>home</span>
+              <span style="color: var(--zine-red); font-weight: bold">/</span>
+              <span>notes</span>
+              <span style="color: var(--zine-red); font-weight: bold">/</span>
+              <span style="color: var(--zine-ink); font-family: var(--font-stamp); font-size: 11px"
+                >pkm</span
+              >
+            </div>
+
+            <div
+              style="
+                font-family: var(--font-stamp);
+                font-size: 12px;
+                letter-spacing: 0.08em;
+                color: var(--zine-muted);
+                margin-bottom: 8px;
+              "
+            >
+              STATUS BADGES
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 5px">
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 10px;
+                  padding: 3px 8px;
+                  background: var(--zine-yellow);
+                  color: var(--zine-ink);
+                  border: 2px solid var(--zine-ink);
+                "
+                >DRAFT</span
+              >
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 10px;
+                  padding: 3px 8px;
+                  background: var(--zine-green-lt);
+                  color: var(--zine-green);
+                  border: 2px solid var(--zine-green);
+                "
+                >PUBLISHED</span
+              >
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 10px;
+                  padding: 3px 8px;
+                  background: #eee;
+                  color: var(--zine-muted);
+                  border: 2px solid var(--zine-muted);
+                "
+                >ARCHIVED</span
+              >
+              <span
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 10px;
+                  padding: 3px 8px;
+                  background: var(--zine-blue);
+                  color: #fff;
+                  border: 2px solid var(--zine-ink);
+                "
+                >WIP</span
+              >
+            </div>
+          </div>
+
+          <div class="col" style="min-width: 220px">
+            <div
+              style="
+                font-family: var(--font-stamp);
+                font-size: 12px;
+                letter-spacing: 0.08em;
+                color: var(--zine-muted);
+                margin-bottom: 8px;
+              "
+            >
+              CODE BLOCK
+            </div>
+            <div class="zine-code" style="font-size: 11px">
+              <span class="kw">import</span> { <span class="fn">Note</span>,
+              <span class="fn">Tag</span> } <span class="kw">from</span>
+              <span class="st">'@garden/lit'</span>
+              <span class="cm">// define web component</span>
+              <span class="kw">class</span> <span class="fn">GardenNote</span>
+              <span class="kw">extends</span> <span class="fn">LitElement</span> {
+              <span class="fn">render</span>() { <span class="kw">return</span> html`&lt;<span
+                class="fn"
+                >article</span
+              >&gt;...&lt;/<span class="fn">article</span>&gt;` } }
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══ FOOTER NOTE ══ -->
+      <div class="zine-footer-note">
+        GARDEN.DEV DESIGN SYSTEM · NEU-BRUTALISM × PUNK ZINE · V0.1 · LIT + NEXT.JS · STORYBOOK
+        READY
+      </div>
+    </div>
+    <!-- /zine-root -->
+  </body>
+</html>
