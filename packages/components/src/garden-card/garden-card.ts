@@ -43,6 +43,7 @@ export class GardenCard extends LitElement {
     css`
       :host {
         display: block;
+
         /* Use CSS custom property so grid containers can set alternating rotations */
         transform: rotate(var(--card-rotate, -0.5deg));
         transition: transform 0.15s ease;
@@ -111,8 +112,8 @@ export class GardenCard extends LitElement {
           45deg,
           transparent,
           transparent 4px,
-          rgba(14, 12, 7, 0.08) 4px,
-          rgba(14, 12, 7, 0.08) 5px
+          rgb(14 12 7 / 8%) 4px,
+          rgb(14 12 7 / 8%) 5px
         );
       }
 
@@ -122,7 +123,7 @@ export class GardenCard extends LitElement {
         color: var(--zine-paper, #f2edd7);
         letter-spacing: 0.04em;
         z-index: 1;
-        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+        text-shadow: 2px 2px 0 rgb(0 0 0 / 40%);
       }
 
       /* Headline */

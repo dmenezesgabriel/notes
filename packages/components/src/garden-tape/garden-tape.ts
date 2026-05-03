@@ -31,7 +31,7 @@ export class GardenTape extends LitElement {
 
       [part='base'] {
         display: inline-block;
-        background: rgba(245, 200, 0, 0.75);
+        background: rgb(245 200 0 / 75%);
         padding: 3px 18px;
         font-size: 10px;
         font-family: var(--font-mono, 'Cutive Mono', monospace);
@@ -40,22 +40,22 @@ export class GardenTape extends LitElement {
         transform: rotate(var(--tape-rotation, -1.5deg));
         position: absolute;
         z-index: 20;
-        border: 1px solid rgba(0, 0, 0, 0.15);
-        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgb(0 0 0 / 15%);
+        box-shadow: 1px 1px 3px rgb(0 0 0 / 30%);
       }
 
       [part='base'].red {
-        background: rgba(212, 43, 43, 0.8);
+        background: rgb(212 43 43 / 80%);
         color: #fff;
       }
 
       [part='base'].blue {
-        background: rgba(26, 60, 143, 0.85);
+        background: rgb(26 60 143 / 85%);
         color: #fff;
       }
 
       [part='base'].white {
-        background: rgba(255, 255, 255, 0.85);
+        background: rgb(255 255 255 / 85%);
       }
     `,
   ];

@@ -87,7 +87,7 @@ export class GardenToc extends LitElement {
         gap: 6px;
         line-height: 1.4;
         width: 100%;
-        border-bottom: 1px dashed rgba(14, 12, 7, 0.2);
+        border-bottom: 1px dashed rgb(14 12 7 / 20%);
         transition: color 0.1s;
       }
 
@@ -117,7 +117,7 @@ export class GardenToc extends LitElement {
       .toc-box {
         width: 10px;
         height: 10px;
-        border: 2px solid currentColor;
+        border: 2px solid currentcolor;
         flex-shrink: 0;
         margin-top: 3px;
         display: inline-block;
@@ -133,7 +133,7 @@ export class GardenToc extends LitElement {
         content: '✕';
         position: absolute;
         top: -4px;
-        left: 0px;
+        left: 0;
         font-size: 12px;
         color: #fff;
         line-height: 1;

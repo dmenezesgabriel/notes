@@ -32,7 +32,7 @@ export class GardenDivider extends LitElement {
         height: 4px;
         background: repeating-linear-gradient(
           90deg,
-          var(--zine-ink, #0e0c07) 0px,
+          var(--zine-ink, #0e0c07) 0,
           var(--zine-ink, #0e0c07) 8px,
           transparent 8px,
           transparent 12px

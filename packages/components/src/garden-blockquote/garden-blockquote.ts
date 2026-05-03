@@ -39,7 +39,7 @@ export class GardenBlockquote extends LitElement {
         font-style: italic;
         color: var(--zine-muted, #6b6050);
         margin: 0;
-        background: rgba(14, 12, 7, 0.04);
+        background: rgb(14 12 7 / 4%);
         position: relative;
       }
 

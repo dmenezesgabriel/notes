@@ -46,6 +46,7 @@ export class GardenButton extends LitElement {
         letter-spacing: 0.06em;
         line-height: 1;
         padding: 9px 18px;
+
         /* Thick neubrutalist offset border */
         border: 3px solid var(--zine-ink, #0e0c07);
         border-right: 5px solid var(--zine-ink, #0e0c07);

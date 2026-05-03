@@ -68,6 +68,11 @@ export class GardenBreadcrumb extends LitElement {
         text-decoration: none;
       }
 
+      a:focus-visible {
+        outline: 2px solid var(--zine-yellow, #f5c800);
+        outline-offset: 2px;
+      }
+
       a:hover {
         color: var(--zine-ink, #0e0c07);
       }
@@ -77,11 +82,6 @@ export class GardenBreadcrumb extends LitElement {
         color: var(--zine-ink, #0e0c07);
         font-family: var(--font-stamp, 'Black Han Sans', sans-serif);
         font-size: 11px;
-      }
-
-      a:focus-visible {
-        outline: 2px solid var(--zine-yellow, #f5c800);
-        outline-offset: 2px;
       }
     `,
   ];

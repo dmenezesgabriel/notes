@@ -46,10 +46,10 @@ export class GardenMermaid extends LitElement {
         overflow-x: auto;
         display: flex;
         justify-content: center;
-        border: 1px solid var(--ds-border, rgba(28, 26, 22, 0.12));
+        border: 1px solid var(--ds-border, rgb(28 26 22 / 12%));
         border-radius: var(--radius-md, 8px);
         padding: var(--space-5, 24px) var(--space-4, 16px);
-        background: var(--ds-surface, #ffffff);
+        background: var(--ds-surface, #fff);
       }
 
       .wrap svg {

@@ -157,7 +157,7 @@ export class GardenNav extends LitElement {
         align-items: center;
         gap: 2px;
         margin-left: 8px;
-        border: 2px solid rgba(255, 255, 255, 0.15);
+        border: 2px solid rgb(255 255 255 / 15%);
         padding: 2px;
       }
 
@@ -170,7 +170,7 @@ export class GardenNav extends LitElement {
         align-items: center;
         justify-content: center;
         background: transparent;
-        color: rgba(255, 255, 255, 0.4);
+        color: rgb(255 255 255 / 40%);
         font-size: 12px;
         font-family: var(--font-mono, 'Cutive Mono', monospace);
         letter-spacing: 0;

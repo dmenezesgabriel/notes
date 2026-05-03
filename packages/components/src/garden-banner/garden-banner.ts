@@ -66,6 +66,7 @@ export class GardenBanner extends LitElement {
         from {
           transform: translateX(100vw);
         }
+
         to {
           transform: translateX(-100%);
         }

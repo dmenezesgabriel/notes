@@ -60,7 +60,7 @@ export class GardenSheet extends LitElement {
         align-items: center;
         justify-content: center;
         z-index: 10;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 2px 4px rgb(0 0 0 / 40%);
       }
 
       [part='wrapper'].pin-yellow {

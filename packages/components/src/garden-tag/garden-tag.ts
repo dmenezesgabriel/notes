@@ -52,6 +52,7 @@ export class GardenTag extends LitElement {
       :host(:nth-child(odd)) [part='base'] {
         transform: rotate(-0.6deg);
       }
+
       :host(:nth-child(even)) [part='base'] {
         transform: rotate(0.5deg);
       }
@@ -59,6 +60,7 @@ export class GardenTag extends LitElement {
       a[part='base'] {
         cursor: pointer;
       }
+
       a[part='base']:hover {
         transform: rotate(0) translate(-1px, -1px);
       }
