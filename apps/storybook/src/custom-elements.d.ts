@@ -13,6 +13,15 @@ declare module 'react' {
       };
 
       // Garden Design System
+      'garden-banner': React.HTMLAttributes<HTMLElement> & {
+        text?: string;
+      };
+
+      'garden-blockquote': React.HTMLAttributes<HTMLElement> & {
+        variant?: 'default' | 'accent';
+        cite?: string;
+      };
+
       'garden-tag': React.HTMLAttributes<HTMLElement> & {
         variant?: 'default' | 'accent' | 'sage' | 'yellow' | 'blue' | 'green';
         href?: string;
@@ -45,10 +54,23 @@ declare module 'react' {
         href?: string;
       };
 
+      'garden-divider': React.HTMLAttributes<HTMLElement> & {
+        variant?: 'dashed' | 'solid' | 'red';
+      };
+
+      'garden-highlight': React.HTMLAttributes<HTMLElement> & {
+        variant?: 'default' | 'blue' | 'red' | 'green';
+      };
+
       'garden-search': React.HTMLAttributes<HTMLElement> & {
         placeholder?: string;
         kbd?: string;
         value?: string;
+      };
+
+      'garden-sheet': React.HTMLAttributes<HTMLElement> & {
+        pinColor?: 'red' | 'yellow' | 'blue' | 'green';
+        heading?: string;
       };
 
       'garden-toc': React.HTMLAttributes<HTMLElement> & {
@@ -68,6 +90,12 @@ declare module 'react' {
           href: string;
           active?: boolean;
         }>;
+      };
+
+      'garden-tape': React.HTMLAttributes<HTMLElement> & {
+        variant?: 'default' | 'red' | 'blue' | 'white';
+        text?: string;
+        rotation?: number;
       };
 
       'garden-mermaid': React.HTMLAttributes<HTMLElement> & {
