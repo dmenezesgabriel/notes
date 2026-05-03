@@ -6,29 +6,28 @@ import { baseStyles } from './styles/base';
 export type CardVariant = 'default' | 'featured' | 'wiki';
 
 /**
- * `<garden-card>` — note/wiki card for listing pages.
+ * `<garden-card>` — Zine-edition note/wiki card.
+ * Thick right+bottom border, slight rotation, scrapbook feel.
  *
- * When `href` is provided the headline becomes a stretched link
- * (CSS `::after` covers the entire card) so the whole card is clickable
- * while keeping valid semantic HTML — an `<article>` is never wrapped by `<a>`.
+ * When `href` is provided the headline becomes a stretched link.
  *
  * @slot footer - Slot for tags (garden-tag elements)
  * @slot thumb  - Optional thumbnail override (wiki variant)
  * @csspart article  - Root article element
- * @csspart headline - Title element (a or span depending on href)
- * @csspart meta     - Metadata line (date, read time)
+ * @csspart headline - Title element
+ * @csspart meta     - Metadata line
  * @csspart excerpt  - Excerpt paragraph
- * @csspart footer   - Footer area (tags)
+ * @csspart footer   - Footer area
  *
  * @example
  * <garden-card
  *   headline="On building a second brain"
- *   meta="3 days ago · 8 min read"
+ *   meta="3 DAYS AGO · 8 MIN READ"
  *   excerpt="The goal is to think better."
  *   href="/notes/second-brain"
  *   variant="featured"
  * >
- *   <garden-tag slot="footer" variant="accent">pkm</garden-tag>
+ *   <garden-tag slot="footer" variant="accent">PKM</garden-tag>
  * </garden-card>
  */
 @customElement('garden-card')
@@ -44,139 +43,167 @@ export class GardenCard extends LitElement {
     css`
       :host {
         display: block;
+        /* Use CSS custom property so grid containers can set alternating rotations */
+        transform: rotate(var(--card-rotate, -0.5deg));
+        transition: transform 0.15s ease;
+      }
+
+      :host(:hover) {
+        transform: rotate(0deg) scale(1.01) !important;
+        z-index: 10;
+        position: relative;
       }
 
       article {
         position: relative;
-        background: var(--ds-surface, #fff);
-        border: 1px solid var(--ds-border, rgba(28, 26, 22, 0.12));
-        border-radius: var(--radius-lg, 12px);
-        padding: 1rem 1.1rem;
-        transition: box-shadow var(--transition-base, 200ms ease);
+        background: var(--zine-paper, #f2edd7);
+        border: 3px solid var(--zine-ink, #0e0c07);
+        border-right: 5px solid var(--zine-ink, #0e0c07);
+        border-bottom: 5px solid var(--zine-ink, #0e0c07);
+        padding: 1rem;
         height: 100%;
       }
 
-      article:hover {
-        box-shadow: var(--shadow-md, 0 4px 12px rgba(28, 26, 22, 0.1));
-      }
-
+      /* Featured — yellow tint + red top border */
       article.featured {
-        border-left: 3px solid var(--ds-accent, #a85025);
-        border-radius: 0 var(--radius-lg, 12px) var(--radius-lg, 12px) 0;
+        background: var(--zine-yellow-lt, #fdf0a0);
+        border-top: 5px solid var(--zine-red, #d42b2b);
       }
 
+      article.featured::after {
+        content: '★ FEATURED';
+        position: absolute;
+        top: -16px;
+        right: 10px;
+        font-family: var(--font-stamp, 'Black Han Sans', sans-serif);
+        font-size: 10px;
+        background: var(--zine-red, #d42b2b);
+        color: #fff;
+        padding: 2px 8px;
+        letter-spacing: 0.08em;
+        z-index: 5;
+        border: 2px solid var(--zine-ink, #0e0c07);
+      }
+
+      /* Wiki variant */
       article.wiki {
         overflow: hidden;
         padding-top: 0;
       }
 
-      /* Pixel decorative thumbnail for wiki cards */
+      /* Wiki thumb */
       .wiki-thumb {
         height: 80px;
-        background: var(--ds-tag-bg, #eeeae0);
+        background: var(--zine-blue, #1a3c8f);
         display: flex;
         align-items: center;
         justify-content: center;
-        border-bottom: 1px solid var(--ds-border, rgba(28, 26, 22, 0.12));
-        margin: 0 -1.1rem 0.875rem;
-        border-radius: var(--radius-lg, 12px) var(--radius-lg, 12px) 0 0;
+        border-bottom: 3px solid var(--zine-ink, #0e0c07);
+        position: relative;
+        overflow: hidden;
       }
 
-      .wiki-thumb-grid {
-        display: grid;
-        grid-template-columns: repeat(6, 8px);
-        grid-template-rows: repeat(3, 8px);
-        gap: 3px;
-        opacity: 0.25;
+      .wiki-thumb::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 4px,
+          rgba(14, 12, 7, 0.08) 4px,
+          rgba(14, 12, 7, 0.08) 5px
+        );
       }
 
-      .wiki-thumb-grid span {
-        width: 8px;
-        height: 8px;
-        border-radius: 1px;
-        background: var(--ds-accent, #a85025);
+      .wiki-thumb-text {
+        font-family: var(--font-display, 'Bebas Neue', sans-serif);
+        font-size: 28px;
+        color: var(--zine-paper, #f2edd7);
+        letter-spacing: 0.04em;
+        z-index: 1;
+        text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
       }
 
-      .wiki-thumb-grid span:nth-child(3n + 1) {
-        background: var(--ds-sage, #4d7350);
-      }
-
-      .wiki-thumb-grid span:nth-child(3n + 2) {
-        background: var(--ds-ink, #1c1a16);
-        opacity: 0.4;
-      }
-
-      /* Headline — plain span by default */
+      /* Headline */
       [part='headline'] {
-        font-family: var(--font-body, 'Lora', serif);
-        font-size: 14px;
-        font-weight: 500;
-        color: var(--ds-ink, #1c1a16);
-        margin-bottom: 4px;
-        letter-spacing: -0.01em;
+        font-family: var(--font-display, 'Bebas Neue', sans-serif);
+        font-size: 18px;
+        color: var(--zine-ink, #0e0c07);
+        letter-spacing: 0.03em;
+        margin-bottom: 5px;
+        line-height: 1.2;
         display: block;
         text-decoration: none;
       }
 
-      /* Stretched link: the headline <a> expands to cover the whole card */
-      a[part='headline'] {
-        color: var(--ds-ink, #1c1a16);
+      /* Scribble underline */
+      [part='headline']::after {
+        content: '';
+        display: block;
+        height: 3px;
+        width: 60%;
+        background: var(--zine-red, #d42b2b);
+        margin-top: 3px;
+        transform: rotate(-0.5deg);
       }
 
-      a[part='headline']::after {
+      /* Stretched link */
+      a[part='headline']::before {
         content: '';
         position: absolute;
         inset: 0;
         z-index: 1;
-        border-radius: inherit;
       }
 
-      a[part='headline']:focus-visible {
-        outline: none;
-      }
-
-      a[part='headline']:focus-visible::after {
-        outline: 2px solid var(--ds-accent, #a85025);
+      a[part='headline']:focus-visible::before {
+        outline: 2px solid var(--zine-yellow, #f5c800);
         outline-offset: 3px;
       }
 
       [part='meta'] {
-        font-family: var(--font-ui, system-ui, sans-serif);
-        font-size: 12px;
-        color: var(--ds-muted, #6b6860);
-        margin-bottom: 0.6rem;
+        font-family: var(--font-mono, 'Cutive Mono', monospace);
+        font-size: 10px;
+        color: var(--zine-muted, #6b6050);
+        margin-bottom: 8px;
         display: block;
+        letter-spacing: 0.05em;
       }
 
       [part='excerpt'] {
-        font-family: var(--font-body, 'Lora', serif);
+        font-family: var(--font-body, 'Special Elite', serif);
         font-size: 13px;
-        color: var(--ds-muted, #6b6860);
+        color: var(--zine-ink-faded, #2c2820);
         line-height: 1.65;
         display: block;
         margin: 0;
       }
 
-      /* Footer sits above the stretched link overlay */
       [part='footer'] {
         position: relative;
         z-index: 2;
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
-        margin-top: 0.75rem;
+        margin-top: 10px;
       }
     `,
   ];
 
   private _renderThumb() {
     if (this.variant !== 'wiki') return nothing;
+    const abbr = this.headline
+      ? this.headline
+          .split(/\s+/)
+          .slice(0, 2)
+          .map((w) => w[0])
+          .join('')
+          .toUpperCase()
+      : 'WK';
     return html`
       <slot name="thumb">
         <div class="wiki-thumb" aria-hidden="true">
-          <div class="wiki-thumb-grid">
-            ${Array.from({ length: 18 }, () => html`<span></span>`)}
-          </div>
+          <span class="wiki-thumb-text">${abbr}</span>
         </div>
       </slot>
     `;

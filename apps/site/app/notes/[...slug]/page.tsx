@@ -149,13 +149,15 @@ export default async function NotePage({ params }: { params: Promise<{ slug: str
     <main style={{ padding: 'var(--space-5) 0 var(--space-8)' }}>
       <div className="page-wrap">
         {/* ── Breadcrumb ──────────────────────────────────────────── */}
-        <SiteBreadcrumb items={breadcrumbItems} />
+        <div style={{ margin: '1rem 0' }}>
+          <SiteBreadcrumb items={breadcrumbItems} />
+        </div>
 
         {/* ── Article + Sidebar layout ───────────────────────────── */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: hasToc ? '1fr minmax(160px, 200px)' : '1fr',
+            gridTemplateColumns: hasToc ? '1fr minmax(180px, 210px)' : '1fr',
             gap: 'var(--space-6)',
             alignItems: 'start',
             marginTop: 'var(--space-4)',
@@ -173,10 +175,14 @@ export default async function NotePage({ params }: { params: Promise<{ slug: str
                 marginBottom: 'var(--space-3)',
               }}
             >
-              {slug[0] && <garden-tag variant="sage">{categoryLabel(slug[0])}</garden-tag>}
+              {slug[0] && (
+                <garden-tag suppressHydrationWarning variant="sage">
+                  {categoryLabel(slug[0]).toUpperCase()}
+                </garden-tag>
+              )}
               {(frontmatter as Record<string, unknown>).status != null && (
-                <garden-tag variant="default">
-                  {String((frontmatter as Record<string, unknown>).status)}
+                <garden-tag suppressHydrationWarning variant="default">
+                  {String((frontmatter as Record<string, unknown>).status).toUpperCase()}
                 </garden-tag>
               )}
             </div>
@@ -186,11 +192,10 @@ export default async function NotePage({ params }: { params: Promise<{ slug: str
               id="note-title"
               style={{
                 fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(24px, 4vw, 36px)',
-                fontWeight: 500,
-                letterSpacing: '-0.025em',
-                lineHeight: 1.15,
-                color: 'var(--ds-ink)',
+                fontSize: 'clamp(28px, 4vw, 48px)',
+                letterSpacing: '0.03em',
+                lineHeight: 1.1,
+                color: 'var(--zine-paper)',
                 margin: '0 0 1.5rem',
               }}
             >
@@ -207,17 +212,16 @@ export default async function NotePage({ params }: { params: Promise<{ slug: str
                 style={{
                   marginTop: 'var(--space-7)',
                   paddingTop: 'var(--space-5)',
-                  borderTop: '1px solid var(--ds-border)',
+                  borderTop: '3px solid rgba(242,237,215,0.2)',
                 }}
               >
                 <h2
                   style={{
-                    fontFamily: 'var(--font-ui)',
-                    fontSize: 13,
-                    fontWeight: 500,
+                    fontFamily: 'var(--font-stamp)',
+                    fontSize: 11,
                     textTransform: 'uppercase',
-                    letterSpacing: '0.06em',
-                    color: 'var(--ds-muted)',
+                    letterSpacing: '0.1em',
+                    color: 'var(--zine-paper)',
                     margin: '0 0 var(--space-3)',
                   }}
                 >

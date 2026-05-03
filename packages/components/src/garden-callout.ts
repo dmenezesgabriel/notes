@@ -3,19 +3,20 @@ import { customElement, property } from 'lit/decorators.js';
 
 import { baseStyles } from './styles/base';
 
-export type CalloutVariant = 'note' | 'tip' | 'warning';
+export type CalloutVariant = 'note' | 'tip' | 'warning' | 'info';
 
 /**
- * `<garden-callout>` — inline highlighted block for notes, tips, and warnings.
+ * `<garden-callout>` — Zine-edition xerox stamp callout block.
+ * Hard borders, stamp label, flat background — rubber-stamp aesthetics.
  *
  * @slot - Body content
- * @csspart base  - Outer container
- * @csspart heading - Optional heading text
+ * @csspart base    - Outer container
+ * @csspart heading - Optional label/heading
  *
  * @example
- * <garden-callout heading="Tip">Start with a weekly review.</garden-callout>
- * <garden-callout variant="tip" heading="Related">Zettelkasten, PARA.</garden-callout>
- * <garden-callout variant="warning">Breaking change ahead.</garden-callout>
+ * <garden-callout heading="✦ TIP">Start with a weekly review.</garden-callout>
+ * <garden-callout variant="info" heading="→ RELATED">Zettelkasten, PARA.</garden-callout>
+ * <garden-callout variant="warning" heading="⚠ WARNING">Breaking change ahead.</garden-callout>
  */
 @customElement('garden-callout')
 export class GardenCallout extends LitElement {
@@ -30,37 +31,72 @@ export class GardenCallout extends LitElement {
       }
 
       [part='base'] {
-        border-left: 3px solid var(--ds-accent, #a85025);
-        background: var(--ds-accent-light, #f5e8e1);
-        border-radius: 0 var(--radius-md, 8px) var(--radius-md, 8px) 0;
+        border: 3px solid var(--zine-ink, #0e0c07);
+        border-right: 4px solid var(--zine-ink, #0e0c07);
+        border-bottom: 4px solid var(--zine-ink, #0e0c07);
         padding: 0.75rem 1rem;
-        font-family: var(--font-body, 'Lora', serif);
+        font-family: var(--font-body, 'Special Elite', serif);
         font-size: 13px;
-        color: var(--ds-ink, #1c1a16);
+        color: var(--zine-ink-faded, #2c2820);
+        position: relative;
+        background: var(--zine-yellow-lt, #fdf0a0);
         line-height: 1.7;
       }
 
-      [part='base'].tip {
-        border-left-color: var(--ds-sage, #4d7350);
-        background: var(--ds-sage-light, #e6eee6);
+      [part='base'].info {
+        background: #eaf0ff;
+        border-color: var(--zine-blue, #1a3c8f);
+        border-right-color: var(--zine-blue, #1a3c8f);
+        border-bottom-color: var(--zine-blue, #1a3c8f);
       }
 
       [part='base'].warning {
-        border-left-color: #b45309;
-        background: #fef3c7;
+        background: #fff3cc;
+        border-color: var(--zine-orange, #e85d1a);
+        border-right-color: var(--zine-orange, #e85d1a);
+        border-bottom-color: var(--zine-orange, #e85d1a);
+      }
+
+      [part='base'].tip {
+        background: var(--zine-green-lt, #a8d8a0);
+        border-color: var(--zine-green, #1d6b2e);
+        border-right-color: var(--zine-green, #1d6b2e);
+        border-bottom-color: var(--zine-green, #1d6b2e);
       }
 
       [part='heading'] {
-        font-weight: 600;
+        font-family: var(--font-stamp, 'Black Han Sans', sans-serif);
+        font-size: 10px;
+        color: var(--zine-red, #d42b2b);
+        letter-spacing: 0.1em;
         margin-bottom: 4px;
         display: block;
-        font-size: 13px;
+        text-transform: uppercase;
+      }
+
+      [part='base'].info [part='heading'] {
+        color: var(--zine-blue, #1a3c8f);
+      }
+
+      [part='base'].warning [part='heading'] {
+        color: var(--zine-orange, #e85d1a);
+      }
+
+      [part='base'].tip [part='heading'] {
+        color: var(--zine-green, #1d6b2e);
       }
     `,
   ];
 
   render() {
-    const cls = this.variant !== 'note' ? this.variant : '';
+    const variantMap: Record<CalloutVariant, string> = {
+      note: '',
+      tip: 'tip',
+      warning: 'warning',
+      info: 'info',
+    };
+    const cls = variantMap[this.variant] ?? '';
+
     return html`
       <div part="base" class=${cls} role="note">
         ${this.heading ? html`<span part="heading">${this.heading}</span>` : ''}

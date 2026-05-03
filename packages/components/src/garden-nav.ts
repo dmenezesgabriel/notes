@@ -10,36 +10,35 @@ export interface NavLink {
 }
 
 /**
- * `<garden-nav>` — site-level navigation bar with brand, links, and theme toggle.
+ * `<garden-nav>` — Zine-edition site navigation bar.
+ * Thick black bar with misregistered red shadow, ransom-note brand,
+ * and stamp-style nav links.
+ *
  * Emits `garden-theme-change` with `{ detail: { theme: 'light' | 'dark' } }`.
  *
- * @slot brand-icon - Override the brand accent dot
- * @slot actions    - Slot after nav links (search, avatar, etc.)
+ * @slot brand-icon - Override the brand area
+ * @slot actions    - Slot after nav links
  * @csspart nav        - The <nav> element
  * @csspart brand      - Brand/logo area
  * @csspart links      - Links wrapper
  * @csspart link       - Each nav link anchor
- * @csspart theme-light - Light theme toggle button
- * @csspart theme-dark  - Dark theme toggle button
  *
  * @fires garden-theme-change — When the user switches themes
  *
  * @example
- * <garden-nav brand="garden.dev" .links=${[
- *   { label: 'notes', href: '/notes', active: true },
- *   { label: 'wiki', href: '/wiki' },
+ * <garden-nav brand="GARDEN.DEV" .links=${[
+ *   { label: 'NOTES', href: '/notes', active: true },
+ *   { label: 'WIKI', href: '/wiki' },
  * ]}></garden-nav>
  */
 @customElement('garden-nav')
 export class GardenNav extends LitElement {
-  @property() brand = 'garden.dev';
+  @property() brand = 'GARDEN.DEV';
   @property({ type: Array }) links: NavLink[] = [];
   @state() private _theme: 'light' | 'dark' = 'light';
 
   override connectedCallback() {
     super.connectedCallback();
-    // Initialise from whatever the document already has (set by the inline
-    // script in layout.tsx that reads localStorage before hydration).
     const docTheme = document.documentElement.getAttribute('data-theme');
     if (docTheme === 'dark' || docTheme === 'light') {
       this._theme = docTheme;
@@ -56,62 +55,67 @@ export class GardenNav extends LitElement {
         z-index: 100;
       }
 
+      /* ── The thick black bar ─────────────────────────────────────────── */
       header {
-        background: var(--ds-surface, #fff);
-        border-bottom: 1px solid var(--ds-border, rgba(28, 26, 22, 0.12));
+        background: var(--zine-ink, #0e0c07);
+        border: 3px solid var(--zine-ink, #0e0c07);
+        border-bottom: 5px solid var(--zine-ink, #0e0c07);
         padding: 0 1.25rem;
+        height: 56px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 52px;
-        backdrop-filter: blur(8px);
-        -webkit-backdrop-filter: blur(8px);
-        background: color-mix(in srgb, var(--ds-surface, #fff) 92%, transparent);
+        position: relative;
+        overflow: visible;
       }
 
+      /* Misregistered red shadow (xerox artifact) */
+      header::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: var(--zine-red, #d42b2b);
+        transform: translate(3px, 3px);
+        z-index: -1;
+      }
+
+      /* ── Brand ────────────────────────────────────────────────────────── */
       [part='brand'] {
-        font-family: var(--font-ui, system-ui, sans-serif);
-        font-size: 15px;
-        font-weight: 500;
-        color: var(--ds-ink, #1c1a16);
-        letter-spacing: -0.01em;
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        font-family: var(--font-display, 'Bebas Neue', sans-serif);
+        font-size: 28px;
+        color: var(--zine-yellow, #f5c800);
+        letter-spacing: 0.04em;
+        line-height: 1;
+        position: relative;
         text-decoration: none;
+        cursor: pointer;
+      }
+
+      /* Blue ghost text behind brand (misregistration) */
+      [part='brand']::after {
+        content: attr(data-brand);
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        color: var(--zine-blue-lt, #4a80d4);
+        z-index: -1;
+        opacity: 0.6;
+        pointer-events: none;
       }
 
       [part='brand']:focus-visible {
-        outline: 2px solid var(--ds-accent, #a85025);
-        outline-offset: 3px;
-        border-radius: 4px;
+        outline: 2px solid var(--zine-yellow, #f5c800);
+        outline-offset: 4px;
       }
 
-      .brand-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background: var(--ds-accent, #a85025);
-        flex-shrink: 0;
-        animation: pulse 3s ease infinite;
-      }
-
-      @keyframes pulse {
-        0%,
-        100% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0.6;
-        }
-      }
-
+      /* ── Right side ───────────────────────────────────────────────────── */
       .right {
         display: flex;
         align-items: center;
         gap: 4px;
       }
 
+      /* ── Nav links ────────────────────────────────────────────────────── */
       [part='links'] {
         display: flex;
         gap: 2px;
@@ -119,69 +123,66 @@ export class GardenNav extends LitElement {
       }
 
       [part='link'] {
-        font-family: var(--font-ui, system-ui, sans-serif);
-        font-size: 13px;
-        color: var(--ds-muted, #6b6860);
-        padding: 4px 10px;
-        border-radius: var(--radius-md, 8px);
+        font-family: var(--font-stamp, 'Black Han Sans', sans-serif);
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        color: #ccc;
+        padding: 5px 12px;
+        border: 2px solid transparent;
         cursor: pointer;
         text-decoration: none;
-        transition:
-          background var(--transition-fast, 120ms ease),
-          color var(--transition-fast, 120ms ease);
+        background: none;
+        line-height: 1;
       }
 
       [part='link']:hover {
-        background: var(--ds-tag-bg, #eeeae0);
-        color: var(--ds-ink, #1c1a16);
+        border-color: var(--zine-yellow, #f5c800);
+        color: var(--zine-yellow, #f5c800);
       }
 
       [part='link'][aria-current='page'] {
-        color: var(--ds-accent, #a85025);
-        font-weight: 500;
+        background: var(--zine-yellow, #f5c800);
+        color: var(--zine-ink, #0e0c07);
+        border-color: var(--zine-yellow, #f5c800);
       }
 
       [part='link']:focus-visible {
-        outline: 2px solid var(--ds-accent, #a85025);
+        outline: 2px solid var(--zine-yellow, #f5c800);
         outline-offset: 2px;
       }
 
+      /* ── Theme toggle ─────────────────────────────────────────────────── */
       .theme-toggle {
-        background: var(--ds-toggle-bg, #e8e4d8);
-        border: 1px solid var(--ds-border, rgba(28, 26, 22, 0.12));
-        border-radius: 20px;
-        padding: 3px;
-        cursor: pointer;
         display: flex;
         align-items: center;
         gap: 2px;
         margin-left: 8px;
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        padding: 2px;
       }
 
       .theme-btn {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
+        width: 26px;
+        height: 22px;
         border: none;
         cursor: pointer;
         display: flex;
         align-items: center;
         justify-content: center;
         background: transparent;
-        color: var(--ds-muted, #6b6860);
-        font-size: 13px;
-        transition:
-          background var(--transition-fast, 120ms ease),
-          color var(--transition-fast, 120ms ease);
+        color: rgba(255, 255, 255, 0.4);
+        font-size: 12px;
+        font-family: var(--font-mono, 'Cutive Mono', monospace);
+        letter-spacing: 0;
       }
 
       .theme-btn.active {
-        background: var(--ds-surface, #fff);
-        color: var(--ds-ink, #1c1a16);
+        background: var(--zine-yellow, #f5c800);
+        color: var(--zine-ink, #0e0c07);
       }
 
       .theme-btn:focus-visible {
-        outline: 2px solid var(--ds-accent, #a85025);
+        outline: 2px solid var(--zine-yellow, #f5c800);
         outline-offset: 2px;
       }
     `,
@@ -198,7 +199,7 @@ export class GardenNav extends LitElement {
     );
   }
 
-  /** Allow external code (site-nav) to imperatively sync the toggle UI. */
+  /** Allow external code to imperatively sync the toggle UI. */
   setTheme(theme: 'light' | 'dark') {
     this._theme = theme;
   }
@@ -206,11 +207,8 @@ export class GardenNav extends LitElement {
   render() {
     return html`
       <header>
-        <a part="brand" href="/">
-          <slot name="brand-icon">
-            <span class="brand-dot" aria-hidden="true"></span>
-          </slot>
-          ${this.brand}
+        <a part="brand" href="/" data-brand=${this.brand}>
+          <slot name="brand-icon">${this.brand}</slot>
         </a>
 
         <div class="right">
@@ -218,7 +216,7 @@ export class GardenNav extends LitElement {
             ${this.links.map(
               (link) => html`
                 <a part="link" href=${link.href} aria-current=${link.active ? 'page' : nothing}>
-                  ${link.label}
+                  ${link.label.toUpperCase()}
                 </a>
               `,
             )}

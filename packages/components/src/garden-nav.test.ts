@@ -61,7 +61,7 @@ describe('garden-nav', () => {
     await waitForUpdate(el);
     const activeLink = el.shadowRoot!.querySelector('[part="link"][aria-current="page"]');
     expect(activeLink).not.toBeNull();
-    expect(activeLink!.textContent).toContain('notes');
+    expect(activeLink!.textContent?.trim().toLowerCase()).toContain('notes');
   });
 
   it('emits garden-theme-change when toggle is clicked', async () => {

@@ -16,3 +16,4 @@ dist
 _
 test-results
 tsconfig.tsbuildinfo
+.playwright-mcp

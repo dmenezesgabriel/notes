@@ -16,27 +16,29 @@ declare module 'react' {
       >;
       'garden-tag': React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement> & {
-          variant?: 'default' | 'accent' | 'sage';
+          variant?: 'default' | 'accent' | 'sage' | 'yellow' | 'blue' | 'green';
           href?: string;
         },
         HTMLElement
       >;
       'garden-button': React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement> & {
-          variant?: 'default' | 'primary' | 'ghost';
+          variant?: 'default' | 'primary' | 'ghost' | 'yellow' | 'blue';
           disabled?: boolean;
           type?: 'button' | 'submit' | 'reset';
         },
         HTMLElement
       >;
       'garden-badge': React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement> & { variant?: 'accent' | 'sage' | 'muted' },
+        React.HTMLAttributes<HTMLElement> & {
+          variant?: 'accent' | 'sage' | 'muted' | 'yellow' | 'blue';
+        },
         HTMLElement
       >;
       'garden-breadcrumb': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
       'garden-callout': React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement> & {
-          variant?: 'note' | 'tip' | 'warning';
+          variant?: 'note' | 'tip' | 'warning' | 'info';
           heading?: string;
         },
         HTMLElement

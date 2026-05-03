@@ -12,7 +12,8 @@ export interface TocEntry {
 }
 
 /**
- * `<garden-toc>` — sticky table-of-contents sidebar.
+ * `<garden-toc>` — Zine-edition table-of-contents sidebar.
+ * Hand-drawn checklist vibe — rotated, marker title, checkbox items.
  *
  * @csspart wrapper - Outer container
  * @csspart title   - "On this page" heading
@@ -38,21 +39,22 @@ export class GardenToc extends LitElement {
       }
 
       [part='wrapper'] {
-        background: var(--ds-surface, #fff);
-        border: 1px solid var(--ds-border, rgba(28, 26, 22, 0.12));
-        border-radius: var(--radius-lg, 12px);
+        background: var(--zine-paper-alt, #ede5c8);
+        border: 3px solid var(--zine-ink, #0e0c07);
+        border-right: 5px solid var(--zine-ink, #0e0c07);
+        border-bottom: 5px solid var(--zine-ink, #0e0c07);
         padding: 1rem;
+        transform: rotate(0.7deg);
       }
 
       [part='title'] {
-        font-family: var(--font-ui, system-ui, sans-serif);
-        font-size: 12px;
-        font-weight: 500;
-        color: var(--ds-muted, #6b6860);
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
+        font-family: var(--font-marker, 'Permanent Marker', cursive);
+        font-size: 15px;
+        color: var(--zine-ink, #0e0c07);
         display: block;
-        margin-bottom: 0.6rem;
+        margin-bottom: 0.8rem;
+        border-bottom: 3px solid var(--zine-ink, #0e0c07);
+        padding-bottom: 6px;
       }
 
       [part='list'] {
@@ -66,52 +68,76 @@ export class GardenToc extends LitElement {
 
       [part='item'] {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 6px;
       }
 
       [part='item'].depth-2 {
-        padding-left: 12px;
+        padding-left: 16px;
       }
 
       [part='item'] a {
-        font-family: var(--font-ui, system-ui, sans-serif);
-        font-size: 13px;
-        color: var(--ds-muted, #6b6860);
+        font-family: var(--font-body, 'Special Elite', serif);
+        font-size: 12px;
+        color: var(--zine-ink-faded, #2c2820);
         text-decoration: none;
-        padding: 3px 0;
+        padding: 4px 0;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 6px;
-        transition: color var(--transition-fast, 120ms ease);
+        line-height: 1.4;
         width: 100%;
+        border-bottom: 1px dashed rgba(14, 12, 7, 0.2);
+        transition: color 0.1s;
+      }
+
+      [part='item']:last-child a {
+        border-bottom: none;
       }
 
       [part='item'].depth-2 a {
-        font-size: 12px;
+        font-size: 11px;
       }
 
       [part='item'] a:hover {
-        color: var(--ds-ink, #1c1a16);
+        color: var(--zine-red, #d42b2b);
       }
 
       [part='item'] a[aria-current='true'] {
-        color: var(--ds-accent, #a85025);
-        font-weight: 500;
+        color: var(--zine-red, #d42b2b);
+        font-family: var(--font-marker, 'Permanent Marker', cursive);
       }
 
       [part='item'] a:focus-visible {
-        outline: 2px solid var(--ds-accent, #a85025);
+        outline: 2px solid var(--zine-yellow, #f5c800);
         outline-offset: 2px;
-        border-radius: 2px;
       }
 
-      .dot {
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background: currentColor;
+      /* Checkbox / tick box */
+      .toc-box {
+        width: 10px;
+        height: 10px;
+        border: 2px solid currentColor;
         flex-shrink: 0;
+        margin-top: 3px;
+        display: inline-block;
+        position: relative;
+      }
+
+      a[aria-current='true'] .toc-box {
+        background: var(--zine-red, #d42b2b);
+        border-color: var(--zine-red, #d42b2b);
+      }
+
+      a[aria-current='true'] .toc-box::after {
+        content: '✕';
+        position: absolute;
+        top: -4px;
+        left: 0px;
+        font-size: 12px;
+        color: #fff;
+        line-height: 1;
+        font-family: var(--font-mono, 'Cutive Mono', monospace);
       }
     `,
   ];
@@ -126,7 +152,7 @@ export class GardenToc extends LitElement {
               (item) => html`
                 <li part="item" class=${item.depth === 2 ? 'depth-2' : ''}>
                   <a href=${`#${item.id}`} aria-current=${item.active ? 'true' : nothing}>
-                    <span class="dot" aria-hidden="true"></span>
+                    <span class="toc-box" aria-hidden="true"></span>
                     ${item.label}
                   </a>
                 </li>

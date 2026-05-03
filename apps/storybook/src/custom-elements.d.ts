@@ -14,17 +14,18 @@ declare module 'react' {
 
       // Garden Design System
       'garden-tag': React.HTMLAttributes<HTMLElement> & {
-        variant?: 'default' | 'accent' | 'sage';
+        variant?: 'default' | 'accent' | 'sage' | 'yellow' | 'blue' | 'green';
+        href?: string;
       };
 
       'garden-button': React.HTMLAttributes<HTMLElement> & {
-        variant?: 'default' | 'primary' | 'ghost';
+        variant?: 'default' | 'primary' | 'ghost' | 'yellow' | 'blue';
         disabled?: boolean;
         type?: 'button' | 'submit' | 'reset';
       };
 
       'garden-badge': React.HTMLAttributes<HTMLElement> & {
-        variant?: 'accent' | 'sage' | 'muted';
+        variant?: 'accent' | 'sage' | 'muted' | 'yellow' | 'blue';
       };
 
       'garden-breadcrumb': React.HTMLAttributes<HTMLElement> & {
@@ -32,7 +33,7 @@ declare module 'react' {
       };
 
       'garden-callout': React.HTMLAttributes<HTMLElement> & {
-        variant?: 'note' | 'tip' | 'warning';
+        variant?: 'note' | 'tip' | 'warning' | 'info';
         heading?: string;
       };
 

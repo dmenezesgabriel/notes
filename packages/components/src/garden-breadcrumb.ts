@@ -9,7 +9,8 @@ export interface BreadcrumbItem {
 }
 
 /**
- * `<garden-breadcrumb>` — accessible navigation trail.
+ * `<garden-breadcrumb>` — Zine-edition accessible navigation trail.
+ * Mono font, white background, hard border, red separators.
  *
  * @example
  * <garden-breadcrumb .items=${[
@@ -30,31 +31,36 @@ export class GardenBreadcrumb extends LitElement {
       }
 
       nav {
-        font-family: var(--font-ui, system-ui, sans-serif);
+        display: inline-block;
       }
 
       ol {
         list-style: none;
         display: flex;
         flex-wrap: wrap;
-        gap: 4px;
+        gap: 0;
         align-items: center;
-        padding: 0;
+        padding: 5px 10px;
         margin: 0;
+        background: #fff;
+        border: 2px solid var(--zine-ink, #0e0c07);
+        border-right: 3px solid var(--zine-ink, #0e0c07);
+        border-bottom: 3px solid var(--zine-ink, #0e0c07);
       }
 
       li {
         display: flex;
         align-items: center;
-        gap: 4px;
-        font-size: 12px;
-        color: var(--ds-muted, #6b6860);
+        font-family: var(--font-mono, 'Cutive Mono', monospace);
+        font-size: 11px;
+        color: var(--zine-muted, #6b6050);
       }
 
-      li:not(:last-child)::after {
+      li + li::before {
         content: '/';
-        opacity: 0.4;
-        margin-left: 4px;
+        color: var(--zine-red, #d42b2b);
+        font-weight: bold;
+        padding: 0 6px;
       }
 
       a {
@@ -63,17 +69,19 @@ export class GardenBreadcrumb extends LitElement {
       }
 
       a:hover {
-        color: var(--ds-ink, #1c1a16);
+        color: var(--zine-ink, #0e0c07);
       }
 
-      li[aria-current='page'] {
-        color: var(--ds-ink, #1c1a16);
+      li:last-child span,
+      li:last-child a {
+        color: var(--zine-ink, #0e0c07);
+        font-family: var(--font-stamp, 'Black Han Sans', sans-serif);
+        font-size: 11px;
       }
 
       a:focus-visible {
-        outline: 2px solid var(--ds-accent, #a85025);
+        outline: 2px solid var(--zine-yellow, #f5c800);
         outline-offset: 2px;
-        border-radius: 2px;
       }
     `,
   ];

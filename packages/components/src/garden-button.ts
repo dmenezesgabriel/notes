@@ -3,20 +3,21 @@ import { customElement, property } from 'lit/decorators.js';
 
 import { baseStyles } from './styles/base';
 
-export type ButtonVariant = 'default' | 'primary' | 'ghost';
+export type ButtonVariant = 'default' | 'primary' | 'ghost' | 'yellow' | 'blue';
 export type ButtonType = 'button' | 'submit' | 'reset';
 
 /**
- * `<garden-button>` — action button with three visual variants.
+ * `<garden-button>` — Zine-edition punk rubber stamp button.
  *
  * @slot - Button label / content
  * @slot icon-left - Optional leading icon
  * @csspart button - The native button element
  *
  * @example
- * <garden-button variant="primary">Publish note</garden-button>
- * <garden-button>Save draft</garden-button>
- * <garden-button variant="ghost">Cancel</garden-button>
+ * <garden-button variant="primary">✦ PUBLISH NOTE</garden-button>
+ * <garden-button variant="yellow">◆ SAVE DRAFT</garden-button>
+ * <garden-button>✂ CLIP</garden-button>
+ * <garden-button variant="ghost">✕ CANCEL</garden-button>
  */
 @customElement('garden-button')
 export class GardenButton extends LitElement {
@@ -33,75 +34,100 @@ export class GardenButton extends LitElement {
 
       :host([disabled]) {
         pointer-events: none;
-        opacity: 0.5;
+        opacity: 0.45;
       }
 
       button {
         display: inline-flex;
         align-items: center;
         gap: 6px;
-        font-family: var(--font-ui, system-ui, sans-serif);
-        font-size: 13px;
-        font-weight: 500;
+        font-family: var(--font-stamp, 'Black Han Sans', sans-serif);
+        font-size: 12px;
+        letter-spacing: 0.06em;
         line-height: 1;
-        padding: 7px 16px;
-        border-radius: var(--radius-md, 8px);
-        border: 1px solid var(--ds-border-strong, rgba(28, 26, 22, 0.25));
-        background: var(--ds-surface, #fff);
-        color: var(--ds-ink, #1c1a16);
+        padding: 9px 18px;
+        /* Thick neubrutalist offset border */
+        border: 3px solid var(--zine-ink, #0e0c07);
+        border-right: 5px solid var(--zine-ink, #0e0c07);
+        border-bottom: 5px solid var(--zine-ink, #0e0c07);
         cursor: pointer;
-        transition:
-          background var(--transition-fast, 120ms ease),
-          border-color var(--transition-fast, 120ms ease),
-          color var(--transition-fast, 120ms ease);
+        background: var(--zine-paper, #f2edd7);
+        color: var(--zine-ink, #0e0c07);
         white-space: nowrap;
-        letter-spacing: 0.01em;
+        position: relative;
+        transition:
+          transform 0.1s,
+          border-width 0.1s;
       }
 
       button:hover {
-        background: var(--ds-tag-bg, #eeeae0);
+        transform: translate(-1px, -1px);
+      }
+
+      button:active {
+        transform: translate(3px, 3px);
+        border-right-width: 3px;
+        border-bottom-width: 3px;
       }
 
       button:focus-visible {
-        outline: 2px solid var(--ds-accent, #a85025);
+        outline: 2px solid var(--zine-yellow, #f5c800);
         outline-offset: 2px;
       }
 
+      /* Primary — red */
       button.primary {
-        background: var(--ds-accent, #a85025);
+        background: var(--zine-red, #d42b2b);
         color: #fff;
-        border-color: transparent;
+        border-color: var(--zine-red-dark, #8a0000);
       }
 
       button.primary:hover {
-        background: var(--ds-accent-dark, #8b3e1f);
+        background: var(--zine-red-dark, #8a0000);
       }
 
+      /* Yellow */
+      button.yellow {
+        background: var(--zine-yellow, #f5c800);
+        color: var(--zine-ink, #0e0c07);
+        border-color: var(--zine-ink, #0e0c07);
+      }
+
+      /* Blue */
+      button.blue {
+        background: var(--zine-blue, #1a3c8f);
+        color: #fff;
+        border-color: var(--zine-ink, #0e0c07);
+      }
+
+      /* Ghost */
       button.ghost {
-        border-color: transparent;
+        border-color: var(--zine-muted, #6b6050);
+        border-right-color: var(--zine-muted, #6b6050);
+        border-bottom-color: var(--zine-muted, #6b6050);
+        color: var(--zine-muted, #6b6050);
         background: transparent;
-        color: var(--ds-muted, #6b6860);
       }
 
       button.ghost:hover {
-        color: var(--ds-ink, #1c1a16);
-        background: var(--ds-tag-bg, #eeeae0);
+        border-color: var(--zine-ink, #0e0c07);
+        color: var(--zine-ink, #0e0c07);
       }
     `,
   ];
 
   render() {
-    const classes = {
-      primary: this.variant === 'primary',
-      ghost: this.variant === 'ghost',
+    const variantMap: Record<ButtonVariant, string> = {
+      default: '',
+      primary: 'primary',
+      ghost: 'ghost',
+      yellow: 'yellow',
+      blue: 'blue',
     };
-    const classStr = Object.entries(classes)
-      .filter(([, v]) => v)
-      .map(([k]) => k)
-      .join(' ');
+    const cls = variantMap[this.variant] ?? '';
 
     return html`
-      <button part="button" class=${classStr} type=${this.type} ?disabled=${this.disabled}>
+      <button part="button" class=${cls} type=${this.type} ?disabled=${this.disabled}>
         <slot name="icon-left"></slot>
         <slot></slot>
       </button>

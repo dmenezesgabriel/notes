@@ -3,18 +3,19 @@ import { customElement, property } from 'lit/decorators.js';
 
 import { baseStyles } from './styles/base';
 
-export type TagVariant = 'default' | 'accent' | 'sage';
+export type TagVariant = 'default' | 'accent' | 'sage' | 'yellow' | 'blue' | 'green';
 
 /**
- * `<garden-tag>` — a compact label chip used for categories and metadata.
+ * `<garden-tag>` — Zine-edition stamp tag chip.
+ * Hard borders, flat color, slight rotation — hand-stamped feel.
  *
  * @slot - Tag text content
- * @csspart base - The inner span element
+ * @csspart base - The inner span/anchor element
  *
  * @example
- * <garden-tag>javascript</garden-tag>
- * <garden-tag variant="accent">featured</garden-tag>
- * <garden-tag variant="sage">pkm</garden-tag>
+ * <garden-tag>PKM</garden-tag>
+ * <garden-tag variant="accent">LIT ELEMENTS</garden-tag>
+ * <garden-tag variant="blue">NEXT.JS SSG</garden-tag>
  */
 @customElement('garden-tag')
 export class GardenTag extends LitElement {
@@ -26,75 +27,94 @@ export class GardenTag extends LitElement {
     css`
       :host {
         display: inline-block;
-        font-family: var(--font-ui, system-ui, sans-serif);
       }
 
       [part='base'] {
         display: inline-flex;
         align-items: center;
-        font-size: 12px;
-        font-weight: 500;
+        font-family: var(--font-stamp, 'Black Han Sans', sans-serif);
+        font-size: 11px;
+        letter-spacing: 0.06em;
         line-height: 1;
-        padding: 3px 10px;
-        border-radius: var(--radius-sm, 4px);
-        border: 1px solid var(--ds-border, rgba(28, 26, 22, 0.12));
-        background: var(--ds-tag-bg, #eeeae0);
-        color: var(--ds-tag-text, #4a4640);
-        letter-spacing: 0.01em;
-        transition: background var(--transition-fast, 120ms ease);
+        padding: 4px 10px;
+        border: 2px solid var(--zine-ink, #0e0c07);
+        background: var(--zine-paper, #f2edd7);
+        color: var(--zine-ink, #0e0c07);
+        box-shadow: 2px 2px 0 var(--zine-ink, #0e0c07);
         white-space: nowrap;
         text-decoration: none;
+        cursor: default;
+        position: relative;
+        transition: transform 0.1s;
       }
 
-      [part='base']:hover {
-        background: var(--ds-tag-hover, #e5dfd5);
+      /* Subtle rotation for handmade feel */
+      :host(:nth-child(odd)) [part='base'] {
+        transform: rotate(-0.6deg);
+      }
+      :host(:nth-child(even)) [part='base'] {
+        transform: rotate(0.5deg);
       }
 
+      a[part='base'] {
+        cursor: pointer;
+      }
+      a[part='base']:hover {
+        transform: rotate(0) translate(-1px, -1px);
+      }
+
+      a[part='base']:focus-visible {
+        outline: 2px solid var(--zine-yellow, #f5c800);
+        outline-offset: 2px;
+      }
+
+      /* Variants */
       [part='base'].accent {
-        background: var(--ds-accent-light, #f5e8e1);
-        color: var(--ds-accent-dark, #8b3e1f);
-        border-color: transparent;
+        background: var(--zine-red, #d42b2b);
+        color: #fff;
+        border-color: var(--zine-ink, #0e0c07);
+        box-shadow: 2px 2px 0 var(--zine-red-dark, #8a0000);
       }
 
-      [part='base'].accent:hover {
-        background: var(--ds-accent-light-hover, #f0ddd5);
+      [part='base'].sage,
+      [part='base'].green {
+        background: var(--zine-green, #1d6b2e);
+        color: #fff;
+        border-color: var(--zine-ink, #0e0c07);
+        box-shadow: 2px 2px 0 var(--zine-ink, #0e0c07);
       }
 
-      [part='base'].sage {
-        background: var(--ds-sage-light, #e6eee6);
-        color: var(--ds-sage, #4d7350);
-        border-color: transparent;
+      [part='base'].yellow {
+        background: var(--zine-yellow, #f5c800);
+        color: var(--zine-ink, #0e0c07);
+        border-color: var(--zine-ink, #0e0c07);
+        box-shadow: 2px 2px 0 var(--zine-ink, #0e0c07);
       }
 
-      [part='base'].sage:hover {
-        background: var(--ds-sage-light-hover, #dce8dc);
+      [part='base'].blue {
+        background: var(--zine-blue, #1a3c8f);
+        color: #fff;
+        border-color: var(--zine-ink, #0e0c07);
+        box-shadow: 2px 2px 0 var(--zine-ink, #0e0c07);
       }
     `,
   ];
 
   render() {
-    const classes = {
-      accent: this.variant === 'accent',
-      sage: this.variant === 'sage',
+    const variantMap: Record<TagVariant, string> = {
+      default: '',
+      accent: 'accent',
+      sage: 'sage',
+      yellow: 'yellow',
+      blue: 'blue',
+      green: 'green',
     };
-    const classStr = Object.entries(classes)
-      .filter(([, v]) => v)
-      .map(([k]) => k)
-      .join(' ');
+    const cls = variantMap[this.variant] ?? '';
 
     if (this.href) {
-      return html`
-        <a part="base" class=${classStr} href=${this.href}>
-          <slot></slot>
-        </a>
-      `;
+      return html`<a part="base" class=${cls} href=${this.href}><slot></slot></a>`;
     }
-
-    return html`
-      <span part="base" class=${classStr}>
-        <slot></slot>
-      </span>
-    `;
+    return html`<span part="base" class=${cls}><slot></slot></span>`;
   }
 }
 

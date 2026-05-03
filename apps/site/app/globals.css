@@ -1,9 +1,10 @@
-/* Garden Design System — Global Styles
-   CSS custom properties cascade into all Lit shadow DOMs automatically.
-   Fonts are loaded via next/font and injected as CSS variables on <html>.
+/* Garden Design System — NEU-BRUTALISM × PUNK ZINE
+   Global Styles — The corkboard is the canvas.
    ======================================================================= */
 
-/* ---- Base reset --------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Elite&family=Permanent+Marker&family=Cutive+Mono&family=Black+Han+Sans&display=swap');
+
+/* ── Reset ──────────────────────────────────────────────────────────────── */
 *,
 *::before,
 *::after {
@@ -12,26 +13,59 @@
   padding: 0;
 }
 
-/* ---- Design tokens: Light mode ----------------------------------------- */
+/* ── Design Tokens: Zine System ─────────────────────────────────────────── */
 :root {
-  /* Core palette */
-  --ds-accent: #a85025;
-  --ds-accent-light: #f5e8e1;
-  --ds-accent-dark: #8b3e1f;
-  --ds-sage: #4d7350;
-  --ds-sage-light: #e6eee6;
-  --ds-sand: #f7f4ee;
-  --ds-ink: #1c1a16;
-  --ds-muted: #6b6860;
-  --ds-surface: #ffffff;
-  --ds-page: #f7f4ee;
-  --ds-border: rgba(28, 26, 22, 0.12);
-  --ds-border-strong: rgba(28, 26, 22, 0.25);
-  --ds-tag-bg: #eeeae0;
-  --ds-tag-text: #4a4640;
-  --ds-code-bg: #f0ede5;
-  --ds-code-text: #2e2c28;
-  --ds-toggle-bg: #e8e4d8;
+  /* Zine palette */
+  --zine-paper: #f2edd7;
+  --zine-paper-alt: #ede5c8;
+  --zine-aged: #d9cfa8;
+  --zine-ink: #0e0c07;
+  --zine-ink-faded: #2c2820;
+  --zine-muted: #6b6050;
+  --zine-red: #d42b2b;
+  --zine-red-dark: #8a0000;
+  --zine-yellow: #f5c800;
+  --zine-yellow-lt: #fdf0a0;
+  --zine-blue: #1a3c8f;
+  --zine-blue-lt: #4a80d4;
+  --zine-green: #1d6b2e;
+  --zine-green-lt: #a8d8a0;
+  --zine-pink: #e8317a;
+  --zine-orange: #e85d1a;
+
+  /* Structural */
+  --zine-border: 3px solid #0e0c07;
+  --zine-shadow: 4px 4px 0 #0e0c07;
+  --zine-shadow-lg: 6px 6px 0 #0e0c07;
+  --zine-shadow-red: 4px 4px 0 #d42b2b;
+  --zine-shadow-blue: 4px 4px 0 #1a3c8f;
+
+  /* Typography */
+  --font-display: 'Bebas Neue', 'Impact', sans-serif;
+  --font-body: 'Special Elite', 'Courier New', serif;
+  --font-marker: 'Permanent Marker', cursive;
+  --font-mono: 'Cutive Mono', 'Courier New', monospace;
+  --font-stamp: 'Black Han Sans', 'Arial Black', sans-serif;
+  --font-ui: 'Black Han Sans', 'Arial Black', sans-serif;
+
+  /* ds-* backward-compat aliases */
+  --ds-accent: #d42b2b;
+  --ds-accent-light: rgba(212, 43, 43, 0.12);
+  --ds-accent-dark: #8a0000;
+  --ds-sage: #1d6b2e;
+  --ds-sage-light: #a8d8a0;
+  --ds-sand: #f2edd7;
+  --ds-ink: #0e0c07;
+  --ds-muted: #6b6050;
+  --ds-surface: #f2edd7;
+  --ds-page: #2a2218;
+  --ds-border: rgba(14, 12, 7, 0.25);
+  --ds-border-strong: #0e0c07;
+  --ds-tag-bg: #f2edd7;
+  --ds-tag-text: #0e0c07;
+  --ds-code-bg: #0e0c07;
+  --ds-code-text: #e8e0c8;
+  --ds-toggle-bg: rgba(245, 200, 0, 0.15);
 
   /* Spacing */
   --space-1: 4px;
@@ -43,16 +77,16 @@
   --space-7: 48px;
   --space-8: 64px;
 
-  /* Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-pill: 999px;
+  /* No border-radius — neubrutalism is sharp */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-pill: 0px;
 
-  /* Shadow */
-  --shadow-sm: 0 1px 3px rgba(28, 26, 22, 0.08);
-  --shadow-md: 0 4px 12px rgba(28, 26, 22, 0.1);
-  --shadow-lg: 0 8px 24px rgba(28, 26, 22, 0.12);
+  /* Block shadows */
+  --shadow-sm: 2px 2px 0 #0e0c07;
+  --shadow-md: 4px 4px 0 #0e0c07;
+  --shadow-lg: 6px 6px 0 #0e0c07;
 
   /* Transitions */
   --transition-fast: 120ms ease;
@@ -60,97 +94,93 @@
   --transition-slow: 360ms ease;
 }
 
-/* ---- Dark mode tokens --------------------------------------------------- */
-[data-theme='dark'] {
-  --ds-accent: #e07a50;
-  --ds-accent-light: #3a2218;
-  --ds-accent-dark: #f0a080;
-  --ds-sage: #7aa87a;
-  --ds-sage-light: #1e2e1e;
-  --ds-sand: #1a1814;
-  --ds-ink: #f0ede5;
-  --ds-muted: #9e9b94;
-  --ds-border: rgba(240, 237, 229, 0.1);
-  --ds-border-strong: rgba(240, 237, 229, 0.22);
-  --ds-surface: #252320;
-  --ds-page: #1a1814;
-  --ds-tag-bg: #2e2c28;
-  --ds-tag-text: #c4bfb4;
-  --ds-code-bg: #2a2820;
-  --ds-code-text: #d4cfc6;
-  --ds-toggle-bg: #2e2c28;
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
-  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
-}
-
-/* ---- Base page styles --------------------------------------------------- */
+/* ── Base page ──────────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  background: var(--ds-page);
-  color: var(--ds-ink);
-  line-height: 1.7;
+  background: #2a2218;
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(90, 70, 30, 0.3) 0%, transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(60, 40, 10, 0.4) 0%, transparent 50%);
+  min-height: 100vh;
+  color: var(--zine-ink);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
 }
 
-/* ---- Skip-to-content link ----------------------------------------------- */
+/* ── Skip-to-content ────────────────────────────────────────────────────── */
 .skip-link {
   position: absolute;
   top: -100%;
   left: var(--space-4);
-  background: var(--ds-accent);
+  background: var(--zine-red);
   color: #fff;
   padding: var(--space-2) var(--space-4);
-  border-radius: var(--radius-md);
-  font-size: 14px;
-  font-weight: 500;
+  font-family: var(--font-stamp);
+  font-size: 12px;
+  letter-spacing: 0.06em;
   text-decoration: none;
   z-index: 9999;
-  transition: top var(--transition-fast);
+  border: 3px solid var(--zine-ink);
+  border-right: 5px solid var(--zine-ink);
+  border-bottom: 5px solid var(--zine-ink);
 }
 .skip-link:focus {
   top: var(--space-2);
 }
 
-/* ---- Prose typography (inside article / .prose) ------------------------- */
+/* ── Prose typography (inside article / .prose) ─────────────────────────── */
 .prose {
-  font-family: var(--font-body, 'Lora', Georgia, serif);
-  font-size: 15px;
+  font-family: var(--font-body);
+  font-size: 14px;
   line-height: 1.8;
-  color: var(--ds-ink);
+  color: var(--zine-ink-faded);
   max-width: 65ch;
+  /* Typewriter paper lines */
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 31px,
+    rgba(100, 120, 200, 0.1) 31px,
+    rgba(100, 120, 200, 0.1) 32px
+  );
+  background-attachment: local;
+  padding: 1.5rem;
+  border: var(--zine-border);
+  border-right: 5px solid var(--zine-ink);
+  border-bottom: 5px solid var(--zine-ink);
+  background-color: #fafaf2;
 }
 
 .prose h1 {
-  font-family: var(--font-display, 'Fraunces', Georgia, serif);
-  font-size: clamp(22px, 4vw, 32px);
-  font-weight: 500;
-  letter-spacing: -0.025em;
-  line-height: 1.15;
+  font-family: var(--font-display);
+  font-size: clamp(26px, 4vw, 36px);
+  letter-spacing: 0.03em;
+  line-height: 1.1;
   margin: 0 0 0.5rem;
-  color: var(--ds-ink);
+  color: var(--zine-ink);
 }
 
 .prose h2 {
-  font-family: var(--font-display, 'Fraunces', Georgia, serif);
+  font-family: var(--font-marker);
   font-size: clamp(18px, 3vw, 22px);
-  font-weight: 500;
-  letter-spacing: -0.02em;
+  color: var(--zine-blue);
   line-height: 1.2;
   margin: 2rem 0 0.6rem;
-  color: var(--ds-ink);
+  display: inline-block;
+  transform: rotate(-0.5deg);
 }
 
 .prose h3 {
-  font-family: var(--font-body, 'Lora', Georgia, serif);
-  font-size: 17px;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: 18px;
+  letter-spacing: 0.04em;
   margin: 1.5rem 0 0.5rem;
-  color: var(--ds-ink);
+  color: var(--zine-ink);
 }
 
 .prose p {
@@ -158,14 +188,16 @@ body {
 }
 
 .prose a {
-  color: var(--ds-accent);
+  color: var(--zine-red);
   text-decoration: underline;
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: 2px;
   text-underline-offset: 3px;
+  font-family: var(--font-marker);
+  font-size: 0.95em;
 }
 
 .prose a:hover {
-  color: var(--ds-accent-dark);
+  color: var(--zine-red-dark);
 }
 
 .prose ul,
@@ -179,104 +211,204 @@ body {
 }
 
 .prose blockquote {
-  border-left: 3px solid var(--ds-border-strong);
-  padding: 0.4rem 0 0.4rem 1rem;
-  color: var(--ds-muted);
+  border-left: 5px solid var(--zine-ink);
+  padding: 0.6rem 0 0.6rem 1rem;
+  color: var(--zine-muted);
   font-style: italic;
   margin: 1.25rem 0;
+  background: rgba(14, 12, 7, 0.04);
+  position: relative;
+}
+
+.prose blockquote::before {
+  content: '"';
+  font-family: var(--font-display);
+  font-size: 48px;
+  color: var(--zine-red);
+  position: absolute;
+  top: -10px;
+  left: -12px;
+  line-height: 1;
+  opacity: 0.5;
 }
 
 .prose code {
-  font-family: var(--font-mono, 'DM Mono', monospace);
+  font-family: var(--font-mono);
   font-size: 0.875em;
-  background: var(--ds-code-bg);
-  color: var(--ds-code-text);
+  background: rgba(14, 12, 7, 0.07);
+  color: var(--zine-ink);
   padding: 2px 6px;
-  border-radius: var(--radius-sm);
+  border-left: 3px solid var(--zine-ink);
 }
 
-/* ---- Code blocks --------------------------------------------------------- */
-/* Layout (applies to all <pre>) */
 .prose pre {
-  font-family: var(--font-mono, 'DM Mono', monospace);
+  font-family: var(--font-mono);
   padding: var(--space-4);
-  border-radius: var(--radius-md);
   overflow-x: auto;
   margin: 1.25rem 0;
-  border: 1px solid var(--ds-border);
+  border: var(--zine-border);
+  border-right: 5px solid var(--zine-ink);
+  border-bottom: 5px solid var(--zine-ink);
 }
 
-/* Plain (un-highlighted) blocks */
 .prose pre:not(.shiki) {
-  background: var(--ds-code-bg);
-  color: var(--ds-code-text);
-  font-size: 13px;
+  background: var(--zine-ink);
+  color: #e8e0c8;
+  font-size: 12px;
 }
 
 .prose pre:not(.shiki) code {
   background: none;
   padding: 0;
-  font-size: 13px;
+  border-left: none;
+  font-size: 12px;
   color: inherit;
 }
 
-/* Shiki-highlighted blocks — light colours inlined by Shiki */
 .prose .shiki {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.65;
 }
 
-/* Shiki dark-mode: override inline light styles with dark CSS variables */
-[data-theme='dark'] .prose .shiki,
-[data-theme='dark'] .prose .shiki code {
-  background-color: var(--shiki-dark-bg) !important;
-  color: var(--shiki-dark) !important;
-}
-
-[data-theme='dark'] .prose .shiki span {
-  color: var(--shiki-dark) !important;
-  background-color: var(--shiki-dark-bg, transparent) !important;
-}
-
-/* Reset inline code inside shiki blocks */
 .prose .shiki code {
   background: none;
   padding: 0;
+  border-left: none;
   color: inherit;
 }
 
 .prose hr {
   border: none;
-  border-top: 1px solid var(--ds-border);
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--zine-ink) 0px,
+    var(--zine-ink) 8px,
+    transparent 8px,
+    transparent 12px
+  );
   margin: 2rem 0;
+  opacity: 0.4;
 }
 
 .prose img {
   max-width: 100%;
   height: auto;
-  border-radius: var(--radius-md);
+  border: var(--zine-border);
+  border-right: 5px solid var(--zine-ink);
+  border-bottom: 5px solid var(--zine-ink);
 }
 
 .prose table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.25rem 0;
-  font-size: 14px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  border: var(--zine-border);
 }
 
 .prose th,
 .prose td {
   padding: 8px 12px;
-  border: 1px solid var(--ds-border);
+  border: 2px solid var(--zine-ink);
   text-align: left;
 }
 
 .prose th {
-  background: var(--ds-tag-bg);
-  font-weight: 600;
+  background: var(--zine-ink);
+  color: var(--zine-yellow);
+  font-family: var(--font-stamp);
+  font-size: 11px;
+  letter-spacing: 0.06em;
 }
 
-/* ---- Layout utilities ---------------------------------------------------- */
+/* ── Zine sheets (paper blocks pinned to corkboard) ─────────────────────── */
+.zine-sheet {
+  background: var(--zine-paper);
+  border: var(--zine-border);
+  padding: 1.5rem;
+  position: relative;
+  box-shadow: var(--zine-shadow-lg);
+}
+
+/* ── Running banner ─────────────────────────────────────────────────────── */
+.zine-marquee-banner {
+  background: var(--zine-red);
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden;
+  border-top: 3px solid var(--zine-ink);
+  border-bottom: 3px solid var(--zine-ink);
+}
+
+.zine-marquee-banner::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  color: var(--zine-blue);
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.25em;
+  opacity: 0.4;
+  white-space: nowrap;
+}
+
+.zine-marquee-text {
+  font-family: var(--font-display);
+  font-size: 14px;
+  letter-spacing: 0.25em;
+  color: var(--zine-yellow);
+  text-transform: uppercase;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+/* ── Zine section label ─────────────────────────────────────────────────── */
+.zine-section-label {
+  font-family: var(--font-display);
+  font-size: 22px;
+  color: var(--zine-ink);
+  letter-spacing: 0.08em;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.zine-section-label .slash {
+  color: var(--zine-red);
+}
+
+.zine-section-label::after {
+  content: '';
+  flex: 1;
+  height: 3px;
+  background: var(--zine-ink);
+  margin-left: 8px;
+}
+
+/* ── Highlight marker ───────────────────────────────────────────────────── */
+.zine-highlight {
+  background: var(--zine-yellow);
+  padding: 0 3px;
+  display: inline;
+}
+
+/* ── Layout utilities ───────────────────────────────────────────────────── */
 .page-wrap {
   max-width: 1120px;
   margin: 0 auto;

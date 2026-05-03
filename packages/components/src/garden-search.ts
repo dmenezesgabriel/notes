@@ -4,10 +4,10 @@ import { customElement, property } from 'lit/decorators.js';
 import { baseStyles } from './styles/base';
 
 /**
- * `<garden-search>` — search bar with optional keyboard shortcut badge.
- * Emits a `garden-search` CustomEvent with `{ detail: { query: string } }` on input.
+ * `<garden-search>` — Zine-edition typewriter search bar.
+ * White bg, thick offset border, mono font, blinking cursor.
  *
- * @fires garden-search — Fired on every keystroke with the current query
+ * @fires garden-search — Fired on every keystroke with `{ detail: { query: string } }`
  * @csspart wrapper - The container div
  * @csspart input   - The text input
  * @csspart kbd     - The keyboard shortcut badge
@@ -30,26 +30,24 @@ export class GardenSearch extends LitElement {
       }
 
       [role='search'] {
-        background: var(--ds-surface, #fff);
-        border: 1px solid var(--ds-border-strong, rgba(28, 26, 22, 0.25));
-        border-radius: var(--radius-md, 8px);
-        padding: 8px 12px;
+        background: #fff;
+        border: 3px solid var(--zine-ink, #0e0c07);
+        border-right: 5px solid var(--zine-ink, #0e0c07);
+        border-bottom: 5px solid var(--zine-ink, #0e0c07);
+        padding: 10px 14px;
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 10px;
         width: 100%;
-        transition:
-          box-shadow var(--transition-fast, 120ms ease),
-          border-color var(--transition-fast, 120ms ease);
+        transition: transform 0.1s;
       }
 
       [role='search']:focus-within {
-        border-color: var(--ds-accent, #a85025);
-        box-shadow: 0 0 0 3px var(--ds-accent-light, #f5e8e1);
+        transform: translate(-1px, -1px);
       }
 
       .icon {
-        color: var(--ds-muted, #6b6860);
+        color: var(--zine-ink, #0e0c07);
         flex-shrink: 0;
         display: flex;
         align-items: center;
@@ -60,26 +58,29 @@ export class GardenSearch extends LitElement {
         border: none;
         outline: none;
         background: transparent;
-        font-family: var(--font-ui, system-ui, sans-serif);
+        font-family: var(--font-mono, 'Cutive Mono', monospace);
         font-size: 14px;
-        color: var(--ds-ink, #1c1a16);
+        color: var(--zine-muted, #6b6050);
         min-width: 0;
       }
 
       input::placeholder {
-        color: var(--ds-muted, #6b6860);
+        color: var(--zine-muted, #6b6050);
+      }
+
+      input:focus::placeholder {
+        opacity: 0.5;
       }
 
       kbd {
         flex-shrink: 0;
-        font-family: var(--font-mono, 'DM Mono', monospace);
+        font-family: var(--font-mono, 'Cutive Mono', monospace);
         font-size: 11px;
-        color: var(--ds-muted, #6b6860);
-        background: var(--ds-tag-bg, #eeeae0);
-        border: 1px solid var(--ds-border, rgba(28, 26, 22, 0.12));
-        border-radius: var(--radius-sm, 4px);
-        padding: 2px 6px;
-        line-height: 1.5;
+        background: var(--zine-ink, #0e0c07);
+        color: var(--zine-yellow, #f5c800);
+        padding: 2px 7px;
+        letter-spacing: 0.05em;
+        border: none;
       }
     `,
   ];
@@ -101,15 +102,15 @@ export class GardenSearch extends LitElement {
       <div role="search" part="wrapper">
         <span class="icon" aria-hidden="true">
           <svg
-            width="16"
-            height="16"
-            viewBox="0 0 16 16"
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
             fill="none"
             stroke="currentColor"
-            stroke-width="1.5"
+            stroke-width="2.5"
           >
-            <circle cx="7" cy="7" r="4.5" />
-            <path d="m10.5 10.5 3 3" />
+            <circle cx="8" cy="8" r="5" />
+            <path d="m12 12 4 4" />
           </svg>
         </span>
         <input

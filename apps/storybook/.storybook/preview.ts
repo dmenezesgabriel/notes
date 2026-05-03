@@ -19,11 +19,11 @@ const preview: Preview = {
     nextjs: { appDirectory: true },
 
     backgrounds: {
-      default: 'sand',
+      default: 'corkboard',
       values: [
-        { name: 'sand', value: '#f7f4ee' },
-        { name: 'white', value: '#ffffff' },
-        { name: 'ink (dark)', value: '#1a1814' },
+        { name: 'corkboard', value: '#2a2218' },
+        { name: 'paper', value: '#f2edd7' },
+        { name: 'ink', value: '#0e0c07' },
       ],
     },
 

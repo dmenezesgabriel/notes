@@ -3,18 +3,18 @@ import { customElement, property } from 'lit/decorators.js';
 
 import { baseStyles } from './styles/base';
 
-export type BadgeVariant = 'accent' | 'sage' | 'muted';
+export type BadgeVariant = 'accent' | 'sage' | 'muted' | 'yellow' | 'blue';
 
 /**
- * `<garden-badge>` — eyebrow / section-label text used above headings.
- * Small caps, letter-spaced, accent-coloured by default.
+ * `<garden-badge>` — Zine-edition rubber stamp eyebrow label.
+ * Small caps, letter-spaced, stamp-coloured. Used above headings.
  *
  * @slot - Label text
  * @csspart base - The inner span element
  *
  * @example
- * <garden-badge>design system · v0.1</garden-badge>
- * <garden-badge variant="sage">pkm</garden-badge>
+ * <garden-badge>NEU-BRUTALISM × PUNK ZINE</garden-badge>
+ * <garden-badge variant="sage">PKM</garden-badge>
  */
 @customElement('garden-badge')
 export class GardenBadge extends LitElement {
@@ -28,27 +28,50 @@ export class GardenBadge extends LitElement {
       }
 
       [part='base'] {
+        font-family: var(--font-mono, 'Cutive Mono', monospace);
         font-size: 11px;
-        letter-spacing: 0.08em;
+        letter-spacing: 0.15em;
         text-transform: uppercase;
-        font-weight: 500;
-        font-family: var(--font-ui, system-ui, sans-serif);
-        color: var(--ds-accent, #a85025);
-        display: inline-block;
+        color: var(--zine-red, #d42b2b);
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      [part='base']::before {
+        content: '///';
+        color: var(--zine-muted, #6b6050);
+        font-size: 10px;
       }
 
       [part='base'].sage {
-        color: var(--ds-sage, #4d7350);
+        color: var(--zine-green, #1d6b2e);
       }
 
       [part='base'].muted {
-        color: var(--ds-muted, #6b6860);
+        color: var(--zine-muted, #6b6050);
+      }
+
+      [part='base'].yellow {
+        color: var(--zine-yellow, #f5c800);
+      }
+
+      [part='base'].blue {
+        color: var(--zine-blue, #1a3c8f);
       }
     `,
   ];
 
   render() {
-    const cls = this.variant !== 'accent' ? this.variant : '';
+    const variantMap: Record<BadgeVariant, string> = {
+      accent: '',
+      sage: 'sage',
+      muted: 'muted',
+      yellow: 'yellow',
+      blue: 'blue',
+    };
+    const cls = variantMap[this.variant] ?? '';
+
     return html`
       <span part="base" class=${cls}>
         <slot></slot>
