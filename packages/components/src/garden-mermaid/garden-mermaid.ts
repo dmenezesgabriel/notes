@@ -2,7 +2,7 @@ import { css, html, LitElement, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
-import { baseStyles } from './styles/base';
+import { baseStyles } from '../styles/base';
 
 /** Monotonic counter so every mermaid render call gets a unique id. */
 let _counter = 0;

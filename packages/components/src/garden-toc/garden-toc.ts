@@ -1,7 +1,7 @@
 import { css, html, LitElement, nothing } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 
-import { baseStyles } from './styles/base';
+import { baseStyles } from '../styles/base';
 
 export interface TocEntry {
   id: string;

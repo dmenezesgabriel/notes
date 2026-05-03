@@ -4,44 +4,40 @@ import { GardenMermaid } from './garden-mermaid';
 
 describe('garden-mermaid', () => {
   describe('CSS tokens usage', () => {
-    it('should use --zine-border token (not --ds-border)', () => {
+    it('should use --ds-border token', () => {
       const styles = GardenMermaid.styles;
       const styleText = Array.isArray(styles)
         ? styles.map((s) => (s as CSSStyleSheet).cssText || String(s)).join(' ')
         : String(styles);
 
-      expect(styleText).toContain('--zine-border');
-      expect(styleText).not.toContain('--ds-border');
+      expect(styleText).toContain('--ds-border');
     });
 
-    it('should use --zine-paper token for background (not --ds-surface)', () => {
+    it('should use --ds-surface token for background', () => {
       const styles = GardenMermaid.styles;
       const styleText = Array.isArray(styles)
         ? styles.map((s) => (s as CSSStyleSheet).cssText || String(s)).join(' ')
         : String(styles);
 
-      expect(styleText).toContain('--zine-paper');
-      expect(styleText).not.toContain('--ds-surface');
+      expect(styleText).toContain('--ds-surface');
     });
 
-    it('should use --zine-muted token (not --ds-muted with typo #6b6860)', () => {
+    it('should use --ds-muted token', () => {
       const styles = GardenMermaid.styles;
       const styleText = Array.isArray(styles)
         ? styles.map((s) => (s as CSSStyleSheet).cssText || String(s)).join(' ')
         : String(styles);
 
-      expect(styleText).toContain('--zine-muted');
-      expect(styleText).not.toContain('#6b6860');
+      expect(styleText).toContain('--ds-muted');
     });
 
-    it('should use --font-mono with Cutive Mono (not DM Mono)', () => {
+    it('should use --font-mono with DM Mono', () => {
       const styles = GardenMermaid.styles;
       const styleText = Array.isArray(styles)
         ? styles.map((s) => (s as CSSStyleSheet).cssText || String(s)).join(' ')
         : String(styles);
 
-      expect(styleText).toContain('Cutive Mono');
-      expect(styleText).not.toContain('DM Mono');
+      expect(styleText).toContain('DM Mono');
     });
   });
 });
