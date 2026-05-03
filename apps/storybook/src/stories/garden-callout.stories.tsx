@@ -13,16 +13,17 @@ const meta: Meta<CalloutArgs> = {
   argTypes: {
     variant: {
       control: 'radio',
-      options: ['note', 'tip', 'warning'],
-      description: 'Semantic intent — drives border and background colour',
+      options: ['note', 'tip', 'warning', 'info'],
+      description:
+        'Semantic intent — drives border and background colour. `note` (yellow-lt), `tip` (green), `warning` (orange), `info` (blue)',
       table: {
-        type: { summary: 'note | tip | warning' },
+        type: { summary: 'note | tip | warning | info' },
         defaultValue: { summary: 'note' },
       },
     },
     heading: {
       control: 'text',
-      description: 'Optional bold heading shown above the body',
+      description: 'Rubber-stamp heading shown above the body',
     },
     body: {
       control: 'text',
@@ -31,14 +32,16 @@ const meta: Meta<CalloutArgs> = {
   },
   args: {
     variant: 'note',
-    heading: 'Note',
+    heading: '✦ NOTE',
     body: 'Start with a weekly review — fifteen minutes every Sunday is enough to close the loop.',
   },
   parameters: {
     docs: {
       description: {
         component:
-          'Inline highlighted block. Uses `<div role="note">` internally. Three variants: `note` (terracotta), `tip` (sage), `warning` (amber).',
+          'Inline callout block. Uses `<div role="note">` internally. ' +
+          'Four variants: `note` (yellow-lt), `tip` (green), `warning` (orange), `info` (blue). ' +
+          'Hard offset border — xerox rubber stamp aesthetic.',
       },
     },
   },
@@ -58,8 +61,8 @@ export const Default: Story = { render };
 export const Tip: Story = {
   args: {
     variant: 'tip',
-    heading: 'Related',
-    body: 'Zettelkasten, evergreen notes, PARA method, progressive summarisation.',
+    heading: '✦ TIP',
+    body: 'Start with a weekly review — fifteen minutes every Sunday.',
   },
   render,
 };
@@ -67,8 +70,17 @@ export const Tip: Story = {
 export const Warning: Story = {
   args: {
     variant: 'warning',
-    heading: 'Breaking change',
+    heading: '⚠ WARNING',
     body: 'This API changed in v0.2 — update component props before upgrading.',
+  },
+  render,
+};
+
+export const Info: Story = {
+  args: {
+    variant: 'info',
+    heading: '→ RELATED',
+    body: 'Zettelkasten, evergreen notes, PARA method, progressive summarisation.',
   },
   render,
 };
@@ -82,33 +94,68 @@ export const NoHeading: Story = {
 export const InArticle: Story = {
   name: 'In article body',
   render: () => (
-    <article
+    <div
       style={{
-        background: 'var(--ds-surface)',
-        border: '1px solid var(--ds-border)',
-        borderRadius: 12,
-        padding: '1.5rem',
+        background: '#fafaf2',
+        border: '3px solid #0e0c07',
+        borderRight: '5px solid #0e0c07',
+        borderBottom: '5px solid #0e0c07',
+        padding: '1.75rem',
         maxWidth: 560,
+        backgroundImage:
+          'repeating-linear-gradient(to bottom, transparent, transparent 31px, rgba(100,120,200,0.1) 31px, rgba(100,120,200,0.1) 32px)',
       }}
     >
       <p
         style={{
-          fontFamily: 'var(--font-body)',
+          fontFamily: "'Special Elite', serif",
           fontSize: 14,
-          lineHeight: 1.75,
-          color: 'var(--ds-muted)',
+          lineHeight: 1.8,
+          color: '#2c2820',
           margin: '0 0 1rem',
         }}
       >
         Every note you capture is a future conversation with yourself. The format matters less than
         the habit of externalising thinking.
       </p>
-      <garden-callout heading="Tip" style={{ marginBottom: 12 }}>
+      <garden-callout heading="✦ TIP" style={{ marginBottom: 10 }}>
         Start with a weekly review — fifteen minutes every Sunday.
       </garden-callout>
-      <garden-callout variant="tip" heading="Related">
+      <garden-callout variant="info" heading="→ RELATED">
         Zettelkasten, evergreen notes, PARA method.
       </garden-callout>
-    </article>
+    </div>
+  ),
+};
+
+export const AllVariants: Story = {
+  name: 'All variants',
+  render: () => (
+    <div
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 10,
+        padding: 24,
+        background: '#f2edd7',
+        border: '3px solid #0e0c07',
+        borderRight: '5px solid #0e0c07',
+        borderBottom: '5px solid #0e0c07',
+        maxWidth: 520,
+      }}
+    >
+      <garden-callout variant="note" heading="✦ NOTE">
+        Default note callout — yellow-lt background.
+      </garden-callout>
+      <garden-callout variant="tip" heading="✦ TIP">
+        Tip callout — green background.
+      </garden-callout>
+      <garden-callout variant="warning" heading="⚠ WARNING">
+        Warning callout — orange border.
+      </garden-callout>
+      <garden-callout variant="info" heading="→ RELATED">
+        Info callout — blue border, light blue background.
+      </garden-callout>
+    </div>
   ),
 };

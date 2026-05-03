@@ -32,7 +32,8 @@ const meta: Meta<SearchArgs> = {
     docs: {
       description: {
         component:
-          'Search bar with optional keyboard shortcut badge. Fires `garden-search` CustomEvent `{ detail: { query } }` on every keystroke.',
+          'Typewriter search bar. White background, thick offset border, Cutive Mono font, blinking cursor. ' +
+          'Fires `garden-search` CustomEvent `{ detail: { query } }` on every keystroke.',
       },
     },
   },
@@ -59,47 +60,62 @@ export const WithValue: Story = {
   render,
 };
 
-export const InNavbar: Story = {
-  name: 'In navbar',
+export const InZineSheet: Story = {
+  name: 'In zine sheet',
   render: () => (
-    <header
+    <div
       style={{
-        background: 'var(--ds-surface)',
-        borderBottom: '1px solid var(--ds-border)',
-        padding: '8px 20px',
-        display: 'flex',
-        alignItems: 'center',
-        gap: 16,
+        background: '#f2edd7',
+        border: '3px solid #0e0c07',
+        borderRight: '5px solid #0e0c07',
+        borderBottom: '5px solid #0e0c07',
+        padding: '1.5rem',
+        maxWidth: 560,
+        position: 'relative',
       }}
     >
-      <span
+      {/* yellow pin */}
+      <div
         style={{
-          fontFamily: 'var(--font-ui)',
-          fontSize: 15,
-          fontWeight: 500,
-          color: 'var(--ds-ink)',
-          whiteSpace: 'nowrap',
+          position: 'absolute',
+          top: -10,
+          left: 24,
+          width: 18,
+          height: 18,
+          background: '#f5c800',
+          border: '2px solid #a08800',
+          borderRadius: '50%',
+          boxShadow: '0 2px 4px rgba(0,0,0,0.4)',
+        }}
+      />
+      <div
+        style={{
+          fontFamily: "'Bebas Neue', sans-serif",
+          fontSize: 22,
+          color: '#0e0c07',
+          letterSpacing: '0.08em',
+          marginBottom: '1.25rem',
+          display: 'flex',
+          alignItems: 'center',
+          gap: 10,
         }}
       >
-        garden.dev
-      </span>
-      <nav aria-label="Main navigation" style={{ display: 'flex', gap: 4 }}>
-        {['notes', 'wiki', 'about'].map((l) => (
-          <a
-            key={l}
-            href="#"
-            style={{
-              fontSize: 13,
-              color: 'var(--ds-muted)',
-              padding: '4px 10px',
-              textDecoration: 'none',
-            }}
-          >
-            {l}
-          </a>
-        ))}
-      </nav>
-      <garden-search placeholder="Search…" kbd="⌘K" style={{ flex: 1, maxWidth: 360 }} />
-    </header>
+        <span style={{ color: '#d42b2b' }}>//</span> SEARCH
+        <div style={{ flex: 1, height: 3, background: '#0e0c07', marginLeft: 8 }} />
+      </div>
+      <garden-search placeholder="Search notes, wiki, projects…" kbd="⌘K" />
+    </div>
+  ),
+};
+
+export const InNav: Story = {
+  name: 'Slotted in garden-nav',
+  parameters: { layout: 'fullscreen' },
+  render: () => (
+    <div style={{ background: '#2a2218' }}>
+      <garden-nav brand="GARDEN.DEV" links={[{ label: 'NOTES', href: '/notes', active: true }]}>
+        <garden-search slot="actions" placeholder="Search…" kbd="⌘K" style={{ width: 260 }} />
+      </garden-nav>
+    </div>
   ),
 };

@@ -12,10 +12,11 @@ const meta: Meta<TagArgs> = {
   argTypes: {
     variant: {
       control: 'radio',
-      options: ['default', 'accent', 'sage'],
-      description: 'Visual variant — default (parchment), accent (terracotta), sage (green)',
+      options: ['default', 'accent', 'sage', 'green', 'yellow', 'blue'],
+      description:
+        'Visual variant — `default` (zine paper), `accent` (red), `sage`/`green` (green), `yellow`, `blue`',
       table: {
-        type: { summary: 'default | accent | sage' },
+        type: { summary: 'default | accent | sage | green | yellow | blue' },
         defaultValue: { summary: 'default' },
       },
     },
@@ -26,13 +27,15 @@ const meta: Meta<TagArgs> = {
   },
   args: {
     variant: 'default',
-    label: 'javascript',
+    label: 'ZETTELKASTEN',
   },
   parameters: {
     docs: {
       description: {
         component:
-          'Compact label chip for categories and metadata. Three variants driven by CSS custom properties — themes to light/dark automatically.',
+          'Compact stamp chip for categories and metadata. ' +
+          'Hard borders, flat offset shadow, slight rotation — hand-stamped feel. ' +
+          'Themes automatically via `--zine-*` CSS variables.',
       },
     },
   },
@@ -46,26 +49,53 @@ const render = ({ variant, label }: TagArgs) => <garden-tag variant={variant}>{l
 export const Default: Story = { render };
 
 export const Accent: Story = {
-  args: { variant: 'accent', label: 'featured' },
+  args: { variant: 'accent', label: 'LIT ELEMENTS' },
+  render,
+};
+
+export const Blue: Story = {
+  args: { variant: 'blue', label: 'NEXT.JS SSG' },
+  render,
+};
+
+export const Yellow: Story = {
+  args: { variant: 'yellow', label: 'STORYBOOK' },
   render,
 };
 
 export const Sage: Story = {
-  args: { variant: 'sage', label: 'pkm' },
+  args: { variant: 'sage', label: 'PKM' },
+  render,
+};
+
+export const Green: Story = {
+  args: { variant: 'green', label: 'RESPONSIVE' },
   render,
 };
 
 export const AllVariants: Story = {
   name: 'All variants',
   render: () => (
-    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', padding: 16 }}>
-      <garden-tag>zettelkasten</garden-tag>
-      <garden-tag variant="accent">lit elements</garden-tag>
-      <garden-tag variant="sage">next.js ssg</garden-tag>
-      <garden-tag>storybook</garden-tag>
-      <garden-tag variant="accent">pkm</garden-tag>
-      <garden-tag variant="sage">frontend</garden-tag>
-      <garden-tag>design</garden-tag>
+    <div
+      style={{
+        display: 'flex',
+        gap: 8,
+        flexWrap: 'wrap',
+        padding: 24,
+        background: '#f2edd7',
+        border: '3px solid #0e0c07',
+        borderRight: '5px solid #0e0c07',
+        borderBottom: '5px solid #0e0c07',
+        maxWidth: 500,
+      }}
+    >
+      <garden-tag variant="accent">LIT ELEMENTS</garden-tag>
+      <garden-tag variant="blue">NEXT.JS SSG</garden-tag>
+      <garden-tag variant="yellow">STORYBOOK</garden-tag>
+      <garden-tag variant="green">RESPONSIVE</garden-tag>
+      <garden-tag variant="sage">PKM</garden-tag>
+      <garden-tag>NO FRAMEWORK BS</garden-tag>
+      <garden-tag>ZETTELKASTEN</garden-tag>
     </div>
   ),
 };
@@ -73,23 +103,21 @@ export const AllVariants: Story = {
 export const InCardFooter: Story = {
   name: 'In card footer',
   render: () => (
-    <div
-      style={{
-        background: 'var(--ds-surface)',
-        border: '1px solid var(--ds-border)',
-        borderRadius: 12,
-        padding: 16,
-        maxWidth: 320,
-      }}
+    <garden-card
+      headline="On building a second brain"
+      meta="3 DAYS AGO · 8 MIN READ"
+      excerpt="The goal isn't to remember everything — it's to think better."
+      href="/notes/second-brain"
+      variant="featured"
+      style={{ maxWidth: 320 }}
     >
-      <p style={{ fontSize: 14, fontFamily: 'var(--font-body)', marginBottom: 12, margin: 0 }}>
-        On building a second brain
-      </p>
-      <div style={{ display: 'flex', gap: 6, marginTop: 10 }}>
-        <garden-tag variant="accent">pkm</garden-tag>
-        <garden-tag>zettelkasten</garden-tag>
-        <garden-tag variant="sage">notes</garden-tag>
-      </div>
-    </div>
+      <garden-tag slot="footer" variant="accent">
+        PKM
+      </garden-tag>
+      <garden-tag slot="footer">ZETTELKASTEN</garden-tag>
+      <garden-tag slot="footer" variant="blue">
+        NOTES
+      </garden-tag>
+    </garden-card>
   ),
 };

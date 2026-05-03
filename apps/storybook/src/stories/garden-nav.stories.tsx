@@ -7,10 +7,10 @@ interface NavArgs {
 }
 
 const defaultLinks: NavLink[] = [
-  { label: 'notes', href: '/notes', active: true },
-  { label: 'wiki', href: '/wiki' },
-  { label: 'projects', href: '/projects' },
-  { label: 'about', href: '/about' },
+  { label: 'NOTES', href: '/notes', active: true },
+  { label: 'WIKI', href: '/wiki' },
+  { label: 'PROJECTS', href: '/projects' },
+  { label: 'ABOUT', href: '/about' },
 ];
 
 const meta: Meta<NavArgs> = {
@@ -19,8 +19,9 @@ const meta: Meta<NavArgs> = {
   argTypes: {
     brand: {
       control: 'text',
-      description: 'Brand name displayed next to the accent dot',
-      table: { defaultValue: { summary: 'garden.dev' } },
+      description:
+        'Brand name displayed in display font with yellow colour and misregistration ghost',
+      table: { defaultValue: { summary: 'GARDEN.DEV' } },
     },
     links: {
       control: 'object',
@@ -28,15 +29,18 @@ const meta: Meta<NavArgs> = {
     },
   },
   args: {
-    brand: 'garden.dev',
+    brand: 'GARDEN.DEV',
     links: defaultLinks,
   },
   parameters: {
     layout: 'fullscreen',
+    backgrounds: { default: 'corkboard' },
     docs: {
       description: {
         component:
-          'Site-level navigation bar. Sticky with glass-morphism background. Includes theme toggle (fires `garden-theme-change` event). Supports `actions` and `brand-icon` slots.',
+          'Site-level navigation bar. Sticky, black background, misregistered red shadow behind it (xerox artifact). ' +
+          'Brand uses Bebas Neue + blue ghost offset. Links use Black Han Sans stamp style. ' +
+          'Includes theme toggle (fires `garden-theme-change` event). Supports `actions` and `brand-icon` slots.',
       },
     },
   },
@@ -50,7 +54,7 @@ const render = ({ brand, links }: NavArgs) => <garden-nav brand={brand} links={l
 export const Default: Story = { render };
 
 export const WithSearch: Story = {
-  name: 'With search slot',
+  name: 'With search in actions slot',
   render: ({ brand, links }: NavArgs) => (
     <garden-nav brand={brand} links={links}>
       <garden-search slot="actions" placeholder="Search…" kbd="⌘K" style={{ width: 240 }} />
@@ -61,11 +65,11 @@ export const WithSearch: Story = {
 export const CustomBrand: Story = {
   name: 'Custom brand',
   args: {
-    brand: 'knowledge.base',
+    brand: 'KNOWLEDGE.BASE',
     links: [
-      { label: 'all notes', href: '/', active: true },
-      { label: 'tags', href: '/tags' },
-      { label: 'about', href: '/about' },
+      { label: 'ALL NOTES', href: '/', active: true },
+      { label: 'TAGS', href: '/tags' },
+      { label: 'ABOUT', href: '/about' },
     ],
   },
   render,
@@ -74,35 +78,70 @@ export const CustomBrand: Story = {
 export const InPageContext: Story = {
   name: 'In page context',
   render: () => (
-    <div style={{ minHeight: '50vh', background: 'var(--ds-page)' }}>
-      <garden-nav brand="garden.dev" links={defaultLinks} />
-      <main style={{ padding: '2rem 1.25rem', maxWidth: 960, margin: '0 auto' }}>
-        <garden-badge style={{ display: 'block', marginBottom: 8 }}>notes</garden-badge>
-        <h1
+    <div
+      style={{
+        minHeight: '50vh',
+        background: '#2a2218',
+        backgroundImage:
+          'radial-gradient(circle at 20% 50%, rgba(90,70,30,0.3) 0%, transparent 60%)',
+      }}
+    >
+      <garden-nav brand="GARDEN.DEV" links={defaultLinks} />
+      {/* Hero section below nav */}
+      <div
+        style={{
+          background: '#f2edd7',
+          border: '3px solid #0e0c07',
+          borderTop: 'none',
+          padding: '2.5rem 1.5rem 2rem',
+        }}
+      >
+        <div
           style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: 28,
-            fontWeight: 500,
-            letterSpacing: '-0.02em',
-            color: 'var(--ds-ink)',
-            margin: '0 0 0.75rem',
+            fontFamily: "'Cutive Mono', monospace",
+            fontSize: 11,
+            letterSpacing: '0.15em',
+            textTransform: 'uppercase' as const,
+            color: '#d42b2b',
+            marginBottom: '0.5rem',
+            display: 'flex',
+            alignItems: 'center',
+            gap: 8,
           }}
         >
-          Digital Garden
+          <span style={{ color: '#6b6050' }}>///</span>
+          NEU-BRUTALISM × PUNK ZINE
+        </div>
+        <garden-badge style={{ display: 'block', marginBottom: 8 }}>
+          DESIGN SYSTEM · V0.1
+        </garden-badge>
+        <h1
+          style={{
+            fontFamily: "'Bebas Neue', sans-serif",
+            fontSize: 32,
+            letterSpacing: '0.04em',
+            color: '#0e0c07',
+            margin: '0 0 0.75rem',
+            lineHeight: 1,
+          }}
+        >
+          DIGITAL GARDEN
         </h1>
         <p
           style={{
-            fontFamily: 'var(--font-body)',
+            fontFamily: "'Special Elite', serif",
             fontSize: 15,
-            color: 'var(--ds-muted)',
+            color: '#2c2820',
             lineHeight: 1.7,
             maxWidth: 480,
             margin: 0,
+            borderLeft: '4px solid #0e0c07',
+            paddingLeft: '1rem',
           }}
         >
-          A warm, readable design language for long-form knowledge sites.
+          A raw, loud, opinionated design language for long-form knowledge sites.
         </p>
-      </main>
+      </div>
     </div>
   ),
 };

@@ -13,10 +13,11 @@ const meta: Meta<ButtonArgs> = {
   argTypes: {
     variant: {
       control: 'radio',
-      options: ['default', 'primary', 'ghost'],
-      description: 'Visual variant',
+      options: ['default', 'primary', 'yellow', 'blue', 'ghost'],
+      description:
+        'Visual variant — `default` (paper fill), `primary` (red/punk fill), `yellow` (yellow fill), `blue` (blue fill), `ghost` (no fill, muted border)',
       table: {
-        type: { summary: 'default | primary | ghost' },
+        type: { summary: 'default | primary | yellow | blue | ghost' },
         defaultValue: { summary: 'default' },
       },
     },
@@ -33,13 +34,14 @@ const meta: Meta<ButtonArgs> = {
   args: {
     variant: 'default',
     disabled: false,
-    label: 'Save draft',
+    label: '✂ CLIP',
   },
   parameters: {
     docs: {
       description: {
         component:
-          'Action button. Three variants: `default` (outlined surface), `primary` (terracotta fill), `ghost` (no border). Supports an `icon-left` slot for leading icons.',
+          'Punk rubber stamp button. Five variants: `default` (zine paper), `primary` (red), `yellow`, `blue`, `ghost` (no border). ' +
+          'Thick right+bottom border creates the neubrutalist offset press effect. Supports an `icon-left` slot.',
       },
     },
   },
@@ -57,23 +59,33 @@ const render = ({ variant, disabled, label }: ButtonArgs) => (
 export const Default: Story = { render };
 
 export const Primary: Story = {
-  args: { variant: 'primary', label: 'Publish note' },
+  args: { variant: 'primary', label: '✦ PUBLISH NOTE' },
+  render,
+};
+
+export const Yellow: Story = {
+  args: { variant: 'yellow', label: '◆ SAVE DRAFT' },
+  render,
+};
+
+export const Blue: Story = {
+  args: { variant: 'blue', label: '↑ EXPORT' },
   render,
 };
 
 export const Ghost: Story = {
-  args: { variant: 'ghost', label: 'Cancel' },
+  args: { variant: 'ghost', label: '✕ CANCEL' },
   render,
 };
 
 export const Disabled: Story = {
-  args: { variant: 'primary', disabled: true, label: 'Saving…' },
+  args: { variant: 'primary', disabled: true, label: 'SAVING…' },
   render,
 };
 
 export const WithIcon: Story = {
   name: 'With leading icon',
-  args: { label: 'Export' },
+  args: { label: '↑ EXPORT' },
   render: ({ label, variant, disabled }) => (
     <garden-button variant={variant} disabled={disabled}>
       <svg
@@ -96,11 +108,24 @@ export const WithIcon: Story = {
 export const AllVariants: Story = {
   name: 'All variants',
   render: () => (
-    <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', padding: 16, alignItems: 'center' }}>
-      <garden-button variant="primary">Publish note</garden-button>
-      <garden-button>Save draft</garden-button>
-      <garden-button variant="ghost">Cancel</garden-button>
-      <garden-button disabled>Disabled</garden-button>
+    <div
+      style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: 0,
+        padding: 24,
+        alignItems: 'center',
+        background: '#f2edd7',
+        border: '3px solid #0e0c07',
+        borderRight: '5px solid #0e0c07',
+        borderBottom: '5px solid #0e0c07',
+      }}
+    >
+      <garden-button variant="primary">✦ PUBLISH NOTE</garden-button>
+      <garden-button variant="yellow">◆ SAVE DRAFT</garden-button>
+      <garden-button variant="blue">↑ EXPORT</garden-button>
+      <garden-button>✂ CLIP</garden-button>
+      <garden-button variant="ghost">✕ CANCEL</garden-button>
     </div>
   ),
 };

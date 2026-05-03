@@ -17,7 +17,7 @@ const metaDef: Meta<CardArgs> = {
       control: 'radio',
       options: ['default', 'featured', 'wiki'],
       description:
-        '`default` — plain card; `featured` — left accent border; `wiki` — decorative pixel thumbnail',
+        '`default` — zine paper card with rotate; `featured` — yellow-lt + red top border + ★ FEATURED badge; `wiki` — hatched thumbnail with abbr text',
       table: {
         type: { summary: 'default | featured | wiki' },
         defaultValue: { summary: 'default' },
@@ -121,9 +121,13 @@ export const NoteGrid: Story = {
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
-        gap: 12,
-        padding: 16,
+        gap: 16,
+        padding: '1.5rem',
         maxWidth: 680,
+        background: '#f2edd7',
+        border: '3px solid #0e0c07',
+        borderRight: '5px solid #0e0c07',
+        borderBottom: '5px solid #0e0c07',
       }}
     >
       <garden-card
@@ -181,9 +185,13 @@ export const WikiGrid: Story = {
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(3, 1fr)',
-        gap: 12,
-        padding: 16,
+        gap: 14,
+        padding: '1.5rem',
         maxWidth: 600,
+        background: '#f2edd7',
+        border: '3px solid #0e0c07',
+        borderRight: '5px solid #0e0c07',
+        borderBottom: '5px solid #0e0c07',
       }}
     >
       <garden-card

@@ -20,13 +20,13 @@ const meta: Meta<TocArgs> = {
   argTypes: {
     heading: {
       control: 'text',
-      description: 'Header text above the list',
+      description: 'Marker-font header text above the list',
       table: { defaultValue: { summary: 'On this page' } },
     },
     items: {
       control: 'object',
       description:
-        'Array of `{ id, label, depth?, active? }`. `depth: 2` indents the item. `active: true` highlights it.',
+        'Array of `{ id, label, depth?, active? }`. `depth: 2` indents the item. `active: true` highlights it in red with a checked box.',
     },
   },
   args: {
@@ -37,7 +37,9 @@ const meta: Meta<TocArgs> = {
     docs: {
       description: {
         component:
-          'Sticky table-of-contents sidebar. Active item highlighted in accent colour. `depth: 2` items are indented.',
+          'Hand-drawn checklist TOC sidebar. ' +
+          'Rotated slightly, Permanent Marker title, checkbox items. ' +
+          'Active item highlighted in red with `✕` in the checkbox.',
       },
     },
   },
@@ -82,41 +84,60 @@ export const InArticleLayout: Story = {
         padding: 16,
         maxWidth: 760,
         alignItems: 'start',
+        background: '#2a2218',
       }}
     >
-      <article
+      {/* Reading pane */}
+      <div
         style={{
-          background: 'var(--ds-surface)',
-          border: '1px solid var(--ds-border)',
-          borderRadius: 12,
-          padding: 24,
+          background: '#fafaf2',
+          border: '3px solid #0e0c07',
+          borderRight: '5px solid #0e0c07',
+          borderBottom: '5px solid #0e0c07',
+          padding: '1.75rem',
+          backgroundImage:
+            'repeating-linear-gradient(to bottom, transparent, transparent 31px, rgba(100,120,200,0.1) 31px, rgba(100,120,200,0.1) 32px)',
         }}
       >
+        <div
+          style={{
+            fontFamily: "'Cutive Mono', monospace",
+            fontSize: 10,
+            color: '#6b6050',
+            marginBottom: 6,
+            letterSpacing: '0.1em',
+            textTransform: 'uppercase' as const,
+          }}
+        >
+          NOTES / PKM / SECOND-BRAIN
+        </div>
         <h1
           style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: 20,
-            fontWeight: 500,
-            letterSpacing: '-0.015em',
-            color: 'var(--ds-ink)',
-            marginTop: 0,
+            fontFamily: "'Bebas Neue', sans-serif",
+            fontSize: 26,
+            letterSpacing: '0.03em',
+            color: '#0e0c07',
+            margin: '0 0 6px',
+            lineHeight: 1.15,
           }}
         >
           On building a second brain
         </h1>
         <p
           style={{
-            fontFamily: 'var(--font-body)',
+            fontFamily: "'Special Elite', serif",
             fontSize: 14,
-            lineHeight: 1.75,
-            color: 'var(--ds-muted)',
+            color: '#2c2820',
+            lineHeight: 1.8,
             margin: 0,
           }}
         >
-          The goal isn't to remember everything — it's to think better by offloading memory to a
-          trusted external system. Your brain is for generating ideas, not storing them.
+          The goal isn&apos;t to remember everything — it&apos;s to think better by offloading
+          memory to a trusted external system.
         </p>
-      </article>
+      </div>
+
+      {/* TOC */}
       <garden-toc items={defaultItems} />
     </div>
   ),

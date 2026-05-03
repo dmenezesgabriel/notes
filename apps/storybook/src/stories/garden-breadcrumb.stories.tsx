@@ -26,7 +26,9 @@ const meta: Meta<BreadcrumbArgs> = {
     docs: {
       description: {
         component:
-          'Accessible navigation trail. Renders `<nav aria-label="Breadcrumb">` with an ordered list. Last item is automatically marked `aria-current="page"` — no link.',
+          'Accessible navigation trail. Mono font, white background, hard border, red `/` separators. ' +
+          'Renders `<nav aria-label="Breadcrumb">` with an ordered list. ' +
+          'Last item is automatically marked `aria-current="page"` in Black Han Sans stamp style.',
       },
     },
   },
@@ -63,13 +65,16 @@ export const DeepPath: Story = {
 export const InArticleHeader: Story = {
   name: 'In article header',
   render: () => (
-    <header
+    <div
       style={{
-        background: 'var(--ds-surface)',
-        padding: 24,
-        borderRadius: 12,
-        border: '1px solid var(--ds-border)',
+        background: '#fafaf2',
+        border: '3px solid #0e0c07',
+        borderRight: '5px solid #0e0c07',
+        borderBottom: '5px solid #0e0c07',
+        padding: '1.5rem 1.75rem',
         maxWidth: 600,
+        backgroundImage:
+          'repeating-linear-gradient(to bottom, transparent, transparent 31px, rgba(100,120,200,0.1) 31px, rgba(100,120,200,0.1) 32px)',
       }}
     >
       <garden-breadcrumb
@@ -79,20 +84,32 @@ export const InArticleHeader: Story = {
           { label: 'pkm', href: '/notes/pkm' },
           { label: 'On building a second brain' },
         ]}
-        style={{ marginBottom: 12 }}
+        style={{ marginBottom: 14 }}
       />
+      <div
+        style={{
+          fontFamily: "'Cutive Mono', monospace",
+          fontSize: 10,
+          color: '#6b6050',
+          marginBottom: 6,
+          letterSpacing: '0.1em',
+          textTransform: 'uppercase' as const,
+        }}
+      >
+        NOTES / PKM / SECOND-BRAIN
+      </div>
       <h1
         style={{
-          fontFamily: 'var(--font-body)',
-          fontSize: 20,
-          fontWeight: 500,
-          letterSpacing: '-0.015em',
+          fontFamily: "'Bebas Neue', sans-serif",
+          fontSize: 28,
+          letterSpacing: '0.03em',
+          color: '#0e0c07',
           margin: 0,
-          color: 'var(--ds-ink)',
+          lineHeight: 1.15,
         }}
       >
         On building a second brain
       </h1>
-    </header>
+    </div>
   ),
 };
