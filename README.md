@@ -27,3 +27,7 @@ I chose this workflow because it allows me to keep my notes as plain Markdown fi
 3. Open a design file
 4. Open the Plugins menu
 5. Load the plugin by entering this URL: `http://localhost:4400/manifest.json`
+
+## Common errors
+
+- [Error: ERROR: Playwright does not support chromium on ubuntu26.04-x64](https://github.com/microsoft/playwright/issues/40117)
