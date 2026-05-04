@@ -101,6 +101,12 @@ declare module 'react' {
       'garden-mermaid': React.HTMLAttributes<HTMLElement> & {
         diagram?: string;
       };
+
+      'garden-article': React.HTMLAttributes<HTMLElement> & {
+        title?: string;
+        'has-sidebar'?: string;
+        'has-backlinks'?: string;
+      };
     }
   }
 }

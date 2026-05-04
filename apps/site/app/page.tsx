@@ -4,12 +4,13 @@ import Link from 'next/link';
 import path from 'path';
 
 import { SiteSearch } from './components/site-search';
+import { CONTENT_DIR, readManifest } from './lib/note-processor';
 import { categoryLabel, cleanExcerpt, groupByCategory } from './lib/notes';
 
-interface Manifest {
-  notes: Note[];
-  byId: Record<string, Note>;
-}
+type Manifest = NonNullable<ReturnType<typeof readManifest>>;
+
+const PRIORITY_CATEGORIES = ['books', 'swe', 'devops', 'productivity', 'design', 'as-code'];
+const MAX_CARDS_PER_SECTION = 6;
 
 interface SearchDoc {
   id: string;
@@ -21,19 +22,10 @@ interface SearchIndex {
   docs: SearchDoc[];
 }
 
-const PRIORITY_CATEGORIES = ['books', 'swe', 'devops', 'productivity', 'design', 'as-code'];
-const MAX_CARDS_PER_SECTION = 6;
-
-function readManifest(): Manifest {
-  const p = path.join(process.cwd(), '.content', 'manifest.json');
-  if (!existsSync(p)) return { notes: [], byId: {} };
-  return JSON.parse(readFileSync(p, 'utf8')) as Manifest;
-}
-
 function searchNotes(query: string, manifest: Manifest): Note[] {
   const slugMap: Record<string, string> = {};
   try {
-    const indexPath = path.join(process.cwd(), '.content', 'index.json');
+    const indexPath = path.join(CONTENT_DIR, 'index.json');
     if (existsSync(indexPath)) {
       const { docs } = JSON.parse(readFileSync(indexPath, 'utf8')) as SearchIndex;
       for (const d of docs) slugMap[d.id] = d.slug;
@@ -63,7 +55,7 @@ export default async function HomePage({
 }) {
   const { q } = await searchParams;
   const query = (q ?? '').trim();
-  const manifest = readManifest();
+  const manifest = readManifest() ?? { notes: [], byId: {} as Record<string, Note> };
 
   /* ── Running marquee banner ────────────────────────────────────────── */
   const marqueeBanner = (

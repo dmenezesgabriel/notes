@@ -12,6 +12,7 @@ interface TocEntry {
 interface SiteTocProps {
   items: TocEntry[];
   heading?: string;
+  slot?: string;
 }
 
 /**

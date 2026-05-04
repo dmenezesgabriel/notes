@@ -42,22 +42,23 @@ describe('garden-tape', () => {
   });
 
   describe('CSS styles', () => {
-    it('should use rgba for default background with yellow tint', () => {
+    it('should use rgb() for default background with yellow tint', () => {
       const styles = GardenTape.styles;
       const styleText = Array.isArray(styles)
         ? styles.map((s) => (s as CSSStyleSheet).cssText || String(s)).join(' ')
         : String(styles);
 
-      expect(styleText).toContain('245, 200, 0');
+      // Component uses modern rgb() space-separated syntax
+      expect(styleText).toContain('245 200 0');
     });
 
-    it('should use rgba for red variant', () => {
+    it('should use rgb() for red variant', () => {
       const styles = GardenTape.styles;
       const styleText = Array.isArray(styles)
         ? styles.map((s) => (s as CSSStyleSheet).cssText || String(s)).join(' ')
         : String(styles);
 
-      expect(styleText).toContain('212, 43, 43');
+      expect(styleText).toContain('212 43 43');
     });
 
     it('should use --font-mono token for font-family', () => {

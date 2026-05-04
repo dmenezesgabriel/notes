@@ -65,6 +65,14 @@ declare module 'react' {
         React.HTMLAttributes<HTMLElement> & { heading?: string },
         HTMLElement
       >;
+      'garden-article': React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement> & {
+          title?: string;
+          'has-sidebar'?: string | undefined;
+          'has-backlinks'?: string | undefined;
+        },
+        HTMLElement
+      >;
     }
   }
 }

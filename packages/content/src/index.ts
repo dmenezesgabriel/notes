@@ -13,6 +13,143 @@ export interface Note {
   backlinks: string[];
 }
 
+// ---------------------------------------------------------------------------
+// Table-of-contents entry
+// ---------------------------------------------------------------------------
+
+/**
+ * A single heading extracted from rendered HTML.
+ * depth 1 = h2 (top-level section), depth 2 = h3 (sub-section).
+ * Shared between `<garden-toc>` and the content extraction pipeline.
+ */
+export interface TocEntry {
+  id: string;
+  label: string;
+  depth?: number;
+  active?: boolean;
+}
+
+// ---------------------------------------------------------------------------
+// Frontmatter parsing
+// ---------------------------------------------------------------------------
+
+/**
+ * Parses a markdown file's YAML front matter, sanitising values that contain
+ * unquoted colons (e.g. `title: Tag: AWS`) before gray-matter processes them.
+ *
+ * Returns `{ content, data }` — the same shape as `matter()`.
+ */
+export function safeParseMatter(raw: string): ReturnType<typeof matter> {
+  try {
+    return matter(raw);
+  } catch {
+    const fmMatch = raw.match(/^---\s*\r?\n([\s\S]*?)\r?\n---/);
+    if (fmMatch) {
+      const lines = (fmMatch[1] ?? '').split(/\r?\n/).map((line) => {
+        const m = line.match(/^(\s*[A-Za-z0-9_-]+):\s*(.+)$/);
+        if (m) {
+          const val = m[2] ?? '';
+          if (val.includes(':') && !/^['"]/.test(val)) {
+            return `${m[1]}: "${val.replace(/"/g, '\\"')}"`;
+          }
+        }
+        return line;
+      });
+      const sanitised = raw.replace(fmMatch[1] ?? '', lines.join('\n'));
+      try {
+        return matter(sanitised);
+      } catch {
+        return {
+          content: raw,
+          data: {},
+          orig: raw,
+          language: 'yaml',
+          matter: '',
+          stringify: () => raw,
+        };
+      }
+    }
+    return {
+      content: raw,
+      data: {},
+      orig: raw,
+      language: 'yaml',
+      matter: '',
+      stringify: () => raw,
+    };
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Wiki-link rewriting
+// ---------------------------------------------------------------------------
+
+/**
+ * Replaces Dendron `[[Target]]` / `[[Target|Alias]]` wiki-links with
+ * standard Markdown `[display](/path)` links.
+ */
+export function rewriteWikiLinks(content: string): string {
+  return content.replace(
+    /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g,
+    (_match, targetRaw: string, alias?: string) => {
+      const target = targetRaw.trim();
+      const display = (alias?.trim() || target.split('.').at(-1) || target).trim();
+      const href = '/' + target.split('.').join('/');
+      return `[${display}](${href})`;
+    },
+  );
+}
+
+// ---------------------------------------------------------------------------
+// TOC extraction
+// ---------------------------------------------------------------------------
+
+/**
+ * Extracts h2/h3 headings from an HTML string produced by remark/rehype.
+ * Requires rehype-slug to have added `id` attributes first.
+ */
+export function extractToc(html: string): TocEntry[] {
+  const entries: TocEntry[] = [];
+  const re = /<(h[23])[^>]* id="([^"]+)"[^>]*>([\s\S]*?)<\/h[23]>/gi;
+  let match;
+  while ((match = re.exec(html)) !== null) {
+    const tag = (match[1] ?? '').toLowerCase();
+    const id = match[2] ?? '';
+    const rawLabel = (match[3] ?? '').replace(/<[^>]+>/g, '').trim();
+    entries.push({ id, label: rawLabel, depth: tag === 'h2' ? 1 : 2 });
+  }
+  return entries;
+}
+
+// ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// Excerpt cleaning
+// ---------------------------------------------------------------------------
+
+/** Returns a clean plain-text excerpt capped at `maxLen` characters. */
+export function cleanExcerpt(raw: string, maxLen = 200): string {
+  const stripped = raw
+    .replace(/---[\s\S]*?---/, '') // YAML front matter
+    .replace(/^#+\s+/gm, '') // headings
+    .replace(/\[([^\]]*)]\([^)]*\)/g, '$1') // [text](url) → text
+    .replace(
+      /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g,
+      (_: string, id: string, label: string) => label || id.split('.').at(-1) || id,
+    ) // [[wiki|label]] → label
+    .replace(/^[-*+]\s+/gm, '') // bullet list markers
+    .replace(/^\d+\.\s+/gm, '') // ordered list markers
+    .replace(/https?:\/\/\S+/g, '') // bare URLs
+    .replace(/[#*_`[\]()\\|]/g, '') // remaining special chars
+    .replace(/\s+/g, ' ') // collapse whitespace
+    .trim();
+  if (stripped.length <= maxLen) return stripped;
+  return stripped.slice(0, maxLen).replace(/\s+\S*$/, '') + '…';
+}
+
+// ---------------------------------------------------------------------------
+// Manifest interface
+// ---------------------------------------------------------------------------
+
 export interface Manifest {
   notes: Note[];
   byId: Record<string, Note>;

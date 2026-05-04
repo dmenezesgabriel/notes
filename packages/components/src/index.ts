@@ -1,6 +1,7 @@
 // Garden Design System — Lit web components
 // Import once from any app to register all custom elements globally.
 
+export * from './garden-article';
 export * from './garden-badge';
 export * from './garden-banner';
 export * from './garden-blockquote';
