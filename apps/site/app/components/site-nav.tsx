@@ -25,6 +25,13 @@ export function SiteNav() {
     const el = ref.current;
     if (!el) return;
 
+    // Sync initial theme to the component's toggle UI
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    if (currentTheme === 'dark' || currentTheme === 'light') {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (el as any).setTheme?.(currentTheme);
+    }
+
     const handleThemeChange = (e: Event) => {
       const theme = (e as CustomEvent<{ theme: 'light' | 'dark' }>).detail.theme;
       document.documentElement.setAttribute('data-theme', theme);

@@ -25,7 +25,7 @@ const meta: Meta<SheetArgs> = {
     heading: 'SECTION TITLE',
   },
   parameters: {
-    backgrounds: { default: 'corkboard' },
+    backgrounds: { default: 'dark' },
     docs: {
       description: {
         component:
@@ -94,7 +94,7 @@ export const AllVariants: Story = {
     <div
       style={{
         padding: '2rem',
-        background: '#2a2218',
+        background: 'var(--ds-page, #11111b)',
         display: 'flex',
         flexDirection: 'column',
         gap: '3rem',

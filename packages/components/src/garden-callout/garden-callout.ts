@@ -39,29 +39,30 @@ export class GardenCallout extends LitElement {
         font-size: 13px;
         color: var(--zine-ink-faded, #2c2820);
         position: relative;
-        background: var(--zine-yellow-lt, #fdf0a0);
+        /* Uses token — overridden to dark surface in dark mode */
+        background: var(--callout-note-bg, #fdf0a0);
         line-height: 1.7;
       }
 
       [part='base'].info {
-        background: #eaf0ff;
-        border-color: var(--zine-blue, #1a3c8f);
-        border-right-color: var(--zine-blue, #1a3c8f);
-        border-bottom-color: var(--zine-blue, #1a3c8f);
+        background: var(--callout-info-bg, #eaf0ff);
+        border-color: var(--callout-info-border, #1a3c8f);
+        border-right-color: var(--callout-info-border, #1a3c8f);
+        border-bottom-color: var(--callout-info-border, #1a3c8f);
       }
 
       [part='base'].warning {
-        background: #fff3cc;
-        border-color: var(--zine-orange, #e85d1a);
-        border-right-color: var(--zine-orange, #e85d1a);
-        border-bottom-color: var(--zine-orange, #e85d1a);
+        background: var(--callout-warning-bg, #fff3cc);
+        border-color: var(--callout-warning-border, #e85d1a);
+        border-right-color: var(--callout-warning-border, #e85d1a);
+        border-bottom-color: var(--callout-warning-border, #e85d1a);
       }
 
       [part='base'].tip {
-        background: var(--zine-green-lt, #a8d8a0);
-        border-color: var(--zine-green, #1d6b2e);
-        border-right-color: var(--zine-green, #1d6b2e);
-        border-bottom-color: var(--zine-green, #1d6b2e);
+        background: var(--callout-tip-bg, #a8d8a0);
+        border-color: var(--callout-tip-border, #1d6b2e);
+        border-right-color: var(--callout-tip-border, #1d6b2e);
+        border-bottom-color: var(--callout-tip-border, #1d6b2e);
       }
 
       [part='heading'] {

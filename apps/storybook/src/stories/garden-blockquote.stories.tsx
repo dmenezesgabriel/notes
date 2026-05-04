@@ -97,7 +97,7 @@ export const AllVariants: Story = {
         flexDirection: 'column',
         gap: '1rem',
         padding: '2rem',
-        background: '#f2edd7',
+        background: 'var(--zine-paper, #f2edd7)',
       }}
     >
       <garden-blockquote>Default blockquote without citation.</garden-blockquote>

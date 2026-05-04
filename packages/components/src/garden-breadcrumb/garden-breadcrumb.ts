@@ -42,7 +42,8 @@ export class GardenBreadcrumb extends LitElement {
         align-items: center;
         padding: 5px 10px;
         margin: 0;
-        background: #fff;
+        /* Uses token so dark mode can override */
+        background: var(--breadcrumb-bg, #ffffff);
         border: 2px solid var(--zine-ink, #0e0c07);
         border-right: 3px solid var(--zine-ink, #0e0c07);
         border-bottom: 3px solid var(--zine-ink, #0e0c07);
@@ -52,8 +53,9 @@ export class GardenBreadcrumb extends LitElement {
         display: flex;
         align-items: center;
         font-family: var(--font-mono, 'Cutive Mono', monospace);
-        font-size: 11px;
-        color: var(--zine-muted, #6b6050);
+        font-size: 12px;
+        /* Use ink-faded for non-link crumbs — better contrast than muted */
+        color: var(--zine-ink-faded, #2c2820);
       }
 
       li + li::before {
@@ -63,9 +65,12 @@ export class GardenBreadcrumb extends LitElement {
         padding: 0 6px;
       }
 
+      /* Links are clearly interactive — use zine-red with underline */
       a {
-        color: inherit;
-        text-decoration: none;
+        color: var(--zine-red, #d42b2b);
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 2px;
       }
 
       a:focus-visible {
@@ -74,14 +79,17 @@ export class GardenBreadcrumb extends LitElement {
       }
 
       a:hover {
-        color: var(--zine-ink, #0e0c07);
+        color: var(--zine-red-dark, #8a0000);
+        text-decoration-thickness: 2px;
       }
 
+      /* Current page: bold stamp font, primary ink color */
       li:last-child span,
       li:last-child a {
         color: var(--zine-ink, #0e0c07);
         font-family: var(--font-stamp, 'Black Han Sans', sans-serif);
         font-size: 11px;
+        text-decoration: none;
       }
     `,
   ];

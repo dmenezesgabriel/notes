@@ -43,7 +43,8 @@ export class GardenCard extends LitElement {
     css`
       :host {
         display: block;
-
+        /* Ensure the card shrinks in CSS grid/flex without overflowing its cell */
+        min-width: 0;
         /* Use CSS custom property so grid containers can set alternating rotations */
         transform: rotate(var(--card-rotate, -0.5deg));
         transition: transform 0.15s ease;
@@ -63,6 +64,12 @@ export class GardenCard extends LitElement {
         border-bottom: 5px solid var(--zine-ink, #0e0c07);
         padding: 1rem;
         height: 100%;
+        /* Hard clipping — no content escapes the card boundary */
+        overflow: hidden;
+        /* Allow the article to shrink inside a grid cell */
+        min-width: 0;
+        /* Ensure box-sizing includes borders */
+        box-sizing: border-box;
       }
 
       /* Featured — yellow tint + red top border */
@@ -136,6 +143,10 @@ export class GardenCard extends LitElement {
         line-height: 1.2;
         display: block;
         text-decoration: none;
+        /* Prevent long titles from blowing out the card */
+        overflow-wrap: break-word;
+        word-break: break-word;
+        overflow: hidden;
       }
 
       /* Scribble underline */
@@ -176,8 +187,15 @@ export class GardenCard extends LitElement {
         font-size: 13px;
         color: var(--zine-ink-faded, #2c2820);
         line-height: 1.65;
-        display: block;
         margin: 0;
+        /* Clamp to 4 lines — prevents markdown-heavy excerpts from blowing the layout */
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        /* Ensure long URLs / dotted identifiers wrap rather than overflow */
+        overflow-wrap: break-word;
+        word-break: break-word;
       }
 
       [part='footer'] {

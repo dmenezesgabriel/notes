@@ -75,7 +75,7 @@ export const AboveHeading: Story = {
   render: () => (
     <div
       style={{
-        background: '#f2edd7',
+        background: 'var(--zine-paper, #f2edd7)',
         border: '3px solid #0e0c07',
         borderRight: '5px solid #0e0c07',
         borderBottom: '5px solid #0e0c07',
@@ -124,7 +124,7 @@ export const AllVariants: Story = {
         flexDirection: 'column',
         gap: 12,
         padding: 24,
-        background: '#f2edd7',
+        background: 'var(--zine-paper, #f2edd7)',
         border: '3px solid #0e0c07',
         borderRight: '5px solid #0e0c07',
         borderBottom: '5px solid #0e0c07',

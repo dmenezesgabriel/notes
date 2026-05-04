@@ -87,7 +87,21 @@ export async function buildContent(opts: { notesDir?: string; outDir?: string } 
     const slug = idToSlug(id);
     const title =
       (parsed.data && (parsed.data.title as string | undefined)) ?? id.split('.').at(-1) ?? id;
-    const excerpt = content.replace(/\n/g, ' ').slice(0, 300);
+    // Strip markdown to clean plain text for the excerpt
+    const cleaned = content
+      .replace(/^#+\s+/gm, '') // headings
+      .replace(/\[([^\]]*)]\([^)]*\)/g, '$1') // [text](url) → text
+      .replace(
+        /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g,
+        (_: string, id: string, label: string) => label || id.split('.').at(-1) || id,
+      ) // [[wiki|label]] → label
+      .replace(/^[-*+]\s+/gm, '') // bullet markers
+      .replace(/^\d+\.\s+/gm, '') // ordered list markers
+      .replace(/https?:\/\/\S+/g, '') // bare URLs
+      .replace(/[`*_|\\]/g, '') // inline formatting chars
+      .replace(/\s+/g, ' ') // collapse whitespace
+      .trim();
+    const excerpt = cleaned.slice(0, 300);
 
     // extract wiki-links
     const outlinks: string[] = [];

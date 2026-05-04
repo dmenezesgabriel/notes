@@ -90,25 +90,8 @@ export default async function HomePage({
         borderTop: 'none',
         padding: 'clamp(2rem, 6vw, 3rem) 1.5rem 3rem',
         position: 'relative',
-        overflow: 'visible',
       }}
     >
-      {/* Torn bottom edge */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: 'absolute',
-          bottom: -18,
-          left: 0,
-          right: 0,
-          height: 20,
-          background: 'var(--zine-paper)',
-          clipPath:
-            'polygon(0% 0%, 3% 100%, 6% 20%, 9% 80%, 12% 10%, 15% 90%, 18% 30%, 21% 100%, 24% 15%, 27% 85%, 30% 5%, 33% 75%, 36% 25%, 39% 95%, 42% 10%, 45% 80%, 48% 0%, 51% 70%, 54% 20%, 57% 100%, 60% 15%, 63% 85%, 66% 30%, 69% 100%, 72% 5%, 75% 75%, 78% 25%, 81% 90%, 84% 10%, 87% 80%, 90% 0%, 93% 70%, 96% 20%, 100% 50%, 100% 0%)',
-          zIndex: 5,
-        }}
-      />
-
       <div className="page-wrap" style={{ position: 'relative' }}>
         {/* Eyebrow */}
         <div

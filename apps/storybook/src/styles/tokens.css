@@ -6,6 +6,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Special+Elite&family=Permanent+Marker&family=Cutive+Mono&family=Black+Han+Sans&display=swap');
 
+/* ── Light mode (default) ──────────────────────────────────────────────── */
 :root {
   /* ── Zine colour palette ───────────────────────────────────────────────── */
   --zine-paper: #f2edd7;
@@ -43,7 +44,7 @@
 
   /* ── Backward-compat ds-* aliases ────────────────────────────────────── */
   --ds-accent: #d42b2b;
-  --ds-accent-light: rgba(212, 43, 43, 0.12);
+  --ds-accent-light: rgb(212 43 43 / 12%);
   --ds-accent-dark: #8a0000;
   --ds-sage: #1d6b2e;
   --ds-sage-light: #a8d8a0;
@@ -51,14 +52,32 @@
   --ds-ink: #0e0c07;
   --ds-muted: #6b6050;
   --ds-surface: #f2edd7;
-  --ds-page: #2a2218;
-  --ds-border: rgba(14, 12, 7, 0.25);
+  --ds-page: #ede5c8;
+  --ds-border: rgb(14 12 7 / 25%);
   --ds-border-strong: #0e0c07;
   --ds-tag-bg: #f2edd7;
   --ds-tag-text: #0e0c07;
   --ds-code-bg: #0e0c07;
   --ds-code-text: #e8e0c8;
-  --ds-toggle-bg: #0e0c07;
+  --ds-toggle-bg: rgb(245 200 0 / 15%);
+
+  /* ── Nav tokens ──────────────────────────────────────────────────────── */
+  --nav-bg: #0e0c07;
+  --nav-border: #0e0c07;
+  --nav-link-color: #cccccc;
+  --nav-active-bg: #f5c800;
+  --nav-active-text: #0e0c07;
+
+  /* ── Component surface tokens ────────────────────────────────────────── */
+  --breadcrumb-bg: #ffffff;
+  --search-bg: #ffffff;
+  --callout-note-bg: #fdf0a0;
+  --callout-info-bg: #eaf0ff;
+  --callout-info-border: #1a3c8f;
+  --callout-warning-bg: #fff3cc;
+  --callout-warning-border: #e85d1a;
+  --callout-tip-bg: #a8d8a0;
+  --callout-tip-border: #1d6b2e;
 
   /* ── Spacing scale ───────────────────────────────────────────────────── */
   --space-1: 4px;
@@ -86,21 +105,79 @@
   --transition-slow: 360ms ease;
 }
 
-/* Dark theme — inverted paper/ink, corkboard stays dark */
+/* ── Dark mode — Catppuccin Mocha ───────────────────────────────────────── */
+/*
+   Base #1e1e2e  Mantle #181825  Surface0 #313244  Surface1 #45475a
+   Text #cdd6f4  Subtext1 #bac2de  Subtext0 #a6adc8
+   Red #f38ba8  Yellow #f9e2af  Blue #89b4fa  Green #a6e3a1
+*/
 [data-theme='dark'] {
-  --zine-paper: #1a1610;
-  --zine-paper-alt: #211d14;
-  --zine-ink: #f2edd7;
-  --zine-ink-faded: #d4cbb8;
-  --zine-muted: #a89880;
-  --ds-ink: #f2edd7;
-  --ds-muted: #a89880;
-  --ds-surface: #1a1610;
-  --ds-page: #0e0c07;
-  --ds-border: rgba(242, 237, 215, 0.15);
-  --ds-border-strong: rgba(242, 237, 215, 0.4);
-  --ds-code-bg: #211d14;
-  --ds-code-text: #e8e0c8;
+  /* Zine palette */
+  --zine-paper: #1e1e2e;
+  --zine-paper-alt: #181825;
+  --zine-aged: #313244;
+  --zine-ink: #cdd6f4;
+  --zine-ink-faded: #bac2de;
+  --zine-muted: #a6adc8;
+  --zine-red: #f38ba8;
+  --zine-red-dark: #eba0ac;
+  --zine-yellow: #f9e2af;
+  --zine-yellow-lt: #2c2a1c;
+  --zine-blue: #89b4fa;
+  --zine-blue-lt: #74c7ec;
+  --zine-green: #a6e3a1;
+  --zine-green-lt: #1a2d20;
+  --zine-pink: #f5c2e7;
+  --zine-orange: #fab387;
+
+  /* Structural */
+  --zine-border: 3px solid #cdd6f4;
+  --zine-shadow: 4px 4px 0 rgb(0 0 0 / 90%);
+  --zine-shadow-lg: 6px 6px 0 rgb(0 0 0 / 90%);
+  --zine-shadow-red: 4px 4px 0 rgb(243 139 168 / 45%);
+  --zine-shadow-blue: 4px 4px 0 rgb(137 180 250 / 45%);
+
+  /* ds-* aliases */
+  --ds-accent: #f38ba8;
+  --ds-accent-light: rgb(243 139 168 / 12%);
+  --ds-accent-dark: #eba0ac;
+  --ds-sage: #a6e3a1;
+  --ds-sage-light: #1a2d20;
+  --ds-sand: #1e1e2e;
+  --ds-ink: #cdd6f4;
+  --ds-muted: #a6adc8;
+  --ds-surface: #1e1e2e;
+  --ds-page: #11111b;
+  --ds-border: rgb(205 214 244 / 18%);
+  --ds-border-strong: rgb(205 214 244 / 55%);
+  --ds-tag-bg: #313244;
+  --ds-tag-text: #cdd6f4;
+  --ds-code-bg: #181825;
+  --ds-code-text: #cdd6f4;
+  --ds-toggle-bg: rgb(249 226 175 / 15%);
+
+  /* Nav tokens */
+  --nav-bg: #313244;
+  --nav-border: #45475a;
+  --nav-link-color: #bac2de;
+  --nav-active-bg: #f9e2af;
+  --nav-active-text: #1e1e2e;
+
+  /* Component surface tokens */
+  --breadcrumb-bg: #181825;
+  --search-bg: #181825;
+  --callout-note-bg: #2c2a1c;
+  --callout-info-bg: #1a1d35;
+  --callout-info-border: #89b4fa;
+  --callout-warning-bg: #2a1e10;
+  --callout-warning-border: #fab387;
+  --callout-tip-bg: #1a2d20;
+  --callout-tip-border: #a6e3a1;
+
+  /* Shadow scale */
+  --shadow-sm: 2px 2px 0 rgb(0 0 0 / 90%);
+  --shadow-md: 4px 4px 0 rgb(0 0 0 / 90%);
+  --shadow-lg: 6px 6px 0 rgb(0 0 0 / 90%);
 }
 
 *,
@@ -111,8 +188,11 @@
 
 body {
   font-family: var(--font-body, 'Special Elite', serif);
-  background: var(--ds-page, #2a2218);
+  background: var(--ds-page, #ede5c8);
   color: var(--zine-ink, #0e0c07);
   margin: 0;
   -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }

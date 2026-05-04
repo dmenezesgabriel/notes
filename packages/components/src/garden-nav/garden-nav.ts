@@ -37,11 +37,53 @@ export class GardenNav extends LitElement {
   @property({ type: Array }) links: NavLink[] = [];
   @state() private _theme: 'light' | 'dark' = 'light';
 
+  private _observer?: MutationObserver;
+
   override connectedCallback() {
     super.connectedCallback();
-    const docTheme = document.documentElement.getAttribute('data-theme');
-    if (docTheme === 'dark' || docTheme === 'light') {
-      this._theme = docTheme;
+    this._syncTheme();
+
+    const observer = new MutationObserver(() => this._syncTheme());
+    this._observer = observer;
+
+    // Watch document root — handles the live site where SiteNav sets data-theme on <html>
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['data-theme'],
+    });
+
+    // Also watch the nearest [data-theme] ancestor — handles Storybook's
+    // withThemeByDataAttribute decorator which sets data-theme on a story wrapper element
+    // (not on document.documentElement).
+    // We use setTimeout(0) because Storybook may complete DOM setup after connectedCallback.
+    setTimeout(() => {
+      const storyHost = this.closest('[data-theme]');
+      if (storyHost && storyHost !== document.documentElement) {
+        observer.observe(storyHost, {
+          attributes: true,
+          attributeFilter: ['data-theme'],
+        });
+      }
+      this._syncTheme();
+    }, 0);
+  }
+
+  override disconnectedCallback() {
+    super.disconnectedCallback();
+    this._observer?.disconnect();
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (this as any)._observer = undefined;
+  }
+
+  /** Read theme from nearest [data-theme] ancestor, fallback to document root. */
+  private _syncTheme() {
+    const host = this.closest('[data-theme]') ?? document.documentElement;
+    const theme = host.getAttribute('data-theme');
+    if (theme === 'dark' || theme === 'light') {
+      this._theme = theme;
+    } else {
+      // No explicit data-theme means light (default)
+      this._theme = 'light';
     }
   }
 
@@ -55,11 +97,11 @@ export class GardenNav extends LitElement {
         z-index: 100;
       }
 
-      /* ── The thick black bar ─────────────────────────────────────────── */
+      /* ── The thick bar ───────────────────────────────────────────────── */
       header {
-        background: var(--zine-ink, #0e0c07);
-        border: 3px solid var(--zine-ink, #0e0c07);
-        border-bottom: 5px solid var(--zine-ink, #0e0c07);
+        background: var(--nav-bg, #0e0c07);
+        border: 3px solid var(--nav-border, #0e0c07);
+        border-bottom: 5px solid var(--nav-border, #0e0c07);
         padding: 0 1.25rem;
         height: 56px;
         display: flex;
@@ -67,6 +109,7 @@ export class GardenNav extends LitElement {
         justify-content: space-between;
         position: relative;
         overflow: visible;
+        transition: background-color 0.2s ease;
       }
 
       /* Misregistered red shadow (xerox artifact) */
@@ -126,13 +169,14 @@ export class GardenNav extends LitElement {
         font-family: var(--font-stamp, 'Black Han Sans', sans-serif);
         font-size: 12px;
         letter-spacing: 0.05em;
-        color: #ccc;
+        color: var(--nav-link-color, #cccccc);
         padding: 5px 12px;
         border: 2px solid transparent;
         cursor: pointer;
         text-decoration: none;
         background: none;
         line-height: 1;
+        transition: color 0.1s ease;
       }
 
       [part='link']:hover {
@@ -141,9 +185,9 @@ export class GardenNav extends LitElement {
       }
 
       [part='link'][aria-current='page'] {
-        background: var(--zine-yellow, #f5c800);
-        color: var(--zine-ink, #0e0c07);
-        border-color: var(--zine-yellow, #f5c800);
+        background: var(--nav-active-bg, #f5c800);
+        color: var(--nav-active-text, #0e0c07);
+        border-color: var(--nav-active-bg, #f5c800);
       }
 
       [part='link']:focus-visible {
@@ -171,14 +215,17 @@ export class GardenNav extends LitElement {
         justify-content: center;
         background: transparent;
         color: rgb(255 255 255 / 40%);
-        font-size: 12px;
+        font-size: 13px;
         font-family: var(--font-mono, 'Cutive Mono', monospace);
         letter-spacing: 0;
+        transition:
+          background-color 0.15s ease,
+          color 0.15s ease;
       }
 
       .theme-btn.active {
-        background: var(--zine-yellow, #f5c800);
-        color: var(--zine-ink, #0e0c07);
+        background: var(--nav-active-bg, #f5c800);
+        color: var(--nav-active-text, #0e0c07);
       }
 
       .theme-btn:focus-visible {

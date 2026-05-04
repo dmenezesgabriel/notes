@@ -50,7 +50,7 @@ export const AllVariants: Story = {
     <div
       style={{
         padding: '2rem',
-        background: '#f2edd7',
+        background: 'var(--zine-paper, #f2edd7)',
         display: 'flex',
         flexDirection: 'column',
         gap: '2rem',

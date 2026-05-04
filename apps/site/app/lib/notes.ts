@@ -105,11 +105,21 @@ export function extractToc(html: string): TocEntry[] {
 // Note excerpt formatting
 // ---------------------------------------------------------------------------
 
-/** Returns a clean excerpt capped at `maxLen` characters. */
+/** Returns a clean plain-text excerpt capped at `maxLen` characters. */
 export function cleanExcerpt(raw: string, maxLen = 200): string {
   const stripped = raw
-    .replace(/---[\s\S]*?---/, '')
-    .replace(/[#*_`[\]]/g, '')
+    .replace(/---[\s\S]*?---/, '') // YAML front matter
+    .replace(/^#+\s+/gm, '') // headings
+    .replace(/\[([^\]]*)]\([^)]*\)/g, '$1') // [text](url) → text
+    .replace(
+      /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g,
+      (_: string, id: string, label: string) => label || id.split('.').at(-1) || id,
+    ) // [[wiki|label]] → label
+    .replace(/^[-*+]\s+/gm, '') // bullet list markers
+    .replace(/^\d+\.\s+/gm, '') // ordered list markers
+    .replace(/https?:\/\/\S+/g, '') // bare URLs
+    .replace(/[#*_`[\]()\\|]/g, '') // remaining special chars
+    .replace(/\s+/g, ' ') // collapse whitespace
     .trim();
   if (stripped.length <= maxLen) return stripped;
   return stripped.slice(0, maxLen).replace(/\s+\S*$/, '') + '…';

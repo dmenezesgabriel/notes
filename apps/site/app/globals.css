@@ -58,7 +58,9 @@
   --ds-ink: #0e0c07;
   --ds-muted: #6b6050;
   --ds-surface: #f2edd7;
-  --ds-page: #2a2218;
+  /* Light-mode page bg: slightly more aged than card paper so the
+     hero's torn-paper clip-path edge has contrast to show against. */
+  --ds-page: #ede5c8;
   --ds-border: rgb(14 12 7 / 25%);
   --ds-border-strong: #0e0c07;
   --ds-tag-bg: #f2edd7;
@@ -66,6 +68,24 @@
   --ds-code-bg: #0e0c07;
   --ds-code-text: #e8e0c8;
   --ds-toggle-bg: rgb(245 200 0 / 15%);
+
+  /* Nav tokens */
+  --nav-bg: #0e0c07;
+  --nav-border: #0e0c07;
+  --nav-link-color: #cccccc;
+  --nav-active-bg: #f5c800;
+  --nav-active-text: #0e0c07;
+
+  /* Component surface tokens */
+  --breadcrumb-bg: #ffffff;
+  --search-bg: #ffffff;
+  --callout-note-bg: #fdf0a0;
+  --callout-info-bg: #eaf0ff;
+  --callout-info-border: #1a3c8f;
+  --callout-warning-bg: #fff3cc;
+  --callout-warning-border: #e85d1a;
+  --callout-tip-bg: #a8d8a0;
+  --callout-tip-border: #1d6b2e;
 
   /* Spacing */
   --space-1: 4px;
@@ -78,10 +98,10 @@
   --space-8: 64px;
 
   /* No border-radius — neubrutalism is sharp */
-  --radius-sm: 0px;
-  --radius-md: 0px;
-  --radius-lg: 0px;
-  --radius-pill: 0px;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-pill: 0;
 
   /* Block shadows */
   --shadow-sm: 2px 2px 0 #0e0c07;
@@ -94,22 +114,109 @@
   --transition-slow: 360ms ease;
 }
 
+/* ── Dark mode — Catppuccin Mocha ───────────────────────────────────────── */
+/*
+   Palette reference (Catppuccin Mocha):
+   Base      #1e1e2e  Mantle    #181825  Crust     #11111b
+   Surface0  #313244  Surface1  #45475a  Surface2  #585b70
+   Text      #cdd6f4  Subtext1  #bac2de  Subtext0  #a6adc8
+   Red       #f38ba8  Maroon    #eba0ac  Pink      #f5c2e7
+   Peach     #fab387  Yellow    #f9e2af  Green     #a6e3a1
+   Sapphire  #74c7ec  Blue      #89b4fa
+*/
+[data-theme='dark'] {
+  /* Zine palette — Catppuccin Mocha */
+  --zine-paper: #1e1e2e;
+  --zine-paper-alt: #181825;
+  --zine-aged: #313244;
+  --zine-ink: #cdd6f4;
+  --zine-ink-faded: #bac2de;
+  --zine-muted: #a6adc8;
+  --zine-red: #f38ba8;
+  --zine-red-dark: #eba0ac;
+  --zine-yellow: #f9e2af;
+  --zine-yellow-lt: #2c2a1c;
+  --zine-blue: #89b4fa;
+  --zine-blue-lt: #74c7ec;
+  --zine-green: #a6e3a1;
+  --zine-green-lt: #1a2d20;
+  --zine-pink: #f5c2e7;
+  --zine-orange: #fab387;
+
+  /* Structural */
+  --zine-border: 3px solid #cdd6f4;
+  --zine-shadow: 4px 4px 0 rgb(0 0 0 / 90%);
+  --zine-shadow-lg: 6px 6px 0 rgb(0 0 0 / 90%);
+  --zine-shadow-red: 4px 4px 0 rgb(243 139 168 / 45%);
+  --zine-shadow-blue: 4px 4px 0 rgb(137 180 250 / 45%);
+
+  /* ds-* aliases */
+  --ds-accent: #f38ba8;
+  --ds-accent-light: rgb(243 139 168 / 12%);
+  --ds-accent-dark: #eba0ac;
+  --ds-sage: #a6e3a1;
+  --ds-sage-light: #1a2d20;
+  --ds-sand: #1e1e2e;
+  --ds-ink: #cdd6f4;
+  --ds-muted: #a6adc8;
+  --ds-surface: #1e1e2e;
+  /* Catppuccin Crust — darkest surface so cards (#1e1e2e) pop clearly */
+  --ds-page: #11111b;
+  --ds-border: rgb(205 214 244 / 18%);
+  --ds-border-strong: rgb(205 214 244 / 55%);
+  --ds-tag-bg: #313244;
+  --ds-tag-text: #cdd6f4;
+  --ds-code-bg: #181825;
+  --ds-code-text: #cdd6f4;
+  --ds-toggle-bg: rgb(249 226 175 / 15%);
+
+  /* Nav tokens */
+  --nav-bg: #313244;
+  --nav-border: #45475a;
+  --nav-link-color: #bac2de;
+  --nav-active-bg: #f9e2af;
+  --nav-active-text: #1e1e2e;
+
+  /* Component surface tokens */
+  --breadcrumb-bg: #181825;
+  --search-bg: #181825;
+  --callout-note-bg: #2c2a1c;
+  --callout-info-bg: #1a1d35;
+  --callout-info-border: #89b4fa;
+  --callout-warning-bg: #2a1e10;
+  --callout-warning-border: #fab387;
+  --callout-tip-bg: #1a2d20;
+  --callout-tip-border: #a6e3a1;
+
+  /* Shadow scale */
+  --shadow-sm: 2px 2px 0 rgb(0 0 0 / 90%);
+  --shadow-md: 4px 4px 0 rgb(0 0 0 / 90%);
+  --shadow-lg: 6px 6px 0 rgb(0 0 0 / 90%);
+}
+
 /* ── Base page ──────────────────────────────────────────────────────────── */
 html {
   scroll-behavior: smooth;
 }
 
+/* Light mode body uses aged-paper page bg; dark mode uses Crust */
 body {
-  background: #2a2218;
-  background-image:
-    radial-gradient(circle at 20% 50%, rgb(90 70 30 / 30%) 0%, transparent 60%),
-    radial-gradient(circle at 80% 20%, rgb(60 40 10 / 40%) 0%, transparent 50%);
+  background: var(--ds-page, #ede5c8);
   min-height: 100vh;
-  color: var(--zine-ink);
+  color: var(--zine-ink, #0e0c07);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.7;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Dark mode body — deep Catppuccin base */
+[data-theme='dark'] body {
+  background: var(--ds-page, #11111b);
+  color: var(--zine-ink, #cdd6f4);
 }
 
 /* ── Skip-to-content ────────────────────────────────────────────────────── */
@@ -139,7 +246,7 @@ body {
   font-family: var(--font-body);
   font-size: 14px;
   line-height: 1.8;
-  color: var(--zine-ink-faded);
+  color: var(--zine-ink-faded, #2c2820);
   max-width: 65ch;
 
   /* Typewriter paper lines */
@@ -153,9 +260,21 @@ body {
   background-attachment: local;
   padding: 1.5rem;
   border: var(--zine-border);
-  border-right: 5px solid var(--zine-ink);
-  border-bottom: 5px solid var(--zine-ink);
-  background-color: #fafaf2;
+  border-right: 5px solid var(--zine-ink, #0e0c07);
+  border-bottom: 5px solid var(--zine-ink, #0e0c07);
+  background-color: var(--zine-paper, #f2edd7);
+}
+
+[data-theme='dark'] .prose {
+  background-color: var(--zine-paper, #1e1e2e);
+  color: var(--zine-ink-faded, #bac2de);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 31px,
+    rgb(205 214 244 / 5%) 31px,
+    rgb(205 214 244 / 5%) 32px
+  );
 }
 
 .prose h1 {
@@ -164,13 +283,13 @@ body {
   letter-spacing: 0.03em;
   line-height: 1.1;
   margin: 0 0 0.5rem;
-  color: var(--zine-ink);
+  color: var(--zine-ink, #0e0c07);
 }
 
 .prose h2 {
   font-family: var(--font-marker);
   font-size: clamp(18px, 3vw, 22px);
-  color: var(--zine-blue);
+  color: var(--zine-blue, #1a3c8f);
   line-height: 1.2;
   margin: 2rem 0 0.6rem;
   display: inline-block;
@@ -182,7 +301,7 @@ body {
   font-size: 18px;
   letter-spacing: 0.04em;
   margin: 1.5rem 0 0.5rem;
-  color: var(--zine-ink);
+  color: var(--zine-ink, #0e0c07);
 }
 
 .prose p {
@@ -190,7 +309,7 @@ body {
 }
 
 .prose a {
-  color: var(--zine-red);
+  color: var(--zine-red, #d42b2b);
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
@@ -199,7 +318,11 @@ body {
 }
 
 .prose a:hover {
-  color: var(--zine-red-dark);
+  color: var(--zine-red-dark, #8a0000);
+}
+
+[data-theme='dark'] .prose a:hover {
+  color: var(--zine-red-dark, #eba0ac);
 }
 
 .prose ul,
@@ -213,20 +336,25 @@ body {
 }
 
 .prose blockquote {
-  border-left: 5px solid var(--zine-ink);
+  border-left: 5px solid var(--zine-ink, #0e0c07);
   padding: 0.6rem 0 0.6rem 1rem;
-  color: var(--zine-muted);
+  color: var(--zine-muted, #6b6050);
   font-style: italic;
   margin: 1.25rem 0;
   background: rgb(14 12 7 / 4%);
   position: relative;
 }
 
+[data-theme='dark'] .prose blockquote {
+  background: rgb(205 214 244 / 5%);
+  color: var(--zine-muted, #a6adc8);
+}
+
 .prose blockquote::before {
   content: '"';
   font-family: var(--font-display);
   font-size: 48px;
-  color: var(--zine-red);
+  color: var(--zine-red, #d42b2b);
   position: absolute;
   top: -10px;
   left: -12px;
@@ -238,9 +366,15 @@ body {
   font-family: var(--font-mono);
   font-size: 0.875em;
   background: rgb(14 12 7 / 7%);
-  color: var(--zine-ink);
+  color: var(--zine-ink, #0e0c07);
   padding: 2px 6px;
-  border-left: 3px solid var(--zine-ink);
+  border-left: 3px solid var(--zine-ink, #0e0c07);
+}
+
+[data-theme='dark'] .prose code {
+  background: rgb(205 214 244 / 8%);
+  color: var(--zine-ink, #cdd6f4);
+  border-left-color: var(--zine-muted, #a6adc8);
 }
 
 .prose pre {
@@ -249,8 +383,8 @@ body {
   overflow-x: auto;
   margin: 1.25rem 0;
   border: var(--zine-border);
-  border-right: 5px solid var(--zine-ink);
-  border-bottom: 5px solid var(--zine-ink);
+  border-right: 5px solid var(--zine-ink, #0e0c07);
+  border-bottom: 5px solid var(--zine-ink, #0e0c07);
 }
 
 .prose .shiki {
@@ -266,8 +400,8 @@ body {
 }
 
 .prose pre:not(.shiki) {
-  background: var(--zine-ink);
-  color: #e8e0c8;
+  background: var(--ds-code-bg, #0e0c07);
+  color: var(--ds-code-text, #e8e0c8);
   font-size: 12px;
 }
 
@@ -297,8 +431,8 @@ body {
   max-width: 100%;
   height: auto;
   border: var(--zine-border);
-  border-right: 5px solid var(--zine-ink);
-  border-bottom: 5px solid var(--zine-ink);
+  border-right: 5px solid var(--zine-ink, #0e0c07);
+  border-bottom: 5px solid var(--zine-ink, #0e0c07);
 }
 
 .prose table {
@@ -313,21 +447,26 @@ body {
 .prose th,
 .prose td {
   padding: 8px 12px;
-  border: 2px solid var(--zine-ink);
+  border: 2px solid var(--zine-ink, #0e0c07);
   text-align: left;
 }
 
 .prose th {
-  background: var(--zine-ink);
-  color: var(--zine-yellow);
+  background: var(--ds-code-bg, #0e0c07);
+  color: var(--zine-yellow, #f5c800);
   font-family: var(--font-stamp);
   font-size: 11px;
   letter-spacing: 0.06em;
 }
 
-/* ── Zine sheets (paper blocks pinned to corkboard) ─────────────────────── */
+[data-theme='dark'] .prose th {
+  background: var(--zine-aged, #313244);
+  color: var(--zine-yellow, #f9e2af);
+}
+
+/* ── Zine sheets (paper blocks) ─────────────────────────────────────────── */
 .zine-sheet {
-  background: var(--zine-paper);
+  background: var(--zine-paper, #f2edd7);
   border: var(--zine-border);
   padding: 1.5rem;
   position: relative;
@@ -336,12 +475,12 @@ body {
 
 /* ── Running banner ─────────────────────────────────────────────────────── */
 .zine-marquee-banner {
-  background: var(--zine-red);
+  background: var(--zine-red, #d42b2b);
   padding: 10px 0;
   position: relative;
   overflow: hidden;
-  border-top: 3px solid var(--zine-ink);
-  border-bottom: 3px solid var(--zine-ink);
+  border-top: 3px solid var(--zine-ink, #0e0c07);
+  border-bottom: 3px solid var(--zine-ink, #0e0c07);
 }
 
 .zine-marquee-banner::before {
@@ -349,7 +488,7 @@ body {
   position: absolute;
   left: 3px;
   top: 3px;
-  color: var(--zine-blue);
+  color: var(--zine-blue, #1a3c8f);
   font-family: var(--font-display);
   font-size: 14px;
   letter-spacing: 0.25em;
@@ -357,11 +496,15 @@ body {
   white-space: nowrap;
 }
 
+[data-theme='dark'] .zine-marquee-banner::before {
+  color: var(--zine-blue, #89b4fa);
+}
+
 .zine-marquee-text {
   font-family: var(--font-display);
   font-size: 14px;
   letter-spacing: 0.25em;
-  color: var(--zine-yellow);
+  color: var(--zine-yellow, #f5c800);
   text-transform: uppercase;
   white-space: nowrap;
   position: relative;
@@ -384,7 +527,7 @@ body {
 .zine-section-label {
   font-family: var(--font-display);
   font-size: 22px;
-  color: var(--zine-ink);
+  color: var(--zine-ink, #0e0c07);
   letter-spacing: 0.08em;
   margin-bottom: 1.25rem;
   display: flex;
@@ -393,22 +536,26 @@ body {
 }
 
 .zine-section-label .slash {
-  color: var(--zine-red);
+  color: var(--zine-red, #d42b2b);
 }
 
 .zine-section-label::after {
   content: '';
   flex: 1;
   height: 3px;
-  background: var(--zine-ink);
+  background: var(--zine-ink, #0e0c07);
   margin-left: 8px;
 }
 
 /* ── Highlight marker ───────────────────────────────────────────────────── */
 .zine-highlight {
-  background: var(--zine-yellow);
+  background: var(--zine-yellow, #f5c800);
   padding: 0 3px;
   display: inline;
+}
+
+[data-theme='dark'] .zine-highlight {
+  color: #1e1e2e;
 }
 
 /* ── Layout utilities ───────────────────────────────────────────────────── */

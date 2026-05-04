@@ -34,7 +34,7 @@ const meta: Meta<NavArgs> = {
   },
   parameters: {
     layout: 'fullscreen',
-    backgrounds: { default: 'corkboard' },
+    backgrounds: { default: 'dark' },
     docs: {
       description: {
         component:
@@ -81,17 +81,15 @@ export const InPageContext: Story = {
     <div
       style={{
         minHeight: '50vh',
-        background: '#2a2218',
-        backgroundImage:
-          'radial-gradient(circle at 20% 50%, rgba(90,70,30,0.3) 0%, transparent 60%)',
+        background: 'var(--ds-page, #ede5c8)',
       }}
     >
       <garden-nav brand="GARDEN.DEV" links={defaultLinks} />
       {/* Hero section below nav */}
       <div
         style={{
-          background: '#f2edd7',
-          border: '3px solid #0e0c07',
+          background: 'var(--zine-paper, #f2edd7)',
+          border: '3px solid var(--zine-ink, #0e0c07)',
           borderTop: 'none',
           padding: '2.5rem 1.5rem 2rem',
         }}
@@ -102,14 +100,14 @@ export const InPageContext: Story = {
             fontSize: 11,
             letterSpacing: '0.15em',
             textTransform: 'uppercase' as const,
-            color: '#d42b2b',
+            color: 'var(--zine-red, #d42b2b)',
             marginBottom: '0.5rem',
             display: 'flex',
             alignItems: 'center',
             gap: 8,
           }}
         >
-          <span style={{ color: '#6b6050' }}>///</span>
+          <span style={{ color: 'var(--zine-muted, #6b6050)' }}>///</span>
           NEU-BRUTALISM × PUNK ZINE
         </div>
         <garden-badge style={{ display: 'block', marginBottom: 8 }}>
@@ -120,7 +118,7 @@ export const InPageContext: Story = {
             fontFamily: "'Bebas Neue', sans-serif",
             fontSize: 32,
             letterSpacing: '0.04em',
-            color: '#0e0c07',
+            color: 'var(--zine-ink, #0e0c07)',
             margin: '0 0 0.75rem',
             lineHeight: 1,
           }}
@@ -131,11 +129,11 @@ export const InPageContext: Story = {
           style={{
             fontFamily: "'Special Elite', serif",
             fontSize: 15,
-            color: '#2c2820',
+            color: 'var(--zine-ink-faded, #2c2820)',
             lineHeight: 1.7,
             maxWidth: 480,
             margin: 0,
-            borderLeft: '4px solid #0e0c07',
+            borderLeft: '4px solid var(--zine-ink, #0e0c07)',
             paddingLeft: '1rem',
           }}
         >

@@ -65,7 +65,7 @@ export const InZineSheet: Story = {
   render: () => (
     <div
       style={{
-        background: '#f2edd7',
+        background: 'var(--zine-paper, #f2edd7)',
         border: '3px solid #0e0c07',
         borderRight: '5px solid #0e0c07',
         borderBottom: '5px solid #0e0c07',
@@ -101,7 +101,9 @@ export const InZineSheet: Story = {
         }}
       >
         <span style={{ color: '#d42b2b' }}>//</span> SEARCH
-        <div style={{ flex: 1, height: 3, background: '#0e0c07', marginLeft: 8 }} />
+        <div
+          style={{ flex: 1, height: 3, background: 'var(--zine-ink, #0e0c07)', marginLeft: 8 }}
+        />
       </div>
       <garden-search placeholder="Search notes, wiki, projects…" kbd="⌘K" />
     </div>
@@ -112,7 +114,7 @@ export const InNav: Story = {
   name: 'Slotted in garden-nav',
   parameters: { layout: 'fullscreen' },
   render: () => (
-    <div style={{ background: '#2a2218' }}>
+    <div style={{ background: 'var(--ds-page, #11111b)' }}>
       <garden-nav brand="GARDEN.DEV" links={[{ label: 'NOTES', href: '/notes', active: true }]}>
         <garden-search slot="actions" placeholder="Search…" kbd="⌘K" style={{ width: 260 }} />
       </garden-nav>

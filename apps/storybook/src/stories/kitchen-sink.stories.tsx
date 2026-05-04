@@ -4,7 +4,7 @@ const meta = {
   title: 'Design System/Kitchen Sink',
   parameters: {
     layout: 'fullscreen',
-    backgrounds: { default: 'corkboard' },
+    backgrounds: { default: 'dark' },
     docs: {
       description: {
         component:
@@ -38,7 +38,7 @@ export const FullPage: Story = {
     <div
       style={{
         minHeight: '100vh',
-        background: '#2a2218',
+        background: 'var(--ds-page, #11111b)',
         backgroundImage:
           'radial-gradient(circle at 20% 50%, rgba(90,70,30,0.3) 0%, transparent 60%), radial-gradient(circle at 80% 20%, rgba(60,40,10,0.4) 0%, transparent 50%)',
         fontFamily: "'Special Elite', serif",
@@ -78,7 +78,7 @@ export const FullPage: Story = {
       {/* Hero */}
       <div
         style={{
-          background: '#f2edd7',
+          background: 'var(--zine-paper, #f2edd7)',
           border: '3px solid #0e0c07',
           borderTop: 'none',
           padding: '2.5rem 1.5rem 3rem',
@@ -116,7 +116,7 @@ export const FullPage: Story = {
           <span
             style={{
               display: 'inline-block',
-              background: '#0e0c07',
+              background: 'var(--zine-ink, #0e0c07)',
               color: '#f2edd7',
               fontFamily: "'Bebas Neue', sans-serif",
               fontSize: 52,
@@ -186,7 +186,7 @@ export const FullPage: Story = {
         {/* Buttons section */}
         <div
           style={{
-            background: '#f2edd7',
+            background: 'var(--zine-paper, #f2edd7)',
             border: '3px solid #0e0c07',
             borderRight: '5px solid #0e0c07',
             borderBottom: '5px solid #0e0c07',
@@ -222,7 +222,9 @@ export const FullPage: Story = {
             }}
           >
             <span style={{ color: '#d42b2b' }}>//</span> BUTTONS &amp; ACTIONS
-            <div style={{ flex: 1, height: 3, background: '#0e0c07', marginLeft: 8 }} />
+            <div
+              style={{ flex: 1, height: 3, background: 'var(--zine-ink, #0e0c07)', marginLeft: 8 }}
+            />
           </div>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: 0, alignItems: 'center' }}>
             <garden-button variant="primary">✦ PUBLISH NOTE</garden-button>
@@ -236,7 +238,7 @@ export const FullPage: Story = {
         {/* Note cards */}
         <div
           style={{
-            background: '#f2edd7',
+            background: 'var(--zine-paper, #f2edd7)',
             border: '3px solid #0e0c07',
             borderRight: '5px solid #0e0c07',
             borderBottom: '5px solid #0e0c07',
@@ -272,7 +274,9 @@ export const FullPage: Story = {
             }}
           >
             <span style={{ color: '#d42b2b' }}>//</span> NOTE CARDS
-            <div style={{ flex: 1, height: 3, background: '#0e0c07', marginLeft: 8 }} />
+            <div
+              style={{ flex: 1, height: 3, background: 'var(--zine-ink, #0e0c07)', marginLeft: 8 }}
+            />
           </div>
           <div
             style={{
@@ -336,7 +340,7 @@ export const FullPage: Story = {
         {/* Article layout specimen */}
         <div
           style={{
-            background: '#f2edd7',
+            background: 'var(--zine-paper, #f2edd7)',
             border: '3px solid #0e0c07',
             borderRight: '5px solid #0e0c07',
             borderBottom: '5px solid #0e0c07',
@@ -372,7 +376,9 @@ export const FullPage: Story = {
             }}
           >
             <span style={{ color: '#d42b2b' }}>//</span> ARTICLE LAYOUT
-            <div style={{ flex: 1, height: 3, background: '#0e0c07', marginLeft: 8 }} />
+            <div
+              style={{ flex: 1, height: 3, background: 'var(--zine-ink, #0e0c07)', marginLeft: 8 }}
+            />
           </div>
           <div
             style={{
@@ -499,7 +505,7 @@ export const FullPage: Story = {
         {/* Wiki cards */}
         <div
           style={{
-            background: '#f2edd7',
+            background: 'var(--zine-paper, #f2edd7)',
             border: '3px solid #0e0c07',
             borderRight: '5px solid #0e0c07',
             borderBottom: '5px solid #0e0c07',
@@ -536,7 +542,9 @@ export const FullPage: Story = {
             }}
           >
             <span style={{ color: '#d42b2b' }}>//</span> WIKI ARTICLE CARDS
-            <div style={{ flex: 1, height: 3, background: '#0e0c07', marginLeft: 8 }} />
+            <div
+              style={{ flex: 1, height: 3, background: 'var(--zine-ink, #0e0c07)', marginLeft: 8 }}
+            />
           </div>
           <div
             style={{

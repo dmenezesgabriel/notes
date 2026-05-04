@@ -115,7 +115,7 @@ export const AllVariants: Story = {
         gap: 0,
         padding: 24,
         alignItems: 'center',
-        background: '#f2edd7',
+        background: 'var(--zine-paper, #f2edd7)',
         border: '3px solid #0e0c07',
         borderRight: '5px solid #0e0c07',
         borderBottom: '5px solid #0e0c07',

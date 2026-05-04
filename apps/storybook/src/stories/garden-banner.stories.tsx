@@ -17,7 +17,7 @@ const meta: Meta<BannerArgs> = {
     text: 'NEU-BRUTALISM × PUNK ZINE · DESIGN SYSTEM V0.1 · GARDEN.DEV',
   },
   parameters: {
-    backgrounds: { default: 'corkboard' },
+    backgrounds: { default: 'dark' },
     docs: {
       description: {
         component:
@@ -43,7 +43,7 @@ export const CustomText: Story = {
 
 export const InPageContext: Story = {
   render: () => (
-    <div style={{ minHeight: 200, background: '#2a2218' }}>
+    <div style={{ minHeight: 200, background: 'var(--ds-page, #11111b)' }}>
       <garden-banner text="KNOWLEDGE GARDEN · NEU-BRUTALISM × PUNK ZINE · NOTES · WIKI · SECOND BRAIN"></garden-banner>
       <div
         style={{

@@ -84,7 +84,7 @@ export const InArticleLayout: Story = {
         padding: 16,
         maxWidth: 760,
         alignItems: 'start',
-        background: '#2a2218',
+        background: 'var(--ds-page, #11111b)',
       }}
     >
       {/* Reading pane */}

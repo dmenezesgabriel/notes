@@ -19,10 +19,15 @@ const preview: Preview = {
     nextjs: { appDirectory: true },
 
     backgrounds: {
-      default: 'corkboard',
+      // Match the actual page background tokens so story canvas looks like the real site.
+      // Light mode page: --ds-page = #ede5c8 (aged paper)
+      // Dark mode page:  --ds-page = #11111b (Catppuccin Crust)
+      default: 'paper',
       values: [
-        { name: 'corkboard', value: '#2a2218' },
-        { name: 'paper', value: '#f2edd7' },
+        { name: 'paper', value: '#ede5c8' },
+        { name: 'paper-card', value: '#f2edd7' },
+        { name: 'dark', value: '#11111b' },
+        { name: 'dark-surface', value: '#1e1e2e' },
         { name: 'ink', value: '#0e0c07' },
       ],
     },

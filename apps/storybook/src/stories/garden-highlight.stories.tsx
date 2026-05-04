@@ -81,7 +81,7 @@ export const AllVariants: Story = {
         flexDirection: 'column',
         gap: '1rem',
         padding: '2rem',
-        background: '#f2edd7',
+        background: 'var(--zine-paper, #f2edd7)',
       }}
     >
       <p style={{ fontFamily: "'Special Elite', serif", fontSize: 15, color: '#2c2820' }}>
