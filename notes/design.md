@@ -15,3 +15,8 @@ desc: "Index for design domain"
 - [[design.ui.design-patterns.easy-read-fonts]] — Easy Read Fonts
 - [[design.ui.design-patterns.font-size]] — Font Size
 - [[design.ui.design-patterns.ui-spacing]] — UI Spacing
+
+## TODO
+
+- Gestalt
+- Heuristicas de Nielsin
