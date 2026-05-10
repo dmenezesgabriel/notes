@@ -1,0 +1,5 @@
+- https://github.com/illuma-ai/nodepod
+- https://github.com/macaly/almostnode
+- https://github.com/stackblitz/webcontainer-core
+- https://divriots.com/blog/vite-in-the-browser/
+- https://github.com/codesandbox/sandpack
