@@ -74,6 +74,37 @@ Avoid:
 too many props, crowded decorations, complex UI, realistic rendering, isometric 3D, excessive details, dark colors, noisy textures.
 ```
 
+#### Cinematic
+
+prompt to create the cinematic:
+    
+```txt
+Create a cozy top-down pixel art island farming RPG scene.
+
+The scene should show a small cute village built on a few tiny grassy islands connected by simple wooden bridges. Use soft pastel colors, clean pixel art, and a charming retro farming game aesthetic.
+
+Keep the composition simple and readable, not overcrowded.
+
+Include:
+- 3 to 5 small islands surrounded by calm blue water
+- wooden bridges and a small dock
+- a few cute houses with colorful roofs
+- one small shop
+- a small fenced farm plot with simple crops
+- one barn with a cow
+- one beach island with a palm tree and umbrella
+- soft water tiles with a few rocks or lily pads
+- simple dirt paths
+- a few trees, bushes, flowers, and fences
+- one small player character in the center with a tiny pet
+
+Style:
+cozy top-down pixel art, pastel colors, cute village, simple island layout, soft water tiles, minimal details, clean readable shapes, charming retro RPG farming game aesthetic, warm and peaceful mood, handcrafted pixel art look.
+
+Avoid:
+too many props, crowded decorations, complex UI, realistic rendering, isometric 3D, excessive details, dark colors, noisy textures.
+```
+
 ### 3 Sprites and Tilesheets
 
 
