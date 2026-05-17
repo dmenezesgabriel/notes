@@ -1515,3 +1515,112 @@ Create the complete working project.
 Generate the full asset pack into `/assets/`.
 Then build the playable browser prototype using only those generated assets.
 The final prototype must open with `index.html` and let the player build a small Japanese temple voxel village.
+
+## Runner
+
+### 1. Image
+
+prompt: 
+
+```txt
+Create a browser game screenshot in a simple low-poly voxel style, closely matching the look of a lightweight WebGL / Three.js prototype.
+
+The camera is in third-person view, placed behind and slightly above a small voxel cyclist riding on a straight 3-lane dirt road. The scene must look like a real playable browser endless runner game, not a cinematic illustration.
+
+Use simple blocky geometry, flat colors, clean shading, and a bright open sky. Keep a large portion of the image dedicated to the sky, with a long straight road centered in the composition and stretching far into the distance.
+
+Environment:
+- simple voxel palm trees on both sides of the road
+- flat green terrain
+- small voxel rocks, flowers, bushes, and scattered decorative blocks
+- light blocky cliffs or large geometric jungle masses in the distance
+- a few cubic clouds in the sky
+- a simple river or water channels on the sides
+- a few basic road obstacles like crates, fences, hay bales, or wooden barriers
+- simple collectibles placed along the road
+
+Cyclist:
+- small blocky voxel character
+- simple voxel bike
+- viewed from the back
+- lightweight browser game look
+- clear silhouette, readable, simple proportions
+
+HUD:
+Add a very simple browser game UI with soft cream-colored rounded panels.
+Top left panel:
+- title: "VOXEL JUNGLE RIDE"
+- score
+- distance
+- fish
+- speed
+- lives shown with red hearts
+- a green "JUNGLE" badge
+- combo text such as "COMBO X1"
+
+Top right panel:
+- title: "CONTROLS"
+- A / Q / ← : steer left
+- D / → : steer right
+- W : pedal faster
+- S : brake
+- Space : jump
+- R : restart
+- a small star note: "Stars build combo"
+
+Bottom center:
+- a simple horizontal speed or progress bar
+
+Style:
+simple voxel browser game, low-poly, flat-shaded, colorful, playful, clean, readable, prototype-like, lightweight, WebGL / Three.js look.
+
+Important:
+Do not make it cinematic, realistic, hyper-detailed, or premium AAA.
+Do not make the jungle too dense.
+Do not use flashy mobile-game UI.
+Keep the overall look simple, airy, open, and very close to a minimal browser voxel game prototype.
+```
+
+### 2. Game
+prompt for create game: 
+
+```txt
+Create a voxel web game playable directly in the browser with only 2 files: index.html and game.js.
+
+The game must be a 3D voxel endless runner. The player controls a voxel cyclist riding on a dirt road through a colorful tropical jungle. The camera is placed behind the player, slightly above, with a dynamic perspective. The result must feel like a real premium arcade prototype: smooth, readable, colorful, with a rich and lively world.
+
+Technical constraints:
+Use only HTML, CSS inside index.html, JavaScript, and Three.js via CDN. No npm, no backend, no external files. Everything must be generated in code using voxel/cube shapes. index.html must only load game.js. The game must work by simply opening index.html.
+
+Structure:
+index.html contains the page, the canvas, the HUD, the CSS styles, and the Three.js import. game.js contains all the logic: scene, camera, lights, world, player, obstacles, collectibles, collisions, score, animation, and restart.
+
+Gameplay:
+The character moves forward automatically. A / Q or left arrow moves left. D or right arrow moves right. W accelerates. S slows down. Space jumps. R restarts. There are 3 playable lanes: left, center, right. The player must avoid voxel obstacles such as logs, crates, rocks, holes, and barriers. The player can collect golden stars and blue fish bonus items. Display score, distance, speed, combo, and lives. Add collision detection. The player loses one life when hitting an obstacle. Game over when lives reach zero. Gradually increase the difficulty with distance.
+
+Voxel world creation:
+The world must be generated as a long 3D corridor divided into segments. Each segment represents a portion of the road with scenery on the left and right sides. Segments appear far in front of the player and are removed behind the player to simulate an infinite world.
+
+Main road:
+Create a dirt road made of flat cubes with 3 visible and readable lanes, voxel stone borders on the sides, small color variations on the ground, broken tiles, small rocks, leaves, wheel tracks, and small ground details. Add a few bridges or special passages on some sections.
+
+Left and right scenery:
+Add dense jungle scenery with cubic trees of different sizes, voxel palm trees with segmented trunks and blocky leaves, bushes, flowers, mushrooms, tall grass, stacked rocks, small terrain reliefs, blue rivers alongside the path, small voxel wooden bridges, waterfalls on side cliffs, and ancient ruins such as arches, broken columns, statues, and damaged walls. Add torches, glowing crystals, or small lanterns to create visual depth.
+
+Biomes:
+Alternate between several environments to avoid repetition: dense jungle, tropical river, ancient ruins, bright clearing, and cliff with waterfall. Each biome must have its own colors, decorative objects, and visual density. Add background elements such as cubic mountains, large trees, distant temples, and voxel clouds.
+
+Procedural generation:
+Create a main function createWorldSegment(z, biome). Each segment must contain a road section, borders, decorations, sometimes an obstacle, and sometimes a collectible. Create dedicated functions: createVoxelTree(x, z), createPalmTree(x, z), createBush(x, z), createFlowerPatch(x, z), createRockCluster(x, z), createRiverSide(x, z), createAncientRuins(x, z), createVoxelCloud(x, y, z), createBridge(z), createWaterfall(x, z), createObstacle(lane, z), and createCollectible(type, lane, z).
+
+Important rules:
+Do not place objects completely randomly. Compose readable and balanced scenes. Never block all 3 lanes at the same time. Always leave at least one playable lane. Vary obstacles depending on the distance. The further the player goes, the closer the obstacles become. Keep the game readable despite the rich environment.
+
+Art direction:
+Use a colorful 3D voxel style, premium arcade rendering, bright but clean colors, tropical jungle atmosphere, soft lighting with shadows, light fog for depth, blue sky with cubic clouds, stylized shiny water, and a clean HUD interface with semi-transparent panels. Add simple animations: moving bike, jumping character, rotating collectibles, and scrolling environment.
+
+HUD:
+Display the game title, score, distance, fish, speed, combo, lives, boost or speed bar, controls panel, and a Game Over screen with final score and restart button.
+
+The final result must be a real playable prototype, not just a 3D scene. It must include gameplay, a game loop, progression, score, collisions, increasing difficulty, and a rich voxel world that makes the player want to keep playing.
+```
