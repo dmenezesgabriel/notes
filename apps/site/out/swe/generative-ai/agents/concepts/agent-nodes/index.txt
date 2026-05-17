@@ -1,0 +1,74 @@
+1:"$Sreact.fragment"
+2:I[9191,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"default"]
+3:I[91771,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"SiteNav"]
+4:I[53922,[],""]
+5:I[39891,["9767","static/chunks/9767-4452bfce4d1f1add.js","8039","static/chunks/app/error-9ae2206466504b49.js"],"default"]
+6:I[1872,[],""]
+7:I[79767,["9767","static/chunks/9767-4452bfce4d1f1add.js","4345","static/chunks/app/not-found-6acd6bddd9def445.js"],""]
+9:I[50987,[],"OutletBoundary"]
+b:I[46842,[],"AsyncMetadataOutlet"]
+d:I[50987,[],"ViewportBoundary"]
+f:I[50987,[],"MetadataBoundary"]
+10:"$Sreact.suspense"
+12:I[47802,[],""]
+:HL["/notes/_next/static/css/d492c5495f17f00e.css","style"]
+0:{"P":null,"b":"IOYRrb6gG67xwS8uEwbG6","p":"/notes","c":["","swe","generative-ai","agents","concepts","agent-nodes",""],"i":false,"f":[[["",{"children":[["slug","swe/generative-ai/agents/concepts/agent-nodes","c"],{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/notes/_next/static/css/d492c5495f17f00e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){\n  try{\n    var t=localStorage.getItem('theme');\n    if(t==='dark'||t==='light') document.documentElement.setAttribute('data-theme',t);\n  }catch(e){}\n})();"}}]}],["$","body",null,{"children":[["$","a",null,{"href":"#main-content","className":"skip-link","children":"Skip to content"}],["$","$L2",null,{}],["$","$L3",null,{}],["$","div",null,{"id":"main-content","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"style":{"display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center","minHeight":"60vh","padding":"var(--space-7) var(--space-5)","textAlign":"center"},"children":[["$","garden-badge",null,{"variant":"muted","style":{"marginBottom":"var(--space-3)","display":"block"},"children":"404"}],["$","h1",null,{"style":{"fontFamily":"var(--font-display)","fontSize":"clamp(24px, 4vw, 40px)","fontWeight":500,"letterSpacing":"-0.025em","color":"var(--ds-ink)","margin":"0 0 0.75rem"},"children":"Note not found"}],["$","p",null,{"style":{"fontFamily":"var(--font-body)","fontSize":15,"color":"var(--ds-muted)","maxWidth":360,"lineHeight":1.7,"margin":"0 0 var(--space-5)"},"children":"This page doesn't exist yet — or the note may have moved. Try browsing from the home page."}],["$","$L7",null,{"href":"/","style":{"display":"inline-flex","alignItems":"center","gap":6,"fontFamily":"var(--font-ui, system-ui, sans-serif)","fontSize":13,"fontWeight":500,"letterSpacing":"0.01em","padding":"7px 20px","borderRadius":"var(--radius-md, 8px)","background":"var(--ds-accent, #a85025)","color":"#fff","textDecoration":"none","transition":"background 120ms ease"},"children":"Back to home"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}]]}],{"children":[["slug","swe/generative-ai/agents/concepts/agent-nodes","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L8",null,["$","$L9",null,{"children":["$La",["$","$Lb",null,{"promise":"$@c"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Ld",null,{"children":"$Le"}],null],["$","$Lf",null,{"children":["$","div",null,{"hidden":true,"children":["$","$10",null,{"fallback":null,"children":"$L11"}]}]}]]}],false]],"m":"$undefined","G":["$12",[]],"s":false,"S":true}
+13:I[23191,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteBreadcrumb"]
+14:Tf9d,<h1 id="-the-seven-node-blueprint-for-ai-agents-">🤖 The Seven Node Blueprint for AI Agents 🤖</h1>
+<h2 id="agents-are-just-graphs"><strong>Agents are just graphs.</strong></h2>
+<p>Viewing AI agents as graphs provides a powerful mental model for designing systems. This approach breaks down complex agents into interconnected nodes, each with specific responsibilities. By thinking in graphs, we can:</p>
+<ul>
+<li><strong>Modularize functionality</strong> for better maintenance</li>
+<li><strong>Scale complexity</strong> through simple component connections</li>
+<li><strong>Improve resilience</strong> with explicit error handling paths</li>
+<li><strong>Enable transparency</strong> by making information flow visible</li>
+</ul>
+<p>This is how you can design complex systems with ease (when necessary).</p>
+<h2 id="node-types">Node Types</h2>
+<h3 id="1️⃣-llm-node-">1️⃣ LLM Node 🧠</h3>
+<p><strong>Purpose</strong>: Reasoning, generation, and decision-making</p>
+<p><strong>Examples</strong>: Planning, content generation, summarization</p>
+<p><strong>Why it's useful</strong>: Acts as the "brain" that processes information and coordinates between components, handling ambiguity and novel situations.</p>
+<h3 id="2️⃣-tool-node-️">2️⃣ Tool Node 🛠️</h3>
+<p><strong>Purpose</strong>: Executes external tools or APIs</p>
+<p><strong>Examples</strong>: Web search, code execution, database queries</p>
+<p><strong>Why it's useful</strong>: Extends capabilities beyond language processing, connecting the agent to external systems and real-time data.</p>
+<h3 id="3️⃣-control-node-️">3️⃣ Control Node ⚙️</h3>
+<p><strong>Purpose</strong>: Handles logic, branching, and deterministic rules</p>
+<p><strong>Examples</strong>: Routing, conditionals, filters</p>
+<p><strong>Why it's useful</strong>: Introduces predictability and enables consistent handling of different cases and business logic.</p>
+<h3 id="4️⃣-memory-node-">4️⃣ Memory Node 📚</h3>
+<p><strong>Purpose</strong>: Reads/writes to memory for stateful context</p>
+<p><strong>Examples</strong>: Vector DBs, conversation history, user preferences</p>
+<p><strong>Why it's useful</strong>: Maintains context over time, enabling personalization and self-evolution.</p>
+<h3 id="5️⃣-guardrail-node-">5️⃣ Guardrail Node 🚧</h3>
+<p><strong>Purpose</strong>: Validates outputs and enforces constraints</p>
+<p><strong>Examples</strong>: Content filtering, format validation, safety checks</p>
+<p><strong>Why it's useful</strong>: Ensures outputs meet required standards, preventing harmful or incorrect responses.</p>
+<h3 id="6️⃣-fallback-node-">6️⃣ Fallback Node 🔄</h3>
+<p><strong>Purpose</strong>: Responds to failures with retries or alternate flows</p>
+<p><strong>Examples</strong>: Retries, escalation paths, default responses</p>
+<p><strong>Why it's useful</strong>: Provides graceful degradation when things go wrong rather than complete failure.</p>
+<h3 id="7️⃣-user-input-node-">7️⃣ User Input Node 👥</h3>
+<p><strong>Purpose</strong>: Brings humans into the loop for clarification or decisions</p>
+<p><strong>Examples</strong>: Confirmations, clarification requests, approvals</p>
+<p><strong>Why it's useful</strong>: Leverages human judgment for critical situations where AI might not be sufficient.</p>
+<h2 id="building-with-the-blueprint">Building with the Blueprint</h2>
+<p>When designing agents as graphs:</p>
+<ol>
+<li><strong>Start simple</strong>, then add complexity as needed</li>
+<li><strong>Identify natural breakpoints</strong> for different node types</li>
+<li><strong>Plan for failures</strong> with fallbacks and validation</li>
+<li><strong>Balance automation with control</strong> through human touchpoints</li>
+<li><strong>Visualize the flow</strong> to spot bottlenecks or unnecessary complexity</li>
+</ol>
+<p>By thoughtfully combining these node types, we can build AI systems that are more capable, reliable, and aligned with human needs.</p>8:["$","main",null,{"style":{"padding":"var(--space-5) 0 var(--space-8)"},"children":["$","div",null,{"className":"page-wrap","children":["$","garden-article",null,{"suppressHydrationWarning":true,"title":"Agent Nodes","has-sidebar":"","has-backlinks":"","children":[["$","div",null,{"slot":"breadcrumb","children":["$","$L13",null,{"items":[{"label":"home","href":"/notes/"},{"label":"Software Engineering","href":"/notes/swe/"},{"label":"Agent Nodes"}]}]}],["$","garden-tag",null,{"suppressHydrationWarning":true,"slot":"meta","variant":"sage","children":"SOFTWARE ENGINEERING"}],false,["$","div",null,{"slot":"content","className":"prose","dangerouslySetInnerHTML":{"__html":"$14"}}],"$L15",["$L16","$L17"]]}]}]}]
+18:I[75658,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteToc"]
+15:["$","$L18",null,{"slot":"sidebar","items":[{"id":"agents-are-just-graphs","label":"Agents are just graphs.","depth":1},{"id":"node-types","label":"Node Types","depth":1},{"id":"1️⃣-llm-node-","label":"1️⃣ LLM Node 🧠","depth":2},{"id":"2️⃣-tool-node-️","label":"2️⃣ Tool Node 🛠️","depth":2},{"id":"3️⃣-control-node-️","label":"3️⃣ Control Node ⚙️","depth":2},{"id":"4️⃣-memory-node-","label":"4️⃣ Memory Node 📚","depth":2},{"id":"5️⃣-guardrail-node-","label":"5️⃣ Guardrail Node 🚧","depth":2},{"id":"6️⃣-fallback-node-","label":"6️⃣ Fallback Node 🔄","depth":2},{"id":"7️⃣-user-input-node-","label":"7️⃣ User Input Node 👥","depth":2},{"id":"building-with-the-blueprint","label":"Building with the Blueprint","depth":1}]}]
+16:["$","li","daily.journal.2025.05.28",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/daily/journal/2025/05/28/","variant":"default","children":"2025-05-28"}]}]
+17:["$","li","swe",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/","variant":"default","children":"swe"}]}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+a:null
+19:I[51506,[],"IconMark"]
+c:{"metadata":[["$","title","0",{"children":"Agent Nodes — Digital Garden"}],["$","meta","1",{"name":"description","content":"🤖 The Seven Node Blueprint for AI Agents 🤖 Agents are just graphs. Viewing AI agents as graphs provides a powerful mental model for designing systems. This ap"}],["$","link","2",{"rel":"icon","href":"/notes/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","$L19","3",{}]],"error":null,"digest":"$undefined"}
+11:"$c:metadata"

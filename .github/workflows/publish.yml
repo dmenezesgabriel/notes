@@ -40,13 +40,15 @@ jobs:
       - name: Setup pages
         uses: actions/configure-pages@v4
 
-      - name: Build with Next.js
-        run: pnpm dendron publish export
+      - name: Build static site
+        env:
+          NEXT_PUBLIC_SITE_BASE_PATH: /notes
+        run: pnpm build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .next/out
+          path: apps/site/out
 
   deploy:
     environment:

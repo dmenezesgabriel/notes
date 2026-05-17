@@ -1,8 +1,10 @@
 import { expect, test } from '@playwright/test';
 
+const HOME_PATH = '/notes';
+
 test.describe('Navigation', () => {
   test('clicking a note card navigates to the note page', async ({ page }) => {
-    await page.goto('/');
+    await page.goto(HOME_PATH);
 
     // Get the first card's href and headline before clicking
     const card = page.locator('garden-card[href]').first();
@@ -28,9 +30,20 @@ test.describe('Navigation', () => {
     // The brand link in garden-nav shadow DOM
     const hasHomeLink = await page.evaluate(() => {
       const nav = document.querySelector('garden-nav');
-      return nav?.shadowRoot?.querySelector('a[href="/"]') !== null;
+      return nav?.shadowRoot?.querySelector('a[href="/notes"], a[href="/notes/"]') !== null;
     });
     expect(hasHomeLink).toBe(true);
+  });
+
+  test('configured favicon request resolves as a static asset', async ({ page, request }) => {
+    await page.goto(HOME_PATH);
+
+    const faviconHref = await page.locator('link[rel="icon"]').getAttribute('href');
+    expect(faviconHref).toBe('/notes/favicon.ico');
+
+    const response = await request.get(faviconHref!);
+    expect(response.ok()).toBe(true);
+    expect(response.headers()['content-type']).toContain('image/x-icon');
   });
 
   test('back-to-home button on 404 navigates home', async ({ page }) => {
@@ -41,7 +54,7 @@ test.describe('Navigation', () => {
     // The back-to-home link is a styled <Link> — use accessible-name selector
     // to target it unambiguously (the nav also has links to "/").
     await page.getByRole('link', { name: 'Back to home' }).click();
-    await expect(page).toHaveURL('/', { timeout: 15_000 });
+    await expect(page).toHaveURL(/\/notes\/?$/, { timeout: 15_000 });
     await expect(page).toHaveTitle(/Digital Garden/);
   });
 
@@ -62,6 +75,6 @@ test.describe('Navigation', () => {
     const breadcrumb = page.getByTestId('site-breadcrumb');
     await breadcrumb.getByRole('link', { name: 'home' }).click();
 
-    await expect(page).toHaveURL('/');
+    await expect(page).toHaveURL(/\/notes\/?$/);
   });
 });

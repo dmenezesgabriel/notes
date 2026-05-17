@@ -1,0 +1,270 @@
+<!doctype html>
+<!--IOYRrb6gG67xwS8uEwbG6-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="/notes/_next/static/css/d492c5495f17f00e.css"
+      data-precedence="next"
+    />
+    <link
+      rel="preload"
+      as="script"
+      fetchpriority="low"
+      href="/notes/_next/static/chunks/webpack-4809e56d9ba14f1b.js"
+    />
+    <script src="/notes/_next/static/chunks/a29c5da9-68f87ed484caa559.js" async=""></script>
+    <script src="/notes/_next/static/chunks/9873-0e8423b8a48a94d7.js" async=""></script>
+    <script src="/notes/_next/static/chunks/main-app-fbdac383fcaf649c.js" async=""></script>
+    <script src="/notes/_next/static/chunks/1874-644ca8adc4d40081.js" async=""></script>
+    <script src="/notes/_next/static/chunks/app/layout-c356b7b58a8c7057.js" async=""></script>
+    <script src="/notes/_next/static/chunks/9767-4452bfce4d1f1add.js" async=""></script>
+    <script src="/notes/_next/static/chunks/app/error-9ae2206466504b49.js" async=""></script>
+    <script src="/notes/_next/static/chunks/app/not-found-6acd6bddd9def445.js" async=""></script>
+    <script
+      src="/notes/_next/static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"
+      async=""
+    ></script>
+    <title>GitHub Copilot — Digital Garden</title>
+    <meta
+      name="description"
+      content=".github/copilot-instructions.md: Customizar comportamento do github copilot Ex: copilot-instructions.md md ## Language - Answer all the questions in plain simpl"
+    />
+    <link rel="icon" href="/notes/favicon.ico" type="image/x-icon" sizes="16x16" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+    <script src="/notes/_next/static/chunks/polyfills-42372ed130431b0a.js" nomodule=""></script>
+  </head>
+  <body>
+    <div hidden=""><!--$--><!--/$--></div>
+    <a href="#main-content" class="skip-link">Skip to content</a
+    ><garden-nav brand="garden.dev" data-testid="site-nav"></garden-nav>
+    <div id="main-content">
+      <main style="padding: var(--space-5) 0 var(--space-8)">
+        <div class="page-wrap">
+          <garden-article title="GitHub Copilot" has-backlinks=""
+            ><div slot="breadcrumb">
+              <garden-breadcrumb data-testid="site-breadcrumb"></garden-breadcrumb>
+            </div>
+            <garden-tag slot="meta" variant="sage">SOFTWARE ENGINEERING</garden-tag>
+            <div slot="content" class="prose">
+              <ul>
+                <li>
+                  <p>
+                    <code>.github/copilot-instructions.md</code>: Customizar comportamento do github
+                    copilot Ex: copilot-instructions.md
+                  </p>
+                  <pre
+                    class="shiki shiki-themes github-light github-dark"
+                    style="
+                      background-color: #fff;
+                      --shiki-dark-bg: #24292e;
+                      color: #24292e;
+                      --shiki-dark: #e1e4e8;
+                    "
+                    tabindex="0"
+                  ><code><span class="line"><span style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold">## Language</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Answer all the questions in plain simple US english</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold">## Humor</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Always answer with humor and jokes</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Treat the developer as a close friend</span></span></code></pre>
+                </li>
+                <li>
+                  <p>
+                    <code>.github/instructions/*.instructions.md</code>: Padrões de codificação,
+                    conhecimento de domínio e preferências que a IA deve seguir.
+                  </p>
+                  <ul>
+                    <li><code>CTRL + SHIFT + P -> Chat: New Instruction File</code></li>
+                  </ul>
+                  <p>Ex: general-coding.instructions.md</p>
+                  <pre
+                    class="shiki shiki-themes github-light github-dark"
+                    style="
+                      background-color: #fff;
+                      --shiki-dark-bg: #24292e;
+                      color: #24292e;
+                      --shiki-dark: #e1e4e8;
+                    "
+                    tabindex="0"
+                  ><code><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">---</span></span>
+<span class="line"><span style="color:#22863A;--shiki-dark:#85E89D">applyTo</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"**"</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold"># Code Guidelines</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold">## Name conventions</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Use PascalCase for class and component names</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> Use camelCase to variables, functions and methods</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold">## Error handling</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">...</span></span></code></pre>
+                  <p>Ex: typescript-react.instructions.md</p>
+                  <pre
+                    class="shiki shiki-themes github-light github-dark"
+                    style="
+                      background-color: #fff;
+                      --shiki-dark-bg: #24292e;
+                      color: #24292e;
+                      --shiki-dark: #e1e4e8;
+                    "
+                    tabindex="0"
+                  ><code><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">---</span></span>
+<span class="line"><span style="color:#22863A;--shiki-dark:#85E89D">applyTo</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"**/*.ts,**./*.ts"</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">Apply [</span><span style="color:#032F62;--shiki-light-text-decoration:underline;--shiki-dark:#DBEDFF;--shiki-dark-text-decoration:underline">general guidelines</span><span style="color:#24292E;--shiki-dark:#E1E4E8">](</span><span style="color:#24292E;--shiki-light-text-decoration:underline;--shiki-dark:#E1E4E8;--shiki-dark-text-decoration:underline">./general-coding.instructions.md</span><span style="color:#24292E;--shiki-dark:#E1E4E8">) to all files.</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold"># Typescript React Instructions</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold">## Typescript</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> ...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold">## React</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> ...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">...</span></span></code></pre>
+                </li>
+                <li>
+                  <p>
+                    <code>.github/prompts/*.prompt.md</code>: Saída esperada e quaisquer restrições
+                    relevantes para esta tarefa.
+                  </p>
+                  <ul>
+                    <li><code>CTRL + SHIFT + P -> Chat: New Prompt File</code></li>
+                  </ul>
+                  <p>Ex: components.prompt.md</p>
+                  <pre
+                    class="shiki shiki-themes github-light github-dark"
+                    style="
+                      background-color: #fff;
+                      --shiki-dark-bg: #24292e;
+                      color: #24292e;
+                      --shiki-dark: #e1e4e8;
+                    "
+                    tabindex="0"
+                  ><code><span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">---</span></span>
+<span class="line"><span style="color:#22863A;--shiki-dark:#85E89D">mode</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"agent"</span></span>
+<span class="line"><span style="color:#22863A;--shiki-dark:#85E89D">tools</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: [</span><span style="color:#032F62;--shiki-dark:#9ECBFF">"githubRepo"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">, </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"codebase"</span><span style="color:#24292E;--shiki-dark:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#22863A;--shiki-dark:#85E89D">description</span><span style="color:#24292E;--shiki-dark:#E1E4E8">: </span><span style="color:#032F62;--shiki-dark:#9ECBFF">"Creation of a new React Component"</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">---</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold"># Your goal is to generate a new react component using Next.js</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold">## Ask for those implementation details if not informed</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> What is the component name?</span></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> It will be based on another one that already exists?</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold">## Component requirements</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E36209;--shiki-dark:#FFAB70">-</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> It will be created in </span><span style="color:#005CC5;--shiki-dark:#79B8FF">`/components`</span><span style="color:#24292E;--shiki-dark:#E1E4E8"> directory inside #codebase</span></span>
+<span class="line"><span style="color:#24292E;--shiki-dark:#E1E4E8">  ...</span></span></code></pre>
+                </li>
+                <li>
+                  <p>
+                    mcp (Model Context Protocol)
+                    <a href="/swe/generative-ai/protocols/mcp/mcp-servers">mcp-servers</a>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <em>chat extensions</em> Ex:vscode-mermAId, escrever no chat
+                    <code>@mermAId</code> quando um arquivo está selecionado.
+                  </p>
+                </li>
+              </ul>
+              <h2 id="reference">Reference</h2>
+              <ul>
+                <li>
+                  <a href="https://code.visualstudio.com/docs/copilot/copilot-customization"
+                    >copilot-customization</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/watch?v=WdZCv4OZcxM&#x26;list=WL&#x26;index=3"
+                    >Customizing Copilot in VS Code</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <li slot="backlinks">
+              <garden-tag href="/notes/swe/" variant="default">swe</garden-tag>
+            </li></garden-article
+          >
+        </div>
+      </main>
+      <!--$--><!--/$-->
+    </div>
+    <script src="/notes/_next/static/chunks/webpack-4809e56d9ba14f1b.js" id="_R_" async=""></script>
+    <script>
+      (self.__next_f = self.__next_f || []).push([0]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '1:"$Sreact.fragment"\n2:I[9191,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"default"]\n3:I[91771,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"SiteNav"]\n4:I[53922,[],""]\n5:I[39891,["9767","static/chunks/9767-4452bfce4d1f1add.js","8039","static/chunks/app/error-9ae2206466504b49.js"],"default"]\n6:I[1872,[],""]\n7:I[79767,["9767","static/chunks/9767-4452bfce4d1f1add.js","4345","static/chunks/app/not-found-6acd6bddd9def445.js"],""]\n9:I[50987,[],"OutletBoundary"]\nb:I[46842,[],"AsyncMetadataOutlet"]\nd:I[50987,[],"ViewportBoundary"]\nf:I[50987,[],"MetadataBoundary"]\n10:"$Sreact.suspense"\n12:I[47802,[],""]\n:HL["/notes/_next/static/css/d492c5495f17f00e.css","style"]\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '0:{"P":null,"b":"IOYRrb6gG67xwS8uEwbG6","p":"/notes","c":["","swe","generative-ai","generative-ai-ide","vscode","github-copilot",""],"i":false,"f":[[["",{"children":[["slug","swe/generative-ai/generative-ai-ide/vscode/github-copilot","c"],{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/notes/_next/static/css/d492c5495f17f00e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){\\n  try{\\n    var t=localStorage.getItem(\'theme\');\\n    if(t===\'dark\'||t===\'light\') document.documentElement.setAttribute(\'data-theme\',t);\\n  }catch(e){}\\n})();"}}]}],["$","body",null,{"children":[["$","a",null,{"href":"#main-content","className":"skip-link","children":"Skip to content"}],["$","$L2",null,{}],["$","$L3",null,{}],["$","div",null,{"id":"main-content","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"style":{"display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center","minHeight":"60vh","padding":"var(--space-7) var(--space-5)","textAlign":"center"},"children":[["$","garden-badge",null,{"variant":"muted","style":{"marginBottom":"var(--space-3)","display":"block"},"children":"404"}],["$","h1",null,{"style":{"fontFamily":"var(--font-display)","fontSize":"clamp(24px, 4vw, 40px)","fontWeight":500,"letterSpacing":"-0.025em","color":"var(--ds-ink)","margin":"0 0 0.75rem"},"children":"Note not found"}],["$","p",null,{"style":{"fontFamily":"var(--font-body)","fontSize":15,"color":"var(--ds-muted)","maxWidth":360,"lineHeight":1.7,"margin":"0 0 var(--space-5)"},"children":"This page doesn\'t exist yet — or the note may have moved. Try browsing from the home page."}],["$","$L7",null,{"href":"/","style":{"display":"inline-flex","alignItems":"center","gap":6,"fontFamily":"var(--font-ui, system-ui, sans-serif)","fontSize":13,"fontWeight":500,"letterSpacing":"0.01em","padding":"7px 20px","borderRadius":"var(--radius-md, 8px)","background":"var(--ds-accent, #a85025)","color":"#fff","textDecoration":"none","transition":"background 120ms ease"},"children":"Back to home"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}]]}],{"children":[["slug","swe/generative-ai/generative-ai-ide/vscode/github-copilot","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L8",null,["$","$L9",null,{"children":["$La",["$","$Lb",null,{"promise":"$@c"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Ld",null,{"children":"$Le"}],null],["$","$Lf",null,{"children":["$","div",null,{"hidden":true,"children":["$","$10",null,{"fallback":null,"children":"$L11"}]}]}]]}],false]],"m":"$undefined","G":["$12",[]],"s":false,"S":true}\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '13:I[23191,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteBreadcrumb"]\n14:T2276,',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ccode\u003e.github/copilot-instructions.md\u003c/code\u003e: Customizar comportamento do github copilot\nEx: copilot-instructions.md\u003c/p\u003e\n\u003cpre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"\u003e\u003ccode\u003e\u003cspan class="line"\u003e\u003cspan style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold"\u003e## Language\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#E36209;--shiki-dark:#FFAB70"\u003e-\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e Answer all the questions in plain simple US english\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold"\u003e## Humor\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#E36209;--shiki-dark:#FFAB70"\u003e-\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e Always answer with humor and jokes\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#E36209;--shiki-dark:#FFAB70"\u003e-\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e Treat the developer as a close friend\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ccode\u003e.github/instructions/*.instructions.md\u003c/code\u003e: Padrões de codificação, conhecimento de domínio e preferências que a IA deve seguir.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003eCTRL + SHIFT + P -\u003e Chat: New Instruction File\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eEx: general-coding.instructions.md\u003c/p\u003e\n\u003cpre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"\u003e\u003ccode\u003e\u003cspan class="line"\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e---\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#22863A;--shiki-dark:#85E89D"\u003eapplyTo\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e: \u003c/span\u003e\u003cspan style="color:#032F62;--shiki-dark:#9ECBFF"\u003e"**"\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e---\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold"\u003e# Code Guidelines\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold"\u003e## Name conventions\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#E36209;--shiki-dark:#FFAB70"\u003e-\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e Use PascalCase for class and component names\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#E36209;--shiki-dark:#FFAB70"\u003e-\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e Use camelCase to variables, functions and methods\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold"\u003e## Error handling\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e...\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\n\u003cp\u003eEx: typescript-react.instructions.md\u003c/p\u003e\n\u003cpre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"\u003e\u003ccode\u003e\u003cspan class="line"\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e---\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#22863A;--shiki-dark:#85E89D"\u003eapplyTo\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e: \u003c/span\u003e\u003cspan style="color:#032F62;--shiki-dark:#9ECBFF"\u003e"**/*.ts,**./*.ts"\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e---\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003eApply [\u003c/span\u003e\u003cspan style="color:#032F62;--shiki-light-text-decoration:underline;--shiki-dark:#DBEDFF;--shiki-dark-text-decoration:underline"\u003egeneral guidelines\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e](\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-light-text-decoration:underline;--shiki-dark:#E1E4E8;--shiki-dark-text-decoration:underline"\u003e./general-coding.instructions.md\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e) to all files.\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold"\u003e# Typescript React Instructions\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold"\u003e## Typescript\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#E36209;--shiki-dark:#FFAB70"\u003e-\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e ...\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold"\u003e## React\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#E36209;--shiki-dark:#FFAB70"\u003e-\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e ...\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e...\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003ccode\u003e.github/prompts/*.prompt.md\u003c/code\u003e: Saída esperada e quaisquer restrições relevantes para esta tarefa.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ccode\u003eCTRL + SHIFT + P -\u003e Chat: New Prompt File\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eEx: components.prompt.md\u003c/p\u003e\n\u003cpre class="shiki shiki-themes github-light github-dark" style="background-color:#fff;--shiki-dark-bg:#24292e;color:#24292e;--shiki-dark:#e1e4e8" tabindex="0"\u003e\u003ccode\u003e\u003cspan class="line"\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e---\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#22863A;--shiki-dark:#85E89D"\u003emode\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e: \u003c/span\u003e\u003cspan style="color:#032F62;--shiki-dark:#9ECBFF"\u003e"agent"\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#22863A;--shiki-dark:#85E89D"\u003etools\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e: [\u003c/span\u003e\u003cspan style="color:#032F62;--shiki-dark:#9ECBFF"\u003e"githubRepo"\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e, \u003c/span\u003e\u003cspan style="color:#032F62;--shiki-dark:#9ECBFF"\u003e"codebase"\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e]\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#22863A;--shiki-dark:#85E89D"\u003edescription\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e: \u003c/span\u003e\u003cspan style="color:#032F62;--shiki-dark:#9ECBFF"\u003e"Creation of a new React Component"\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e---\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold"\u003e# Your goal is to generate a new react component using Next.js\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold"\u003e## Ask for those implementation details if not informed\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#E36209;--shiki-dark:#FFAB70"\u003e-\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e What is the component name?\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#E36209;--shiki-dark:#FFAB70"\u003e-\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e It will be based on another one that already exists?\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold"\u003e## Component requirements\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#E36209;--shiki-dark:#FFAB70"\u003e-\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e It will be created in \u003c/span\u003e\u003cspan style="color:#005CC5;--shiki-dark:#79B8FF"\u003e`/components`\u003c/span\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e directory inside #codebase\u003c/span\u003e\u003c/span\u003e\n\u003cspan class="line"\u003e\u003cspan style="color:#24292E;--shiki-dark:#E1E4E8"\u003e  ...\u003c/span\u003e\u003c/span\u003e\u003c/code\u003e\u003c/pre\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003emcp (Model Context Protocol) \u003ca href="/swe/generative-ai/protocols/mcp/mcp-servers"\u003emcp-servers\u003c/a\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003e\u003cem\u003echat extensions\u003c/em\u003e Ex:vscode-mermAId, escrever no chat \u003ccode\u003e@mermAId\u003c/code\u003e quando um arquivo está selecionado.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id="reference"\u003eReference\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href="https://code.visualstudio.com/docs/copilot/copilot-customization"\u003ecopilot-customization\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href="https://www.youtube.com/watch?v=WdZCv4OZcxM\u0026#x26;list=WL\u0026#x26;index=3"\u003eCustomizing Copilot in VS Code\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '8:["$","main",null,{"style":{"padding":"var(--space-5) 0 var(--space-8)"},"children":["$","div",null,{"className":"page-wrap","children":["$","garden-article",null,{"suppressHydrationWarning":true,"title":"GitHub Copilot","has-sidebar":"$undefined","has-backlinks":"","children":[["$","div",null,{"slot":"breadcrumb","children":["$","$L13",null,{"items":[{"label":"home","href":"/notes/"},{"label":"Software Engineering","href":"/notes/swe/"},{"label":"GitHub Copilot"}]}]}],["$","garden-tag",null,{"suppressHydrationWarning":true,"slot":"meta","variant":"sage","children":"SOFTWARE ENGINEERING"}],false,["$","div",null,{"slot":"content","className":"prose","dangerouslySetInnerHTML":{"__html":"$14"}}],false,["$L15"]]}]}]}]\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '15:["$","li","swe",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/","variant":"default","children":"swe"}]}]\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        'e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]\na:null\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '16:I[51506,[],"IconMark"]\nc:{"metadata":[["$","title","0",{"children":"GitHub Copilot — Digital Garden"}],["$","meta","1",{"name":"description","content":".github/copilot-instructions.md: Customizar comportamento do github copilot Ex: copilot-instructions.md md ## Language - Answer all the questions in plain simpl"}],["$","link","2",{"rel":"icon","href":"/notes/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","$L16","3",{}]],"error":null,"digest":"$undefined"}\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([1, '11:"$c:metadata"\n']);
+    </script>
+  </body>
+</html>

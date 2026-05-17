@@ -1,6 +1,8 @@
 import type { Page } from '@playwright/test';
 import { expect, test } from '@playwright/test';
 
+const HOME_PATH = '/notes';
+
 /**
  * Home page tests — all assertions run against a single page load.
  * Using `mode: 'serial'` + `beforeAll` means we navigate to `/` exactly
@@ -14,7 +16,7 @@ test.describe('Home page', () => {
 
   test.beforeAll(async ({ browser }) => {
     page = await browser.newPage();
-    await page.goto('/');
+    await page.goto(HOME_PATH);
   });
 
   test.afterAll(async () => {

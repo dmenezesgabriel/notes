@@ -76,7 +76,7 @@ test.describe('Note detail page — 404 handling', () => {
 
   test('404 page has a back-to-home link', async ({ page }) => {
     await page.goto('/notes/this-does-not-exist-at-all');
-    const homeLink = page.locator('a[href="/"]');
+    const homeLink = page.locator('a[href="/notes"], a[href="/notes/"]');
     await expect(homeLink.first()).toBeVisible();
   });
 });

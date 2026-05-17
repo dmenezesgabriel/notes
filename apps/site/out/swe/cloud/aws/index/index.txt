@@ -1,0 +1,246 @@
+1:"$Sreact.fragment"
+2:I[9191,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"default"]
+3:I[91771,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"SiteNav"]
+4:I[53922,[],""]
+5:I[39891,["9767","static/chunks/9767-4452bfce4d1f1add.js","8039","static/chunks/app/error-9ae2206466504b49.js"],"default"]
+6:I[1872,[],""]
+7:I[79767,["9767","static/chunks/9767-4452bfce4d1f1add.js","4345","static/chunks/app/not-found-6acd6bddd9def445.js"],""]
+9:I[50987,[],"OutletBoundary"]
+b:I[46842,[],"AsyncMetadataOutlet"]
+d:I[50987,[],"ViewportBoundary"]
+f:I[50987,[],"MetadataBoundary"]
+10:"$Sreact.suspense"
+12:I[47802,[],""]
+:HL["/notes/_next/static/css/d492c5495f17f00e.css","style"]
+0:{"P":null,"b":"IOYRrb6gG67xwS8uEwbG6","p":"/notes","c":["","swe","cloud","aws","index",""],"i":false,"f":[[["",{"children":[["slug","swe/cloud/aws/index","c"],{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/notes/_next/static/css/d492c5495f17f00e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){\n  try{\n    var t=localStorage.getItem('theme');\n    if(t==='dark'||t==='light') document.documentElement.setAttribute('data-theme',t);\n  }catch(e){}\n})();"}}]}],["$","body",null,{"children":[["$","a",null,{"href":"#main-content","className":"skip-link","children":"Skip to content"}],["$","$L2",null,{}],["$","$L3",null,{}],["$","div",null,{"id":"main-content","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"style":{"display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center","minHeight":"60vh","padding":"var(--space-7) var(--space-5)","textAlign":"center"},"children":[["$","garden-badge",null,{"variant":"muted","style":{"marginBottom":"var(--space-3)","display":"block"},"children":"404"}],["$","h1",null,{"style":{"fontFamily":"var(--font-display)","fontSize":"clamp(24px, 4vw, 40px)","fontWeight":500,"letterSpacing":"-0.025em","color":"var(--ds-ink)","margin":"0 0 0.75rem"},"children":"Note not found"}],["$","p",null,{"style":{"fontFamily":"var(--font-body)","fontSize":15,"color":"var(--ds-muted)","maxWidth":360,"lineHeight":1.7,"margin":"0 0 var(--space-5)"},"children":"This page doesn't exist yet — or the note may have moved. Try browsing from the home page."}],["$","$L7",null,{"href":"/","style":{"display":"inline-flex","alignItems":"center","gap":6,"fontFamily":"var(--font-ui, system-ui, sans-serif)","fontSize":13,"fontWeight":500,"letterSpacing":"0.01em","padding":"7px 20px","borderRadius":"var(--radius-md, 8px)","background":"var(--ds-accent, #a85025)","color":"#fff","textDecoration":"none","transition":"background 120ms ease"},"children":"Back to home"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}]]}],{"children":[["slug","swe/cloud/aws/index","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L8",null,["$","$L9",null,{"children":["$La",["$","$Lb",null,{"promise":"$@c"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Ld",null,{"children":"$Le"}],null],["$","$Lf",null,{"children":["$","div",null,{"hidden":true,"children":["$","$10",null,{"fallback":null,"children":"$L11"}]}]}]]}],false]],"m":"$undefined","G":["$12",[]],"s":false,"S":true}
+13:I[23191,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteBreadcrumb"]
+14:T4fc0,<h1 id="swe-cloud-aws--index-regenerated">SWE Cloud AWS — Index (regenerated)</h1>
+<h2 id="concepts">Concepts</h2>
+<ul>
+<li><a href="/swe/cloud/aws/concepts/disaster-recovery">disaster-recovery</a> — Disaster Recovery</li>
+<li><a href="/swe/cloud/aws/concepts/well-architected-framework">well-architected-framework</a> — Well Architected Framework</li>
+</ul>
+<h2 id="services">Services</h2>
+<ul>
+<li><a href="/swe/cloud/aws/services/amplify">amplify</a> — Amplify</li>
+<li><a href="/swe/cloud/aws/services/app-flow">app-flow</a> — App Flow</li>
+<li><a href="/swe/cloud/aws/services/application-discovery-service">application-discovery-service</a> — Application Discovery Service</li>
+<li><a href="/swe/cloud/aws/services/application-migration-service">application-migration-service</a> — Application Migration Service</li>
+<li><a href="/swe/cloud/aws/services/asg/ecs-vs-ec2">ecs-vs-ec2</a> — Ecs Vs Ec2</li>
+<li><a href="/swe/cloud/aws/services/aurora">aurora</a> — Aurora</li>
+<li><a href="/swe/cloud/aws/services/aws-serverless-services">aws-serverless-services</a> — Serverless</li>
+<li><a href="/swe/cloud/aws/services/backup">backup</a> — Backup</li>
+<li><a href="/swe/cloud/aws/services/batch">batch</a> — Batch</li>
+<li><a href="/swe/cloud/aws/services/cloudfront">cloudfront</a> — Cloudfront</li>
+<li><a href="/swe/cloud/aws/services/containers/app-runner">app-runner</a> — App Runner</li>
+<li><a href="/swe/cloud/aws/services/containers/ecr">ecr</a> — Ecr</li>
+<li><a href="/swe/cloud/aws/services/containers/ecs/asg">asg</a> — Asg</li>
+<li><a href="/swe/cloud/aws/services/containers/ecs">ecs</a> — Ecs</li>
+<li><a href="/swe/cloud/aws/services/containers/ecs/patterns">patterns</a> — Patterns</li>
+<li><a href="/swe/cloud/aws/services/containers/eks/data-volumes">data-volumes</a> — Data Volumes</li>
+<li><a href="/swe/cloud/aws/services/containers/eks/managed-node-groups">managed-node-groups</a> — Managed Node Groups</li>
+<li><a href="/swe/cloud/aws/services/containers/eks">eks</a> — Eks</li>
+<li><a href="/swe/cloud/aws/services/containers/eks/self-managed-nodes">self-managed-nodes</a> — Self Managed Nodes</li>
+<li><a href="/swe/cloud/aws/services/cost-anomaly-detection">cost-anomaly-detection</a> — Cost Anomaly Detection</li>
+<li><a href="/swe/cloud/aws/services/cost-explorer">cost-explorer</a> — Cost Explorer</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/apache-flink">apache-flink</a> — Apache Flink</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/athena/federated-query">federated-query</a> — Athena Federated Query</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/athena">athena</a> — Athena</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/athena/performance">performance</a> — Athena Performance</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/emr">emr</a> — Emr</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/glue/data-catalog">data-catalog</a> — Glue Data Catalog</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/glue/databrew">databrew</a> — Glue Databrew</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/glue">glue</a> — Glue</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/glue/patterns">patterns</a> — Glue Patterns</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/lake-formation">lake-formation</a> — Lake Formation</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/msk">msk</a> — Msk</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/open-search">open-search</a> — Open Search</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/open-search/patterns">patterns</a> — Open Search Patterns</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/quicksight">quicksight</a> — Quicksight</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/redshift/data-ingestion">data-ingestion</a> — Redshift Data Ingestion</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/redshift/disaster-recovery">disaster-recovery</a> — Redshift Disaster Recovery</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/redshift">redshift</a> — Redshift</li>
+<li><a href="/swe/cloud/aws/services/data-analytics/redshift/spectrum">spectrum</a> — Redshift Spectrum</li>
+<li><a href="/swe/cloud/aws/services/databases">databases</a> — Databases</li>
+<li><a href="/swe/cloud/aws/services/dms/dms/sct">sct</a> — Sct</li>
+<li><a href="/swe/cloud/aws/services/dms">dms</a> — Dms</li>
+<li><a href="/swe/cloud/aws/services/document-db">document-db</a> — Document Db</li>
+<li><a href="/swe/cloud/aws/services/ec2/ami">ami</a> — Ec2 Ami</li>
+<li><a href="/swe/cloud/aws/services/ec2/ebs">ebs</a> — Ec2 Ebs</li>
+<li><a href="/swe/cloud/aws/services/ec2/efs">efs</a> — Ec2 Efs</li>
+<li><a href="/swe/cloud/aws/services/ec2/elastic-network-interface">elastic-network-interface</a> — Ec2 Elastic Network Interface</li>
+<li><a href="/swe/cloud/aws/services/ec2/golden-ami">golden-ami</a> — Ec2 Golden Ami</li>
+<li><a href="/swe/cloud/aws/services/ec2/instance-connect">instance-connect</a> — Ec2 Instance Connect</li>
+<li><a href="/swe/cloud/aws/services/ec2/instance-purchase-options">instance-purchase-options</a> — Ec2 Instance Purchase Options</li>
+<li><a href="/swe/cloud/aws/services/ec2/instance-store">instance-store</a> — Ec2 Instance Store</li>
+<li><a href="/swe/cloud/aws/services/ec2/instances">instances</a> — Ec2 Instances</li>
+<li><a href="/swe/cloud/aws/services/ec2">ec2</a> — EC2</li>
+<li><a href="/swe/cloud/aws/services/ec2/placement-groups">placement-groups</a> — Ec2 Placement Groups</li>
+<li><a href="/swe/cloud/aws/services/ec2/security-groups">security-groups</a> — Ec2 Security Groups</li>
+<li><a href="/swe/cloud/aws/services/ec2/ssh">ssh</a> — Ssh</li>
+<li><a href="/swe/cloud/aws/services/elasticache">elasticache</a> — Elasticache</li>
+<li><a href="/swe/cloud/aws/services/elb/alb-sni">alb-sni</a> — Alb Sni</li>
+<li><a href="/swe/cloud/aws/services/elb/alb">alb</a> — Alb</li>
+<li><a href="/swe/cloud/aws/services/elb/connection-draining">connection-draining</a> — Elb Connection Draining</li>
+<li><a href="/swe/cloud/aws/services/elb/cross-zone">cross-zone</a> — Elb Cross Zone</li>
+<li><a href="/swe/cloud/aws/services/elb">elb</a> — ELB</li>
+<li><a href="/swe/cloud/aws/services/elb/nlb">nlb</a> — Nlb</li>
+<li><a href="/swe/cloud/aws/services/elb/sticky-sessions">sticky-sessions</a> — Elb Sticky Sessions</li>
+<li><a href="/swe/cloud/aws/services/global-accelerator">global-accelerator</a> — Global Accelerator</li>
+<li><a href="/swe/cloud/aws/services/iac/cloud-formation">cloud-formation</a> — Cloud Formation</li>
+<li><a href="/swe/cloud/aws/services/iam/control-tower">control-tower</a> — Control Tower</li>
+<li><a href="/swe/cloud/aws/services/iam/directory-services">directory-services</a> — Directory Services</li>
+<li><a href="/swe/cloud/aws/services/iam">iam</a> — Iam</li>
+<li><a href="/swe/cloud/aws/services/integration/data-firehose">data-firehose</a> — Data Firehose</li>
+<li><a href="/swe/cloud/aws/services/keyspaces">keyspaces</a> — Keyspaces</li>
+<li><a href="/swe/cloud/aws/services/machine-learning/comprehend-medical">comprehend-medical</a> — Comprehend Medical</li>
+<li><a href="/swe/cloud/aws/services/machine-learning/comprehend">comprehend</a> — Comprehend</li>
+<li><a href="/swe/cloud/aws/services/machine-learning/connect">connect</a> — Connect</li>
+<li><a href="/swe/cloud/aws/services/machine-learning/kendra">kendra</a> — Kendra</li>
+<li><a href="/swe/cloud/aws/services/machine-learning/lex">lex</a> — Lex</li>
+<li><a href="/swe/cloud/aws/services/machine-learning">machine-learning</a> — Machine Learning</li>
+<li><a href="/swe/cloud/aws/services/machine-learning/personalize">personalize</a> — Personalize</li>
+<li><a href="/swe/cloud/aws/services/machine-learning/polly">polly</a> — Polly</li>
+<li><a href="/swe/cloud/aws/services/machine-learning/rekognition">rekognition</a> — Rekognition</li>
+<li><a href="/swe/cloud/aws/services/machine-learning/sagemaker">sagemaker</a> — Sagemaker</li>
+<li><a href="/swe/cloud/aws/services/machine-learning/textract">textract</a> — Textract</li>
+<li><a href="/swe/cloud/aws/services/machine-learning/transcribe">transcribe</a> — Transcribe</li>
+<li><a href="/swe/cloud/aws/services/machine-learning/translate">translate</a> — Translate</li>
+<li><a href="/swe/cloud/aws/services/messaging/amazon-mq">amazon-mq</a> — Amazon Mq</li>
+<li><a href="/swe/cloud/aws/services/messaging/kinesis-data-stream">kinesis-data-stream</a> — Kinesis Data Stream</li>
+<li><a href="/swe/cloud/aws/services/messaging">messaging</a> — Messaging</li>
+<li><a href="/swe/cloud/aws/services/messaging/sns/fifo">fifo</a> — Sns Fifo</li>
+<li><a href="/swe/cloud/aws/services/messaging/sns">sns</a> — Sns</li>
+<li><a href="/swe/cloud/aws/services/messaging/sns/message-filtering">message-filtering</a> — Sns Message Filtering</li>
+<li><a href="/swe/cloud/aws/services/messaging/sns/security">security</a> — Sns Security</li>
+<li><a href="/swe/cloud/aws/services/messaging/sns/sqs-fan-out">sqs-fan-out</a> — Sns Sqs Fan Out</li>
+<li><a href="/swe/cloud/aws/services/messaging/sqs/asg">asg</a> — Sqs Asg</li>
+<li><a href="/swe/cloud/aws/services/messaging/sqs/fifo">fifo</a> — Sqs Fifo</li>
+<li><a href="/swe/cloud/aws/services/messaging/sqs/long-pooling">long-pooling</a> — Sqs Long Pooling</li>
+<li><a href="/swe/cloud/aws/services/messaging/sqs">sqs</a> — Sqs</li>
+<li><a href="/swe/cloud/aws/services/messaging/sqs/message-visibility-timeout">message-visibility-timeout</a> — Sqs Message Visibility Timeout</li>
+<li><a href="/swe/cloud/aws/services/messaging/sqs/security">security</a> — Sqs Security</li>
+<li><a href="/swe/cloud/aws/services/monitoring-audit/cloud-trail">cloud-trail</a> — Cloud Trail</li>
+<li><a href="/swe/cloud/aws/services/monitoring-audit/cloud-watch/alarms">alarms</a> — Cloud Watch Alarms</li>
+<li><a href="/swe/cloud/aws/services/monitoring-audit/cloud-watch/insights">insights</a> — Cloud Watch Insights</li>
+<li><a href="/swe/cloud/aws/services/monitoring-audit/cloud-watch/logs">logs</a> — Cloud Watch Logs</li>
+<li><a href="/swe/cloud/aws/services/monitoring-audit/cloud-watch">cloud-watch</a> — Cloud Watch</li>
+<li><a href="/swe/cloud/aws/services/monitoring-audit/cloud-watch/metrics">metrics</a> — Cloud Watch Metrics</li>
+<li><a href="/swe/cloud/aws/services/monitoring-audit/config">config</a> — Config</li>
+<li><a href="/swe/cloud/aws/services/monitoring-audit/event-bridge">event-bridge</a> — Event Bridge</li>
+<li><a href="/swe/cloud/aws/services/monitoring-audit">monitoring-audit</a> — Monitoring Audit</li>
+<li><a href="/swe/cloud/aws/services/neptune">neptune</a> — Neptune</li>
+<li><a href="/swe/cloud/aws/services/neptune/streams">streams</a> — Neptune Streams</li>
+<li><a href="/swe/cloud/aws/services/network/direct-connect">direct-connect</a> — Direct Connect</li>
+<li><a href="/swe/cloud/aws/services/network/internet-gateway-egress-only">internet-gateway-egress-only</a> — Internet Gateway Egress Only</li>
+<li><a href="/swe/cloud/aws/services/network/internet-gateway">internet-gateway</a> — Internet Gateway</li>
+<li><a href="/swe/cloud/aws/services/network/nacl">nacl</a> — Nacl</li>
+<li><a href="/swe/cloud/aws/services/network/nat-gateway">nat-gateway</a> — Nat Gateway</li>
+<li><a href="/swe/cloud/aws/services/network/patterns/bastion-host">bastion-host</a> — Bastion Host</li>
+<li><a href="/swe/cloud/aws/services/network/site-to-site-vpn">site-to-site-vpn</a> — Site to Site Vpn</li>
+<li><a href="/swe/cloud/aws/services/network/subnet">subnet</a> — Subnet</li>
+<li><a href="/swe/cloud/aws/services/network/transit-gateway">transit-gateway</a> — Transit Gateway</li>
+<li><a href="/swe/cloud/aws/services/network/vpc-endpoint">vpc-endpoint</a> — Vpc Endpoint</li>
+<li><a href="/swe/cloud/aws/services/network/vpc-flow-logs">vpc-flow-logs</a> — Vpc Flow Logs</li>
+<li><a href="/swe/cloud/aws/services/network/vpc-peering">vpc-peering</a> — Vpc Peering</li>
+<li><a href="/swe/cloud/aws/services/network/vpc-traffic-mirroring">vpc-traffic-mirroring</a> — Vpc Traffic Mirroring</li>
+<li><a href="/swe/cloud/aws/services/network/vpc">vpc</a> — Vpc</li>
+<li><a href="/swe/cloud/aws/services/organizations">organizations</a> — Organizations</li>
+<li><a href="/swe/cloud/aws/services/outposts">outposts</a> — Outposts</li>
+<li><a href="/swe/cloud/aws/services/pinpoint">pinpoint</a> — Pinpoint</li>
+<li><a href="/swe/cloud/aws/services/qldb">qldb</a> — Qldb</li>
+<li><a href="/swe/cloud/aws/services/rds">rds</a> — Rds</li>
+<li><a href="/swe/cloud/aws/services/rds/multi-az">multi-az</a> — Rds Multi Az</li>
+<li><a href="/swe/cloud/aws/services/rds/read-replicas">read-replicas</a> — Rds Read Replicas</li>
+<li><a href="/swe/cloud/aws/services/route53">route53</a> — Route53</li>
+<li><a href="/swe/cloud/aws/services/s3/access-points">access-points</a> — S3 Access Points</li>
+<li><a href="/swe/cloud/aws/services/s3/batch-operations">batch-operations</a> — S3 Batch Operations</li>
+<li><a href="/swe/cloud/aws/services/s3/cors">cors</a> — S3 Cors</li>
+<li><a href="/swe/cloud/aws/services/s3/glacier-vault-lock-policy">glacier-vault-lock-policy</a> — S3 Glacier Vault Lock Policy</li>
+<li><a href="/swe/cloud/aws/services/s3/life-cycle">life-cycle</a> — S3 Life Cycle</li>
+<li><a href="/swe/cloud/aws/services/s3">s3</a> — S3</li>
+<li><a href="/swe/cloud/aws/services/s3/object-encryption">object-encryption</a> — S3 Object Encryption</li>
+<li><a href="/swe/cloud/aws/services/s3/object-lambda">object-lambda</a> — S3 Object Lambda</li>
+<li><a href="/swe/cloud/aws/services/s3/object-lock">object-lock</a> — S3 Object Lock</li>
+<li><a href="/swe/cloud/aws/services/s3/performance">performance</a> — S3 Performance</li>
+<li><a href="/swe/cloud/aws/services/s3/security">security</a> — S3 Security</li>
+<li><a href="/swe/cloud/aws/services/s3/static-hosting">static-hosting</a> — S3 Static Hosting</li>
+<li><a href="/swe/cloud/aws/services/s3/storage-classes">storage-classes</a> — S3 Storage Classes</li>
+<li><a href="/swe/cloud/aws/services/s3/storage-lens">storage-lens</a> — S3 Storage Lens</li>
+<li><a href="/swe/cloud/aws/services/s3/versioning">versioning</a> — S3 Versioning</li>
+<li><a href="/swe/cloud/aws/services/security/acm">acm</a> — Acm</li>
+<li><a href="/swe/cloud/aws/services/security/firewall-manager">firewall-manager</a> — Firewall Manager</li>
+<li><a href="/swe/cloud/aws/services/security/guard-duty">guard-duty</a> — Guard Duty</li>
+<li><a href="/swe/cloud/aws/services/security/inspector">inspector</a> — Inspector</li>
+<li><a href="/swe/cloud/aws/services/security/kms/key-policy">key-policy</a> — Kms Key Policy</li>
+<li><a href="/swe/cloud/aws/services/security/kms/key-types">key-types</a> — Kms Key Types</li>
+<li><a href="/swe/cloud/aws/services/security/kms/keys-multi-region">keys-multi-region</a> — Kms Keys Multi Region</li>
+<li><a href="/swe/cloud/aws/services/security/kms">kms</a> — Kms</li>
+<li><a href="/swe/cloud/aws/services/security/macie">macie</a> — Macie</li>
+<li><a href="/swe/cloud/aws/services/security">security</a> — Security</li>
+<li><a href="/swe/cloud/aws/services/security/secrets-manager">secrets-manager</a> — Secret Manager</li>
+<li><a href="/swe/cloud/aws/services/security/shield">shield</a> — Shield</li>
+<li><a href="/swe/cloud/aws/services/security/ssm-parameter-store">ssm-parameter-store</a> — Ssm Parameter Store</li>
+<li><a href="/swe/cloud/aws/services/security/waf">waf</a> — Waf</li>
+<li><a href="/swe/cloud/aws/services/serverless/api-gateway/endpoint-types">endpoint-types</a> — API Gateway Endpoint Types</li>
+<li><a href="/swe/cloud/aws/services/serverless/api-gateway/integrations">integrations</a> — API Gateway Integrations</li>
+<li><a href="/swe/cloud/aws/services/serverless/api-gateway">api-gateway</a> — API Gateway (AWS)</li>
+<li><a href="/swe/cloud/aws/services/serverless/api-gateway/security">security</a> — API Gateway Security</li>
+<li><a href="/swe/cloud/aws/services/serverless/cognito-cognito-identity-pools">cognito-cognito-identity-pools</a> — Cognito Cognito Identity Pools</li>
+<li><a href="/swe/cloud/aws/services/serverless/cognito-cognito-user-pools">cognito-cognito-user-pools</a> — Cognito Cognito User Pools</li>
+<li><a href="/swe/cloud/aws/services/serverless/cognito">cognito</a> — Cognito</li>
+<li><a href="/swe/cloud/aws/services/serverless/dynamodb/accelerator">accelerator</a> — Dynamodb Accelerator</li>
+<li><a href="/swe/cloud/aws/services/serverless/dynamodb/disaster-recovery">disaster-recovery</a> — Dynamodb Disaster Recovery</li>
+<li><a href="/swe/cloud/aws/services/serverless/dynamodb/global-tables">global-tables</a> — Dynamodb Global Tables</li>
+<li><a href="/swe/cloud/aws/services/serverless/dynamodb">dynamodb</a> — Dynamodb</li>
+<li><a href="/swe/cloud/aws/services/serverless/dynamodb/s3-integration">s3-integration</a> — Dynamodb S3 Integration</li>
+<li><a href="/swe/cloud/aws/services/serverless/dynamodb/streams">streams</a> — Dynamodb Streams</li>
+<li><a href="/swe/cloud/aws/services/serverless/dynamodb/ttl">ttl</a> — Dynamodb Ttl</li>
+<li><a href="/swe/cloud/aws/services/serverless/lambda/concurrency">concurrency</a> — Lambda Concurrency</li>
+<li><a href="/swe/cloud/aws/services/serverless/lambda/edge-function">edge-function</a> — Lambda Edge Function</li>
+<li><a href="/swe/cloud/aws/services/serverless/lambda/in-vpc">in-vpc</a> — Lambda in Vpc</li>
+<li><a href="/swe/cloud/aws/services/serverless/lambda/limits">limits</a> — Lambda Limits</li>
+<li><a href="/swe/cloud/aws/services/serverless/lambda">lambda</a> — Lambda</li>
+<li><a href="/swe/cloud/aws/services/serverless/lambda/snap-start">snap-start</a> — Lambda Snap Start</li>
+<li><a href="/swe/cloud/aws/services/serverless/step-functions">step-functions</a> — Step Functions</li>
+<li><a href="/swe/cloud/aws/services/simple-email-service">simple-email-service</a> — Simple Email Service</li>
+<li><a href="/swe/cloud/aws/services/solutions/instance-scheduler">instance-scheduler</a> — Instance Scheduler</li>
+<li><a href="/swe/cloud/aws/services/ssm/automation">automation</a> — Ssm Automation</li>
+<li><a href="/swe/cloud/aws/services/ssm/maintenance-windows">maintenance-windows</a> — Ssm Maintenance Windows</li>
+<li><a href="/swe/cloud/aws/services/ssm">ssm</a> — SSM</li>
+<li><a href="/swe/cloud/aws/services/ssm/patch-manager">patch-manager</a> — Ssm Patch Manager</li>
+<li><a href="/swe/cloud/aws/services/ssm/run-command">run-command</a> — Ssm Run Command</li>
+<li><a href="/swe/cloud/aws/services/ssm/session-manager">session-manager</a> — Ssm Session Manager</li>
+<li><a href="/swe/cloud/aws/services/storage/data-sync">data-sync</a> — Data Sync</li>
+<li><a href="/swe/cloud/aws/services/storage/fsx">fsx</a> — Fsx</li>
+<li><a href="/swe/cloud/aws/services/storage/gateway">gateway</a> — Storage Gateway</li>
+<li><a href="/swe/cloud/aws/services/storage/snow-family">snow-family</a> — Snow Family</li>
+<li><a href="/swe/cloud/aws/services/storage/transfer-family">transfer-family</a> — Transfer Family</li>
+<li><a href="/swe/cloud/aws/services/summary-data-transfer">summary-data-transfer</a> — Summary Data Transfer</li>
+<li><a href="/swe/cloud/aws/services/timestream">timestream</a> — Timestream</li>
+<li><a href="/swe/cloud/aws/services/trusted-advisor">trusted-advisor</a> — Trusted Advisor</li>
+<li><a href="/swe/cloud/aws/services/vmware-cloud">vmware-cloud</a> — Vmware Cloud</li>
+<li><a href="/swe/cloud/aws/services/vpc">vpc</a> — VPC (index)</li>
+<li><a href="/swe/cloud/aws/services/vpc/sharing">sharing</a> — Vpc Sharing</li>
+</ul>
+<h2 id="regions">Regions</h2>
+<ul>
+<li><a href="/swe/cloud/aws/regions/choosing-regions">choosing-regions</a> — Choosing Regions</li>
+</ul>
+<h2 id="how-to--solutions">How-to / Solutions</h2>
+<ul>
+<li><a href="/swe/cloud/aws/how-to/solutions-architectures">solutions-architectures</a> — Solutions Architectures</li>
+</ul>
+<h2 id="other">Other</h2>
+<ul>
+<li><a href="/swe/cloud/aws/index">index</a> — SWE Cloud AWS - Index</li>
+<li><a href="/swe/cloud/aws/mapping">mapping</a> — swe.cloud.aws.mapping</li>
+</ul>8:["$","main",null,{"style":{"padding":"var(--space-5) 0 var(--space-8)"},"children":["$","div",null,{"className":"page-wrap","children":["$","garden-article",null,{"suppressHydrationWarning":true,"title":"SWE Cloud AWS - Index","has-sidebar":"","has-backlinks":"","children":[["$","div",null,{"slot":"breadcrumb","children":["$","$L13",null,{"items":[{"label":"home","href":"/notes/"},{"label":"Software Engineering","href":"/notes/swe/"},{"label":"SWE Cloud AWS - Index"}]}]}],["$","garden-tag",null,{"suppressHydrationWarning":true,"slot":"meta","variant":"sage","children":"SOFTWARE ENGINEERING"}],["$","garden-tag",null,{"suppressHydrationWarning":true,"slot":"meta","variant":"default","children":"DRAFT"}],["$","div",null,{"slot":"content","className":"prose","dangerouslySetInnerHTML":{"__html":"$14"}}],"$L15",["$L16"]]}]}]}]
+17:I[75658,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteToc"]
+15:["$","$L17",null,{"slot":"sidebar","items":[{"id":"concepts","label":"Concepts","depth":1},{"id":"services","label":"Services","depth":1},{"id":"regions","label":"Regions","depth":1},{"id":"how-to--solutions","label":"How-to / Solutions","depth":1},{"id":"other","label":"Other","depth":1}]}]
+16:["$","li","swe.cloud.aws.index",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/index/","variant":"default","children":"SWE Cloud AWS - Index"}]}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+a:null
+18:I[51506,[],"IconMark"]
+c:{"metadata":[["$","title","0",{"children":"SWE Cloud AWS - Index — Digital Garden"}],["$","meta","1",{"name":"description","content":"SWE Cloud AWS — Index (regenerated) Concepts disaster-recovery — Disaster Recovery well-architected-framework — Well Architected Framework Services amplify — Am"}],["$","link","2",{"rel":"icon","href":"/notes/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","$L18","3",{}]],"error":null,"digest":"$undefined"}
+11:"$c:metadata"

@@ -1,0 +1,159 @@
+1:"$Sreact.fragment"
+2:I[9191,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"default"]
+3:I[91771,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"SiteNav"]
+4:I[53922,[],""]
+5:I[39891,["9767","static/chunks/9767-4452bfce4d1f1add.js","8039","static/chunks/app/error-9ae2206466504b49.js"],"default"]
+6:I[1872,[],""]
+7:I[79767,["9767","static/chunks/9767-4452bfce4d1f1add.js","4345","static/chunks/app/not-found-6acd6bddd9def445.js"],""]
+9:I[50987,[],"OutletBoundary"]
+b:I[46842,[],"AsyncMetadataOutlet"]
+d:I[50987,[],"ViewportBoundary"]
+f:I[50987,[],"MetadataBoundary"]
+10:"$Sreact.suspense"
+12:I[47802,[],""]
+:HL["/notes/_next/static/css/d492c5495f17f00e.css","style"]
+0:{"P":null,"b":"IOYRrb6gG67xwS8uEwbG6","p":"/notes","c":["","swe","cloud","aws","services","network","vpc",""],"i":false,"f":[[["",{"children":[["slug","swe/cloud/aws/services/network/vpc","c"],{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/notes/_next/static/css/d492c5495f17f00e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){\n  try{\n    var t=localStorage.getItem('theme');\n    if(t==='dark'||t==='light') document.documentElement.setAttribute('data-theme',t);\n  }catch(e){}\n})();"}}]}],["$","body",null,{"children":[["$","a",null,{"href":"#main-content","className":"skip-link","children":"Skip to content"}],["$","$L2",null,{}],["$","$L3",null,{}],["$","div",null,{"id":"main-content","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"style":{"display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center","minHeight":"60vh","padding":"var(--space-7) var(--space-5)","textAlign":"center"},"children":[["$","garden-badge",null,{"variant":"muted","style":{"marginBottom":"var(--space-3)","display":"block"},"children":"404"}],["$","h1",null,{"style":{"fontFamily":"var(--font-display)","fontSize":"clamp(24px, 4vw, 40px)","fontWeight":500,"letterSpacing":"-0.025em","color":"var(--ds-ink)","margin":"0 0 0.75rem"},"children":"Note not found"}],["$","p",null,{"style":{"fontFamily":"var(--font-body)","fontSize":15,"color":"var(--ds-muted)","maxWidth":360,"lineHeight":1.7,"margin":"0 0 var(--space-5)"},"children":"This page doesn't exist yet — or the note may have moved. Try browsing from the home page."}],["$","$L7",null,{"href":"/","style":{"display":"inline-flex","alignItems":"center","gap":6,"fontFamily":"var(--font-ui, system-ui, sans-serif)","fontSize":13,"fontWeight":500,"letterSpacing":"0.01em","padding":"7px 20px","borderRadius":"var(--radius-md, 8px)","background":"var(--ds-accent, #a85025)","color":"#fff","textDecoration":"none","transition":"background 120ms ease"},"children":"Back to home"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}]]}],{"children":[["slug","swe/cloud/aws/services/network/vpc","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L8",null,["$","$L9",null,{"children":["$La",["$","$Lb",null,{"promise":"$@c"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Ld",null,{"children":"$Le"}],null],["$","$Lf",null,{"children":["$","div",null,{"hidden":true,"children":["$","$10",null,{"fallback":null,"children":"$L11"}]}]}]]}],false]],"m":"$undefined","G":["$12",[]],"s":false,"S":true}
+13:I[23191,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteBreadcrumb"]
+14:T1293,<h1 id="virtual-private-cloud-vpc">Virtual Private Cloud (VPC)</h1>
+<ul>
+<li>Todas novas contas AWS tem uma <strong>VPC padrão</strong></li>
+<li>Novas instâncias EC2 são hospedadas na <em>VPC</em> padrão caso nenhuma subnets seja definida</li>
+<li>A <em>VPC</em> padrão possui conectividade com a internet e todas instâncias EC2 hospedadas nela possuem endereços IPv4 públicos</li>
+<li>É possível ter múltiplas VPCs em uma região da AWS (máximo de 5 VPCs por região)</li>
+<li>É possível ter até 5 CIDR <a href="/swe/network/concepts/network-ipv4#CIDR">network-ipv4#CIDR</a> por VPC:
+<ul>
+<li>Mínimo <code>/28</code> (16 endereços de IP)</li>
+<li>Máximo <code>/16</code> (65536 endereços de IP)</li>
+</ul>
+</li>
+<li>Como a vpc é privada, apenas intervalos de IPv4 privados são permitidos:
+<img src="/swe/network/concepts/network-ipv4#IPs-privados" alt="network-ipv4#IPs-privados"></li>
+</ul>
+<h2 id="resumo">Resumo</h2>
+<ul>
+<li>
+<p><strong>CIDR – IP Range</strong>
+Faixa de IPs usada para definir blocos de endereçamento.</p>
+</li>
+<li>
+<p><strong>VPC – Virtual Private Cloud</strong>
+Criamos uma lista de blocos CIDR IPv4 e IPv6 para definir a rede virtual.</p>
+</li>
+<li>
+<p><strong>Subnets</strong>
+Associadas a uma Availability Zone (AZ), cada uma possui um CIDR próprio.</p>
+</li>
+<li>
+<p><strong>Internet Gateway</strong>
+Configurado no nível da VPC, fornece acesso à Internet para IPv4 e IPv6.</p>
+</li>
+<li>
+<p><strong>Route Tables</strong>
+Precisam ser editadas para adicionar rotas de subnets para o Internet Gateway (IGW), VPC Peering Connections, VPC Endpoints, etc.</p>
+</li>
+<li>
+<p><strong>Bastion Host</strong>
+Instância EC2 pública usada para acesso SSH, com conectividade SSH para instâncias EC2 em subnets privadas.</p>
+</li>
+<li>
+<p><strong>NAT Instances</strong>
+Fornecem acesso à Internet para instâncias EC2 em subnets privadas. São antigas, devem ser configuradas em subnets públicas e ter o flag de verificação de origem/destino (Source/Destination Check) desativado.</p>
+</li>
+<li>
+<p><strong>NAT Gateway</strong>
+Serviço gerenciado pela AWS que fornece acesso escalável à Internet para instâncias EC2 privadas, quando o destino é um endereço IPv4.</p>
+</li>
+<li>
+<p><strong>NACL – Network ACL</strong>
+Regras stateless (sem estado) para tráfego de entrada e saída em nível de subnet. Não esqueça das portas efêmeras (Ephemeral Ports).</p>
+</li>
+<li>
+<p><strong>Security Groups</strong>
+Regras stateful (com estado), operam no nível da instância EC2.</p>
+</li>
+<li>
+<p><strong>VPC Peering</strong>
+Conecta duas VPCs com CIDRs que não se sobrepõem. Não é transitivo.</p>
+</li>
+<li>
+<p><strong>VPC Endpoints</strong>
+Fornecem acesso privado a serviços da AWS (S3, DynamoDB, CloudFormation, SSM) dentro de uma VPC.</p>
+</li>
+<li>
+<p><strong>VPC Flow Logs</strong>
+Podem ser configurados no nível da VPC, Subnet ou ENI para registrar tráfego ACCEPT e REJECT. Ajudam a identificar ataques e podem ser analisados com o Athena ou CloudWatch Logs Insights.</p>
+</li>
+<li>
+<p><strong>Site-to-Site VPN</strong>
+Configura um Customer Gateway no data center e um Virtual Private Gateway na VPC, estabelecendo uma VPN site-to-site pela Internet pública.</p>
+</li>
+<li>
+<p><strong>AWS VPN CloudHub</strong>
+Modelo de VPN em estrela (hub-and-spoke) para conectar múltiplos sites on-premise.</p>
+</li>
+<li>
+<p><strong>Direct Connect</strong>
+Configura um Virtual Private Gateway na VPC e estabelece uma conexão privada direta com um AWS Direct Connect Location.</p>
+</li>
+<li>
+<p><strong>Direct Connect Gateway</strong>
+Permite usar o Direct Connect com múltiplas VPCs em diferentes regiões da AWS.</p>
+</li>
+<li>
+<p><strong>AWS PrivateLink / VPC Endpoint Services</strong></p>
+<ul>
+<li>Permite que clientes acessem serviços de forma privada da VPC do provedor de serviço.</li>
+<li>Não requer VPC Peering, Internet pública, NAT Gateway ou Route Tables.</li>
+<li>Deve ser usado com Network Load Balancer e ENI.</li>
+</ul>
+</li>
+<li>
+<p><strong>ClassicLink</strong>
+Conecta instâncias EC2 no modo EC2-Classic à sua VPC de forma privada.</p>
+</li>
+<li>
+<p><strong>Transit Gateway</strong>
+Permite conexões de peering transitivas entre VPCs, VPNs e Direct Connect.</p>
+</li>
+<li>
+<p><strong>Traffic Mirroring</strong>
+Copia o tráfego de rede de ENIs para análise posterior.</p>
+</li>
+<li>
+<p><strong>Egress-only Internet Gateway</strong>
+Similar ao NAT Gateway, mas usado para fornecer saída para a Internet somente para IPv6.</p>
+</li>
+</ul>
+<h2 id="relacionado">Relacionado</h2>
+<ul>
+<li><a href="/daily/journal/2025/06/14">14</a></li>
+<li><a href="/swe/network/concepts/network-ipv4">network-ipv4</a></li>
+</ul>
+<p>#SWE #Cloud #AWS #AWSServices #Network #AmazonVPC</p>8:["$","main",null,{"style":{"padding":"var(--space-5) 0 var(--space-8)"},"children":["$","div",null,{"className":"page-wrap","children":["$","garden-article",null,{"suppressHydrationWarning":true,"title":"Vpc","has-sidebar":"$undefined","has-backlinks":"","children":[["$","div",null,{"slot":"breadcrumb","children":["$","$L13",null,{"items":[{"label":"home","href":"/notes/"},{"label":"Software Engineering","href":"/notes/swe/"},{"label":"Vpc"}]}]}],["$","garden-tag",null,{"suppressHydrationWarning":true,"slot":"meta","variant":"sage","children":"SOFTWARE ENGINEERING"}],["$","garden-tag",null,{"suppressHydrationWarning":true,"slot":"meta","variant":"default","children":"DRAFT"}],["$","div",null,{"slot":"content","className":"prose","dangerouslySetInnerHTML":{"__html":"$14"}}],false,["$L15","$L16","$L17","$L18","$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22","$L23","$L24","$L25","$L26","$L27","$L28","$L29","$L2a"]]}]}]}]
+15:["$","li","daily.journal.2025.06.14",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/daily/journal/2025/06/14/","variant":"default","children":"2025-06-14"}]}]
+16:["$","li","swe.cloud.aws.index",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/index/","variant":"default","children":"SWE Cloud AWS - Index"}]}]
+17:["$","li","swe.cloud.aws.services.network.direct-connect",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/network/direct-connect/","variant":"default","children":"Direct Connect"}]}]
+18:["$","li","swe.cloud.aws.services.network.direct-connect",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/network/direct-connect/","variant":"default","children":"Direct Connect"}]}]
+19:["$","li","swe.cloud.aws.services.network.internet-gateway-egress-only",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/network/internet-gateway-egress-only/","variant":"default","children":"Internet Gateway Egress Only"}]}]
+1a:["$","li","swe.cloud.aws.services.network.internet-gateway",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/network/internet-gateway/","variant":"default","children":"Internet Gateway"}]}]
+1b:["$","li","swe.cloud.aws.services.network.nat-gateway",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/network/nat-gateway/","variant":"default","children":"Nat Gateway"}]}]
+1c:["$","li","swe.cloud.aws.services.network.site-to-site-vpn",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/network/site-to-site-vpn/","variant":"default","children":"Site to Site Vpn"}]}]
+1d:["$","li","swe.cloud.aws.services.network.site-to-site-vpn",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/network/site-to-site-vpn/","variant":"default","children":"Site to Site Vpn"}]}]
+1e:["$","li","swe.cloud.aws.services.network.subnet",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/network/subnet/","variant":"default","children":"Subnet"}]}]
+1f:["$","li","swe.cloud.aws.services.network.transit-gateway",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/network/transit-gateway/","variant":"default","children":"Transit Gateway"}]}]
+20:["$","li","swe.cloud.aws.services.network.vpc-endpoint",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/network/vpc-endpoint/","variant":"default","children":"Vpc Endpoint"}]}]
+21:["$","li","swe.cloud.aws.services.network.vpc-flow-logs",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/network/vpc-flow-logs/","variant":"default","children":"Vpc Flow Logs"}]}]
+22:["$","li","swe.cloud.aws.services.network.vpc-peering",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/network/vpc-peering/","variant":"default","children":"Vpc Peering"}]}]
+23:["$","li","swe.cloud.aws.services.network.vpc-peering",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/network/vpc-peering/","variant":"default","children":"Vpc Peering"}]}]
+24:["$","li","swe.cloud.aws.services.network.vpc-traffic-mirroring",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/network/vpc-traffic-mirroring/","variant":"default","children":"Vpc Traffic Mirroring"}]}]
+25:["$","li","swe",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/","variant":"default","children":"swe"}]}]
+26:["$","li","tags.AWS",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/tags/AWS/","variant":"default","children":"Tag: AWS"}]}]
+27:["$","li","tags.AWSServices",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/tags/AWSServices/","variant":"default","children":"Tag: AWSServices"}]}]
+28:["$","li","tags.Cloud",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/tags/Cloud/","variant":"default","children":"Tag: Cloud"}]}]
+29:["$","li","tags.Network",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/tags/Network/","variant":"default","children":"Tag: Network"}]}]
+2a:["$","li","tags.SWE",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/tags/SWE/","variant":"default","children":"Tag: SWE"}]}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+a:null
+2b:I[51506,[],"IconMark"]
+c:{"metadata":[["$","title","0",{"children":"Vpc — Digital Garden"}],["$","meta","1",{"name":"description","content":"Virtual Private Cloud (VPC) Todas novas contas AWS tem uma VPC padrão Novas instâncias EC2 são hospedadas na VPC padrão caso nenhuma subnets seja definida A VPC"}],["$","link","2",{"rel":"icon","href":"/notes/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","$L2b","3",{}]],"error":null,"digest":"$undefined"}
+11:"$c:metadata"

@@ -1,6 +1,7 @@
 import type { Page } from '@playwright/test';
 import { expect, test } from '@playwright/test';
 
+const HOME_PATH = '/notes';
 const NOTE_SLUG = '/notes/books/a-philosophy-of-software-design';
 
 /**
@@ -15,7 +16,7 @@ test.describe('Accessibility — home page', () => {
 
   test.beforeAll(async ({ browser }) => {
     page = await browser.newPage();
-    await page.goto('/');
+    await page.goto(HOME_PATH);
   });
 
   test.afterAll(async () => {

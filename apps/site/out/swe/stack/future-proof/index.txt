@@ -1,0 +1,134 @@
+1:"$Sreact.fragment"
+2:I[9191,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"default"]
+3:I[91771,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"SiteNav"]
+4:I[53922,[],""]
+5:I[39891,["9767","static/chunks/9767-4452bfce4d1f1add.js","8039","static/chunks/app/error-9ae2206466504b49.js"],"default"]
+6:I[1872,[],""]
+7:I[79767,["9767","static/chunks/9767-4452bfce4d1f1add.js","4345","static/chunks/app/not-found-6acd6bddd9def445.js"],""]
+9:I[50987,[],"OutletBoundary"]
+b:I[46842,[],"AsyncMetadataOutlet"]
+d:I[50987,[],"ViewportBoundary"]
+f:I[50987,[],"MetadataBoundary"]
+10:"$Sreact.suspense"
+12:I[47802,[],""]
+:HL["/notes/_next/static/css/d492c5495f17f00e.css","style"]
+0:{"P":null,"b":"IOYRrb6gG67xwS8uEwbG6","p":"/notes","c":["","swe","stack","future-proof",""],"i":false,"f":[[["",{"children":[["slug","swe/stack/future-proof","c"],{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/notes/_next/static/css/d492c5495f17f00e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){\n  try{\n    var t=localStorage.getItem('theme');\n    if(t==='dark'||t==='light') document.documentElement.setAttribute('data-theme',t);\n  }catch(e){}\n})();"}}]}],["$","body",null,{"children":[["$","a",null,{"href":"#main-content","className":"skip-link","children":"Skip to content"}],["$","$L2",null,{}],["$","$L3",null,{}],["$","div",null,{"id":"main-content","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"style":{"display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center","minHeight":"60vh","padding":"var(--space-7) var(--space-5)","textAlign":"center"},"children":[["$","garden-badge",null,{"variant":"muted","style":{"marginBottom":"var(--space-3)","display":"block"},"children":"404"}],["$","h1",null,{"style":{"fontFamily":"var(--font-display)","fontSize":"clamp(24px, 4vw, 40px)","fontWeight":500,"letterSpacing":"-0.025em","color":"var(--ds-ink)","margin":"0 0 0.75rem"},"children":"Note not found"}],["$","p",null,{"style":{"fontFamily":"var(--font-body)","fontSize":15,"color":"var(--ds-muted)","maxWidth":360,"lineHeight":1.7,"margin":"0 0 var(--space-5)"},"children":"This page doesn't exist yet — or the note may have moved. Try browsing from the home page."}],["$","$L7",null,{"href":"/","style":{"display":"inline-flex","alignItems":"center","gap":6,"fontFamily":"var(--font-ui, system-ui, sans-serif)","fontSize":13,"fontWeight":500,"letterSpacing":"0.01em","padding":"7px 20px","borderRadius":"var(--radius-md, 8px)","background":"var(--ds-accent, #a85025)","color":"#fff","textDecoration":"none","transition":"background 120ms ease"},"children":"Back to home"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}]]}],{"children":[["slug","swe/stack/future-proof","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L8",null,["$","$L9",null,{"children":["$La",["$","$Lb",null,{"promise":"$@c"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Ld",null,{"children":"$Le"}],null],["$","$Lf",null,{"children":["$","div",null,{"hidden":true,"children":["$","$10",null,{"fallback":null,"children":"$L11"}]}]}]]}],false]],"m":"$undefined","G":["$12",[]],"s":false,"S":true}
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+a:null
+13:I[51506,[],"IconMark"]
+c:{"metadata":[["$","title","0",{"children":"Future Proof — Digital Garden"}],["$","meta","1",{"name":"description","content":"Future Proof Stack Languages Go Python Typescript Backend Architectures Serverless Event Driven Microservices Frontend Frameworks Angular React Architectures Mi"}],["$","link","2",{"rel":"icon","href":"/notes/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","$L13","3",{}]],"error":null,"digest":"$undefined"}
+11:"$c:metadata"
+14:I[23191,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteBreadcrumb"]
+16:I[75658,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteToc"]
+15:T807,<h1 id="future-proof-stack">Future Proof Stack</h1>
+<h2 id="languages">Languages</h2>
+<ul>
+<li>Go</li>
+<li>Python</li>
+<li>Typescript</li>
+</ul>
+<h2 id="backend">Backend</h2>
+<h3 id="architectures">Architectures</h3>
+<ul>
+<li>Serverless</li>
+<li>Event Driven</li>
+<li>Microservices</li>
+</ul>
+<h2 id="frontend">Frontend</h2>
+<h3 id="frameworks">Frameworks</h3>
+<ul>
+<li>Angular</li>
+<li>React</li>
+</ul>
+<h3 id="architectures-1">Architectures</h3>
+<ul>
+<li>Microfrontends</li>
+<li>Serverless</li>
+</ul>
+<h3 id="concepts">Concepts</h3>
+<ul>
+<li>Web Components</li>
+</ul>
+<h2 id="devops">Devops</h2>
+<ul>
+<li>Docker</li>
+<li>Kubernetes</li>
+<li>IaC (Terraform)</li>
+<li>Github Actions</li>
+<li>CI/CD</li>
+<li>DataDog</li>
+<li>Prometheus</li>
+<li>Grafana</li>
+<li>Deploy Blue Green</li>
+<li>Deploy Canary</li>
+</ul>
+<h2 id="databases">Databases</h2>
+<h3 id="language">Language</h3>
+<ul>
+<li>SQL</li>
+</ul>
+<h3 id="concepts-1">Concepts</h3>
+<ul>
+<li>Database Modeling</li>
+</ul>
+<h3 id="oltp-databases">OLTP Databases</h3>
+<ul>
+<li>SQLite</li>
+<li>PostgreSQL</li>
+</ul>
+<h3 id="olap-databases">OLAP Databases</h3>
+<ul>
+<li>DuckDB</li>
+</ul>
+<h3 id="nosql">NoSQL</h3>
+<ul>
+<li>DynamoDB</li>
+<li>MongoDB</li>
+<li>Redis</li>
+</ul>
+<h2 id="concepts-2">Concepts</h2>
+<ul>
+<li>SOLID</li>
+<li>REST</li>
+<li>Design Patterns</li>
+<li>API Modeling (OpenAPI/Swagger)</li>
+<li>Oauth</li>
+</ul>
+<h2 id="quality-assurance">Quality Assurance</h2>
+<ul>
+<li>Unit tests</li>
+<li>Integration tests</li>
+<li>End to end tests</li>
+<li>BDD</li>
+<li>Chaos tests</li>
+<li>TaaC (Test as Code)</li>
+</ul>
+<h2 id="cloud">Cloud</h2>
+<h3 id="best-practices">Best Practices</h3>
+<ul>
+<li>FinOps</li>
+</ul>
+<h3 id="aws">AWS</h3>
+<h4 id="services">Services</h4>
+<ul>
+<li>IAM</li>
+<li>VPC</li>
+<li>CloudWatch</li>
+<li>EC2</li>
+<li>ECS</li>
+<li>EKS</li>
+<li>ELB</li>
+<li>SQS</li>
+<li>SNS</li>
+<li>Step Functions</li>
+<li>Lambda</li>
+<li>API Gateway</li>
+<li>DynamoDB</li>
+<li>RDS</li>
+<li>Elasticache</li>
+<li>Cloud Front</li>
+<li>S3</li>
+<li>Glue</li>
+<li>Athena</li>
+<li>Sagemaker</li>
+</ul>8:["$","main",null,{"style":{"padding":"var(--space-5) 0 var(--space-8)"},"children":["$","div",null,{"className":"page-wrap","children":["$","garden-article",null,{"suppressHydrationWarning":true,"title":"Future Proof","has-sidebar":"","has-backlinks":"","children":[["$","div",null,{"slot":"breadcrumb","children":["$","$L14",null,{"items":[{"label":"home","href":"/notes/"},{"label":"Software Engineering","href":"/notes/swe/"},{"label":"Future Proof"}]}]}],["$","garden-tag",null,{"suppressHydrationWarning":true,"slot":"meta","variant":"sage","children":"SOFTWARE ENGINEERING"}],false,["$","div",null,{"slot":"content","className":"prose","dangerouslySetInnerHTML":{"__html":"$15"}}],["$","$L16",null,{"slot":"sidebar","items":[{"id":"languages","label":"Languages","depth":1},{"id":"backend","label":"Backend","depth":1},{"id":"architectures","label":"Architectures","depth":2},{"id":"frontend","label":"Frontend","depth":1},{"id":"frameworks","label":"Frameworks","depth":2},{"id":"architectures-1","label":"Architectures","depth":2},{"id":"concepts","label":"Concepts","depth":2},{"id":"devops","label":"Devops","depth":1},{"id":"databases","label":"Databases","depth":1},{"id":"language","label":"Language","depth":2},{"id":"concepts-1","label":"Concepts","depth":2},{"id":"oltp-databases","label":"OLTP Databases","depth":2},{"id":"olap-databases","label":"OLAP Databases","depth":2},{"id":"nosql","label":"NoSQL","depth":2},{"id":"concepts-2","label":"Concepts","depth":1},{"id":"quality-assurance","label":"Quality Assurance","depth":1},{"id":"cloud","label":"Cloud","depth":1},{"id":"best-practices","label":"Best Practices","depth":2},{"id":"aws","label":"AWS","depth":2}]}],[["$","li","swe",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/","variant":"default","children":"swe"}]}]]]}]}]}]

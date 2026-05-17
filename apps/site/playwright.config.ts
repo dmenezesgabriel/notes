@@ -8,10 +8,13 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   testDir: './e2e',
-  fullyParallel: true,
+  // The site dev server is memory-heavy during first compile; keep a single
+  // browser worker so Playwright does not stampede Next.js with parallel page
+  // compiles that push the process over its heap cap.
+  fullyParallel: false,
   forbidOnly: !!process.env['CI'],
   retries: process.env['CI'] ? 2 : 0,
-  ...(process.env['CI'] ? { workers: 1 } : {}),
+  workers: 1,
   reporter: process.env['CI'] ? 'github' : 'list',
 
   use: {
@@ -33,7 +36,7 @@ export default defineConfig({
   // Starts Next.js dev server before the tests; reuses it when already running.
   webServer: {
     command: 'pnpm dev',
-    url: 'http://localhost:3000',
+    url: 'http://localhost:3000/notes',
     reuseExistingServer: !process.env['CI'],
     timeout: 120_000,
     stdout: 'pipe',

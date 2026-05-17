@@ -1,0 +1,227 @@
+<!doctype html>
+<!--IOYRrb6gG67xwS8uEwbG6-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="/notes/_next/static/css/d492c5495f17f00e.css"
+      data-precedence="next"
+    />
+    <link
+      rel="preload"
+      as="script"
+      fetchpriority="low"
+      href="/notes/_next/static/chunks/webpack-4809e56d9ba14f1b.js"
+    />
+    <script src="/notes/_next/static/chunks/a29c5da9-68f87ed484caa559.js" async=""></script>
+    <script src="/notes/_next/static/chunks/9873-0e8423b8a48a94d7.js" async=""></script>
+    <script src="/notes/_next/static/chunks/main-app-fbdac383fcaf649c.js" async=""></script>
+    <script src="/notes/_next/static/chunks/1874-644ca8adc4d40081.js" async=""></script>
+    <script src="/notes/_next/static/chunks/app/layout-c356b7b58a8c7057.js" async=""></script>
+    <script src="/notes/_next/static/chunks/9767-4452bfce4d1f1add.js" async=""></script>
+    <script src="/notes/_next/static/chunks/app/error-9ae2206466504b49.js" async=""></script>
+    <script src="/notes/_next/static/chunks/app/not-found-6acd6bddd9def445.js" async=""></script>
+    <script
+      src="/notes/_next/static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"
+      async=""
+    ></script>
+    <title>Aurora — Digital Garden</title>
+    <meta
+      name="description"
+      content="Cluster de banco de dados otimizado para cloud. Features Suporte a PostgresSQL e MySQL Armazenamento cresce automaticamente conforme a necessidade de 10GB a 128"
+    />
+    <link rel="icon" href="/notes/favicon.ico" type="image/x-icon" sizes="16x16" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+    <script src="/notes/_next/static/chunks/polyfills-42372ed130431b0a.js" nomodule=""></script>
+  </head>
+  <body>
+    <div hidden=""><!--$--><!--/$--></div>
+    <a href="#main-content" class="skip-link">Skip to content</a
+    ><garden-nav brand="garden.dev" data-testid="site-nav"></garden-nav>
+    <div id="main-content">
+      <main style="padding: var(--space-5) 0 var(--space-8)">
+        <div class="page-wrap">
+          <garden-article title="Aurora" has-sidebar="" has-backlinks=""
+            ><div slot="breadcrumb">
+              <garden-breadcrumb data-testid="site-breadcrumb"></garden-breadcrumb>
+            </div>
+            <garden-tag slot="meta" variant="sage">SOFTWARE ENGINEERING</garden-tag
+            ><garden-tag slot="meta" variant="default">DRAFT</garden-tag>
+            <div slot="content" class="prose">
+              <p>Cluster de banco de dados otimizado para cloud.</p>
+              <h2 id="features">Features</h2>
+              <ul>
+                <li>Suporte a PostgresSQL e MySQL</li>
+                <li>Armazenamento cresce automaticamente conforme a necessidade de 10GB a 128TB</li>
+                <li>Ate 15 replicas</li>
+                <li><em>Failover</em> instantâneo</li>
+                <li>Integração com serviços de Machine Learning da AWS</li>
+                <li><em>Babelfish</em>: interpretação de comandos MS SQLServer no PostgreSQL</li>
+                <li>Armazenamento e processamento são separados</li>
+                <li>
+                  Mesmas funcionalidades de segurança do rds
+                  <a href="/swe/cloud/aws/services/rds">rds</a>
+                </li>
+                <li>Backup e restauração</li>
+              </ul>
+              <h2 id="aurora-serverless">Aurora Serverless</h2>
+              <p>para fluxos de trabalho imprevisíveis sem necessidade de planejamento prévio</p>
+              <h2 id="aurora-global">Aurora Global</h2>
+              <p>
+                Até 16 instâncias de leitura em cada região e replicação de dados em menos de 1
+                segundo
+              </p>
+              <h2 id="aurora-machine-learning">Aurora Machine Learning</h2>
+              <p>
+                Utilizar SageMaker e Comprehend para realizar <em>Machine Learning</em> no Aurora
+              </p>
+              <h2 id="aurora-database-cloning">Aurora Database Cloning</h2>
+              <p>
+                Criar um novo cluster baseado em um existente (mais rápido que restaurar um
+                snapshot)
+              </p>
+              <ul>
+                <li>Pode ser utilizado para ambientes de testes e staging</li>
+              </ul>
+              <h2 id="storage">Storage</h2>
+              <ul>
+                <li>dados são armazenados em 6 replicas, entre 3 <em>availability zones</em></li>
+                <li>altamente disponível</li>
+                <li><em>self healing</em></li>
+                <li><em>auto-scaling</em></li>
+              </ul>
+              <h2 id="compute">Compute</h2>
+              <ul>
+                <li>
+                  cluster de banco de dados com instâncias armazenadas em múltiplas
+                  <em>availability zones</em>
+                </li>
+                <li><em>auto-scaling</em> de replicas de leitura</li>
+              </ul>
+              <h2 id="writer-endpoint">Writer Endpoint</h2>
+              <ul>
+                <li>Aponta para o Nó master</li>
+              </ul>
+              <h2 id="reader-endpoint">Reader Endpoint</h2>
+              <ul>
+                <li>Balanceamento de carga de conexão</li>
+              </ul>
+              <h2 id="relacionado">Relacionado</h2>
+              <ul>
+                <li><a href="/swe/cloud/aws/services/databases">databases</a></li>
+              </ul>
+            </div>
+            <garden-toc heading="On this page" data-testid="site-toc"></garden-toc>
+            <li slot="backlinks">
+              <garden-tag href="/notes/swe/cloud/aws/concepts/disaster-recovery/" variant="default"
+                >Disaster Recovery</garden-tag
+              >
+            </li>
+            <li slot="backlinks">
+              <garden-tag href="/notes/swe/cloud/aws/index/" variant="default"
+                >SWE Cloud AWS - Index</garden-tag
+              >
+            </li>
+            <li slot="backlinks">
+              <garden-tag href="/notes/swe/cloud/aws/services/databases/" variant="default"
+                >Databases</garden-tag
+              >
+            </li>
+            <li slot="backlinks">
+              <garden-tag href="/notes/swe/cloud/aws/services/dms/" variant="default"
+                >Dms</garden-tag
+              >
+            </li>
+            <li slot="backlinks">
+              <garden-tag href="/notes/swe/cloud/aws/services/document-db/" variant="default"
+                >Document Db</garden-tag
+              >
+            </li>
+            <li slot="backlinks">
+              <garden-tag
+                href="/notes/swe/cloud/aws/services/security/kms/keys-multi-region/"
+                variant="default"
+                >Kms Keys Multi Region</garden-tag
+              >
+            </li>
+            <li slot="backlinks">
+              <garden-tag
+                href="/notes/swe/cloud/aws/services/security/secrets-manager/"
+                variant="default"
+                >Secret Manager</garden-tag
+              >
+            </li>
+            <li slot="backlinks">
+              <garden-tag href="/notes/swe/" variant="default">swe</garden-tag>
+            </li></garden-article
+          >
+        </div>
+      </main>
+      <!--$--><!--/$-->
+    </div>
+    <script src="/notes/_next/static/chunks/webpack-4809e56d9ba14f1b.js" id="_R_" async=""></script>
+    <script>
+      (self.__next_f = self.__next_f || []).push([0]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '1:"$Sreact.fragment"\n2:I[9191,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"default"]\n3:I[91771,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"SiteNav"]\n4:I[53922,[],""]\n5:I[39891,["9767","static/chunks/9767-4452bfce4d1f1add.js","8039","static/chunks/app/error-9ae2206466504b49.js"],"default"]\n6:I[1872,[],""]\n7:I[79767,["9767","static/chunks/9767-4452bfce4d1f1add.js","4345","static/chunks/app/not-found-6acd6bddd9def445.js"],""]\n9:I[50987,[],"OutletBoundary"]\nb:I[46842,[],"AsyncMetadataOutlet"]\nd:I[50987,[],"ViewportBoundary"]\nf:I[50987,[],"MetadataBoundary"]\n10:"$Sreact.suspense"\n12:I[47802,[],""]\n:HL["/notes/_next/static/css/d492c5495f17f00e.css","style"]\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '0:{"P":null,"b":"IOYRrb6gG67xwS8uEwbG6","p":"/notes","c":["","swe","cloud","aws","services","aurora",""],"i":false,"f":[[["",{"children":[["slug","swe/cloud/aws/services/aurora","c"],{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/notes/_next/static/css/d492c5495f17f00e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){\\n  try{\\n    var t=localStorage.getItem(\'theme\');\\n    if(t===\'dark\'||t===\'light\') document.documentElement.setAttribute(\'data-theme\',t);\\n  }catch(e){}\\n})();"}}]}],["$","body",null,{"children":[["$","a",null,{"href":"#main-content","className":"skip-link","children":"Skip to content"}],["$","$L2",null,{}],["$","$L3",null,{}],["$","div",null,{"id":"main-content","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"style":{"display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center","minHeight":"60vh","padding":"var(--space-7) var(--space-5)","textAlign":"center"},"children":[["$","garden-badge",null,{"variant":"muted","style":{"marginBottom":"var(--space-3)","display":"block"},"children":"404"}],["$","h1",null,{"style":{"fontFamily":"var(--font-display)","fontSize":"clamp(24px, 4vw, 40px)","fontWeight":500,"letterSpacing":"-0.025em","color":"var(--ds-ink)","margin":"0 0 0.75rem"},"children":"Note not found"}],["$","p",null,{"style":{"fontFamily":"var(--font-body)","fontSize":15,"color":"var(--ds-muted)","maxWidth":360,"lineHeight":1.7,"margin":"0 0 var(--space-5)"},"children":"This page doesn\'t exist yet — or the note may have moved. Try browsing from the home page."}],["$","$L7",null,{"href":"/","style":{"display":"inline-flex","alignItems":"center","gap":6,"fontFamily":"var(--font-ui, system-ui, sans-serif)","fontSize":13,"fontWeight":500,"letterSpacing":"0.01em","padding":"7px 20px","borderRadius":"var(--radius-md, 8px)","background":"var(--ds-accent, #a85025)","color":"#fff","textDecoration":"none","transition":"background 120ms ease"},"children":"Back to home"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}]]}],{"children":[["slug","swe/cloud/aws/services/aurora","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L8",null,["$","$L9",null,{"children":["$La",["$","$Lb",null,{"promise":"$@c"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Ld",null,{"children":"$Le"}],null],["$","$Lf",null,{"children":["$","div",null,{"hidden":true,"children":["$","$10",null,{"fallback":null,"children":"$L11"}]}]}]]}],false]],"m":"$undefined","G":["$12",[]],"s":false,"S":true}\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '13:I[23191,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteBreadcrumb"]\n15:I[75658,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteToc"]\n14:T7d2,',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '\u003cp\u003eCluster de banco de dados otimizado para cloud.\u003c/p\u003e\n\u003ch2 id="features"\u003eFeatures\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eSuporte a PostgresSQL e MySQL\u003c/li\u003e\n\u003cli\u003eArmazenamento cresce automaticamente conforme a necessidade de 10GB a 128TB\u003c/li\u003e\n\u003cli\u003eAte 15 replicas\u003c/li\u003e\n\u003cli\u003e\u003cem\u003eFailover\u003c/em\u003e instantâneo\u003c/li\u003e\n\u003cli\u003eIntegração com serviços de Machine Learning da AWS\u003c/li\u003e\n\u003cli\u003e\u003cem\u003eBabelfish\u003c/em\u003e: interpretação de comandos MS SQLServer no PostgreSQL\u003c/li\u003e\n\u003cli\u003eArmazenamento e processamento são separados\u003c/li\u003e\n\u003cli\u003eMesmas funcionalidades de segurança do rds \u003ca href="/swe/cloud/aws/services/rds"\u003erds\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003eBackup e restauração\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id="aurora-serverless"\u003eAurora Serverless\u003c/h2\u003e\n\u003cp\u003epara fluxos de trabalho imprevisíveis sem necessidade de planejamento prévio\u003c/p\u003e\n\u003ch2 id="aurora-global"\u003eAurora Global\u003c/h2\u003e\n\u003cp\u003eAté 16 instâncias de leitura em cada região e replicação de dados em menos de 1 segundo\u003c/p\u003e\n\u003ch2 id="aurora-machine-learning"\u003eAurora Machine Learning\u003c/h2\u003e\n\u003cp\u003eUtilizar SageMaker e Comprehend para realizar \u003cem\u003eMachine Learning\u003c/em\u003e no Aurora\u003c/p\u003e\n\u003ch2 id="aurora-database-cloning"\u003eAurora Database Cloning\u003c/h2\u003e\n\u003cp\u003eCriar um novo cluster baseado em um existente (mais rápido que restaurar um snapshot)\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003ePode ser utilizado para ambientes de testes e staging\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id="storage"\u003eStorage\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003edados são armazenados em 6 replicas, entre 3 \u003cem\u003eavailability zones\u003c/em\u003e\u003c/li\u003e\n\u003cli\u003ealtamente disponível\u003c/li\u003e\n\u003cli\u003e\u003cem\u003eself healing\u003c/em\u003e\u003c/li\u003e\n\u003cli\u003e\u003cem\u003eauto-scaling\u003c/em\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id="compute"\u003eCompute\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003ecluster de banco de dados com instâncias armazenadas em múltiplas \u003cem\u003eavailability zones\u003c/em\u003e\u003c/li\u003e\n\u003cli\u003e\u003cem\u003eauto-scaling\u003c/em\u003e de replicas de leitura\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id="writer-endpoint"\u003eWriter Endpoint\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eAponta para o Nó master\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id="reader-endpoint"\u003eReader Endpoint\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eBalanceamento de carga de conexão\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id="relacionado"\u003eRelacionado\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href="/swe/cloud/aws/services/databases"\u003edatabases\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '8:["$","main",null,{"style":{"padding":"var(--space-5) 0 var(--space-8)"},"children":["$","div",null,{"className":"page-wrap","children":["$","garden-article",null,{"suppressHydrationWarning":true,"title":"Aurora","has-sidebar":"","has-backlinks":"","children":[["$","div",null,{"slot":"breadcrumb","children":["$","$L13",null,{"items":[{"label":"home","href":"/notes/"},{"label":"Software Engineering","href":"/notes/swe/"},{"label":"Aurora"}]}]}],["$","garden-tag",null,{"suppressHydrationWarning":true,"slot":"meta","variant":"sage","children":"SOFTWARE ENGINEERING"}],["$","garden-tag",null,{"suppressHydrationWarning":true,"slot":"meta","variant":"default","children":"DRAFT"}],["$","div",null,{"slot":"content","className":"prose","dangerouslySetInnerHTML":{"__html":"$14"}}],["$","$L15",null,{"slot":"sidebar","items":[{"id":"features","label":"Features","depth":1},{"id":"aurora-serverless","label":"Aurora Serverless","depth":1},{"id":"aurora-global","label":"Aurora Global","depth":1},{"id":"aurora-machine-learning","label":"Aurora Machine Learning","depth":1},{"id":"aurora-database-cloning","label":"Aurora Database Cloning","depth":1},{"id":"storage","label":"Storage","depth":1},{"id":"compute","label":"Compute","depth":1},{"id":"writer-endpoint","label":"Writer Endpoint","depth":1},{"id":"reader-endpoint","label":"Reader Endpoint","depth":1},{"id":"relacionado","label":"Relacionado","depth":1}]}],[["$","li","swe.cloud.aws.concepts.disaster-recovery",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/concepts/disaster-recovery/","variant":"default","children":"Disaster Recovery"}]}],["$","li","swe.cloud.aws.index",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/index/","variant":"default","children":"SWE Cloud AWS - Index"}]}],"$L16","$L17","$L18","$L19","$L1a","$L1b"]]}]}]}]\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '16:["$","li","swe.cloud.aws.services.databases",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/databases/","variant":"default","children":"Databases"}]}]\n17:["$","li","swe.cloud.aws.services.dms",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/dms/","variant":"default","children":"Dms"}]}]\n18:["$","li","swe.cloud.aws.services.document-db",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/document-db/","variant":"default","children":"Document Db"}]}]\n19:["$","li","swe.cloud.aws.services.security.kms.keys-multi-region",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/security/kms/keys-multi-region/","variant":"default","children":"Kms Keys Multi Region"}]}]\n1a:["$","li","swe.cloud.aws.services.security.secrets-manager",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/services/security/secrets-manager/","variant":"default","children":"Secret Manager"}]}]\n1b:["$","li","swe",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/","variant":"default","children":"swe"}]}]\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        'e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]\na:null\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '1c:I[51506,[],"IconMark"]\nc:{"metadata":[["$","title","0",{"children":"Aurora — Digital Garden"}],["$","meta","1",{"name":"description","content":"Cluster de banco de dados otimizado para cloud. Features Suporte a PostgresSQL e MySQL Armazenamento cresce automaticamente conforme a necessidade de 10GB a 128"}],["$","link","2",{"rel":"icon","href":"/notes/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","$L1c","3",{}]],"error":null,"digest":"$undefined"}\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([1, '11:"$c:metadata"\n']);
+    </script>
+  </body>
+</html>

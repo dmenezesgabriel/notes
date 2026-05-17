@@ -1,0 +1,255 @@
+<!doctype html>
+<!--IOYRrb6gG67xwS8uEwbG6-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="/notes/_next/static/css/d492c5495f17f00e.css"
+      data-precedence="next"
+    />
+    <link
+      rel="preload"
+      as="script"
+      fetchpriority="low"
+      href="/notes/_next/static/chunks/webpack-4809e56d9ba14f1b.js"
+    />
+    <script src="/notes/_next/static/chunks/a29c5da9-68f87ed484caa559.js" async=""></script>
+    <script src="/notes/_next/static/chunks/9873-0e8423b8a48a94d7.js" async=""></script>
+    <script src="/notes/_next/static/chunks/main-app-fbdac383fcaf649c.js" async=""></script>
+    <script src="/notes/_next/static/chunks/1874-644ca8adc4d40081.js" async=""></script>
+    <script src="/notes/_next/static/chunks/app/layout-c356b7b58a8c7057.js" async=""></script>
+    <script src="/notes/_next/static/chunks/9767-4452bfce4d1f1add.js" async=""></script>
+    <script src="/notes/_next/static/chunks/app/error-9ae2206466504b49.js" async=""></script>
+    <script src="/notes/_next/static/chunks/app/not-found-6acd6bddd9def445.js" async=""></script>
+    <script
+      src="/notes/_next/static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"
+      async=""
+    ></script>
+    <title>Feature Engineering — Digital Garden</title>
+    <meta
+      name="description"
+      content="O que é? Técnica para selecionar, modificar ou criar novos atributos a partir de dados existentes para melhor representar padrões. Isso inclui transformações ma"
+    />
+    <link rel="icon" href="/notes/favicon.ico" type="image/x-icon" sizes="16x16" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+    <script src="/notes/_next/static/chunks/polyfills-42372ed130431b0a.js" nomodule=""></script>
+  </head>
+  <body>
+    <div hidden=""><!--$--><!--/$--></div>
+    <a href="#main-content" class="skip-link">Skip to content</a
+    ><garden-nav brand="garden.dev" data-testid="site-nav"></garden-nav>
+    <div id="main-content">
+      <main style="padding: var(--space-5) 0 var(--space-8)">
+        <div class="page-wrap">
+          <garden-article title="Feature Engineering" has-sidebar="" has-backlinks=""
+            ><div slot="breadcrumb">
+              <garden-breadcrumb data-testid="site-breadcrumb"></garden-breadcrumb>
+            </div>
+            <garden-tag slot="meta" variant="sage">DATA SCIENCE</garden-tag>
+            <div slot="content" class="prose">
+              <h2 id="o-que-é">O que é?</h2>
+              <p>
+                Técnica para selecionar, modificar ou criar novos atributos a partir de dados
+                existentes para melhor representar padrões. Isso inclui transformações matemáticas,
+                combinações nos dados, extração de características temporais e etc.
+              </p>
+              <p>
+                Importante para lidar com ruídos, valores faltantes e tornar a informação relevante
+                acessível aos modelos
+              </p>
+              <ul>
+                <li>Seleção de atributos</li>
+                <li>Transformação de atributos</li>
+                <li>Criação de atributos</li>
+                <li>Codificação de variáveis categóricas</li>
+                <li>Normalização ou padronização</li>
+              </ul>
+              <h2 id="seleção-de-features">Seleção de Features</h2>
+              <ul>
+                <li>Escolher entre atributos existentes</li>
+                <li>
+                  Nem todos os atributos ou características dos dados são importantes para a
+                  modelagem
+                </li>
+              </ul>
+              <h3 id="filtragem">Filtragem</h3>
+              <p>
+                Uso de estatística para selecionar atributos baseando-se em seu relacionamento com a
+                variável alvo
+              </p>
+              <h3 id="wrapper-methods">Wrapper methods</h3>
+              <p>Uso de um modelo preditivo parta avaliar a importância do atributo</p>
+              <h3 id="embedded-methods">Embedded methods</h3>
+              <p>
+                Integram a seleção dos atributos como parte do processo de treinamento do modelo.
+                Ex: Modelos que utilizam regularização
+              </p>
+              <h2 id="extração-e-criação-de-atributos">Extração e criação de atributos</h2>
+              <h3 id="análise-de-componentes-principais-pca">
+                Análise de componentes principais (PCA)
+              </h3>
+              <p>
+                Reduz a dimensionalidade dos dados ao transforma-los em um conjunto menor de
+                variáveis sumarias(components) que retém a maior parte da variabilidade original dos
+                dados
+              </p>
+              <h3 id="engenharia-de-atributos-temporais">Engenharia de atributos temporais</h3>
+              <p>
+                Derivação de novos atributos a partir de variáveis de tempo como hora do dia, dia da
+                semana, diferenciação de tempos entre eventos
+              </p>
+              <h2 id="tratamento-de-dados-categóricos">Tratamento de dados categóricos</h2>
+              <ul>
+                <li>
+                  <a href="/data-science/machine-learning/data-pre-processing/one-hot-encoding"
+                    >one-hot-encoding</a
+                  >
+                </li>
+                <li>
+                  <a href="/data-science/machine-learning/data-pre-processing/ordinal-encoding"
+                    >ordinal-encoding</a
+                  >
+                </li>
+                <li>
+                  <a href="/data-science/machine-learning/data-pre-processing/frequency-encoding"
+                    >frequency-encoding</a
+                  >
+                </li>
+                <li>
+                  <a href="/data-science/machine-learning/target-encoding">target-encoding</a>
+                </li>
+              </ul>
+              <h2 id="normalização-e-padronização">Normalização e Padronização</h2>
+              <ul>
+                <li>
+                  <a href="/data-science/machine-learning/data-pre-processing/normalization"
+                    >normalization</a
+                  >
+                </li>
+                <li>
+                  <a href="/data-science/machine-learning/data-pre-processing/standardization"
+                    >standardization</a
+                  >
+                </li>
+              </ul>
+              <h2 id="dados-faltantes">Dados Faltantes</h2>
+              <h3 id="imputação">Imputação</h3>
+              <p>
+                Substituição de valores faltantes por um valor estimado com base em outras
+                observações
+              </p>
+              <h3 id="indicadores-de-dados-faltantes">Indicadores de dados faltantes</h3>
+              <p>
+                Criação de novos atributos que indicam a presença de dados faltantes em outros
+                atributos
+              </p>
+              <h2 id="tratamento-de-dados-desbalanceados">Tratamento de dados desbalanceados</h2>
+              <h3 id="oversamplingundersampling">Oversampling/Undersampling</h3>
+              <p>
+                Ajusta o balanceamento das classes alvo por meio de replicação de exemplos da classe
+                minoritária ou remoção de exemplos da classe majoritária
+              </p>
+              <ul>
+                <li>SMOTE: Técnica de Sobre-amostragem</li>
+                <li>Tomeklinks e ENN: Técnica de Sub-amostragem</li>
+              </ul>
+              <h2 id="detecção-e-tratamento-de-outliers">Detecção e tratamento de Outliers</h2>
+              <h3 id="métodos-estatísticos">Métodos estatísticos</h3>
+              <ul>
+                <li>Uso de scores ou intervalos interquartis (IQR) para identificar outliers</li>
+              </ul>
+              <h3 id="truncamento-ou-capping">Truncamento ou Capping</h3>
+              <p>Limitação de valores extremos a um certo valor definido</p>
+            </div>
+            <garden-toc heading="On this page" data-testid="site-toc"></garden-toc>
+            <li slot="backlinks">
+              <garden-tag href="/notes/daily/journal/2025/09/01/" variant="default"
+                >2025-09-01</garden-tag
+              >
+            </li>
+            <li slot="backlinks">
+              <garden-tag href="/notes/data-science/" variant="default">data-science</garden-tag>
+            </li></garden-article
+          >
+        </div>
+      </main>
+      <!--$--><!--/$-->
+    </div>
+    <script src="/notes/_next/static/chunks/webpack-4809e56d9ba14f1b.js" id="_R_" async=""></script>
+    <script>
+      (self.__next_f = self.__next_f || []).push([0]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '1:"$Sreact.fragment"\n2:I[9191,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"default"]\n3:I[91771,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"SiteNav"]\n4:I[53922,[],""]\n5:I[39891,["9767","static/chunks/9767-4452bfce4d1f1add.js","8039","static/chunks/app/error-9ae2206466504b49.js"],"default"]\n6:I[1872,[],""]\n7:I[79767,["9767","static/chunks/9767-4452bfce4d1f1add.js","4345","static/chunks/app/not-found-6acd6bddd9def445.js"],""]\n9:I[50987,[],"OutletBoundary"]\nb:I[46842,[],"AsyncMetadataOutlet"]\nd:I[50987,[],"ViewportBoundary"]\nf:I[50987,[],"MetadataBoundary"]\n10:"$Sreact.suspense"\n12:I[47802,[],""]\n:HL["/notes/_next/static/css/d492c5495f17f00e.css","style"]\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '0:{"P":null,"b":"IOYRrb6gG67xwS8uEwbG6","p":"/notes","c":["","data-science","machine-learning","feature-engineering",""],"i":false,"f":[[["",{"children":[["slug","data-science/machine-learning/feature-engineering","c"],{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/notes/_next/static/css/d492c5495f17f00e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){\\n  try{\\n    var t=localStorage.getItem(\'theme\');\\n    if(t===\'dark\'||t===\'light\') document.documentElement.setAttribute(\'data-theme\',t);\\n  }catch(e){}\\n})();"}}]}],["$","body",null,{"children":[["$","a",null,{"href":"#main-content","className":"skip-link","children":"Skip to content"}],["$","$L2",null,{}],["$","$L3",null,{}],["$","div",null,{"id":"main-content","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"style":{"display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center","minHeight":"60vh","padding":"var(--space-7) var(--space-5)","textAlign":"center"},"children":[["$","garden-badge",null,{"variant":"muted","style":{"marginBottom":"var(--space-3)","display":"block"},"children":"404"}],["$","h1",null,{"style":{"fontFamily":"var(--font-display)","fontSize":"clamp(24px, 4vw, 40px)","fontWeight":500,"letterSpacing":"-0.025em","color":"var(--ds-ink)","margin":"0 0 0.75rem"},"children":"Note not found"}],["$","p",null,{"style":{"fontFamily":"var(--font-body)","fontSize":15,"color":"var(--ds-muted)","maxWidth":360,"lineHeight":1.7,"margin":"0 0 var(--space-5)"},"children":"This page doesn\'t exist yet — or the note may have moved. Try browsing from the home page."}],["$","$L7",null,{"href":"/","style":{"display":"inline-flex","alignItems":"center","gap":6,"fontFamily":"var(--font-ui, system-ui, sans-serif)","fontSize":13,"fontWeight":500,"letterSpacing":"0.01em","padding":"7px 20px","borderRadius":"var(--radius-md, 8px)","background":"var(--ds-accent, #a85025)","color":"#fff","textDecoration":"none","transition":"background 120ms ease"},"children":"Back to home"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}]]}],{"children":[["slug","data-science/machine-learning/feature-engineering","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L8",null,["$","$L9",null,{"children":["$La",["$","$Lb",null,{"promise":"$@c"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Ld",null,{"children":"$Le"}],null],["$","$Lf",null,{"children":["$","div",null,{"hidden":true,"children":["$","$10",null,{"fallback":null,"children":"$L11"}]}]}]]}],false]],"m":"$undefined","G":["$12",[]],"s":false,"S":true}\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '13:I[23191,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteBreadcrumb"]\n14:Tebf,',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '\u003ch2 id="o-que-é"\u003eO que é?\u003c/h2\u003e\n\u003cp\u003eTécnica para selecionar, modificar ou criar novos atributos a partir de dados existentes para melhor representar padrões. Isso inclui transformações matemáticas, combinações nos dados, extração de características temporais e etc.\u003c/p\u003e\n\u003cp\u003eImportante para lidar com ruídos, valores faltantes e tornar a informação relevante acessível aos modelos\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eSeleção de atributos\u003c/li\u003e\n\u003cli\u003eTransformação de atributos\u003c/li\u003e\n\u003cli\u003eCriação de atributos\u003c/li\u003e\n\u003cli\u003eCodificação de variáveis categóricas\u003c/li\u003e\n\u003cli\u003eNormalização ou padronização\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id="seleção-de-features"\u003eSeleção de Features\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eEscolher entre atributos existentes\u003c/li\u003e\n\u003cli\u003eNem todos os atributos ou características dos dados são importantes para a modelagem\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id="filtragem"\u003eFiltragem\u003c/h3\u003e\n\u003cp\u003eUso de estatística para selecionar atributos baseando-se em seu relacionamento com a variável alvo\u003c/p\u003e\n\u003ch3 id="wrapper-methods"\u003eWrapper methods\u003c/h3\u003e\n\u003cp\u003eUso de um modelo preditivo parta avaliar a importância do atributo\u003c/p\u003e\n\u003ch3 id="embedded-methods"\u003eEmbedded methods\u003c/h3\u003e\n\u003cp\u003eIntegram a seleção dos atributos como parte do processo de treinamento do modelo. Ex: Modelos que utilizam regularização\u003c/p\u003e\n\u003ch2 id="extração-e-criação-de-atributos"\u003eExtração e criação de atributos\u003c/h2\u003e\n\u003ch3 id="análise-de-componentes-principais-pca"\u003eAnálise de componentes principais (PCA)\u003c/h3\u003e\n\u003cp\u003eReduz a dimensionalidade dos dados ao transforma-los em um conjunto menor de variáveis sumarias(components) que retém a maior parte da variabilidade original dos dados\u003c/p\u003e\n\u003ch3 id="engenharia-de-atributos-temporais"\u003eEngenharia de atributos temporais\u003c/h3\u003e\n\u003cp\u003eDerivação de novos atributos a partir de variáveis de tempo como hora do dia, dia da semana, diferenciação de tempos entre eventos\u003c/p\u003e\n\u003ch2 id="tratamento-de-dados-categóricos"\u003eTratamento de dados categóricos\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href="/data-science/machine-learning/data-pre-processing/one-hot-encoding"\u003eone-hot-encoding\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href="/data-science/machine-learning/data-pre-processing/ordinal-encoding"\u003eordinal-encoding\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href="/data-science/machine-learning/data-pre-processing/frequency-encoding"\u003efrequency-encoding\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href="/data-science/machine-learning/target-encoding"\u003etarget-encoding\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id="normalização-e-padronização"\u003eNormalização e Padronização\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href="/data-science/machine-learning/data-pre-processing/normalization"\u003enormalization\u003c/a\u003e\u003c/li\u003e\n\u003cli\u003e\u003ca href="/data-science/machine-learning/data-pre-processing/standardization"\u003estandardization\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id="dados-faltantes"\u003eDados Faltantes\u003c/h2\u003e\n\u003ch3 id="imputação"\u003eImputação\u003c/h3\u003e\n\u003cp\u003eSubstituição de valores faltantes por um valor estimado com base em outras observações\u003c/p\u003e\n\u003ch3 id="indicadores-de-dados-faltantes"\u003eIndicadores de dados faltantes\u003c/h3\u003e\n\u003cp\u003eCriação de novos atributos que indicam a presença de dados faltantes em outros atributos\u003c/p\u003e\n\u003ch2 id="tratamento-de-dados-desbalanceados"\u003eTratamento de dados desbalanceados\u003c/h2\u003e\n\u003ch3 id="oversamplingundersampling"\u003eOversampling/Undersampling\u003c/h3\u003e\n\u003cp\u003eAjusta o balanceamento das classes alvo por meio de replicação de exemplos da classe minoritária ou remoção de exemplos da classe majoritária\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eSMOTE: Técnica de Sobre-amostragem\u003c/li\u003e\n\u003cli\u003eTomeklinks e ENN: Técnica de Sub-amostragem\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id="detecção-e-tratamento-de-outliers"\u003eDetecção e tratamento de Outliers\u003c/h2\u003e\n\u003ch3 id="métodos-estatísticos"\u003eMétodos estatísticos\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eUso de scores ou intervalos interquartis (IQR) para identificar outliers\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id="truncamento-ou-capping"\u003eTruncamento ou Capping\u003c/h3\u003e\n\u003cp\u003eLimitação de valores extremos a um certo valor definido\u003c/p\u003e',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '8:["$","main",null,{"style":{"padding":"var(--space-5) 0 var(--space-8)"},"children":["$","div",null,{"className":"page-wrap","children":["$","garden-article",null,{"suppressHydrationWarning":true,"title":"Feature Engineering","has-sidebar":"","has-backlinks":"","children":[["$","div",null,{"slot":"breadcrumb","children":["$","$L13",null,{"items":[{"label":"home","href":"/notes/"},{"label":"Data Science","href":"/notes/data-science/"},{"label":"Feature Engineering"}]}]}],["$","garden-tag",null,{"suppressHydrationWarning":true,"slot":"meta","variant":"sage","children":"DATA SCIENCE"}],false,["$","div",null,{"slot":"content","className":"prose","dangerouslySetInnerHTML":{"__html":"$14"}}],"$L15",["$L16","$L17"]]}]}]}]\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '18:I[75658,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteToc"]\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '15:["$","$L18",null,{"slot":"sidebar","items":[{"id":"o-que-é","label":"O que é?","depth":1},{"id":"seleção-de-features","label":"Seleção de Features","depth":1},{"id":"filtragem","label":"Filtragem","depth":2},{"id":"wrapper-methods","label":"Wrapper methods","depth":2},{"id":"embedded-methods","label":"Embedded methods","depth":2},{"id":"extração-e-criação-de-atributos","label":"Extração e criação de atributos","depth":1},{"id":"análise-de-componentes-principais-pca","label":"Análise de componentes principais (PCA)","depth":2},{"id":"engenharia-de-atributos-temporais","label":"Engenharia de atributos temporais","depth":2},{"id":"tratamento-de-dados-categóricos","label":"Tratamento de dados categóricos","depth":1},{"id":"normalização-e-padronização","label":"Normalização e Padronização","depth":1},{"id":"dados-faltantes","label":"Dados Faltantes","depth":1},{"id":"imputação","label":"Imputação","depth":2},{"id":"indicadores-de-dados-faltantes","label":"Indicadores de dados faltantes","depth":2},{"id":"tratamento-de-dados-desbalanceados","label":"Tratamento de dados desbalanceados","depth":1},{"id":"oversamplingundersampling","label":"Oversampling/Undersampling","depth":2},{"id":"detecção-e-tratamento-de-outliers","label":"Detecção e tratamento de Outliers","depth":1},{"id":"métodos-estatísticos","label":"Métodos estatísticos","depth":2},{"id":"truncamento-ou-capping","label":"Truncamento ou Capping","depth":2}]}]\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '16:["$","li","daily.journal.2025.09.01",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/daily/journal/2025/09/01/","variant":"default","children":"2025-09-01"}]}]\n17:["$","li","data-science",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/data-science/","variant":"default","children":"data-science"}]}]\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        'e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]\na:null\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '19:I[51506,[],"IconMark"]\nc:{"metadata":[["$","title","0",{"children":"Feature Engineering — Digital Garden"}],["$","meta","1",{"name":"description","content":"O que é? Técnica para selecionar, modificar ou criar novos atributos a partir de dados existentes para melhor representar padrões. Isso inclui transformações ma"}],["$","link","2",{"rel":"icon","href":"/notes/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","$L19","3",{}]],"error":null,"digest":"$undefined"}\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([1, '11:"$c:metadata"\n']);
+    </script>
+  </body>
+</html>

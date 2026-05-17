@@ -34,6 +34,7 @@ export interface NavLink {
 @customElement('garden-nav')
 export class GardenNav extends LitElement {
   @property() brand = 'GARDEN.DEV';
+  @property() homeHref = '/';
   @property({ type: Array }) links: NavLink[] = [];
   @state() private _theme: 'light' | 'dark' = 'light';
 
@@ -254,7 +255,7 @@ export class GardenNav extends LitElement {
   render() {
     return html`
       <header>
-        <a part="brand" href="/" data-brand=${this.brand}>
+        <a part="brand" href=${this.homeHref} data-brand=${this.brand}>
           <slot name="brand-icon">${this.brand}</slot>
         </a>
 

@@ -1,0 +1,163 @@
+<!doctype html>
+<!--IOYRrb6gG67xwS8uEwbG6-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="/notes/_next/static/css/d492c5495f17f00e.css"
+      data-precedence="next"
+    />
+    <link
+      rel="preload"
+      as="script"
+      fetchpriority="low"
+      href="/notes/_next/static/chunks/webpack-4809e56d9ba14f1b.js"
+    />
+    <script src="/notes/_next/static/chunks/a29c5da9-68f87ed484caa559.js" async=""></script>
+    <script src="/notes/_next/static/chunks/9873-0e8423b8a48a94d7.js" async=""></script>
+    <script src="/notes/_next/static/chunks/main-app-fbdac383fcaf649c.js" async=""></script>
+    <script src="/notes/_next/static/chunks/1874-644ca8adc4d40081.js" async=""></script>
+    <script src="/notes/_next/static/chunks/app/layout-c356b7b58a8c7057.js" async=""></script>
+    <script src="/notes/_next/static/chunks/9767-4452bfce4d1f1add.js" async=""></script>
+    <script src="/notes/_next/static/chunks/app/error-9ae2206466504b49.js" async=""></script>
+    <script src="/notes/_next/static/chunks/app/not-found-6acd6bddd9def445.js" async=""></script>
+    <script
+      src="/notes/_next/static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"
+      async=""
+    ></script>
+    <title>Patterns — Digital Garden</title>
+    <meta
+      name="description"
+      content="Tarefas ECS invocadas por um evento do Event Bridge Client faz um upload no S3 O evento de upload no S3 sinaliza o Event Bridge Uma tarefa de ECS é executada Re"
+    />
+    <link rel="icon" href="/notes/favicon.ico" type="image/x-icon" sizes="16x16" />
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'dark' || t === 'light') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+      })();
+    </script>
+    <script src="/notes/_next/static/chunks/polyfills-42372ed130431b0a.js" nomodule=""></script>
+  </head>
+  <body>
+    <div hidden=""><!--$--><!--/$--></div>
+    <a href="#main-content" class="skip-link">Skip to content</a
+    ><garden-nav brand="garden.dev" data-testid="site-nav"></garden-nav>
+    <div id="main-content">
+      <main style="padding: var(--space-5) 0 var(--space-8)">
+        <div class="page-wrap">
+          <garden-article title="Patterns" has-sidebar="" has-backlinks=""
+            ><div slot="breadcrumb">
+              <garden-breadcrumb data-testid="site-breadcrumb"></garden-breadcrumb>
+            </div>
+            <garden-tag slot="meta" variant="sage">SOFTWARE ENGINEERING</garden-tag
+            ><garden-tag slot="meta" variant="default">DRAFT</garden-tag>
+            <div slot="content" class="prose">
+              <h2 id="tarefas-ecs-invocadas-por-um-evento-do-event-bridge">
+                Tarefas ECS invocadas por um evento do Event Bridge
+              </h2>
+              <ul>
+                <li>Client faz um upload no S3</li>
+                <li>O evento de upload no S3 sinaliza o <code>Event Bridge</code></li>
+                <li>Uma tarefa de <code>ECS</code> é executada</li>
+                <li>Resultados são salvos no <code>DynamoDB</code></li>
+              </ul>
+              <h2 id="tarefas-ecs-invocadas-por-agendamento-do-event-bridge">
+                Tarefas ECS invocadas por agendamento do Event bridge
+              </h2>
+              <ul>
+                <li>Agendamento do <code>Event Bridge</code> a cada uma hora</li>
+                <li>No horário agendado uma tarefa é executada no cluster ECS</li>
+              </ul>
+              <h2 id="ecs--sqs-queue">ECS + SQS Queue</h2>
+              <ul>
+                <li>Uma fila SQS recebe mensagens</li>
+                <li>Tarefas do ecs fazem <code>poll</code> das mensagens</li>
+                <li>
+                  O ECS possui um grupo de <em>Auto Scaling</em> que escala o numero de tarefas
+                  conforme a demanda
+                </li>
+              </ul>
+              <h2 id="alerta-de-tarefa-ecs-parada-via-event-bridge">
+                Alerta de tarefa ECS parada via Event Bridge
+              </h2>
+              <ul>
+                <li>
+                  Uma vez que uma tarefa ECS é parada um evento é recebido pelo
+                  <code>Event Bridge</code>
+                </li>
+                <li>
+                  O <code>Event Bridge</code> aciona o <code>SNS</code> e envia um E-mail ao
+                  administrador
+                </li>
+              </ul>
+            </div>
+            <garden-toc heading="On this page" data-testid="site-toc"></garden-toc>
+            <li slot="backlinks">
+              <garden-tag href="/notes/swe/cloud/aws/index/" variant="default"
+                >SWE Cloud AWS - Index</garden-tag
+              >
+            </li>
+            <li slot="backlinks">
+              <garden-tag href="/notes/swe/" variant="default">swe</garden-tag>
+            </li></garden-article
+          >
+        </div>
+      </main>
+      <!--$--><!--/$-->
+    </div>
+    <script src="/notes/_next/static/chunks/webpack-4809e56d9ba14f1b.js" id="_R_" async=""></script>
+    <script>
+      (self.__next_f = self.__next_f || []).push([0]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '1:"$Sreact.fragment"\n2:I[9191,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"default"]\n3:I[91771,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"SiteNav"]\n4:I[53922,[],""]\n5:I[39891,["9767","static/chunks/9767-4452bfce4d1f1add.js","8039","static/chunks/app/error-9ae2206466504b49.js"],"default"]\n6:I[1872,[],""]\n7:I[79767,["9767","static/chunks/9767-4452bfce4d1f1add.js","4345","static/chunks/app/not-found-6acd6bddd9def445.js"],""]\n9:I[50987,[],"OutletBoundary"]\nb:I[46842,[],"AsyncMetadataOutlet"]\nd:I[50987,[],"ViewportBoundary"]\nf:I[50987,[],"MetadataBoundary"]\n10:"$Sreact.suspense"\n12:I[47802,[],""]\n:HL["/notes/_next/static/css/d492c5495f17f00e.css","style"]\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '0:{"P":null,"b":"IOYRrb6gG67xwS8uEwbG6","p":"/notes","c":["","swe","cloud","aws","services","containers","ecs","patterns",""],"i":false,"f":[[["",{"children":[["slug","swe/cloud/aws/services/containers/ecs/patterns","c"],{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/notes/_next/static/css/d492c5495f17f00e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){\\n  try{\\n    var t=localStorage.getItem(\'theme\');\\n    if(t===\'dark\'||t===\'light\') document.documentElement.setAttribute(\'data-theme\',t);\\n  }catch(e){}\\n})();"}}]}],["$","body",null,{"children":[["$","a",null,{"href":"#main-content","className":"skip-link","children":"Skip to content"}],["$","$L2",null,{}],["$","$L3",null,{}],["$","div",null,{"id":"main-content","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"style":{"display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center","minHeight":"60vh","padding":"var(--space-7) var(--space-5)","textAlign":"center"},"children":[["$","garden-badge",null,{"variant":"muted","style":{"marginBottom":"var(--space-3)","display":"block"},"children":"404"}],["$","h1",null,{"style":{"fontFamily":"var(--font-display)","fontSize":"clamp(24px, 4vw, 40px)","fontWeight":500,"letterSpacing":"-0.025em","color":"var(--ds-ink)","margin":"0 0 0.75rem"},"children":"Note not found"}],["$","p",null,{"style":{"fontFamily":"var(--font-body)","fontSize":15,"color":"var(--ds-muted)","maxWidth":360,"lineHeight":1.7,"margin":"0 0 var(--space-5)"},"children":"This page doesn\'t exist yet — or the note may have moved. Try browsing from the home page."}],["$","$L7",null,{"href":"/","style":{"display":"inline-flex","alignItems":"center","gap":6,"fontFamily":"var(--font-ui, system-ui, sans-serif)","fontSize":13,"fontWeight":500,"letterSpacing":"0.01em","padding":"7px 20px","borderRadius":"var(--radius-md, 8px)","background":"var(--ds-accent, #a85025)","color":"#fff","textDecoration":"none","transition":"background 120ms ease"},"children":"Back to home"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}]]}],{"children":[["slug","swe/cloud/aws/services/containers/ecs/patterns","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L8",null,["$","$L9",null,{"children":["$La",["$","$Lb",null,{"promise":"$@c"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Ld",null,{"children":"$Le"}],null],["$","$Lf",null,{"children":["$","div",null,{"hidden":true,"children":["$","$10",null,{"fallback":null,"children":"$L11"}]}]}]]}],false]],"m":"$undefined","G":["$12",[]],"s":false,"S":true}\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '13:I[23191,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteBreadcrumb"]\n15:I[75658,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteToc"]\n14:T4a4,',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '\u003ch2 id="tarefas-ecs-invocadas-por-um-evento-do-event-bridge"\u003eTarefas ECS invocadas por um evento do Event Bridge\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eClient faz um upload no S3\u003c/li\u003e\n\u003cli\u003eO evento de upload no S3 sinaliza o \u003ccode\u003eEvent Bridge\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eUma tarefa de \u003ccode\u003eECS\u003c/code\u003e é executada\u003c/li\u003e\n\u003cli\u003eResultados são salvos no \u003ccode\u003eDynamoDB\u003c/code\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id="tarefas-ecs-invocadas-por-agendamento-do-event-bridge"\u003eTarefas ECS invocadas por agendamento do Event bridge\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eAgendamento do \u003ccode\u003eEvent Bridge\u003c/code\u003e a cada uma hora\u003c/li\u003e\n\u003cli\u003eNo horário agendado uma tarefa é executada no cluster ECS\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id="ecs--sqs-queue"\u003eECS + SQS Queue\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eUma fila SQS recebe mensagens\u003c/li\u003e\n\u003cli\u003eTarefas do ecs fazem \u003ccode\u003epoll\u003c/code\u003e das mensagens\u003c/li\u003e\n\u003cli\u003eO ECS possui um grupo de \u003cem\u003eAuto Scaling\u003c/em\u003e que escala o numero de tarefas conforme a demanda\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id="alerta-de-tarefa-ecs-parada-via-event-bridge"\u003eAlerta de tarefa ECS parada via Event Bridge\u003c/h2\u003e\n\u003cul\u003e\n\u003cli\u003eUma vez que uma tarefa ECS é parada um evento é recebido pelo \u003ccode\u003eEvent Bridge\u003c/code\u003e\u003c/li\u003e\n\u003cli\u003eO \u003ccode\u003eEvent Bridge\u003c/code\u003e aciona o \u003ccode\u003eSNS\u003c/code\u003e e envia um E-mail ao administrador\u003c/li\u003e\n\u003c/ul\u003e',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '8:["$","main",null,{"style":{"padding":"var(--space-5) 0 var(--space-8)"},"children":["$","div",null,{"className":"page-wrap","children":["$","garden-article",null,{"suppressHydrationWarning":true,"title":"Patterns","has-sidebar":"","has-backlinks":"","children":[["$","div",null,{"slot":"breadcrumb","children":["$","$L13",null,{"items":[{"label":"home","href":"/notes/"},{"label":"Software Engineering","href":"/notes/swe/"},{"label":"Patterns"}]}]}],["$","garden-tag",null,{"suppressHydrationWarning":true,"slot":"meta","variant":"sage","children":"SOFTWARE ENGINEERING"}],["$","garden-tag",null,{"suppressHydrationWarning":true,"slot":"meta","variant":"default","children":"DRAFT"}],["$","div",null,{"slot":"content","className":"prose","dangerouslySetInnerHTML":{"__html":"$14"}}],["$","$L15",null,{"slot":"sidebar","items":[{"id":"tarefas-ecs-invocadas-por-um-evento-do-event-bridge","label":"Tarefas ECS invocadas por um evento do Event Bridge","depth":1},{"id":"tarefas-ecs-invocadas-por-agendamento-do-event-bridge","label":"Tarefas ECS invocadas por agendamento do Event bridge","depth":1},{"id":"ecs--sqs-queue","label":"ECS + SQS Queue","depth":1},{"id":"alerta-de-tarefa-ecs-parada-via-event-bridge","label":"Alerta de tarefa ECS parada via Event Bridge","depth":1}]}],[["$","li","swe.cloud.aws.index",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/cloud/aws/index/","variant":"default","children":"SWE Cloud AWS - Index"}]}],["$","li","swe",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/swe/","variant":"default","children":"swe"}]}]]]}]}]}]\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        'e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]\na:null\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([
+        1,
+        '16:I[51506,[],"IconMark"]\nc:{"metadata":[["$","title","0",{"children":"Patterns — Digital Garden"}],["$","meta","1",{"name":"description","content":"Tarefas ECS invocadas por um evento do Event Bridge Client faz um upload no S3 O evento de upload no S3 sinaliza o Event Bridge Uma tarefa de ECS é executada Re"}],["$","link","2",{"rel":"icon","href":"/notes/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","$L16","3",{}]],"error":null,"digest":"$undefined"}\n',
+      ]);
+    </script>
+    <script>
+      self.__next_f.push([1, '11:"$c:metadata"\n']);
+    </script>
+  </body>
+</html>

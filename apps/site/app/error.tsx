@@ -2,6 +2,8 @@
 
 import Link from 'next/link';
 
+import { linkPath } from './lib/site-path';
+
 interface ErrorProps {
   error: Error & { digest?: string };
   reset: () => void;
@@ -61,7 +63,7 @@ export default function ErrorPage({ error, reset }: ErrorProps) {
         <garden-button variant="primary" onClick={reset}>
           Try again
         </garden-button>
-        <Link href="/" style={{ textDecoration: 'none' }}>
+        <Link href={linkPath('/')} style={{ textDecoration: 'none' }}>
           <garden-button>Back to home</garden-button>
         </Link>
       </div>

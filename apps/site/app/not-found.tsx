@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import { linkPath } from './lib/site-path';
+
 export default function NotFound() {
   return (
     <main
@@ -45,7 +47,7 @@ export default function NotFound() {
       </p>
 
       <Link
-        href="/"
+        href={linkPath('/')}
         style={{
           display: 'inline-flex',
           alignItems: 'center',

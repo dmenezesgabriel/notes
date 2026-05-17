@@ -1,0 +1,66 @@
+1:"$Sreact.fragment"
+2:I[9191,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"default"]
+3:I[91771,["1874","static/chunks/1874-644ca8adc4d40081.js","7177","static/chunks/app/layout-c356b7b58a8c7057.js"],"SiteNav"]
+4:I[53922,[],""]
+5:I[39891,["9767","static/chunks/9767-4452bfce4d1f1add.js","8039","static/chunks/app/error-9ae2206466504b49.js"],"default"]
+6:I[1872,[],""]
+7:I[79767,["9767","static/chunks/9767-4452bfce4d1f1add.js","4345","static/chunks/app/not-found-6acd6bddd9def445.js"],""]
+9:I[50987,[],"OutletBoundary"]
+b:I[46842,[],"AsyncMetadataOutlet"]
+d:I[50987,[],"ViewportBoundary"]
+f:I[50987,[],"MetadataBoundary"]
+10:"$Sreact.suspense"
+12:I[47802,[],""]
+:HL["/notes/_next/static/css/d492c5495f17f00e.css","style"]
+0:{"P":null,"b":"IOYRrb6gG67xwS8uEwbG6","p":"/notes","c":["","data-science","machine-learning","optimization",""],"i":false,"f":[[["",{"children":[["slug","data-science/machine-learning/optimization","c"],{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/notes/_next/static/css/d492c5495f17f00e.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":[["$","head",null,{"children":["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){\n  try{\n    var t=localStorage.getItem('theme');\n    if(t==='dark'||t==='light') document.documentElement.setAttribute('data-theme',t);\n  }catch(e){}\n})();"}}]}],["$","body",null,{"children":[["$","a",null,{"href":"#main-content","className":"skip-link","children":"Skip to content"}],["$","$L2",null,{}],["$","$L3",null,{}],["$","div",null,{"id":"main-content","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$5","errorStyles":[],"errorScripts":[],"template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","main",null,{"style":{"display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center","minHeight":"60vh","padding":"var(--space-7) var(--space-5)","textAlign":"center"},"children":[["$","garden-badge",null,{"variant":"muted","style":{"marginBottom":"var(--space-3)","display":"block"},"children":"404"}],["$","h1",null,{"style":{"fontFamily":"var(--font-display)","fontSize":"clamp(24px, 4vw, 40px)","fontWeight":500,"letterSpacing":"-0.025em","color":"var(--ds-ink)","margin":"0 0 0.75rem"},"children":"Note not found"}],["$","p",null,{"style":{"fontFamily":"var(--font-body)","fontSize":15,"color":"var(--ds-muted)","maxWidth":360,"lineHeight":1.7,"margin":"0 0 var(--space-5)"},"children":"This page doesn't exist yet — or the note may have moved. Try browsing from the home page."}],["$","$L7",null,{"href":"/","style":{"display":"inline-flex","alignItems":"center","gap":6,"fontFamily":"var(--font-ui, system-ui, sans-serif)","fontSize":13,"fontWeight":500,"letterSpacing":"0.01em","padding":"7px 20px","borderRadius":"var(--radius-md, 8px)","background":"var(--ds-accent, #a85025)","color":"#fff","textDecoration":"none","transition":"background 120ms ease"},"children":"Back to home"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]]}]]}]]}],{"children":[["slug","data-science/machine-learning/optimization","c"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L6",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L8",null,["$","$L9",null,{"children":["$La",["$","$Lb",null,{"promise":"$@c"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Ld",null,{"children":"$Le"}],null],["$","$Lf",null,{"children":["$","div",null,{"hidden":true,"children":["$","$10",null,{"fallback":null,"children":"$L11"}]}]}]]}],false]],"m":"$undefined","G":["$12",[]],"s":false,"S":true}
+13:I[23191,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteBreadcrumb"]
+14:Tee3,<h2 id="otimização-de-hiperparametros">Otimização de hiperparametros</h2>
+<h2 id="diretrizes">Diretrizes</h2>
+<ul>
+<li>Utilizar conjunto de validações</li>
+<li>Explorar diferentes métodos</li>
+<li>Interromper a otimização quando necessário (Caso não haja melhoria significativa no modelo)</li>
+</ul>
+<h3 id="tipos-de-parâmetros">Tipos de parâmetros</h3>
+<ul>
+<li>Parâmetros: Aprendidos pelo modelo durante o treinamento</li>
+<li>Hiperparametros: Ajudam o modelo no processo de treinamento e precisam ser definidos previamente <a href="/data-science/machine-learning/glossary/hiperparams">hiperparams</a></li>
+</ul>
+<h2 id="métodos-comuns-de-otimização">Métodos Comuns de otimização</h2>
+<h3 id="busca-aleatória-random-search">Busca aleatória (Random Search)</h3>
+<p>São geradas combinações aleatórias de hiperparametros e o desempenho do modelo é avaliado para cada combinação.</p>
+<h3 id="busca-em-grade-grid-search">Busca em grade (Grid Search)</h3>
+<p>A busca em grade envolve a criação de uma grade com todas as combinações possíveis de hiperparametros a serem avaliados. Pode ser bem custosa, por isso é utilizada em espaços de busca menores.</p>
+<h3 id="otimização-bayesiana">Otimização Bayesiana</h3>
+<p>Se utiliza um modelo de Machine Learning para prever os melhores valores dos parâmetros com base em iterações anteriores. A ideia é ajustar os valores gradualmente, de forma inteligente, levando em consideração os resultados obtidos em tentativas anteriores.</p>
+<h3 id="gradient-based-optimization">Gradient-based optimization</h3>
+<p>Ajusta-se os hiperparametros de forma iterativa, movendo-se na direção que reduz o gradiente de perda, pode ser eficaz em parâmetros continuos, mas não é aplicável a parâmetros discretos ou categóricos.</p>
+<h3 id="evolutionary-algorithms">Evolutionary Algorithms</h3>
+<p>Algoritmos evolutivos que simulam a evolução natural, utilizam conceitos de mutação, cruzamento e seleção. Podem ser mais lentos e exigem configuração de parâmetros adicionais como taxa de mutação e cruzamento.</p>
+<h2 id="escolha-de-métodos-de-otimização">Escolha de métodos de otimização</h2>
+<h3 id="tamanho-da-busca">Tamanho da busca</h3>
+<p>Se o número de combinações possíveis de hiperparametros for muito grande, a busca aleatória ou a otimização baseada em modelo pode ser mais eficiente que a busca em grade.</p>
+<h3 id="recursos-computacionais-disponíveis">Recursos computacionais disponíveis</h3>
+<p>A busca em grade pode exigir muito mais pode computacional.</p>
+<h3 id="tempo-de-treinamento">Tempo de treinamento</h3>
+<p>Para modelos que levam muito tempo para treinar, como redes neurais profundas, pode ser mais eficiente utilizar a otimização Bayesiana, que pode reduzir o numero de tentativas necessárias.</p>
+<h2 id="boas-praticas">Boas praticas</h2>
+<h3 id="validação-cruzada">Validação cruzada</h3>
+<p>Utiliza validação cruzada para avaliar o desempenho do modelo com diferentes hiperparametros, evitando vies na avaliação.</p>
+<h3 id="escalonamento-apropriado">Escalonamento apropriado</h3>
+<p>Alguns hiperparametros são mais sensíveis que outros, use um escalonamento apropriado (Ex: Logarítmico).</p>
+<h3 id="paralelização">Paralelização</h3>
+<p>Aproveite a paralelização para acelerar o processo de busca, especialmente ao utilizar Grid Search ou Random Search.</p>
+<h3 id="monitoramento-e-desempenho">Monitoramento e desempenho</h3>
+<p>Acompanhe o desempenho do modelo em tempo real durante o tunning para identificar se uma combinação de hiperparametros esta se identificando promissora ou não</p>
+<h3 id="utilizar-hiperparametros-pré-definidos">Utilizar hiperparametros pré-definidos</h3>
+<p>Considerar o uso de configuração padrão como ponto de partida</p>8:["$","main",null,{"style":{"padding":"var(--space-5) 0 var(--space-8)"},"children":["$","div",null,{"className":"page-wrap","children":["$","garden-article",null,{"suppressHydrationWarning":true,"title":"Optimization","has-sidebar":"","has-backlinks":"","children":[["$","div",null,{"slot":"breadcrumb","children":["$","$L13",null,{"items":[{"label":"home","href":"/notes/"},{"label":"Data Science","href":"/notes/data-science/"},{"label":"Optimization"}]}]}],["$","garden-tag",null,{"suppressHydrationWarning":true,"slot":"meta","variant":"sage","children":"DATA SCIENCE"}],false,["$","div",null,{"slot":"content","className":"prose","dangerouslySetInnerHTML":{"__html":"$14"}}],"$L15",["$L16","$L17"]]}]}]}]
+18:I[75658,["3048","static/chunks/app/%5B...slug%5D/page-9fe1229e6036ae98.js"],"SiteToc"]
+15:["$","$L18",null,{"slot":"sidebar","items":[{"id":"otimização-de-hiperparametros","label":"Otimização de hiperparametros","depth":1},{"id":"diretrizes","label":"Diretrizes","depth":1},{"id":"tipos-de-parâmetros","label":"Tipos de parâmetros","depth":2},{"id":"métodos-comuns-de-otimização","label":"Métodos Comuns de otimização","depth":1},{"id":"busca-aleatória-random-search","label":"Busca aleatória (Random Search)","depth":2},{"id":"busca-em-grade-grid-search","label":"Busca em grade (Grid Search)","depth":2},{"id":"otimização-bayesiana","label":"Otimização Bayesiana","depth":2},{"id":"gradient-based-optimization","label":"Gradient-based optimization","depth":2},{"id":"evolutionary-algorithms","label":"Evolutionary Algorithms","depth":2},{"id":"escolha-de-métodos-de-otimização","label":"Escolha de métodos de otimização","depth":1},{"id":"tamanho-da-busca","label":"Tamanho da busca","depth":2},{"id":"recursos-computacionais-disponíveis","label":"Recursos computacionais disponíveis","depth":2},{"id":"tempo-de-treinamento","label":"Tempo de treinamento","depth":2},{"id":"boas-praticas","label":"Boas praticas","depth":1},{"id":"validação-cruzada","label":"Validação cruzada","depth":2},{"id":"escalonamento-apropriado","label":"Escalonamento apropriado","depth":2},{"id":"paralelização","label":"Paralelização","depth":2},{"id":"monitoramento-e-desempenho","label":"Monitoramento e desempenho","depth":2},{"id":"utilizar-hiperparametros-pré-definidos","label":"Utilizar hiperparametros pré-definidos","depth":2}]}]
+16:["$","li","daily.journal.2025.09.01",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/daily/journal/2025/09/01/","variant":"default","children":"2025-09-01"}]}]
+17:["$","li","data-science",{"slot":"backlinks","children":["$","garden-tag",null,{"suppressHydrationWarning":true,"href":"/notes/data-science/","variant":"default","children":"data-science"}]}]
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+a:null
+19:I[51506,[],"IconMark"]
+c:{"metadata":[["$","title","0",{"children":"Optimization — Digital Garden"}],["$","meta","1",{"name":"description","content":"Otimização de hiperparametros Diretrizes Utilizar conjunto de validações Explorar diferentes métodos Interromper a otimização quando necessário (Caso não haja m"}],["$","link","2",{"rel":"icon","href":"/notes/favicon.ico","type":"image/x-icon","sizes":"16x16"}],["$","$L19","3",{}]],"error":null,"digest":"$undefined"}
+11:"$c:metadata"

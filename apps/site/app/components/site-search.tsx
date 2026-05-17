@@ -3,6 +3,8 @@
 import { useRouter, useSearchParams } from 'next/navigation';
 import { Suspense, useCallback, useEffect, useRef } from 'react';
 
+import { linkPath } from '../lib/site-path';
+
 /**
  * Inner component that reads `useSearchParams` (must be inside a Suspense
  * boundary when used in a Server Component layout).
@@ -27,9 +29,9 @@ function SiteSearchInner() {
     (e: Event) => {
       const query = (e as CustomEvent<{ query: string }>).detail.query.trim();
       if (query) {
-        router.push(`/?q=${encodeURIComponent(query)}`);
+        router.push(linkPath(`/?q=${encodeURIComponent(query)}`));
       } else {
-        router.push('/');
+        router.push(linkPath('/'));
       }
     },
     [router],

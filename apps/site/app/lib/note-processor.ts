@@ -25,7 +25,7 @@
 import type { Note, TocEntry } from '@notes/content';
 import { extractToc, rewriteWikiLinks, safeParseMatter } from '@notes/content';
 import rehypeShiki from '@shikijs/rehype';
-import { existsSync, readFileSync } from 'fs';
+import { existsSync, readdirSync, readFileSync } from 'fs';
 import path from 'path';
 import rehypeRaw from 'rehype-raw';
 import rehypeSlug from 'rehype-slug';
@@ -36,6 +36,7 @@ import remarkRehype from 'remark-rehype';
 import { type Processor, unified } from 'unified';
 
 import { rehypeMermaid } from './rehype-code';
+import { publicPath } from './site-path';
 
 // ---------------------------------------------------------------------------
 // Path constants — single source of truth for the whole app
@@ -114,6 +115,33 @@ export function readManifest(): Manifest | null {
   const p = path.join(CONTENT_DIR, 'manifest.json');
   if (!existsSync(p)) return null;
   return JSON.parse(readFileSync(p, 'utf8')) as Manifest;
+}
+
+function collectNoteIds(dir: string, ids: string[] = []): string[] {
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    if (entry.name === 'assets' || entry.name === '.obsidian') continue;
+    const entryPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      collectNoteIds(entryPath, ids);
+      continue;
+    }
+    if (entry.isFile() && (entry.name.endsWith('.md') || entry.name.endsWith('.mdx'))) {
+      ids.push(path.basename(entry.name, path.extname(entry.name)));
+    }
+  }
+  return ids;
+}
+
+/**
+ * Returns the catch-all route params for every note, using the built manifest
+ * when available and falling back to scanning notes/ directly in dev.
+ */
+export function getStaticNoteParams(): Array<{ slug: string[] }> {
+  const manifest = readManifest();
+  const ids = manifest?.notes.map((note) => note.id) ?? collectNoteIds(NOTES_DIR);
+  return ids.map((id) => ({
+    slug: id.split('.'),
+  }));
 }
 
 // ---------------------------------------------------------------------------
@@ -204,9 +232,9 @@ export function buildBreadcrumbs(
   categoryLabelFn: (cat: string) => string,
 ): BreadcrumbItem[] {
   return [
-    { label: 'home', href: '/' },
+    { label: 'home', href: publicPath('/') },
     ...(slug.length > 1
-      ? [{ label: categoryLabelFn(slug[0] ?? ''), href: `/notes/${slug[0]}` }]
+      ? [{ label: categoryLabelFn(slug[0] ?? ''), href: publicPath(`/${slug[0]}`) }]
       : []),
     { label: noteTitle },
   ];

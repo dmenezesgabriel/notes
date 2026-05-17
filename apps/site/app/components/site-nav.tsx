@@ -3,10 +3,12 @@
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef } from 'react';
 
+import { publicPath } from '../lib/site-path';
+
 const NAV_LINKS = [
-  { label: 'notes', href: '/' },
-  { label: 'books', href: '/notes/books' },
-  { label: 'about', href: '/notes/about' },
+  { label: 'notes', href: publicPath('/') },
+  { label: 'books', href: publicPath('/books') },
+  { label: 'about', href: publicPath('/about') },
 ] as const;
 
 /**
@@ -32,6 +34,10 @@ export function SiteNav() {
       (el as any).setTheme?.(currentTheme);
     }
 
+    // Keep the brand link aligned with the route the nav should send users to.
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    (el as any).homeHref = publicPath('/');
+
     const handleThemeChange = (e: Event) => {
       const theme = (e as CustomEvent<{ theme: 'light' | 'dark' }>).detail.theme;
       document.documentElement.setAttribute('data-theme', theme);
@@ -50,13 +56,14 @@ export function SiteNav() {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    const visiblePathname = window.location.pathname;
     const links = NAV_LINKS.map((l) => ({
       ...l,
       active:
-        l.href === '/'
-          ? pathname === '/' ||
-            (!NAV_LINKS.slice(1).some((x) => pathname.startsWith(x.href)) && pathname !== '/')
-          : pathname.startsWith(l.href),
+        l.href === publicPath('/')
+          ? visiblePathname === publicPath('/') || visiblePathname === '/'
+          : visiblePathname.startsWith(l.href),
     }));
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (el as any).links = links;
