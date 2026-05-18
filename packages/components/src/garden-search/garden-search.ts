@@ -30,7 +30,7 @@ export class GardenSearch extends LitElement {
       }
 
       [role='search'] {
-        background: var(--search-bg, #ffffff);
+        background: var(--search-bg, #fff);
         border: 3px solid var(--zine-ink, #0e0c07);
         border-right: 5px solid var(--zine-ink, #0e0c07);
         border-bottom: 5px solid var(--zine-ink, #0e0c07);
@@ -60,6 +60,7 @@ export class GardenSearch extends LitElement {
         background: transparent;
         font-family: var(--font-mono, 'Cutive Mono', monospace);
         font-size: 14px;
+
         /* Use ink-faded for typed text (readable), muted only for placeholder */
         color: var(--zine-ink-faded, #2c2820);
         min-width: 0;

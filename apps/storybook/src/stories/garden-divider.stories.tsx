@@ -6,7 +6,7 @@ interface DividerArgs {
 }
 
 const meta: Meta<DividerArgs> = {
-  title: 'Components/Divider',
+  title: 'Atoms/GardenDivider',
   tags: ['autodocs'],
   argTypes: {
     variant: {
@@ -23,7 +23,7 @@ const meta: Meta<DividerArgs> = {
     docs: {
       description: {
         component:
-          'Zine-edition hand-drawn style divider. Dashed (default), solid, or red variants. Uses `--zine-ink` token.',
+          'Atom: zine-edition hand-drawn style divider. Dashed (default), solid, or red variants. Uses the canonical shared `--zine-*` tokens.',
       },
     },
   },
@@ -38,10 +38,12 @@ export const Default: Story = {
 };
 
 export const Solid: Story = {
+  args: { variant: 'solid' },
   render: (args) => <garden-divider variant={args.variant}></garden-divider>,
 };
 
 export const Red: Story = {
+  args: { variant: 'red' },
   render: (args) => <garden-divider variant={args.variant}></garden-divider>,
 };
 
@@ -58,7 +60,11 @@ export const AllVariants: Story = {
     >
       <div>
         <strong
-          style={{ fontFamily: "'Cutive Mono', monospace", fontSize: '11px', color: '#6b6050' }}
+          style={{
+            fontFamily: "'Cutive Mono', monospace",
+            fontSize: '11px',
+            color: 'var(--zine-muted, #6b6050)',
+          }}
         >
           DASHED (default)
         </strong>
@@ -66,7 +72,11 @@ export const AllVariants: Story = {
       </div>
       <div>
         <strong
-          style={{ fontFamily: "'Cutive Mono', monospace", fontSize: '11px', color: '#6b6050' }}
+          style={{
+            fontFamily: "'Cutive Mono', monospace",
+            fontSize: '11px',
+            color: 'var(--zine-muted, #6b6050)',
+          }}
         >
           SOLID
         </strong>
@@ -74,7 +84,11 @@ export const AllVariants: Story = {
       </div>
       <div>
         <strong
-          style={{ fontFamily: "'Cutive Mono', monospace", fontSize: '11px', color: '#6b6050' }}
+          style={{
+            fontFamily: "'Cutive Mono', monospace",
+            fontSize: '11px',
+            color: 'var(--zine-muted, #6b6050)',
+          }}
         >
           RED
         </strong>

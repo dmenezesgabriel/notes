@@ -51,6 +51,30 @@ describe('garden-tag', () => {
     expect(span!.classList.contains('sage')).toBe(true);
   });
 
+  it('applies yellow, blue, and green variants', async () => {
+    const span = () => el.shadowRoot!.querySelector('[part="base"]')!;
+
+    el.setAttribute('variant', 'yellow');
+    await waitForUpdate(el);
+    expect(span().classList.contains('yellow')).toBe(true);
+
+    el.setAttribute('variant', 'blue');
+    await waitForUpdate(el);
+    expect(span().classList.contains('blue')).toBe(true);
+
+    el.setAttribute('variant', 'green');
+    await waitForUpdate(el);
+    expect(span().classList.contains('green')).toBe(true);
+  });
+
+  it('renders an anchor when href is provided', async () => {
+    el.setAttribute('href', '/notes/test');
+    await waitForUpdate(el);
+    const anchor = el.shadowRoot!.querySelector('a[part="base"]');
+    expect(anchor).not.toBeNull();
+    expect(anchor!.getAttribute('href')).toBe('/notes/test');
+  });
+
   it('has role="note" for accessibility', async () => {
     await waitForUpdate(el);
     // slot is rendered inside the part=base element

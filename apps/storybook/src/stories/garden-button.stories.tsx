@@ -8,7 +8,7 @@ interface ButtonArgs {
 }
 
 const meta: Meta<ButtonArgs> = {
-  title: 'Components/GardenButton',
+  title: 'Atoms/GardenButton',
   tags: ['autodocs'],
   argTypes: {
     variant: {
@@ -40,8 +40,8 @@ const meta: Meta<ButtonArgs> = {
     docs: {
       description: {
         component:
-          'Punk rubber stamp button. Five variants: `default` (zine paper), `primary` (red), `yellow`, `blue`, `ghost` (no border). ' +
-          'Thick right+bottom border creates the neubrutalist offset press effect. Supports an `icon-left` slot.',
+          'Atom: punk rubber stamp button. Five variants: `default` (zine paper), `primary` (red), `yellow`, `blue`, `ghost` (no border). ' +
+          'Thick right+bottom border creates the neubrutalist offset press effect. Supports an `icon-left` slot and uses the canonical shared tokens.',
       },
     },
   },
@@ -116,9 +116,9 @@ export const AllVariants: Story = {
         padding: 24,
         alignItems: 'center',
         background: 'var(--zine-paper, #f2edd7)',
-        border: '3px solid #0e0c07',
-        borderRight: '5px solid #0e0c07',
-        borderBottom: '5px solid #0e0c07',
+        border: '3px solid var(--zine-ink, #0e0c07)',
+        borderRight: '5px solid var(--zine-ink, #0e0c07)',
+        borderBottom: '5px solid var(--zine-ink, #0e0c07)',
       }}
     >
       <garden-button variant="primary">✦ PUBLISH NOTE</garden-button>

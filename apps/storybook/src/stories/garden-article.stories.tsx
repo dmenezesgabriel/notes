@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 
 const meta: Meta = {
-  title: 'Components/GardenArticle',
+  title: 'Templates/GardenArticle',
   tags: ['autodocs'],
   parameters: {
     backgrounds: { default: 'paper' },
@@ -13,7 +13,8 @@ const meta: Meta = {
           'Provides the h1 title, meta-tags row, optional two-column grid with sticky sidebar, ' +
           'and backlinks section. All content is injected via **named slots** in the light DOM ' +
           'so host-document CSS (`.prose`, `globals.css`) applies to slotted children without ' +
-          'any shadow-DOM workarounds. ' +
+          'any shadow-DOM workarounds. These stories document the supported note template states ' +
+          'used by the live note route: without sidebar, with sidebar, and with backlinks.' +
           '\n\n**Slots:** `breadcrumb` · `meta` · `content` · `sidebar` · `backlinks`',
       },
     },

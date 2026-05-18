@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 
 import RegisterWebComponents from './components/register-webcomponents';
 import { SiteNav } from './components/site-nav';
+import { themeInitializationScript } from './lib/theme-preference';
 
 // ---------------------------------------------------------------------------
 // Root metadata
@@ -31,12 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){
-  try{
-    var t=localStorage.getItem('theme');
-    if(t==='dark'||t==='light') document.documentElement.setAttribute('data-theme',t);
-  }catch(e){}
-})();`,
+            __html: themeInitializationScript,
           }}
         />
       </head>

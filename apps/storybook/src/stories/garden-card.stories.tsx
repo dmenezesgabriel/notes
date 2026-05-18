@@ -40,7 +40,7 @@ const metaDef: Meta<CardArgs> = {
     docs: {
       description: {
         component:
-          'Note/wiki card. When `href` is provided the headline becomes a stretched link (CSS `::after`) so the whole card is clickable — `<article>` is never wrapped by `<a>`.',
+          'Note/wiki card used by the home discovery slice and other route-local compositions. When `href` is provided the headline becomes a stretched link (CSS `::after`) so the whole card is clickable — `<article>` is never wrapped by `<a>`.',
       },
     },
   },
@@ -214,6 +214,42 @@ export const WikiGrid: Story = {
         meta="wiki · writing"
         excerpt="Notes written to accumulate insight over time."
         href="/wiki/evergreen"
+      />
+    </section>
+  ),
+};
+
+export const HomeDiscoveryGrid: Story = {
+  name: 'Home discovery grid',
+  render: () => (
+    <section
+      aria-label="Home discovery cards"
+      style={{
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+        gap: 16,
+        padding: '1.5rem',
+        maxWidth: 760,
+        background: 'var(--zine-paper, #f2edd7)',
+        border: '3px solid #0e0c07',
+        borderRight: '5px solid #0e0c07',
+        borderBottom: '5px solid #0e0c07',
+      }}
+    >
+      <garden-card
+        headline="A Philosophy of Software Design"
+        excerpt="Notes on complexity, module depth, and why simple interfaces matter more than clever implementations."
+        href="/notes/books/a-philosophy-of-software-design/"
+      />
+      <garden-card
+        headline="Lit elements vs React"
+        excerpt="Web components shine when the goal is portability across stacks, not one framework's ergonomics."
+        href="/notes/swe/lit-elements-vs-react/"
+      />
+      <garden-card
+        headline="Synthwave palettes and why they work"
+        excerpt="High contrast plus neon on dark surfaces can stay readable when the hierarchy is disciplined."
+        href="/notes/design/synthwave-palettes/"
       />
     </section>
   ),

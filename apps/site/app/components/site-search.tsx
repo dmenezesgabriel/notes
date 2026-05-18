@@ -1,8 +1,14 @@
 'use client';
 
 import { useRouter, useSearchParams } from 'next/navigation';
-import { Suspense, useCallback, useEffect, useRef } from 'react';
+import React, { Suspense, useCallback, useEffect, useRef } from 'react';
 
+import {
+  bindCustomElementEvent,
+  type GardenSearchDetail,
+  type GardenSearchElement,
+  setCustomElementProperty,
+} from '../lib/react-lit-adapter';
 import { linkPath } from '../lib/site-path';
 
 /**
@@ -12,24 +18,21 @@ import { linkPath } from '../lib/site-path';
 function SiteSearchInner() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<GardenSearchElement | null>(null);
   const currentQuery = searchParams.get('q') ?? '';
 
   // Seed the web-component's value from the URL on mount / navigation.
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    (el as any).value = currentQuery;
+    setCustomElementProperty(ref.current, 'value', currentQuery);
   }, [currentQuery]);
 
   // Wire the custom event — React JSX can't handle hyphenated event names on
   // custom elements, so we use addEventListener instead.
   const handleSearch = useCallback(
-    (e: Event) => {
-      const query = (e as CustomEvent<{ query: string }>).detail.query.trim();
-      if (query) {
-        router.push(linkPath(`/?q=${encodeURIComponent(query)}`));
+    ({ query }: GardenSearchDetail) => {
+      const nextQuery = query.trim();
+      if (nextQuery) {
+        router.push(linkPath(`/?q=${encodeURIComponent(nextQuery)}`));
       } else {
         router.push(linkPath('/'));
       }
@@ -38,10 +41,7 @@ function SiteSearchInner() {
   );
 
   useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    el.addEventListener('garden-search', handleSearch);
-    return () => el.removeEventListener('garden-search', handleSearch);
+    return bindCustomElementEvent<GardenSearchDetail>(ref.current, 'garden-search', handleSearch);
   }, [handleSearch]);
 
   return <garden-search ref={ref} placeholder="Search notes…" kbd="⌘K" data-testid="site-search" />;

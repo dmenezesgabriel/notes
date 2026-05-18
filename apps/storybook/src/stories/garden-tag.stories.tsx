@@ -7,7 +7,7 @@ interface TagArgs {
 }
 
 const meta: Meta<TagArgs> = {
-  title: 'Components/GardenTag',
+  title: 'Atoms/GardenTag',
   tags: ['autodocs'],
   argTypes: {
     variant: {
@@ -33,9 +33,9 @@ const meta: Meta<TagArgs> = {
     docs: {
       description: {
         component:
-          'Compact stamp chip for categories and metadata. ' +
+          'Atom: compact stamp chip for categories and metadata. ' +
           'Hard borders, flat offset shadow, slight rotation — hand-stamped feel. ' +
-          'Themes automatically via `--zine-*` CSS variables.',
+          'Themes automatically via the canonical shared `--zine-*` CSS tokens.',
       },
     },
   },
@@ -83,9 +83,9 @@ export const AllVariants: Story = {
         flexWrap: 'wrap',
         padding: 24,
         background: 'var(--zine-paper, #f2edd7)',
-        border: '3px solid #0e0c07',
-        borderRight: '5px solid #0e0c07',
-        borderBottom: '5px solid #0e0c07',
+        border: '3px solid var(--zine-ink, #0e0c07)',
+        borderRight: '5px solid var(--zine-ink, #0e0c07)',
+        borderBottom: '5px solid var(--zine-ink, #0e0c07)',
         maxWidth: 500,
       }}
     >

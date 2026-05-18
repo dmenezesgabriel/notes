@@ -89,8 +89,9 @@ export class GardenArticle extends LitElement {
         font-size: clamp(28px, 4vw, 48px);
         letter-spacing: 0.03em;
         line-height: 1.1;
+
         /* Always use the primary ink colour — the previous code used
-           --zine-paper which was invisible on a light background. */
+       --zine-paper which was invisible on a light background. */
         color: var(--zine-ink, #0e0c07);
         margin: 0 0 1.5rem;
         overflow-wrap: break-word;
@@ -98,7 +99,7 @@ export class GardenArticle extends LitElement {
       }
 
       /* Prose slot wrapper (the actual .prose div is in the light DOM so
-         globals.css styles apply to its children without any special tricks) */
+     globals.css styles apply to its children without any special tricks) */
       .content {
         display: block;
       }
@@ -107,7 +108,7 @@ export class GardenArticle extends LitElement {
       .backlinks {
         margin-top: var(--space-7, 48px);
         padding-top: var(--space-5, 24px);
-        border-top: 3px solid var(--ds-border, rgba(14, 12, 7, 0.2));
+        border-top: 3px solid var(--ds-border, rgb(14 12 7 / 20%));
       }
 
       .backlinks-heading {
@@ -148,12 +149,12 @@ export class GardenArticle extends LitElement {
 
       <div class="layout">
         <!-- ── Article column ──────────────────────────────────────── -->
-        <article class="article" aria-labelledby="garden-article-title">
+        <article class="article" aria-labelledby="note-title">
           <div class="meta-row">
             <slot name="meta"></slot>
           </div>
 
-          <h1 id="garden-article-title" part="title">${this.title}</h1>
+          <h1 id="note-title" part="title">${this.title}</h1>
 
           <div class="content">
             <slot name="content"></slot>

@@ -41,8 +41,8 @@ test.describe('Home page', () => {
     await expect(skip).toHaveAttribute('href', '#main-content');
   });
 
-  test('renders the hero badge', async () => {
-    await expect(page.locator('garden-badge').first()).toBeVisible();
+  test('renders the hero tags row', async () => {
+    await expect(page.locator('garden-tag').first()).toBeVisible();
   });
 
   test('renders the search bar', async () => {
@@ -68,5 +68,32 @@ test.describe('Home page', () => {
 
   test('main landmark is present', async () => {
     await expect(page.locator('main')).toBeVisible();
+  });
+});
+
+test.describe('Home page — search states', () => {
+  test('search shows matching results and a clear no-results state', async ({ page }) => {
+    await page.goto(HOME_PATH);
+
+    const search = page.getByTestId('site-search').getByRole('searchbox');
+
+    await search.fill('software');
+    await expect(page).toHaveURL(/\?q=software/);
+    await expect(page.getByTestId('site-search')).toBeVisible();
+    await expect(page.getByTestId('site-search').getByRole('searchbox')).toHaveValue('software');
+    await expect(page.getByText(/RESULTS FOR/i)).toBeVisible();
+    await expect(page.getByLabel(/search results/i)).toBeVisible();
+    await expect(page.locator('garden-card').first()).toBeVisible();
+
+    await page.getByRole('link', { name: /clear/i }).click();
+    await expect(page).toHaveURL(/\/notes\/?$/);
+
+    const searchAgain = page.getByTestId('site-search').getByRole('searchbox');
+    await searchAgain.fill('definitely-no-home-search-hit');
+    await expect(page).toHaveURL(/\?q=definitely-no-home-search-hit/);
+    await expect(page.getByTestId('site-search')).toBeVisible();
+    await expect(searchAgain).toHaveValue('definitely-no-home-search-hit');
+    await expect(page.getByText(/No notes found for/i)).toBeVisible();
+    await expect(page.getByRole('link', { name: /clear/i })).toBeVisible();
   });
 });

@@ -47,4 +47,20 @@ describe('garden-badge', () => {
     const base = el.shadowRoot!.querySelector('[part="base"]')!;
     expect(base.classList.contains('sage')).toBe(true);
   });
+
+  it('applies muted, yellow, and blue variants', async () => {
+    const base = () => el.shadowRoot!.querySelector('[part="base"]')!;
+
+    el.setAttribute('variant', 'muted');
+    await waitForUpdate(el);
+    expect(base().classList.contains('muted')).toBe(true);
+
+    el.setAttribute('variant', 'yellow');
+    await waitForUpdate(el);
+    expect(base().classList.contains('yellow')).toBe(true);
+
+    el.setAttribute('variant', 'blue');
+    await waitForUpdate(el);
+    expect(base().classList.contains('blue')).toBe(true);
+  });
 });

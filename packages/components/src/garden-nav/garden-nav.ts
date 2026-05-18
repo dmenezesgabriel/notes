@@ -170,7 +170,7 @@ export class GardenNav extends LitElement {
         font-family: var(--font-stamp, 'Black Han Sans', sans-serif);
         font-size: 12px;
         letter-spacing: 0.05em;
-        color: var(--nav-link-color, #cccccc);
+        color: var(--nav-link-color, #ccc);
         padding: 5px 12px;
         border: 2px solid transparent;
         cursor: pointer;

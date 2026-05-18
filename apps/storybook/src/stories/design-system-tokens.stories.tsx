@@ -10,7 +10,7 @@ const meta = {
       description: {
         component:
           'Garden Design System — NEU-BRUTALISM × PUNK ZINE palette. ' +
-          'All values are CSS custom properties (`--zine-*`, `--ds-*`) that cascade into Lit shadow DOMs automatically. ' +
+          'All values are CSS custom properties (`--zine-*`, `--ds-*`) sourced from `packages/components/src/styles/tokens.css` and cascade into Lit shadow DOMs automatically. ' +
           'Use the theme toggle (☀/☽) or the Storybook Themes addon to preview dark mode.',
       },
     },

@@ -39,6 +39,7 @@ export class GardenCallout extends LitElement {
         font-size: 13px;
         color: var(--zine-ink-faded, #2c2820);
         position: relative;
+
         /* Uses token — overridden to dark surface in dark mode */
         background: var(--callout-note-bg, #fdf0a0);
         line-height: 1.7;

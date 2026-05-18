@@ -1,29 +1,30 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
-interface BreadcrumbItem {
-  label: string;
-  href?: string;
-}
+import type { BreadcrumbItem } from '../lib/note-processor';
+import {
+  type GardenBreadcrumbElement,
+  mapBreadcrumbItemsToGarden,
+  setCustomElementItems,
+} from '../lib/react-lit-adapter';
 
 interface SiteBreadcrumbProps {
   items: BreadcrumbItem[];
+  slot?: string;
 }
 
 /**
- * SiteBreadcrumb — wraps `<garden-breadcrumb>` and sets the `items` array
- * as a JS property (cannot be serialised as an HTML attribute).
+ * SiteBreadcrumb — app-level React-Lit adapter for `<garden-breadcrumb>`.
+ * Maps route breadcrumb data into the custom-element contract and assigns
+ * the `items` array as a JS property.
  */
-export function SiteBreadcrumb({ items }: SiteBreadcrumbProps) {
-  const ref = useRef<HTMLElement>(null);
+export function SiteBreadcrumb({ items, slot }: SiteBreadcrumbProps) {
+  const ref = useRef<GardenBreadcrumbElement | null>(null);
 
   useEffect(() => {
-    if (ref.current) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (ref.current as any).items = items;
-    }
+    setCustomElementItems(ref.current, mapBreadcrumbItemsToGarden(items));
   }, [items]);
 
-  return <garden-breadcrumb ref={ref} data-testid="site-breadcrumb" />;
+  return <garden-breadcrumb ref={ref} slot={slot} data-testid="site-breadcrumb" />;
 }

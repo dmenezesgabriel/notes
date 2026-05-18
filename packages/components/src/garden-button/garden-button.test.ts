@@ -56,6 +56,18 @@ describe('garden-button', () => {
     expect(btn.classList.contains('ghost')).toBe(true);
   });
 
+  it('applies yellow and blue variants', async () => {
+    const button = () => el.shadowRoot!.querySelector('button')!;
+
+    el.setAttribute('variant', 'yellow');
+    await waitForUpdate(el);
+    expect(button().classList.contains('yellow')).toBe(true);
+
+    el.setAttribute('variant', 'blue');
+    await waitForUpdate(el);
+    expect(button().classList.contains('blue')).toBe(true);
+  });
+
   it('is disabled when the disabled attribute is set', async () => {
     el.setAttribute('disabled', '');
     await waitForUpdate(el);

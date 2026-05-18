@@ -24,15 +24,39 @@ test.describe('Navigation', () => {
     await expect(page.locator('h1#note-title')).toBeVisible();
   });
 
-  test('site nav brand link returns to home', async ({ page }) => {
+  test('site nav renders a keyboard-focusable brand link', async ({ page }) => {
     await page.goto('/notes/books/a-philosophy-of-software-design');
 
-    // The brand link in garden-nav shadow DOM
-    const hasHomeLink = await page.evaluate(() => {
-      const nav = document.querySelector('garden-nav');
-      return nav?.shadowRoot?.querySelector('a[href="/notes"], a[href="/notes/"]') !== null;
-    });
-    expect(hasHomeLink).toBe(true);
+    const brandLink = page.getByTestId('site-nav').locator('[part="brand"]');
+
+    await brandLink.focus();
+    await expect(brandLink).toContainText(/garden\.dev/i);
+  });
+
+  test('theme toggle persists across navigation and keeps the current nav link active', async ({
+    page,
+  }) => {
+    await page.goto(HOME_PATH);
+
+    const siteNav = page.getByTestId('site-nav');
+    const darkThemeButton = siteNav.locator('[part="theme-dark"]');
+
+    await darkThemeButton.focus();
+    await page.keyboard.press('Enter');
+
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+    await expect(darkThemeButton).toHaveAttribute('aria-pressed', 'true');
+
+    await page.locator('garden-card[headline="A Philosophy of Software Design"]').click();
+
+    await expect(page).toHaveURL(/\/notes\/books\/a-philosophy-of-software-design\/?$/);
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+    await expect(siteNav.locator('[part="link"][aria-current="page"]')).toHaveText(/books/i);
+
+    await page.reload();
+
+    await expect(page.locator('html')).toHaveAttribute('data-theme', 'dark');
+    await expect(siteNav.locator('[part="theme-dark"]')).toHaveAttribute('aria-pressed', 'true');
   });
 
   test('configured favicon request resolves as a static asset', async ({ page, request }) => {

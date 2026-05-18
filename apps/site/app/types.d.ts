@@ -1,5 +1,11 @@
 import 'react';
 
+import type {
+  BreadcrumbItem as GardenBreadcrumbItem,
+  NavLink as GardenNavLink,
+  TocEntry as GardenTocEntry,
+} from '@notes/components';
+
 /**
  * JSX intrinsic element declarations for Garden Design System Lit web components.
  *
@@ -11,7 +17,11 @@ declare module 'react' {
   namespace JSX {
     interface IntrinsicElements {
       'garden-nav': React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement> & { brand?: string },
+        React.HTMLAttributes<HTMLElement> & {
+          brand?: string;
+          homeHref?: string;
+          links?: GardenNavLink[];
+        },
         HTMLElement
       >;
       'garden-tag': React.DetailedHTMLProps<
@@ -35,7 +45,12 @@ declare module 'react' {
         },
         HTMLElement
       >;
-      'garden-breadcrumb': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement>;
+      'garden-breadcrumb': React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement> & {
+          items?: GardenBreadcrumbItem[];
+        },
+        HTMLElement
+      >;
       'garden-callout': React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement> & {
           variant?: 'note' | 'tip' | 'warning' | 'info';
@@ -62,7 +77,10 @@ declare module 'react' {
         HTMLElement
       >;
       'garden-toc': React.DetailedHTMLProps<
-        React.HTMLAttributes<HTMLElement> & { heading?: string },
+        React.HTMLAttributes<HTMLElement> & {
+          heading?: string;
+          items?: GardenTocEntry[];
+        },
         HTMLElement
       >;
       'garden-article': React.DetailedHTMLProps<

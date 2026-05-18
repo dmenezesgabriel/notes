@@ -1,5 +1,11 @@
 import 'react';
 
+import type {
+  BreadcrumbItem as GardenBreadcrumbItem,
+  NavLink as GardenNavLink,
+  TocEntry as GardenTocEntry,
+} from '@notes/components';
+
 /**
  * JSX type declarations for Garden Lit web components used in stories.
  * Augments React's IntrinsicElements so custom element tags are accepted in TSX.
@@ -38,7 +44,7 @@ declare module 'react' {
       };
 
       'garden-breadcrumb': React.HTMLAttributes<HTMLElement> & {
-        items?: Array<{ label: string; href?: string }>;
+        items?: GardenBreadcrumbItem[];
       };
 
       'garden-callout': React.HTMLAttributes<HTMLElement> & {
@@ -75,21 +81,13 @@ declare module 'react' {
 
       'garden-toc': React.HTMLAttributes<HTMLElement> & {
         heading?: string;
-        items?: Array<{
-          id: string;
-          label: string;
-          depth?: number;
-          active?: boolean;
-        }>;
+        items?: GardenTocEntry[];
       };
 
       'garden-nav': React.HTMLAttributes<HTMLElement> & {
         brand?: string;
-        links?: Array<{
-          label: string;
-          href: string;
-          active?: boolean;
-        }>;
+        homeHref?: string;
+        links?: GardenNavLink[];
       };
 
       'garden-tape': React.HTMLAttributes<HTMLElement> & {

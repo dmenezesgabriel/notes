@@ -22,6 +22,7 @@
     "format": "prettier --write .",
     "typecheck": "pnpm -r run --if-present typecheck",
     "test": "pnpm -r run --if-present test",
+    "validate:atomic-design-boundaries": "node ./scripts/validate-atomic-design-boundaries.mjs",
     "prepare": "husky",
     "site:e2e": "pnpm -C apps/site e2e",
     "site:e2e:ci": "pnpm -C apps/site e2e:ci"

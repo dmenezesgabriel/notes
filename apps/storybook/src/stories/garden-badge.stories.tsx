@@ -7,7 +7,7 @@ interface BadgeArgs {
 }
 
 const meta: Meta<BadgeArgs> = {
-  title: 'Components/GardenBadge',
+  title: 'Atoms/GardenBadge',
   tags: ['autodocs'],
   argTypes: {
     variant: {
@@ -33,9 +33,9 @@ const meta: Meta<BadgeArgs> = {
     docs: {
       description: {
         component:
-          'Eyebrow / section-label text placed above headings. ' +
+          'Atom: eyebrow / section-label text placed above headings. ' +
           'Small caps, letter-spaced, red by default. ' +
-          'Prefixed with `///` separator in the zine style.',
+          'Prefixed with `///` separator in the zine style and themed by the canonical shared tokens.',
       },
     },
   },
@@ -76,9 +76,9 @@ export const AboveHeading: Story = {
     <div
       style={{
         background: 'var(--zine-paper, #f2edd7)',
-        border: '3px solid #0e0c07',
-        borderRight: '5px solid #0e0c07',
-        borderBottom: '5px solid #0e0c07',
+        border: '3px solid var(--zine-ink, #0e0c07)',
+        borderRight: '5px solid var(--zine-ink, #0e0c07)',
+        borderBottom: '5px solid var(--zine-ink, #0e0c07)',
         padding: '1.5rem',
         maxWidth: 480,
       }}
@@ -91,7 +91,7 @@ export const AboveHeading: Story = {
           fontFamily: "'Bebas Neue', sans-serif",
           fontSize: 32,
           letterSpacing: '0.04em',
-          color: '#0e0c07',
+          color: 'var(--zine-ink, #0e0c07)',
           margin: '0 0 0.5rem',
           lineHeight: 1,
         }}
@@ -102,10 +102,10 @@ export const AboveHeading: Story = {
         style={{
           fontFamily: "'Special Elite', serif",
           fontSize: 14,
-          color: '#2c2820',
+          color: 'var(--zine-ink-faded, #2c2820)',
           lineHeight: 1.7,
           margin: 0,
-          borderLeft: '4px solid #0e0c07',
+          borderLeft: '4px solid var(--zine-ink, #0e0c07)',
           paddingLeft: '1rem',
         }}
       >
@@ -125,9 +125,9 @@ export const AllVariants: Story = {
         gap: 12,
         padding: 24,
         background: 'var(--zine-paper, #f2edd7)',
-        border: '3px solid #0e0c07',
-        borderRight: '5px solid #0e0c07',
-        borderBottom: '5px solid #0e0c07',
+        border: '3px solid var(--zine-ink, #0e0c07)',
+        borderRight: '5px solid var(--zine-ink, #0e0c07)',
+        borderBottom: '5px solid var(--zine-ink, #0e0c07)',
         maxWidth: 360,
       }}
     >

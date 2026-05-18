@@ -32,7 +32,7 @@ const meta: Meta<SearchArgs> = {
     docs: {
       description: {
         component:
-          'Typewriter search bar. White background, thick offset border, Cutive Mono font, blinking cursor. ' +
+          'Typewriter search bar used by the home discovery slice and navigation actions. White background, thick offset border, Cutive Mono font, blinking cursor. ' +
           'Fires `garden-search` CustomEvent `{ detail: { query } }` on every keystroke.',
       },
     },
@@ -106,6 +106,33 @@ export const InZineSheet: Story = {
         />
       </div>
       <garden-search placeholder="Search notes, wiki, projects…" kbd="⌘K" />
+    </div>
+  ),
+};
+
+export const HomeHeroSearch: Story = {
+  name: 'Home hero search',
+  render: () => (
+    <div
+      style={{
+        background: 'var(--zine-paper, #f2edd7)',
+        border: '3px solid var(--zine-ink, #0e0c07)',
+        borderTop: 'none',
+        padding: '2rem 1.5rem 2.5rem',
+        maxWidth: 620,
+      }}
+    >
+      <p
+        style={{
+          fontFamily: 'var(--font-body, "Special Elite", serif)',
+          fontSize: 15,
+          color: 'var(--zine-ink-faded, #2c2820)',
+          margin: '0 0 1rem',
+        }}
+      >
+        Search notes across books, software engineering, productivity, and design.
+      </p>
+      <garden-search placeholder="Search notes…" kbd="⌘K" style={{ width: '100%' }} />
     </div>
   ),
 };

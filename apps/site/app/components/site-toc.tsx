@@ -1,13 +1,13 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import type { TocEntry } from '@notes/content';
+import React, { useEffect, useRef } from 'react';
 
-interface TocEntry {
-  id: string;
-  label: string;
-  depth?: number;
-  active?: boolean;
-}
+import {
+  type GardenTocElement,
+  mapTocItemsToGarden,
+  setCustomElementItems,
+} from '../lib/react-lit-adapter';
 
 interface SiteTocProps {
   items: TocEntry[];
@@ -16,17 +16,16 @@ interface SiteTocProps {
 }
 
 /**
- * SiteToc — wraps `<garden-toc>` and sets the `items` array via JS property.
+ * SiteToc — app-level React-Lit adapter for `<garden-toc>`.
+ * Maps note TOC data into the custom-element contract and assigns the
+ * `items` array as a JS property.
  */
-export function SiteToc({ items, heading = 'On this page' }: SiteTocProps) {
-  const ref = useRef<HTMLElement>(null);
+export function SiteToc({ items, heading = 'On this page', slot }: SiteTocProps) {
+  const ref = useRef<GardenTocElement | null>(null);
 
   useEffect(() => {
-    if (ref.current) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      (ref.current as any).items = items;
-    }
+    setCustomElementItems(ref.current, mapTocItemsToGarden(items));
   }, [items]);
 
-  return <garden-toc ref={ref} heading={heading} data-testid="site-toc" />;
+  return <garden-toc ref={ref} slot={slot} heading={heading} data-testid="site-toc" />;
 }

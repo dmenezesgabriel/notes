@@ -6,8 +6,14 @@ interface HighlightArgs {
   label: string;
 }
 
+const proseHighlightStyle = {
+  fontFamily: "'Special Elite', serif",
+  fontSize: 15,
+  color: 'var(--zine-ink-faded, #2c2820)',
+};
+
 const meta: Meta<HighlightArgs> = {
-  title: 'Components/Highlight',
+  title: 'Atoms/GardenHighlight',
   tags: ['autodocs'],
   argTypes: {
     variant: {
@@ -29,7 +35,7 @@ const meta: Meta<HighlightArgs> = {
     docs: {
       description: {
         component:
-          'Zine-edition text highlighter. Background highlight with inline display. Uses `--zine-yellow`, `--zine-blue-lt`, `--zine-red`, `--zine-green-lt` tokens.',
+          'Atom: zine-edition text highlighter. Background highlight with inline display. Uses the canonical shared `--zine-*` tokens.',
       },
     },
   },
@@ -41,7 +47,7 @@ type Story = StoryObj<HighlightArgs>;
 export const Default: Story = {
   name: 'Default (yellow)',
   render: (args) => (
-    <p style={{ fontFamily: "'Special Elite', serif", fontSize: 15, color: '#2c2820' }}>
+    <p style={proseHighlightStyle}>
       A <garden-highlight>{args.label}</garden-highlight> design language for long-form knowledge
       sites.
     </p>
@@ -50,7 +56,7 @@ export const Default: Story = {
 
 export const Blue: Story = {
   render: () => (
-    <p style={{ fontFamily: "'Special Elite', serif", fontSize: 15, color: '#2c2820' }}>
+    <p style={proseHighlightStyle}>
       This is <garden-highlight variant="blue">blue highlighted text</garden-highlight> in a
       sentence.
     </p>
@@ -59,7 +65,7 @@ export const Blue: Story = {
 
 export const Red: Story = {
   render: () => (
-    <p style={{ fontFamily: "'Special Elite', serif", fontSize: 15, color: '#2c2820' }}>
+    <p style={proseHighlightStyle}>
       Warning: <garden-highlight variant="red">Breaking change ahead</garden-highlight>
     </p>
   ),
@@ -67,7 +73,7 @@ export const Red: Story = {
 
 export const Green: Story = {
   render: () => (
-    <p style={{ fontFamily: "'Special Elite', serif", fontSize: 15, color: '#2c2820' }}>
+    <p style={proseHighlightStyle}>
       The <garden-highlight variant="green">grid is the system.</garden-highlight>
     </p>
   ),
@@ -84,16 +90,16 @@ export const AllVariants: Story = {
         background: 'var(--zine-paper, #f2edd7)',
       }}
     >
-      <p style={{ fontFamily: "'Special Elite', serif", fontSize: 15, color: '#2c2820' }}>
+      <p style={proseHighlightStyle}>
         Default: <garden-highlight>yellow highlight</garden-highlight>
       </p>
-      <p style={{ fontFamily: "'Special Elite', serif", fontSize: 15, color: '#2c2820' }}>
+      <p style={proseHighlightStyle}>
         Blue: <garden-highlight variant="blue">blue highlight</garden-highlight>
       </p>
-      <p style={{ fontFamily: "'Special Elite', serif", fontSize: 15, color: '#2c2820' }}>
+      <p style={proseHighlightStyle}>
         Red: <garden-highlight variant="red">red highlight</garden-highlight>
       </p>
-      <p style={{ fontFamily: "'Special Elite', serif", fontSize: 15, color: '#2c2820' }}>
+      <p style={proseHighlightStyle}>
         Green: <garden-highlight variant="green">green highlight</garden-highlight>
       </p>
     </div>

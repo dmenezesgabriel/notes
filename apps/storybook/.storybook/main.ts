@@ -31,8 +31,11 @@ const config: StorybookConfig = {
   viteFinal: async (config) => {
     config.resolve ??= {};
 
-    // Deduplicate Lit so only one version loads across all packages
-    config.resolve.dedupe = ['lit', '@lit/reactive-element', 'lit-html', 'lit-element'];
+    // Deduplicate the public Lit entrypoint across workspaces.
+    // Dedupe of nested packages such as `@lit/reactive-element` breaks
+    // Storybook's production build under pnpm because those transitive
+    // entries are not hoisted to a top-level node_modules location.
+    config.resolve.dedupe = ['lit'];
 
     // Pre-bundle @notes/components and its Lit deps.
     // We intentionally resolve the package via its built dist/ output
@@ -45,6 +48,8 @@ const config: StorybookConfig = {
       '@notes/components',
       'lit',
       'lit/decorators.js',
+      'lit-html',
+      '@lit/reactive-element',
     ];
 
     return config;

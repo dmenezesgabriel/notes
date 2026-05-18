@@ -42,8 +42,9 @@ export class GardenBreadcrumb extends LitElement {
         align-items: center;
         padding: 5px 10px;
         margin: 0;
+
         /* Uses token so dark mode can override */
-        background: var(--breadcrumb-bg, #ffffff);
+        background: var(--breadcrumb-bg, #fff);
         border: 2px solid var(--zine-ink, #0e0c07);
         border-right: 3px solid var(--zine-ink, #0e0c07);
         border-bottom: 3px solid var(--zine-ink, #0e0c07);
@@ -54,6 +55,7 @@ export class GardenBreadcrumb extends LitElement {
         align-items: center;
         font-family: var(--font-mono, 'Cutive Mono', monospace);
         font-size: 12px;
+
         /* Use ink-faded for non-link crumbs — better contrast than muted */
         color: var(--zine-ink-faded, #2c2820);
       }

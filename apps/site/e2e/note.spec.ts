@@ -1,8 +1,10 @@
 import type { Page } from '@playwright/test';
 import { expect, test } from '@playwright/test';
 
-// Use a stable note that definitely exists in the vault
+// Use stable notes that definitely exist in the vault.
 const STABLE_NOTE_SLUG = '/notes/books/a-philosophy-of-software-design';
+const NOTE_WITH_SIDEBAR_AND_BACKLINKS =
+  '/notes/data-engineer/concepts/data-modeling/sql/data-modeling-cardinality';
 
 /**
  * Note detail page tests — navigate once, assert many times.
@@ -62,9 +64,21 @@ test.describe('Note detail page', () => {
   });
 
   test('renders a category tag', async () => {
-    // At least one garden-tag should be visible in the article header
-    const tag = page.locator('article garden-tag').first();
+    // Meta tags are slotted into <garden-article> from the light DOM.
+    const tag = page.locator('garden-tag[slot="meta"]').first();
     await expect(tag).toBeVisible();
+  });
+});
+
+test.describe('Note detail page — sidebar and backlinks state', () => {
+  test('renders the table of contents for a note with enough headings', async ({ page }) => {
+    await page.goto(NOTE_WITH_SIDEBAR_AND_BACKLINKS);
+    await expect(page.getByTestId('site-toc')).toBeVisible();
+  });
+
+  test('renders backlinks for a note that is linked from other notes', async ({ page }) => {
+    await page.goto(NOTE_WITH_SIDEBAR_AND_BACKLINKS);
+    await expect(page.locator('li[slot="backlinks"]').first()).toBeVisible();
   });
 });
 
