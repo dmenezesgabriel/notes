@@ -101,4 +101,27 @@ test.describe('Navigation', () => {
 
     await expect(page).toHaveURL(/\/notes\/?$/);
   });
+
+  /**
+   * Clicking primary nav links inside garden-nav's shadow DOM navigates to
+   * a URL under /notes/...
+   *
+   * Playwright auto-pierces shadow roots when using getByRole(), so no manual
+   * shadowRoot traversal is needed.
+   */
+  test('primary nav links navigate to URLs under /notes', async ({ page }) => {
+    await page.goto(HOME_PATH);
+
+    const siteNav = page.getByTestId('site-nav');
+
+    // Click the "notes" nav link and assert we land under /notes
+    await siteNav.getByRole('link', { name: /^notes$/i }).click();
+    await expect(page).toHaveURL(/\/notes\/?/);
+
+    await page.goto(HOME_PATH);
+
+    // Click the "books" nav link and assert we land under /notes/books
+    await siteNav.getByRole('link', { name: /^books$/i }).click();
+    await expect(page).toHaveURL(/\/notes\/books\/?/);
+  });
 });

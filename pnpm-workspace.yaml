@@ -2,3 +2,9 @@ packages:
   - 'apps/*'
   - 'packages/*'
   - 'configs/*'
+allowBuilds:
+  '@swc/core': true
+  esbuild: true
+  sharp: true
+  sqlite3: false
+  unrs-resolver: true
