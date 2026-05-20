@@ -7,7 +7,7 @@ interface BlockquoteArgs {
 }
 
 const meta: Meta<BlockquoteArgs> = {
-  title: 'Components/Blockquote',
+  title: 'Molecules/GardenBlockquote',
   tags: ['autodocs'],
   argTypes: {
     variant: {

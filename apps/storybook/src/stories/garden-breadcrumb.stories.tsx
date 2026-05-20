@@ -6,7 +6,7 @@ interface BreadcrumbArgs {
 }
 
 const meta: Meta<BreadcrumbArgs> = {
-  title: 'Components/GardenBreadcrumb',
+  title: 'Molecules/GardenBreadcrumb',
   tags: ['autodocs'],
   argTypes: {
     items: {

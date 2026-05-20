@@ -73,6 +73,15 @@ describe('garden-nav', () => {
     expect(handler).toHaveBeenCalledOnce();
   });
 
+  it('uses dedicated dark-mode nav tokens to keep active and inactive controls distinct', () => {
+    const renderText = (el as unknown as { render(): unknown }).render.toString();
+
+    expect(renderText).toContain('var(--nav-active-text, #0e0c07)');
+    expect(renderText).toContain('var(--nav-active-bg, #f5c800)');
+    expect(renderText).toContain('var(--nav-link-color, #ccc)');
+    expect(renderText).toContain('var(--nav-toggle-icon, rgb(255 255 255 / 40%))');
+  });
+
   it('renders a header element as the banner landmark', async () => {
     await waitForUpdate(el);
     // <header> has implicit role="banner" — no explicit role needed

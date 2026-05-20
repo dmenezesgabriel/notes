@@ -1,11 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import { expect } from 'storybook/test';
+
+import { expectShadowTextContrast } from './story-helpers/dark-mode-contrast';
+import { darkBannerTokens, DarkThemeFrame } from './story-helpers/dark-theme-frame';
 
 interface BannerArgs {
   text: string;
 }
 
 const meta: Meta<BannerArgs> = {
-  title: 'Components/Banner',
+  title: 'Undecided/GardenBanner',
   tags: ['autodocs'],
   argTypes: {
     text: {
@@ -21,7 +25,7 @@ const meta: Meta<BannerArgs> = {
     docs: {
       description: {
         component:
-          'Zine-edition misregistration banner. Xerox artifact with scrolling marquee text and blue shadow offset. Uses `--zine-red`, `--zine-yellow`, `--zine-blue` tokens.',
+          'Status: `undecided` shared component. Zine-edition misregistration banner with scrolling marquee text and blue shadow offset. The live site still keeps its marquee composition route-local, so do not add new shared usage until a second real route proves the contract. Uses `--zine-red`, `--zine-yellow`, and `--zine-blue` tokens.',
       },
     },
   },
@@ -60,4 +64,31 @@ export const InPageContext: Story = {
       </div>
     </div>
   ),
+};
+
+export const DarkModeContrastReview: Story = {
+  name: 'Dark mode contrast review',
+  tags: ['dark-contrast'],
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+  render: () => (
+    <DarkThemeFrame
+      label="Dark-mode banner contrast review"
+      style={{ minHeight: 120, background: 'var(--ds-page, #11111b)' }}
+    >
+      <garden-banner
+        style={darkBannerTokens}
+        text="KNOWLEDGE GARDEN · NEU-BRUTALISM × PUNK ZINE · NOTES · WIKI · SECOND BRAIN"
+      ></garden-banner>
+    </DarkThemeFrame>
+  ),
+  play: async ({ canvasElement }) => {
+    expect(canvasElement.querySelector('[data-theme="dark"]')).not.toBeNull();
+
+    const banner = canvasElement.querySelector('garden-banner');
+
+    expect(banner).not.toBeNull();
+    expectShadowTextContrast(banner as Element, '[part="text"]', 'Banner marquee text');
+  },
 };

@@ -8,7 +8,7 @@ interface CalloutArgs {
 }
 
 const meta: Meta<CalloutArgs> = {
-  title: 'Components/GardenCallout',
+  title: 'Molecules/GardenCallout',
   tags: ['autodocs'],
   argTypes: {
     variant: {

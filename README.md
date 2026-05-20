@@ -15,6 +15,17 @@ I chose this workflow because it allows me to keep my notes as plain Markdown fi
 
 ## Development
 
+## Design system workflow
+
+Use these artifacts together when changing shared UI:
+
+- Storybook overview: `pnpm storybook:dev` → `Design System/Overview`
+- Storybook governance: `Design System/Governance`
+- Governance doc: `docs/design-system-governance.md`
+- Migration matrix: `docs/atomic-design-migration-matrix.md`
+- Vocabulary: `CONTEXT.md`
+- ADRs: `docs/adrs/001-atomic-component-promotion-boundary.md`, `docs/adrs/002-design-token-source-of-truth.md`, `docs/adrs/003-react-lit-interop-boundary.md`
+
 ### UI
 
 1. Penpot

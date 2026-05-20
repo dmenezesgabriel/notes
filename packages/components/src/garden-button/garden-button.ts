@@ -30,6 +30,7 @@ export class GardenButton extends LitElement {
     css`
       :host {
         display: inline-block;
+        color: var(--zine-ink, #0e0c07);
       }
 
       :host([disabled]) {
@@ -53,7 +54,7 @@ export class GardenButton extends LitElement {
         border-bottom: 5px solid var(--zine-ink, #0e0c07);
         cursor: pointer;
         background: var(--zine-paper, #f2edd7);
-        color: var(--zine-ink, #0e0c07);
+        color: inherit;
         white-space: nowrap;
         position: relative;
         transition:
@@ -79,7 +80,6 @@ export class GardenButton extends LitElement {
       /* Primary — red */
       button.primary {
         background: var(--zine-red, #d42b2b);
-        color: #fff;
         border-color: var(--zine-red-dark, #8a0000);
       }
 
@@ -90,14 +90,13 @@ export class GardenButton extends LitElement {
       /* Yellow */
       button.yellow {
         background: var(--zine-yellow, #f5c800);
-        color: var(--zine-ink, #0e0c07);
+        color: inherit;
         border-color: var(--zine-ink, #0e0c07);
       }
 
       /* Blue */
       button.blue {
         background: var(--zine-blue, #1a3c8f);
-        color: #fff;
         border-color: var(--zine-ink, #0e0c07);
       }
 
@@ -106,16 +105,27 @@ export class GardenButton extends LitElement {
         border-color: var(--zine-muted, #6b6050);
         border-right-color: var(--zine-muted, #6b6050);
         border-bottom-color: var(--zine-muted, #6b6050);
-        color: var(--zine-muted, #6b6050);
         background: transparent;
       }
 
       button.ghost:hover {
         border-color: var(--zine-ink, #0e0c07);
-        color: var(--zine-ink, #0e0c07);
       }
     `,
   ];
+
+  override updated() {
+    const hostColor =
+      this.variant === 'primary' || this.variant === 'blue'
+        ? 'var(--zine-filled-text, #fff)'
+        : this.variant === 'yellow'
+          ? 'var(--zine-light-fill-text, var(--zine-ink, #0e0c07))'
+          : this.variant === 'ghost'
+            ? 'var(--zine-muted, #6b6050)'
+            : 'var(--zine-ink, #0e0c07)';
+
+    this.style.color = hostColor;
+  }
 
   render() {
     const variantMap: Record<ButtonVariant, string> = {

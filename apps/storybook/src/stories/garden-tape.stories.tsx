@@ -7,7 +7,7 @@ interface TapeArgs {
 }
 
 const meta: Meta<TapeArgs> = {
-  title: 'Components/Tape',
+  title: 'Undecided/GardenTape',
   tags: ['autodocs'],
   argTypes: {
     variant: {
@@ -29,7 +29,7 @@ const meta: Meta<TapeArgs> = {
     docs: {
       description: {
         component:
-          'Zine-edition decorative tape strip. Diagonal tape element for scrapbook/decorative effect. Uses `--font-mono` token.',
+          'Status: `undecided` shared component. Decorative scrapbook tape strip with Storybook-only usage today. Use route-local decoration instead of expanding shared usage until a reusable cross-route contract exists. Uses the `--font-mono` token.',
       },
     },
   },

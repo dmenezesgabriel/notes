@@ -10,7 +10,7 @@ interface CardArgs {
 }
 
 const metaDef: Meta<CardArgs> = {
-  title: 'Components/GardenCard',
+  title: 'Organisms/GardenCard',
   tags: ['autodocs'],
   argTypes: {
     variant: {

@@ -1,5 +1,9 @@
 import type { TagVariant } from '@notes/components';
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import { expect } from 'storybook/test';
+
+import { expectShadowTextContrast } from './story-helpers/dark-mode-contrast';
+import { darkFilledComponentTokens, DarkThemeFrame } from './story-helpers/dark-theme-frame';
 
 interface TagArgs {
   variant: TagVariant;
@@ -120,4 +124,63 @@ export const InCardFooter: Story = {
       </garden-tag>
     </garden-card>
   ),
+};
+
+export const DarkModeContrastReview: Story = {
+  name: 'Dark mode contrast review',
+  tags: ['dark-contrast'],
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+  render: () => (
+    <DarkThemeFrame
+      label="Dark-mode tag contrast review"
+      style={{
+        display: 'flex',
+        gap: 8,
+        flexWrap: 'wrap',
+        padding: 24,
+        background: 'var(--ds-page, #11111b)',
+        border: '3px solid var(--zine-ink, #cdd6f4)',
+        borderRight: '5px solid var(--zine-ink, #cdd6f4)',
+        borderBottom: '5px solid var(--zine-ink, #cdd6f4)',
+        maxWidth: 500,
+      }}
+    >
+      <garden-tag style={darkFilledComponentTokens} variant="accent">
+        LIT ELEMENTS
+      </garden-tag>
+      <garden-tag style={darkFilledComponentTokens} variant="blue">
+        NEXT.JS SSG
+      </garden-tag>
+      <garden-tag style={darkFilledComponentTokens} variant="yellow">
+        STORYBOOK
+      </garden-tag>
+      <garden-tag style={darkFilledComponentTokens} variant="green">
+        RESPONSIVE
+      </garden-tag>
+      <garden-tag style={darkFilledComponentTokens} variant="sage">
+        PKM
+      </garden-tag>
+    </DarkThemeFrame>
+  ),
+  play: async ({ canvasElement }) => {
+    expect(canvasElement.querySelector('[data-theme="dark"]')).not.toBeNull();
+
+    const tagHosts = Array.from(canvasElement.querySelectorAll('garden-tag'));
+    const [accentTag, blueTag, yellowTag, greenTag, sageTag] = tagHosts;
+
+    expect(tagHosts).toHaveLength(5);
+    expect(accentTag).toBeDefined();
+    expect(blueTag).toBeDefined();
+    expect(yellowTag).toBeDefined();
+    expect(greenTag).toBeDefined();
+    expect(sageTag).toBeDefined();
+
+    expectShadowTextContrast(accentTag as Element, '[part="base"]', 'Accent tag label');
+    expectShadowTextContrast(blueTag as Element, '[part="base"]', 'Blue tag label');
+    expectShadowTextContrast(yellowTag as Element, '[part="base"]', 'Yellow tag label');
+    expectShadowTextContrast(greenTag as Element, '[part="base"]', 'Green tag label');
+    expectShadowTextContrast(sageTag as Element, '[part="base"]', 'Sage tag label');
+  },
 };

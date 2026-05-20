@@ -68,6 +68,18 @@ Update this file when a domain term is first defined or clarified. Do not batch 
 **Usage**: `docs/atomic-design-migration-matrix.md`, issue sequencing, and human approval of shared-vs-local boundaries.
 **Constraints**: The matrix must stay aligned with `CONTEXT.md`, the ADRs, and the actual codebase; unresolved promotions must be marked `undecided` instead of being silently assumed.
 
+### Undecided Shared Component
+
+**Definition**: A shared-package artifact whose long-term place in the atomic system is not yet approved because real route reuse is still unproven.
+**Usage**: Storybook `Undecided/*` sections, migration-matrix notes, and cleanup planning.
+**Constraints**: Do not add new shared usage while the status is `undecided`; prefer route-local composition until the Component Promotion Boundary is satisfied.
+
+### Legacy Export
+
+**Definition**: A backward-compatibility export that remains available temporarily but is no longer part of the approved active shared taxonomy.
+**Usage**: Storybook `Legacy/*` sections, migration-matrix notes, and deprecation guidance.
+**Constraints**: Do not add new usage; every legacy export must have an explicit replacement path before removal.
+
 ---
 
 ## Decisions and constraints

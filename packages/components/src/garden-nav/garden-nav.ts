@@ -1,5 +1,6 @@
 import { css, html, LitElement, nothing } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
+import { styleMap } from 'lit/directives/style-map.js';
 
 import { baseStyles } from '../styles/base';
 
@@ -170,7 +171,6 @@ export class GardenNav extends LitElement {
         font-family: var(--font-stamp, 'Black Han Sans', sans-serif);
         font-size: 12px;
         letter-spacing: 0.05em;
-        color: var(--nav-link-color, #ccc);
         padding: 5px 12px;
         border: 2px solid transparent;
         cursor: pointer;
@@ -186,8 +186,6 @@ export class GardenNav extends LitElement {
       }
 
       [part='link'][aria-current='page'] {
-        background: var(--nav-active-bg, #f5c800);
-        color: var(--nav-active-text, #0e0c07);
         border-color: var(--nav-active-bg, #f5c800);
       }
 
@@ -202,7 +200,7 @@ export class GardenNav extends LitElement {
         align-items: center;
         gap: 2px;
         margin-left: 8px;
-        border: 2px solid rgb(255 255 255 / 15%);
+        border: 2px solid var(--nav-toggle-border, rgb(255 255 255 / 15%));
         padding: 2px;
       }
 
@@ -215,7 +213,6 @@ export class GardenNav extends LitElement {
         align-items: center;
         justify-content: center;
         background: transparent;
-        color: rgb(255 255 255 / 40%);
         font-size: 13px;
         font-family: var(--font-mono, 'Cutive Mono', monospace);
         letter-spacing: 0;
@@ -226,6 +223,13 @@ export class GardenNav extends LitElement {
 
       .theme-btn.active {
         background: var(--nav-active-bg, #f5c800);
+      }
+
+      .theme-btn:hover {
+        color: var(--zine-yellow, #f5c800);
+      }
+
+      .theme-btn.active:hover {
         color: var(--nav-active-text, #0e0c07);
       }
 
@@ -263,7 +267,21 @@ export class GardenNav extends LitElement {
           <nav part="links" aria-label="Main navigation">
             ${this.links.map(
               (link) => html`
-                <a part="link" href=${link.href} aria-current=${link.active ? 'page' : nothing}>
+                <a
+                  part="link"
+                  href=${link.href}
+                  aria-current=${link.active ? 'page' : nothing}
+                  style=${styleMap(
+                    link.active
+                      ? {
+                          color: 'var(--nav-active-text, #0e0c07)',
+                          backgroundColor: 'var(--nav-active-bg, #f5c800)',
+                        }
+                      : {
+                          color: 'var(--nav-link-color, #ccc)',
+                        },
+                  )}
+                >
                   ${link.label.toUpperCase()}
                 </a>
               `,
@@ -276,6 +294,16 @@ export class GardenNav extends LitElement {
             <button
               part="theme-light"
               class=${'theme-btn' + (this._theme === 'light' ? ' active' : '')}
+              style=${styleMap(
+                this._theme === 'light'
+                  ? {
+                      color: 'var(--nav-active-text, #0e0c07)',
+                      backgroundColor: 'var(--nav-active-bg, #f5c800)',
+                    }
+                  : {
+                      color: 'var(--nav-toggle-icon, rgb(255 255 255 / 40%))',
+                    },
+              )}
               aria-pressed=${this._theme === 'light'}
               aria-label="Light theme"
               @click=${() => this._setTheme('light')}
@@ -285,6 +313,16 @@ export class GardenNav extends LitElement {
             <button
               part="theme-dark"
               class=${'theme-btn' + (this._theme === 'dark' ? ' active' : '')}
+              style=${styleMap(
+                this._theme === 'dark'
+                  ? {
+                      color: 'var(--nav-active-text, #0e0c07)',
+                      backgroundColor: 'var(--nav-active-bg, #f5c800)',
+                    }
+                  : {
+                      color: 'var(--nav-toggle-icon, rgb(255 255 255 / 40%))',
+                    },
+              )}
               aria-pressed=${this._theme === 'dark'}
               aria-label="Dark theme"
               @click=${() => this._setTheme('dark')}

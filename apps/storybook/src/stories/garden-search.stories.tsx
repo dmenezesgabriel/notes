@@ -7,7 +7,7 @@ interface SearchArgs {
 }
 
 const meta: Meta<SearchArgs> = {
-  title: 'Components/GardenSearch',
+  title: 'Molecules/GardenSearch',
   tags: ['autodocs'],
   argTypes: {
     placeholder: {

@@ -7,7 +7,7 @@ interface SheetArgs {
 }
 
 const meta: Meta<SheetArgs> = {
-  title: 'Components/Sheet',
+  title: 'Undecided/GardenSheet',
   tags: ['autodocs'],
   argTypes: {
     pinColor: {
@@ -29,7 +29,7 @@ const meta: Meta<SheetArgs> = {
     docs: {
       description: {
         component:
-          'Zine-edition paper sheet pinned to corkboard. Simulates pinned paper with pushpin and optional heading. Uses `--zine-paper`, `--zine-shadow-lg`, `--zine-border` tokens.',
+          'Status: `undecided` shared component. Zine-edition paper sheet pinned to corkboard with an optional heading. Current live routes still keep pinned-paper wrappers route-local, so do not add new shared usage until reuse is proven. Uses `--zine-paper`, `--zine-shadow-lg`, and `--zine-border` tokens.',
       },
     },
   },

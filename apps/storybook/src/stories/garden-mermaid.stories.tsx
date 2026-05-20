@@ -7,7 +7,7 @@ interface MermaidArgs {
 }
 
 const meta: Meta<MermaidArgs> = {
-  title: 'Components/GardenMermaid',
+  title: 'Molecules/GardenMermaid',
   tags: ['autodocs'],
   argTypes: {
     diagram: {

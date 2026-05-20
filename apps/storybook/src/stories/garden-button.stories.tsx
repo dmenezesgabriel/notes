@@ -1,5 +1,9 @@
 import type { ButtonVariant } from '@notes/components';
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import { expect } from 'storybook/test';
+
+import { expectShadowTextContrast } from './story-helpers/dark-mode-contrast';
+import { darkFilledComponentTokens, DarkThemeFrame } from './story-helpers/dark-theme-frame';
 
 interface ButtonArgs {
   variant: ButtonVariant;
@@ -128,4 +132,53 @@ export const AllVariants: Story = {
       <garden-button variant="ghost">✕ CANCEL</garden-button>
     </div>
   ),
+};
+
+export const DarkModeContrastReview: Story = {
+  name: 'Dark mode contrast review',
+  tags: ['dark-contrast'],
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+  render: () => (
+    <DarkThemeFrame
+      label="Dark-mode button contrast review"
+      style={{
+        display: 'flex',
+        flexWrap: 'wrap',
+        gap: 12,
+        padding: 24,
+        alignItems: 'center',
+        background: 'var(--ds-page, #11111b)',
+        border: '3px solid var(--zine-ink, #cdd6f4)',
+        borderRight: '5px solid var(--zine-ink, #cdd6f4)',
+        borderBottom: '5px solid var(--zine-ink, #cdd6f4)',
+      }}
+    >
+      <garden-button style={darkFilledComponentTokens} variant="primary">
+        ✦ PUBLISH NOTE
+      </garden-button>
+      <garden-button style={darkFilledComponentTokens} variant="yellow">
+        ◆ SAVE DRAFT
+      </garden-button>
+      <garden-button style={darkFilledComponentTokens} variant="blue">
+        ↑ EXPORT
+      </garden-button>
+    </DarkThemeFrame>
+  ),
+  play: async ({ canvasElement }) => {
+    expect(canvasElement.querySelector('[data-theme="dark"]')).not.toBeNull();
+
+    const buttonHosts = Array.from(canvasElement.querySelectorAll('garden-button'));
+    const [primaryButton, yellowButton, blueButton] = buttonHosts;
+
+    expect(buttonHosts).toHaveLength(3);
+    expect(primaryButton).toBeDefined();
+    expect(yellowButton).toBeDefined();
+    expect(blueButton).toBeDefined();
+
+    expectShadowTextContrast(primaryButton as Element, 'button', 'Primary button label');
+    expectShadowTextContrast(yellowButton as Element, 'button', 'Yellow button label');
+    expectShadowTextContrast(blueButton as Element, 'button', 'Blue button label');
+  },
 };

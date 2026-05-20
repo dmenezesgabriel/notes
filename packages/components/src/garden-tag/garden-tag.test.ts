@@ -2,6 +2,8 @@ import './garden-tag';
 
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
+import { GardenTag } from './garden-tag';
+
 function waitForUpdate(el: Element): Promise<void> {
   return (el as unknown as { updateComplete: Promise<void> }).updateComplete;
 }
@@ -73,6 +75,14 @@ describe('garden-tag', () => {
     const anchor = el.shadowRoot!.querySelector('a[part="base"]');
     expect(anchor).not.toBeNull();
     expect(anchor!.getAttribute('href')).toBe('/notes/test');
+  });
+
+  it('uses the shared filled-text token for filled dark-mode variants', () => {
+    const styleText = String(GardenTag.styles);
+    const updatedText = GardenTag.prototype.updated.toString();
+
+    expect(updatedText).toContain('var(--zine-filled-text, #fff)');
+    expect(styleText).toContain('color: inherit;');
   });
 
   it('has role="note" for accessibility', async () => {

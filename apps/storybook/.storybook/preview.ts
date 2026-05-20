@@ -1,4 +1,4 @@
-import '@notes/components'; // registers all Lit custom elements globally
+import '../src/register-components'; // registers all Lit custom elements globally from the built shared package
 // Import Garden design tokens — CSS custom properties cascade into all shadow DOMs
 import '../src/styles/tokens.css';
 

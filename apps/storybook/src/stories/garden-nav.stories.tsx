@@ -1,5 +1,9 @@
 import type { NavLink } from '@notes/components';
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import { expect } from 'storybook/test';
+
+import { expectShadowTextContrast } from './story-helpers/dark-mode-contrast';
+import { darkNavTokens, DarkThemeFrame } from './story-helpers/dark-theme-frame';
 
 interface NavArgs {
   brand: string;
@@ -13,7 +17,7 @@ const siteLinks: NavLink[] = [
 ];
 
 const meta: Meta<NavArgs> = {
-  title: 'Components/GardenNav',
+  title: 'Organisms/GardenNav',
   tags: ['autodocs'],
   argTypes: {
     brand: {
@@ -158,4 +162,69 @@ export const NoteRouteContext: Story = {
       </main>
     </div>
   ),
+};
+
+export const DarkModeContrastReview: Story = {
+  name: 'Dark mode contrast review',
+  tags: ['dark-contrast'],
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+  render: () => (
+    <DarkThemeFrame
+      label="Dark-mode navigation contrast review"
+      style={{ minHeight: '30vh', background: 'var(--ds-page, #11111b)' }}
+    >
+      <garden-nav
+        data-theme="dark"
+        style={darkNavTokens}
+        brand="garden.dev"
+        links={siteLinks}
+        homeHref="/notes/"
+      />
+    </DarkThemeFrame>
+  ),
+  play: async ({ canvasElement }) => {
+    expect(canvasElement.querySelector('[data-theme="dark"]')).not.toBeNull();
+
+    await new Promise((resolve) => globalThis.setTimeout(resolve, 0));
+
+    const nav = canvasElement.querySelector('garden-nav');
+
+    expect(nav).not.toBeNull();
+
+    const navElement = nav as unknown as Element & {
+      shadowRoot: ShadowRoot | null;
+      setTheme: (theme: 'light' | 'dark') => void;
+      updateComplete: Promise<boolean>;
+    };
+
+    navElement.setTheme('dark');
+    await navElement.updateComplete;
+
+    const activeLink = navElement.shadowRoot?.querySelector('[part="link"][aria-current="page"]');
+    const inactiveLink = navElement.shadowRoot?.querySelector('[part="link"]:not([aria-current])');
+    const activeThemeButton = navElement.shadowRoot?.querySelector('[part="theme-dark"]');
+    const inactiveThemeButton = navElement.shadowRoot?.querySelector('[part="theme-light"]');
+
+    expect(activeLink).not.toBeNull();
+    expect(inactiveLink).not.toBeNull();
+    expect(activeThemeButton).not.toBeNull();
+    expect(inactiveThemeButton).not.toBeNull();
+    expect(activeLink?.getAttribute('aria-current')).toBe('page');
+    expect(inactiveLink?.getAttribute('aria-current')).toBeNull();
+    expect(activeThemeButton?.getAttribute('aria-pressed')).toBe('true');
+    expect(inactiveThemeButton?.getAttribute('aria-pressed')).toBe('false');
+    expect(getComputedStyle(activeThemeButton as Element).backgroundColor).not.toBe(
+      getComputedStyle(inactiveThemeButton as Element).backgroundColor,
+    );
+    expect(getComputedStyle(activeThemeButton as Element).color).not.toBe(
+      getComputedStyle(inactiveThemeButton as Element).color,
+    );
+
+    expectShadowTextContrast(navElement, '[part="link"][aria-current="page"]', 'Active nav link');
+    expectShadowTextContrast(navElement, '[part="link"]:not([aria-current])', 'Inactive nav link');
+    expectShadowTextContrast(navElement, '[part="theme-dark"]', 'Active dark-theme button');
+    expectShadowTextContrast(navElement, '[part="theme-light"]', 'Inactive light-theme button');
+  },
 };

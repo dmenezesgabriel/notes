@@ -18,3 +18,4 @@ test-results
 tsconfig.tsbuildinfo
 .playwright-mcp
 out
+apps/storybook/storybook-static

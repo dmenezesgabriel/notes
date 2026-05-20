@@ -27,6 +27,7 @@ export class GardenTag extends LitElement {
     css`
       :host {
         display: inline-block;
+        color: var(--zine-ink, #0e0c07);
       }
 
       [part='base'] {
@@ -39,7 +40,7 @@ export class GardenTag extends LitElement {
         padding: 4px 10px;
         border: 2px solid var(--zine-ink, #0e0c07);
         background: var(--zine-paper, #f2edd7);
-        color: var(--zine-ink, #0e0c07);
+        color: inherit;
         box-shadow: 2px 2px 0 var(--zine-ink, #0e0c07);
         white-space: nowrap;
         text-decoration: none;
@@ -73,7 +74,6 @@ export class GardenTag extends LitElement {
       /* Variants */
       [part='base'].accent {
         background: var(--zine-red, #d42b2b);
-        color: #fff;
         border-color: var(--zine-ink, #0e0c07);
         box-shadow: 2px 2px 0 var(--zine-red-dark, #8a0000);
       }
@@ -81,26 +81,38 @@ export class GardenTag extends LitElement {
       [part='base'].sage,
       [part='base'].green {
         background: var(--zine-green, #1d6b2e);
-        color: #fff;
         border-color: var(--zine-ink, #0e0c07);
         box-shadow: 2px 2px 0 var(--zine-ink, #0e0c07);
       }
 
       [part='base'].yellow {
         background: var(--zine-yellow, #f5c800);
-        color: var(--zine-ink, #0e0c07);
+        color: inherit;
         border-color: var(--zine-ink, #0e0c07);
         box-shadow: 2px 2px 0 var(--zine-ink, #0e0c07);
       }
 
       [part='base'].blue {
         background: var(--zine-blue, #1a3c8f);
-        color: #fff;
         border-color: var(--zine-ink, #0e0c07);
         box-shadow: 2px 2px 0 var(--zine-ink, #0e0c07);
       }
     `,
   ];
+
+  override updated() {
+    const hostColor =
+      this.variant === 'accent' ||
+      this.variant === 'sage' ||
+      this.variant === 'green' ||
+      this.variant === 'blue'
+        ? 'var(--zine-filled-text, #fff)'
+        : this.variant === 'yellow'
+          ? 'var(--zine-light-fill-text, var(--zine-ink, #0e0c07))'
+          : 'var(--zine-ink, #0e0c07)';
+
+    this.style.color = hostColor;
+  }
 
   render() {
     const variantMap: Record<TagVariant, string> = {

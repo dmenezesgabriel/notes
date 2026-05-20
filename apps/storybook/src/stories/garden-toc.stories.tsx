@@ -15,7 +15,7 @@ const defaultItems: TocEntry[] = [
 ];
 
 const meta: Meta<TocArgs> = {
-  title: 'Components/GardenToc',
+  title: 'Organisms/GardenToc',
   tags: ['autodocs'],
   argTypes: {
     heading: {

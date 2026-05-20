@@ -25,6 +25,7 @@ export class GardenBanner extends LitElement {
       :host {
         display: block;
         overflow: hidden;
+        color: var(--zine-banner-text, #fff);
       }
 
       [part='wrapper'] {
@@ -54,7 +55,7 @@ export class GardenBanner extends LitElement {
         font-family: var(--font-display, 'Bebas Neue', sans-serif);
         font-size: 15px;
         letter-spacing: 0.25em;
-        color: var(--zine-yellow, #f5c800);
+        color: inherit;
         text-transform: uppercase;
         white-space: nowrap;
         position: relative;
@@ -73,6 +74,10 @@ export class GardenBanner extends LitElement {
       }
     `,
   ];
+
+  override updated() {
+    this.style.color = 'var(--zine-banner-text, #fff)';
+  }
 
   render() {
     return html`

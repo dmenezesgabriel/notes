@@ -68,6 +68,13 @@
   --nav-link-color: #cccccc;
   --nav-active-bg: #f5c800;
   --nav-active-text: #0e0c07;
+  --nav-toggle-border: rgb(255 255 255 / 24%);
+  --nav-toggle-icon: #cccccc;
+
+  /* ── Shared contrast tokens ──────────────────────────────────────────── */
+  --zine-filled-text: #ffffff;
+  --zine-light-fill-text: #0e0c07;
+  --zine-banner-text: #ffffff;
 
   /* ── Component surface tokens (dark-mode-overridable) ────────────────── */
   --breadcrumb-bg: #ffffff;
@@ -168,6 +175,13 @@
   --nav-link-color: #bac2de;
   --nav-active-bg: #f9e2af;
   --nav-active-text: #1e1e2e;
+  --nav-toggle-border: rgb(186 194 222 / 42%);
+  --nav-toggle-icon: #bac2de;
+
+  /* ── Shared contrast tokens ──────────────────────────────────────────── */
+  --zine-filled-text: #1e1e2e;
+  --zine-light-fill-text: #1e1e2e;
+  --zine-banner-text: #1e1e2e;
 
   /* ── Component surface tokens ────────────────────────────────────────── */
   --breadcrumb-bg: #181825;

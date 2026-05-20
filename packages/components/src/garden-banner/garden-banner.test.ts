@@ -32,13 +32,13 @@ describe('garden-banner', () => {
       expect(styleText).toContain('--zine-red');
     });
 
-    it('should use --zine-yellow token for text color', () => {
+    it('should use a dedicated banner contrast token for text color', () => {
       const styles = GardenBanner.styles;
       const styleText = Array.isArray(styles)
         ? styles.map((s) => (s as CSSStyleSheet).cssText || String(s)).join(' ')
         : String(styles);
 
-      expect(styleText).toContain('--zine-yellow');
+      expect(styleText).toContain('--zine-banner-text');
     });
 
     it('should use --zine-blue token for misregistered shadow', () => {
@@ -57,6 +57,19 @@ describe('garden-banner', () => {
         : String(styles);
 
       expect(styleText).toContain('--font-display');
+    });
+  });
+
+  describe('Dark mode contrast token', () => {
+    it('applies the banner text token through host inheritance', () => {
+      const styles = GardenBanner.styles;
+      const styleText = Array.isArray(styles)
+        ? styles.map((s) => (s as CSSStyleSheet).cssText || String(s)).join(' ')
+        : String(styles);
+      const updatedText = GardenBanner.prototype.updated.toString();
+
+      expect(updatedText).toContain('var(--zine-banner-text, #fff)');
+      expect(styleText).toContain('color: inherit;');
     });
   });
 });

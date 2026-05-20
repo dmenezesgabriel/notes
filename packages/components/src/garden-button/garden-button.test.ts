@@ -2,6 +2,8 @@ import './garden-button';
 
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
+import { GardenButton } from './garden-button';
+
 function waitForUpdate(el: Element): Promise<void> {
   return (el as unknown as { updateComplete: Promise<void> }).updateComplete;
 }
@@ -73,6 +75,14 @@ describe('garden-button', () => {
     await waitForUpdate(el);
     const btn = el.shadowRoot!.querySelector('button')!;
     expect(btn.disabled).toBe(true);
+  });
+
+  it('uses the shared filled-text token for filled dark-mode variants', () => {
+    const styleText = String(GardenButton.styles);
+    const updatedText = GardenButton.prototype.updated.toString();
+
+    expect(updatedText).toContain('var(--zine-filled-text, #fff)');
+    expect(styleText).toContain('color: inherit;');
   });
 
   it('has type="button" by default', async () => {
