@@ -10,7 +10,10 @@ const darkThemeTokens = {
   '--zine-paper': '#1e1e2e',
   '--zine-paper-alt': '#181825',
   '--zine-ink': '#cdd6f4',
+  '--zine-ink-faded': '#bac2de',
   '--zine-muted': '#a6adc8',
+  '--zine-red': '#f38ba8',
+  '--zine-yellow': '#f9e2af',
 } as CSSProperties;
 
 export function DarkThemeFrame({ children, label, style }: DarkThemeFrameProps) {

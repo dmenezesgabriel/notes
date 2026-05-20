@@ -1,5 +1,9 @@
 import type { CalloutVariant } from '@notes/components';
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import { expect } from 'storybook/test';
+
+import { expectShadowTextContrast } from './story-helpers/dark-mode-contrast';
+import { DarkThemeFrame } from './story-helpers/dark-theme-frame';
 
 interface CalloutArgs {
   variant: CalloutVariant;
@@ -96,10 +100,10 @@ export const InArticle: Story = {
   render: () => (
     <div
       style={{
-        background: '#fafaf2',
-        border: '3px solid #0e0c07',
-        borderRight: '5px solid #0e0c07',
-        borderBottom: '5px solid #0e0c07',
+        background: 'var(--zine-paper, #f2edd7)',
+        border: '3px solid var(--zine-ink, #0e0c07)',
+        borderRight: '5px solid var(--zine-ink, #0e0c07)',
+        borderBottom: '5px solid var(--zine-ink, #0e0c07)',
         padding: '1.75rem',
         maxWidth: 560,
         backgroundImage:
@@ -111,7 +115,7 @@ export const InArticle: Story = {
           fontFamily: "'Special Elite', serif",
           fontSize: 14,
           lineHeight: 1.8,
-          color: '#2c2820',
+          color: 'var(--zine-ink-faded, #2c2820)',
           margin: '0 0 1rem',
         }}
       >
@@ -138,9 +142,9 @@ export const AllVariants: Story = {
         gap: 10,
         padding: 24,
         background: 'var(--zine-paper, #f2edd7)',
-        border: '3px solid #0e0c07',
-        borderRight: '5px solid #0e0c07',
-        borderBottom: '5px solid #0e0c07',
+        border: '3px solid var(--zine-ink, #0e0c07)',
+        borderRight: '5px solid var(--zine-ink, #0e0c07)',
+        borderBottom: '5px solid var(--zine-ink, #0e0c07)',
         maxWidth: 520,
       }}
     >
@@ -158,4 +162,33 @@ export const AllVariants: Story = {
       </garden-callout>
     </div>
   ),
+};
+
+export const DarkModeContrastReview: Story = {
+  name: 'Dark mode contrast review',
+  tags: ['dark-contrast'],
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+  render: () => (
+    <DarkThemeFrame
+      label="Dark-mode callout contrast review"
+      style={{ padding: '2rem', background: 'var(--ds-page, #11111b)' }}
+    >
+      <garden-callout heading="✦ NOTE" style={{ maxWidth: 480 }}>
+        Dark-mode callout contrast check — heading and body text against callout background.
+      </garden-callout>
+    </DarkThemeFrame>
+  ),
+  play: async ({ canvasElement }) => {
+    expect(canvasElement.querySelector('[data-theme="dark"]')).not.toBeNull();
+
+    await new Promise((resolve) => globalThis.setTimeout(resolve, 0));
+
+    const callout = canvasElement.querySelector('garden-callout');
+
+    expect(callout).not.toBeNull();
+
+    expectShadowTextContrast(callout as Element, '[part="heading"]', 'Callout heading');
+  },
 };

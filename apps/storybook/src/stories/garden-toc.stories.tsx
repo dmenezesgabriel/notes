@@ -1,5 +1,9 @@
 import type { TocEntry } from '@notes/components';
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import { expect } from 'storybook/test';
+
+import { expectShadowTextContrast } from './story-helpers/dark-mode-contrast';
+import { DarkThemeFrame } from './story-helpers/dark-theme-frame';
 
 interface TocArgs {
   heading: string;
@@ -90,10 +94,10 @@ export const InArticleLayout: Story = {
       {/* Reading pane */}
       <div
         style={{
-          background: '#fafaf2',
-          border: '3px solid #0e0c07',
-          borderRight: '5px solid #0e0c07',
-          borderBottom: '5px solid #0e0c07',
+          background: 'var(--zine-paper, #f2edd7)',
+          border: '3px solid var(--zine-ink, #0e0c07)',
+          borderRight: '5px solid var(--zine-ink, #0e0c07)',
+          borderBottom: '5px solid var(--zine-ink, #0e0c07)',
           padding: '1.75rem',
           backgroundImage:
             'repeating-linear-gradient(to bottom, transparent, transparent 31px, rgba(100,120,200,0.1) 31px, rgba(100,120,200,0.1) 32px)',
@@ -103,7 +107,7 @@ export const InArticleLayout: Story = {
           style={{
             fontFamily: "'Cutive Mono', monospace",
             fontSize: 10,
-            color: '#6b6050',
+            color: 'var(--zine-muted, #6b6050)',
             marginBottom: 6,
             letterSpacing: '0.1em',
             textTransform: 'uppercase' as const,
@@ -116,7 +120,7 @@ export const InArticleLayout: Story = {
             fontFamily: "'Bebas Neue', sans-serif",
             fontSize: 26,
             letterSpacing: '0.03em',
-            color: '#0e0c07',
+            color: 'var(--zine-ink, #0e0c07)',
             margin: '0 0 6px',
             lineHeight: 1.15,
           }}
@@ -127,7 +131,7 @@ export const InArticleLayout: Story = {
           style={{
             fontFamily: "'Special Elite', serif",
             fontSize: 14,
-            color: '#2c2820',
+            color: 'var(--zine-ink-faded, #2c2820)',
             lineHeight: 1.8,
             margin: 0,
           }}
@@ -141,4 +145,31 @@ export const InArticleLayout: Story = {
       <garden-toc items={defaultItems} />
     </div>
   ),
+};
+
+export const DarkModeContrastReview: Story = {
+  name: 'Dark mode contrast review',
+  tags: ['dark-contrast'],
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+  render: () => (
+    <DarkThemeFrame
+      label="Dark-mode TOC contrast review"
+      style={{ padding: '2rem', background: 'var(--ds-page, #11111b)' }}
+    >
+      <garden-toc heading="On this page" items={defaultItems} style={{ maxWidth: 200 }} />
+    </DarkThemeFrame>
+  ),
+  play: async ({ canvasElement }) => {
+    expect(canvasElement.querySelector('[data-theme="dark"]')).not.toBeNull();
+
+    await new Promise((resolve) => globalThis.setTimeout(resolve, 0));
+
+    const toc = canvasElement.querySelector('garden-toc');
+
+    expect(toc).not.toBeNull();
+
+    expectShadowTextContrast(toc as Element, '[part="title"]', 'TOC title');
+  },
 };

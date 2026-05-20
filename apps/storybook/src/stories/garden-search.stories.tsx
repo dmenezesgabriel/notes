@@ -1,4 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import { expect } from 'storybook/test';
+
+import { expectShadowTextContrast } from './story-helpers/dark-mode-contrast';
+import { DarkThemeFrame } from './story-helpers/dark-theme-frame';
 
 interface SearchArgs {
   label: string;
@@ -71,7 +75,17 @@ export const FocusIndicator: Story = {
   play: async ({ canvasElement }) => {
     const el = canvasElement.querySelector('garden-search') as HTMLElement;
     const input = el?.shadowRoot?.querySelector('input') as HTMLInputElement | null;
+
+    expect(input?.getAttribute('aria-label')).toBe('Search notes');
+
     input?.focus();
+
+    const wrapper = el?.shadowRoot?.querySelector('[part="wrapper"]') as HTMLElement | null;
+    const outlineColor = wrapper ? getComputedStyle(wrapper).outlineColor : '';
+
+    expect(outlineColor, 'Focus ring should be visible on focused search wrapper').not.toBe(
+      'rgba(0, 0, 0, 0)',
+    );
   },
 };
 
@@ -93,15 +107,15 @@ export const InZineSheet: Story = {
     <div
       style={{
         background: 'var(--zine-paper, #f2edd7)',
-        border: '3px solid #0e0c07',
-        borderRight: '5px solid #0e0c07',
-        borderBottom: '5px solid #0e0c07',
+        border: '3px solid var(--zine-ink, #0e0c07)',
+        borderRight: '5px solid var(--zine-ink, #0e0c07)',
+        borderBottom: '5px solid var(--zine-ink, #0e0c07)',
         padding: '1.5rem',
         maxWidth: 560,
         position: 'relative',
       }}
     >
-      {/* yellow pin */}
+      {/* yellow pin — decorative */}
       <div
         style={{
           position: 'absolute',
@@ -109,7 +123,7 @@ export const InZineSheet: Story = {
           left: 24,
           width: 18,
           height: 18,
-          background: '#f5c800',
+          background: 'var(--zine-yellow, #f5c800)',
           border: '2px solid #a08800',
           borderRadius: '50%',
           boxShadow: '0 2px 4px rgba(0,0,0,0.4)',
@@ -119,7 +133,7 @@ export const InZineSheet: Story = {
         style={{
           fontFamily: "'Bebas Neue', sans-serif",
           fontSize: 22,
-          color: '#0e0c07',
+          color: 'var(--zine-ink, #0e0c07)',
           letterSpacing: '0.08em',
           marginBottom: '1.25rem',
           display: 'flex',
@@ -127,7 +141,7 @@ export const InZineSheet: Story = {
           gap: 10,
         }}
       >
-        <span style={{ color: '#d42b2b' }}>//</span> SEARCH
+        <span style={{ color: 'var(--zine-red, #d42b2b)' }}>//</span> SEARCH
         <div
           style={{ flex: 1, height: 3, background: 'var(--zine-ink, #0e0c07)', marginLeft: 8 }}
         />
@@ -185,4 +199,40 @@ export const InNav: Story = {
       </garden-nav>
     </div>
   ),
+};
+
+export const DarkModeContrastReview: Story = {
+  name: 'Dark mode contrast review',
+  tags: ['dark-contrast'],
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+  render: () => (
+    <DarkThemeFrame
+      label="Dark-mode search contrast review"
+      style={{ padding: '2rem', background: 'var(--ds-page, #11111b)' }}
+    >
+      <garden-search
+        label="Search notes"
+        placeholder="Search notes…"
+        kbd="⌘K"
+        style={{ maxWidth: 480 }}
+      />
+    </DarkThemeFrame>
+  ),
+  play: async ({ canvasElement }) => {
+    expect(canvasElement.querySelector('[data-theme="dark"]')).not.toBeNull();
+
+    await new Promise((resolve) => globalThis.setTimeout(resolve, 0));
+
+    const search = canvasElement.querySelector('garden-search');
+
+    expect(search).not.toBeNull();
+
+    const input = (search as HTMLElement).shadowRoot?.querySelector('input');
+
+    expect(input?.getAttribute('aria-label')).toBe('Search notes');
+
+    expectShadowTextContrast(search as Element, '[part="input"]', 'Search input');
+  },
 };

@@ -52,13 +52,15 @@ export const InPageContext: Story = {
       <div
         style={{
           padding: '2rem',
-          background: '#f2edd7',
-          border: '3px solid #0e0c07',
+          background: 'var(--zine-paper, #f2edd7)',
+          border: '3px solid var(--zine-ink, #0e0c07)',
           borderTop: 'none',
         }}
       >
         <h2 style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 26 }}>Page Content</h2>
-        <p style={{ fontFamily: "'Special Elite', serif", color: '#2c2820' }}>
+        <p
+          style={{ fontFamily: "'Special Elite', serif", color: 'var(--zine-ink-faded, #2c2820)' }}
+        >
           Content below the banner.
         </p>
       </div>
@@ -78,6 +80,8 @@ export const ReducedMotion: Story = {
   },
   render: (args) => (
     <>
+      {/* CSS override simulates prefers-reduced-motion: reduce because window.matchMedia
+          cannot be reliably mocked in the Storybook browser environment. */}
       <style>{`
         garden-banner::part(text) {
           animation: none;
@@ -105,6 +109,8 @@ export const DarkModeContrastReview: Story = {
   ),
   play: async ({ canvasElement }) => {
     expect(canvasElement.querySelector('[data-theme="dark"]')).not.toBeNull();
+
+    await new Promise((resolve) => globalThis.setTimeout(resolve, 0));
 
     const banner = canvasElement.querySelector('garden-banner');
 

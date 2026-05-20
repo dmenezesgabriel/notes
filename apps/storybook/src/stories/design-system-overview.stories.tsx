@@ -244,7 +244,7 @@ export const CurrentSystem: Story = {
                 >
                   <div
                     style={{
-                      background: '#fafaf2',
+                      background: 'var(--zine-paper, #f2edd7)',
                       border: '3px solid var(--zine-ink, #0e0c07)',
                       padding: '1rem',
                     }}

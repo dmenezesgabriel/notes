@@ -1,5 +1,9 @@
 import type { BreadcrumbItem } from '@notes/components';
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
+import { expect } from 'storybook/test';
+
+import { expectShadowTextContrast } from './story-helpers/dark-mode-contrast';
+import { DarkThemeFrame } from './story-helpers/dark-theme-frame';
 
 interface BreadcrumbArgs {
   items: BreadcrumbItem[];
@@ -67,10 +71,10 @@ export const InArticleHeader: Story = {
   render: () => (
     <div
       style={{
-        background: '#fafaf2',
-        border: '3px solid #0e0c07',
-        borderRight: '5px solid #0e0c07',
-        borderBottom: '5px solid #0e0c07',
+        background: 'var(--zine-paper, #f2edd7)',
+        border: '3px solid var(--zine-ink, #0e0c07)',
+        borderRight: '5px solid var(--zine-ink, #0e0c07)',
+        borderBottom: '5px solid var(--zine-ink, #0e0c07)',
         padding: '1.5rem 1.75rem',
         maxWidth: 600,
         backgroundImage:
@@ -90,7 +94,7 @@ export const InArticleHeader: Story = {
         style={{
           fontFamily: "'Cutive Mono', monospace",
           fontSize: 10,
-          color: '#6b6050',
+          color: 'var(--zine-muted, #6b6050)',
           marginBottom: 6,
           letterSpacing: '0.1em',
           textTransform: 'uppercase' as const,
@@ -103,7 +107,7 @@ export const InArticleHeader: Story = {
           fontFamily: "'Bebas Neue', sans-serif",
           fontSize: 28,
           letterSpacing: '0.03em',
-          color: '#0e0c07',
+          color: 'var(--zine-ink, #0e0c07)',
           margin: 0,
           lineHeight: 1.15,
         }}
@@ -112,4 +116,38 @@ export const InArticleHeader: Story = {
       </h1>
     </div>
   ),
+};
+
+export const DarkModeContrastReview: Story = {
+  name: 'Dark mode contrast review',
+  tags: ['dark-contrast'],
+  parameters: {
+    backgrounds: { default: 'dark' },
+  },
+  render: () => (
+    <DarkThemeFrame
+      label="Dark-mode breadcrumb contrast review"
+      style={{ padding: '2rem', background: 'var(--ds-page, #11111b)' }}
+    >
+      <garden-breadcrumb
+        items={[
+          { label: 'home', href: '/' },
+          { label: 'notes', href: '/notes' },
+          { label: 'On building a second brain' },
+        ]}
+      />
+    </DarkThemeFrame>
+  ),
+  play: async ({ canvasElement }) => {
+    expect(canvasElement.querySelector('[data-theme="dark"]')).not.toBeNull();
+
+    await new Promise((resolve) => globalThis.setTimeout(resolve, 0));
+
+    const bc = canvasElement.querySelector('garden-breadcrumb');
+
+    expect(bc).not.toBeNull();
+
+    expectShadowTextContrast(bc as Element, 'a', 'Breadcrumb link');
+    expectShadowTextContrast(bc as Element, '[aria-current="page"]', 'Current breadcrumb item');
+  },
 };
