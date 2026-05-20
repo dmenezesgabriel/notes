@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { expect } from 'storybook/test';
 
 import { expectShadowTextContrast } from './story-helpers/dark-mode-contrast';
-import { darkFilledComponentTokens, DarkThemeFrame } from './story-helpers/dark-theme-frame';
+import { DarkThemeFrame } from './story-helpers/dark-theme-frame';
 
 interface TagArgs {
   variant: TagVariant;
@@ -147,19 +147,19 @@ export const DarkModeContrastReview: Story = {
         maxWidth: 500,
       }}
     >
-      <garden-tag style={darkFilledComponentTokens} variant="accent">
+      <garden-tag variant="accent">
         LIT ELEMENTS
       </garden-tag>
-      <garden-tag style={darkFilledComponentTokens} variant="blue">
+      <garden-tag variant="blue">
         NEXT.JS SSG
       </garden-tag>
-      <garden-tag style={darkFilledComponentTokens} variant="yellow">
+      <garden-tag variant="yellow">
         STORYBOOK
       </garden-tag>
-      <garden-tag style={darkFilledComponentTokens} variant="green">
+      <garden-tag variant="green">
         RESPONSIVE
       </garden-tag>
-      <garden-tag style={darkFilledComponentTokens} variant="sage">
+      <garden-tag variant="sage">
         PKM
       </garden-tag>
     </DarkThemeFrame>

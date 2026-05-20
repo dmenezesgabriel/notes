@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { expect } from 'storybook/test';
 
 import { expectShadowTextContrast } from './story-helpers/dark-mode-contrast';
-import { darkNavTokens, DarkThemeFrame } from './story-helpers/dark-theme-frame';
+import { DarkThemeFrame } from './story-helpers/dark-theme-frame';
 
 interface NavArgs {
   brand: string;
@@ -13,7 +13,6 @@ interface NavArgs {
 const siteLinks: NavLink[] = [
   { label: 'notes', href: '/notes/', active: true },
   { label: 'books', href: '/notes/books/' },
-  { label: 'about', href: '/notes/about/' },
 ];
 
 const meta: Meta<NavArgs> = {
@@ -177,7 +176,6 @@ export const DarkModeContrastReview: Story = {
     >
       <garden-nav
         data-theme="dark"
-        style={darkNavTokens}
         brand="garden.dev"
         links={siteLinks}
         homeHref="/notes/"

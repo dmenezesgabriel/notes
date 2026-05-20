@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { expect } from 'storybook/test';
 
 import { expectShadowTextContrast } from './story-helpers/dark-mode-contrast';
-import { darkBannerTokens, DarkThemeFrame } from './story-helpers/dark-theme-frame';
+import { DarkThemeFrame } from './story-helpers/dark-theme-frame';
 
 interface BannerArgs {
   text: string;
@@ -78,7 +78,6 @@ export const DarkModeContrastReview: Story = {
       style={{ minHeight: 120, background: 'var(--ds-page, #11111b)' }}
     >
       <garden-banner
-        style={darkBannerTokens}
         text="KNOWLEDGE GARDEN · NEU-BRUTALISM × PUNK ZINE · NOTES · WIKI · SECOND BRAIN"
       ></garden-banner>
     </DarkThemeFrame>

@@ -2,6 +2,8 @@ import './garden-nav';
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
+import { GardenNav } from './garden-nav';
+
 function waitForUpdate(el: Element): Promise<void> {
   return (el as unknown as { updateComplete: Promise<void> }).updateComplete;
 }
@@ -74,12 +76,11 @@ describe('garden-nav', () => {
   });
 
   it('uses dedicated dark-mode nav tokens to keep active and inactive controls distinct', () => {
-    const renderText = (el as unknown as { render(): unknown }).render.toString();
-
-    expect(renderText).toContain('var(--nav-active-text, #0e0c07)');
-    expect(renderText).toContain('var(--nav-active-bg, #f5c800)');
-    expect(renderText).toContain('var(--nav-link-color, #ccc)');
-    expect(renderText).toContain('var(--nav-toggle-icon, rgb(255 255 255 / 40%))');
+    const styleText = String(GardenNav.styles);
+    expect(styleText).toContain('--nav-active-text');
+    expect(styleText).toContain('--nav-active-bg');
+    expect(styleText).toContain('--nav-link-color');
+    expect(styleText).toContain('--nav-toggle-icon');
   });
 
   it('renders a header element as the banner landmark', async () => {

@@ -74,7 +74,6 @@ describe('SiteNav', () => {
     expect(nav.links).toEqual([
       { label: 'notes', href: publicPath('/'), active: false },
       { label: 'books', href: publicPath('/books'), active: true },
-      { label: 'about', href: publicPath('/about'), active: false },
     ]);
 
     const activeLink = nav.shadowRoot.querySelector('[part="link"][aria-current="page"]');

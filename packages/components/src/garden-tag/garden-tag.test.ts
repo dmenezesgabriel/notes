@@ -79,10 +79,8 @@ describe('garden-tag', () => {
 
   it('uses the shared filled-text token for filled dark-mode variants', () => {
     const styleText = String(GardenTag.styles);
-    const updatedText = GardenTag.prototype.updated.toString();
-
-    expect(updatedText).toContain('var(--zine-filled-text, #fff)');
-    expect(styleText).toContain('color: inherit;');
+    expect(styleText).toContain('--zine-filled-text');
+    expect(styleText).toContain('--zine-light-fill-text');
   });
 
   it('has role="note" for accessibility', async () => {

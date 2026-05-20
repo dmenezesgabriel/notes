@@ -17,7 +17,6 @@ import { applyDocumentTheme, readDocumentTheme, writeStoredTheme } from '../lib/
 const NAV_LINKS: NavLink[] = [
   { label: 'notes', href: publicPath('/') },
   { label: 'books', href: publicPath('/books') },
-  { label: 'about', href: publicPath('/about') },
 ];
 
 function getActiveLinks(visiblePathname: string): NavLink[] {

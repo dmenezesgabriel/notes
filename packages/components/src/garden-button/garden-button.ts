@@ -81,6 +81,7 @@ export class GardenButton extends LitElement {
       button.primary {
         background: var(--zine-red, #d42b2b);
         border-color: var(--zine-red-dark, #8a0000);
+        color: var(--zine-filled-text, #fff);
       }
 
       button.primary:hover {
@@ -90,7 +91,7 @@ export class GardenButton extends LitElement {
       /* Yellow */
       button.yellow {
         background: var(--zine-yellow, #f5c800);
-        color: inherit;
+        color: var(--zine-light-fill-text, var(--zine-ink, #0e0c07));
         border-color: var(--zine-ink, #0e0c07);
       }
 
@@ -98,6 +99,7 @@ export class GardenButton extends LitElement {
       button.blue {
         background: var(--zine-blue, #1a3c8f);
         border-color: var(--zine-ink, #0e0c07);
+        color: var(--zine-filled-text, #fff);
       }
 
       /* Ghost */
@@ -106,10 +108,12 @@ export class GardenButton extends LitElement {
         border-right-color: var(--zine-muted, #6b6050);
         border-bottom-color: var(--zine-muted, #6b6050);
         background: transparent;
+        color: var(--zine-muted, #6b6050);
       }
 
       button.ghost:hover {
         border-color: var(--zine-ink, #0e0c07);
+        color: var(--zine-ink, #0e0c07);
       }
     `,
   ];

@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 import { expect } from 'storybook/test';
 
 import { expectShadowTextContrast } from './story-helpers/dark-mode-contrast';
-import { darkFilledComponentTokens, DarkThemeFrame } from './story-helpers/dark-theme-frame';
+import { DarkThemeFrame } from './story-helpers/dark-theme-frame';
 
 interface ButtonArgs {
   variant: ButtonVariant;
@@ -155,13 +155,13 @@ export const DarkModeContrastReview: Story = {
         borderBottom: '5px solid var(--zine-ink, #cdd6f4)',
       }}
     >
-      <garden-button style={darkFilledComponentTokens} variant="primary">
+      <garden-button variant="primary">
         ✦ PUBLISH NOTE
       </garden-button>
-      <garden-button style={darkFilledComponentTokens} variant="yellow">
+      <garden-button variant="yellow">
         ◆ SAVE DRAFT
       </garden-button>
-      <garden-button style={darkFilledComponentTokens} variant="blue">
+      <garden-button variant="blue">
         ↑ EXPORT
       </garden-button>
     </DarkThemeFrame>

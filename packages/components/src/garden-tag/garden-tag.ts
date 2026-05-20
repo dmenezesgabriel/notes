@@ -76,6 +76,7 @@ export class GardenTag extends LitElement {
         background: var(--zine-red, #d42b2b);
         border-color: var(--zine-ink, #0e0c07);
         box-shadow: 2px 2px 0 var(--zine-red-dark, #8a0000);
+        color: var(--zine-filled-text, #fff);
       }
 
       [part='base'].sage,
@@ -83,11 +84,12 @@ export class GardenTag extends LitElement {
         background: var(--zine-green, #1d6b2e);
         border-color: var(--zine-ink, #0e0c07);
         box-shadow: 2px 2px 0 var(--zine-ink, #0e0c07);
+        color: var(--zine-filled-text, #fff);
       }
 
       [part='base'].yellow {
         background: var(--zine-yellow, #f5c800);
-        color: inherit;
+        color: var(--zine-light-fill-text, var(--zine-ink, #0e0c07));
         border-color: var(--zine-ink, #0e0c07);
         box-shadow: 2px 2px 0 var(--zine-ink, #0e0c07);
       }
@@ -96,6 +98,7 @@ export class GardenTag extends LitElement {
         background: var(--zine-blue, #1a3c8f);
         border-color: var(--zine-ink, #0e0c07);
         box-shadow: 2px 2px 0 var(--zine-ink, #0e0c07);
+        color: var(--zine-filled-text, #fff);
       }
     `,
   ];

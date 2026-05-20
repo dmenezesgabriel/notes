@@ -75,10 +75,6 @@ export class GardenBanner extends LitElement {
     `,
   ];
 
-  override updated() {
-    this.style.color = 'var(--zine-banner-text, #fff)';
-  }
-
   render() {
     return html`
       <div part="wrapper" data-text=${this.text}>

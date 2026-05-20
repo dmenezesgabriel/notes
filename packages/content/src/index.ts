@@ -87,14 +87,21 @@ export function safeParseMatter(raw: string): ReturnType<typeof matter> {
 /**
  * Replaces Dendron `[[Target]]` / `[[Target|Alias]]` wiki-links with
  * standard Markdown `[display](/path)` links.
+ *
+ * Pass `buildHref` to apply site-specific path rules (e.g. prepend `/notes`
+ * and add a trailing slash) without coupling this package to the site layer.
  */
-export function rewriteWikiLinks(content: string): string {
+export function rewriteWikiLinks(
+  content: string,
+  buildHref: (notePath: string) => string = (p) => p,
+): string {
   return content.replace(
     /\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g,
     (_match, targetRaw: string, alias?: string) => {
       const target = targetRaw.trim();
       const display = (alias?.trim() || target.split('.').at(-1) || target).trim();
-      const href = '/' + target.split('.').join('/');
+      const notePath = '/' + target.split('.').join('/');
+      const href = buildHref(notePath);
       return `[${display}](${href})`;
     },
   );

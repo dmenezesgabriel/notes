@@ -178,6 +178,7 @@ export class GardenNav extends LitElement {
         background: none;
         line-height: 1;
         transition: color 0.1s ease;
+        color: var(--nav-link-color, #ccc);
       }
 
       [part='link']:hover {
@@ -186,6 +187,8 @@ export class GardenNav extends LitElement {
       }
 
       [part='link'][aria-current='page'] {
+        background: var(--nav-active-bg, #f5c800);
+        color: var(--nav-active-text, #0e0c07);
         border-color: var(--nav-active-bg, #f5c800);
       }
 
@@ -219,6 +222,7 @@ export class GardenNav extends LitElement {
         transition:
           background-color 0.15s ease,
           color 0.15s ease;
+        color: var(--nav-toggle-icon, rgb(255 255 255 / 40%));
       }
 
       .theme-btn.active {
@@ -267,21 +271,7 @@ export class GardenNav extends LitElement {
           <nav part="links" aria-label="Main navigation">
             ${this.links.map(
               (link) => html`
-                <a
-                  part="link"
-                  href=${link.href}
-                  aria-current=${link.active ? 'page' : nothing}
-                  style=${styleMap(
-                    link.active
-                      ? {
-                          color: 'var(--nav-active-text, #0e0c07)',
-                          backgroundColor: 'var(--nav-active-bg, #f5c800)',
-                        }
-                      : {
-                          color: 'var(--nav-link-color, #ccc)',
-                        },
-                  )}
-                >
+                <a part="link" href=${link.href} aria-current=${link.active ? 'page' : nothing}>
                   ${link.label.toUpperCase()}
                 </a>
               `,

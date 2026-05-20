@@ -183,7 +183,7 @@ export interface ProcessedNote {
  */
 export async function processMarkdown(content: string): Promise<ProcessedNote['html']> {
   const processor = await getProcessor();
-  const withLinks = rewriteWikiLinks(content);
+  const withLinks = rewriteWikiLinks(content, publicPath);
   const result = await processor.process(withLinks);
   return String(result);
 }
