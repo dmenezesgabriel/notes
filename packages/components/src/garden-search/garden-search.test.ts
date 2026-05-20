@@ -1,6 +1,6 @@
-import './garden-search';
-
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+
+import { GardenSearch } from './garden-search';
 
 function waitForUpdate(el: Element): Promise<void> {
   return (el as unknown as { updateComplete: Promise<void> }).updateComplete;
@@ -63,5 +63,38 @@ describe('garden-search', () => {
     input.value = 'zettelkasten';
     input.dispatchEvent(new Event('input'));
     expect(handler).toHaveBeenCalledOnce();
+  });
+
+  it('uses the label property as the accessible name when set', async () => {
+    el.setAttribute('label', 'Search the garden');
+    await waitForUpdate(el);
+    const input = el.shadowRoot!.querySelector('input')!;
+    expect(input.getAttribute('aria-label')).toBe('Search the garden');
+  });
+
+  it('falls back to placeholder for accessible name when label is not set', async () => {
+    el.setAttribute('placeholder', 'Search notes…');
+    await waitForUpdate(el);
+    const input = el.shadowRoot!.querySelector('input')!;
+    expect(input.getAttribute('aria-label')).toBe('Search notes…');
+  });
+
+  it('renders a visible outline focus indicator in CSS', async () => {
+    await waitForUpdate(el);
+    const styles = GardenSearch.styles;
+    const styleText = Array.isArray(styles)
+      ? styles.map((s) => (s as CSSStyleSheet).cssText || String(s)).join(' ')
+      : String(styles);
+    expect(styleText).toMatch(/focus-within[\s\S]*?outline/);
+  });
+
+  it('disables the focus transform under prefers-reduced-motion', async () => {
+    await waitForUpdate(el);
+    const styles = GardenSearch.styles;
+    const styleText = Array.isArray(styles)
+      ? styles.map((s) => (s as CSSStyleSheet).cssText || String(s)).join(' ')
+      : String(styles);
+    expect(styleText).toContain('prefers-reduced-motion');
+    expect(styleText).toMatch(/prefers-reduced-motion[\s\S]*?transition:\s*none/);
   });
 });

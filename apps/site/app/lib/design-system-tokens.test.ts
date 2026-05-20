@@ -92,3 +92,35 @@ describe('design-system token source of truth', () => {
     expect(dividerStory).toContain("args: { variant: 'red' },");
   });
 });
+
+describe('site prose typography and motion accessibility', () => {
+  it('uses the updated readable baseline for prose inline code and code blocks', () => {
+    const siteGlobals = readRepoFile('apps/site/app/globals.css');
+
+    expect(siteGlobals).toContain('font-size: 0.9em');
+    expect(siteGlobals).toMatch(/\.prose \.shiki\s*\{[^}]*font-size:\s*14px/);
+    expect(siteGlobals).toMatch(/\.prose pre:not\(\.shiki\)\s*\{[^}]*font-size:\s*14px/);
+  });
+
+  it('includes a prefers-reduced-motion fallback for the site marquee animation', () => {
+    const siteGlobals = readRepoFile('apps/site/app/globals.css');
+
+    expect(siteGlobals).toContain('prefers-reduced-motion');
+    expect(siteGlobals).toMatch(
+      /@media\s*\(prefers-reduced-motion:\s*reduce\)[\s\S]*?\.zine-marquee-text[\s\S]*?animation:\s*none/,
+    );
+  });
+
+  it('exposes a label-based accessible name contract and focus indicator in the search story', () => {
+    const searchStory = readRepoFile('apps/storybook/src/stories/garden-search.stories.tsx');
+
+    expect(searchStory).toContain('label');
+    expect(searchStory).toContain('FocusIndicator');
+  });
+
+  it('exposes a reduced-motion story for the banner component', () => {
+    const bannerStory = readRepoFile('apps/storybook/src/stories/garden-banner.stories.tsx');
+
+    expect(bannerStory).toContain('ReducedMotion');
+  });
+});

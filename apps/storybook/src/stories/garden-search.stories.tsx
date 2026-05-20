@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/nextjs-vite';
 
 interface SearchArgs {
+  label: string;
   placeholder: string;
   kbd: string;
   value: string;
@@ -10,9 +11,15 @@ const meta: Meta<SearchArgs> = {
   title: 'Molecules/GardenSearch',
   tags: ['autodocs'],
   argTypes: {
+    label: {
+      control: 'text',
+      description:
+        'Stable accessible name exposed to assistive technology. Takes precedence over `placeholder` for `aria-label`.',
+    },
     placeholder: {
       control: 'text',
-      description: 'Input placeholder text (also used as `aria-label`)',
+      description:
+        'Input placeholder text. Also used as `aria-label` fallback when `label` is not set.',
     },
     kbd: {
       control: 'text',
@@ -24,6 +31,7 @@ const meta: Meta<SearchArgs> = {
     },
   },
   args: {
+    label: 'Search notes',
     placeholder: 'Search notes, wiki, projects…',
     kbd: '⌘K',
     value: '',
@@ -33,7 +41,9 @@ const meta: Meta<SearchArgs> = {
       description: {
         component:
           'Typewriter search bar used by the home discovery slice and navigation actions. White background, thick offset border, Cutive Mono font, blinking cursor. ' +
-          'Fires `garden-search` CustomEvent `{ detail: { query } }` on every keystroke.',
+          'Fires `garden-search` CustomEvent `{ detail: { query } }` on every keystroke. ' +
+          'Exposes a stable accessible name via the `label` property (falls back to `placeholder`). ' +
+          'Focus shows a yellow outline (`--zine-yellow`) in addition to the translate offset.',
       },
     },
   },
@@ -42,11 +52,28 @@ const meta: Meta<SearchArgs> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-const render = ({ placeholder, kbd, value }: SearchArgs) => (
-  <garden-search placeholder={placeholder} kbd={kbd} value={value} style={{ maxWidth: 480 }} />
+const render = ({ label, placeholder, kbd, value }: SearchArgs) => (
+  <garden-search
+    label={label}
+    placeholder={placeholder}
+    kbd={kbd}
+    value={value}
+    style={{ maxWidth: 480 }}
+  />
 );
 
 export const Default: Story = { render };
+
+export const FocusIndicator: Story = {
+  name: 'Keyboard focus indicator',
+  args: { label: 'Search notes', kbd: '⌘K' },
+  render,
+  play: async ({ canvasElement }) => {
+    const el = canvasElement.querySelector('garden-search') as HTMLElement;
+    const input = el?.shadowRoot?.querySelector('input') as HTMLInputElement | null;
+    input?.focus();
+  },
+};
 
 export const NoKbd: Story = {
   name: 'Without shortcut badge',
@@ -105,7 +132,7 @@ export const InZineSheet: Story = {
           style={{ flex: 1, height: 3, background: 'var(--zine-ink, #0e0c07)', marginLeft: 8 }}
         />
       </div>
-      <garden-search placeholder="Search notes, wiki, projects…" kbd="⌘K" />
+      <garden-search label="Search notes" placeholder="Search notes, wiki, projects…" kbd="⌘K" />
     </div>
   ),
 };
@@ -132,7 +159,12 @@ export const HomeHeroSearch: Story = {
       >
         Search notes across books, software engineering, productivity, and design.
       </p>
-      <garden-search placeholder="Search notes…" kbd="⌘K" style={{ width: '100%' }} />
+      <garden-search
+        label="Search notes"
+        placeholder="Search notes…"
+        kbd="⌘K"
+        style={{ width: '100%' }}
+      />
     </div>
   ),
 };
@@ -143,7 +175,13 @@ export const InNav: Story = {
   render: () => (
     <div style={{ background: 'var(--ds-page, #11111b)' }}>
       <garden-nav brand="GARDEN.DEV" links={[{ label: 'NOTES', href: '/notes', active: true }]}>
-        <garden-search slot="actions" placeholder="Search…" kbd="⌘K" style={{ width: 260 }} />
+        <garden-search
+          slot="actions"
+          label="Search notes"
+          placeholder="Search…"
+          kbd="⌘K"
+          style={{ width: 260 }}
+        />
       </garden-nav>
     </div>
   ),

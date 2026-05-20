@@ -54,7 +54,7 @@ export class GardenBreadcrumb extends LitElement {
         display: flex;
         align-items: center;
         font-family: var(--font-mono, 'Cutive Mono', monospace);
-        font-size: 12px;
+        font-size: 13px;
 
         /* Use ink-faded for non-link crumbs — better contrast than muted */
         color: var(--zine-ink-faded, #2c2820);

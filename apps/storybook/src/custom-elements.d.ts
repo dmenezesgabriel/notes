@@ -69,6 +69,7 @@ declare module 'react' {
       };
 
       'garden-search': React.HTMLAttributes<HTMLElement> & {
+        label?: string;
         placeholder?: string;
         kbd?: string;
         value?: string;

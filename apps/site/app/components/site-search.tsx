@@ -44,7 +44,15 @@ function SiteSearchInner() {
     return bindCustomElementEvent<GardenSearchDetail>(ref.current, 'garden-search', handleSearch);
   }, [handleSearch]);
 
-  return <garden-search ref={ref} placeholder="Search notes…" kbd="⌘K" data-testid="site-search" />;
+  return (
+    <garden-search
+      ref={ref}
+      label="Search notes"
+      placeholder="Search notes…"
+      kbd="⌘K"
+      data-testid="site-search"
+    />
+  );
 }
 
 /**

@@ -70,4 +70,16 @@ describe('garden-banner', () => {
       expect(styleText).toContain('--zine-banner-text');
     });
   });
+
+  describe('Reduced-motion fallback', () => {
+    it('disables marquee animation when prefers-reduced-motion is set', () => {
+      const styles = GardenBanner.styles;
+      const styleText = Array.isArray(styles)
+        ? styles.map((s) => (s as CSSStyleSheet).cssText || String(s)).join(' ')
+        : String(styles);
+
+      expect(styleText).toContain('prefers-reduced-motion');
+      expect(styleText).toMatch(/prefers-reduced-motion[\s\S]*?animation:\s*none/);
+    });
+  });
 });

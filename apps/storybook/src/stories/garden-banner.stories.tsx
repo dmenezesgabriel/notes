@@ -66,6 +66,29 @@ export const InPageContext: Story = {
   ),
 };
 
+export const ReducedMotion: Story = {
+  name: 'Reduced-motion fallback (static)',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Under `prefers-reduced-motion: reduce`, the marquee animation stops and the text is shown in a static position. The misregistration shadow offset is preserved. This story simulates the static fallback via `::part(text)` CSS override.',
+      },
+    },
+  },
+  render: (args) => (
+    <>
+      <style>{`
+        garden-banner::part(text) {
+          animation: none;
+          transform: none;
+        }
+      `}</style>
+      <garden-banner text={args.text}></garden-banner>
+    </>
+  ),
+};
+
 export const DarkModeContrastReview: Story = {
   name: 'Dark mode contrast review',
   tags: ['dark-contrast'],
@@ -77,9 +100,7 @@ export const DarkModeContrastReview: Story = {
       label="Dark-mode banner contrast review"
       style={{ minHeight: 120, background: 'var(--ds-page, #11111b)' }}
     >
-      <garden-banner
-        text="KNOWLEDGE GARDEN · NEU-BRUTALISM × PUNK ZINE · NOTES · WIKI · SECOND BRAIN"
-      ></garden-banner>
+      <garden-banner text="KNOWLEDGE GARDEN · NEU-BRUTALISM × PUNK ZINE · NOTES · WIKI · SECOND BRAIN"></garden-banner>
     </DarkThemeFrame>
   ),
   play: async ({ canvasElement }) => {

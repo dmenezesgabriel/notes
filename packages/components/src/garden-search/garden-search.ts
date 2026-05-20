@@ -17,6 +17,7 @@ import { baseStyles } from '../styles/base';
  */
 @customElement('garden-search')
 export class GardenSearch extends LitElement {
+  @property() label = '';
   @property() placeholder = 'Search notes, wiki, projects…';
   @property() kbd = '';
   @property() value = '';
@@ -44,6 +45,14 @@ export class GardenSearch extends LitElement {
 
       [role='search']:focus-within {
         transform: translate(-1px, -1px);
+        outline: 3px solid var(--zine-yellow, #f5c800);
+        outline-offset: 2px;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        [role='search'] {
+          transition: none;
+        }
       }
 
       .icon {
@@ -59,7 +68,7 @@ export class GardenSearch extends LitElement {
         outline: none;
         background: transparent;
         font-family: var(--font-mono, 'Cutive Mono', monospace);
-        font-size: 14px;
+        font-size: 16px;
 
         /* Use ink-faded for typed text (readable), muted only for placeholder */
         color: var(--zine-ink-faded, #2c2820);
@@ -120,7 +129,7 @@ export class GardenSearch extends LitElement {
           type="search"
           .value=${this.value}
           placeholder=${this.placeholder}
-          aria-label=${this.placeholder}
+          aria-label=${this.label || this.placeholder}
           @input=${this._onInput}
         />
         ${this.kbd ? html`<kbd part="kbd">${this.kbd}</kbd>` : ''}

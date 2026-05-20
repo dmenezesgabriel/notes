@@ -72,6 +72,12 @@ export class GardenBanner extends LitElement {
           transform: translateX(-100%);
         }
       }
+
+      @media (prefers-reduced-motion: reduce) {
+        [part='text'] {
+          animation: none;
+        }
+      }
     `,
   ];
 

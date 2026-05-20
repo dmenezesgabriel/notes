@@ -70,6 +70,7 @@ declare module 'react' {
       >;
       'garden-search': React.DetailedHTMLProps<
         React.HTMLAttributes<HTMLElement> & {
+          label?: string;
           placeholder?: string;
           kbd?: string;
           value?: string;

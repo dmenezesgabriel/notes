@@ -1,6 +1,6 @@
-import './garden-breadcrumb';
-
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+
+import { GardenBreadcrumb } from './garden-breadcrumb';
 
 function waitForUpdate(el: Element): Promise<void> {
   return (el as unknown as { updateComplete: Promise<void> }).updateComplete;
@@ -55,5 +55,14 @@ describe('garden-breadcrumb', () => {
     const currentEl = el.shadowRoot!.querySelector('[aria-current="page"]');
     expect(currentEl).not.toBeNull();
     expect(currentEl!.textContent?.trim()).toBe('notes');
+  });
+
+  it('uses the updated readable monospace baseline for breadcrumb items', async () => {
+    await waitForUpdate(el);
+    const styles = GardenBreadcrumb.styles;
+    const styleText = Array.isArray(styles)
+      ? styles.map((s) => (s as CSSStyleSheet).cssText || String(s)).join(' ')
+      : String(styles);
+    expect(styleText).toContain('font-size: 13px');
   });
 });
