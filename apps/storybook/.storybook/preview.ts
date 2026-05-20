@@ -21,13 +21,13 @@ const preview: Preview = {
     backgrounds: {
       // Match the actual page background tokens so story canvas looks like the real site.
       // Light mode page: --ds-page = #ede5c8 (aged paper)
-      // Dark mode page:  --ds-page = #11111b (Catppuccin Crust)
+      // Dark mode page:  --ds-page = #1d2021 (Gruvbox Hard)
       default: 'paper',
       values: [
         { name: 'paper', value: '#ede5c8' },
         { name: 'paper-card', value: '#f2edd7' },
-        { name: 'dark', value: '#11111b' },
-        { name: 'dark-surface', value: '#1e1e2e' },
+        { name: 'dark', value: '#1d2021' },
+        { name: 'dark-surface', value: '#282828' },
         { name: 'ink', value: '#0e0c07' },
       ],
     },

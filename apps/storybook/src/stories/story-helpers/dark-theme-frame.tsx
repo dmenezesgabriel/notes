@@ -6,14 +6,14 @@ interface DarkThemeFrameProps extends PropsWithChildren {
 }
 
 const darkThemeTokens = {
-  '--ds-page': '#11111b',
-  '--zine-paper': '#1e1e2e',
-  '--zine-paper-alt': '#181825',
-  '--zine-ink': '#cdd6f4',
-  '--zine-ink-faded': '#bac2de',
-  '--zine-muted': '#a6adc8',
-  '--zine-red': '#f38ba8',
-  '--zine-yellow': '#f9e2af',
+  '--ds-page': '#1d2021',
+  '--zine-paper': '#282828',
+  '--zine-paper-alt': '#1d2021',
+  '--zine-ink': '#ebdbb2',
+  '--zine-ink-faded': '#d5c4a1',
+  '--zine-muted': '#bdae93',
+  '--zine-red': '#fb4934',
+  '--zine-yellow': '#fabd2f',
 } as CSSProperties;
 
 export function DarkThemeFrame({ children, label, style }: DarkThemeFrameProps) {

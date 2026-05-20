@@ -33,10 +33,10 @@ body {
     color 0.2s ease;
 }
 
-/* Dark mode body — deep Catppuccin base */
+/* Dark mode body — Gruvbox Hard bg */
 [data-theme='dark'] body {
-  background: var(--ds-page, #11111b);
-  color: var(--zine-ink, #cdd6f4);
+  background: var(--ds-page, #1d2021);
+  color: var(--zine-ink, #ebdbb2);
 }
 
 /* ── Skip-to-content ────────────────────────────────────────────────────── */
@@ -86,14 +86,14 @@ body {
 }
 
 [data-theme='dark'] .prose {
-  background-color: var(--zine-paper, #1e1e2e);
-  color: var(--zine-ink-faded, #bac2de);
+  background-color: var(--zine-paper, #282828);
+  color: var(--zine-ink-faded, #d5c4a1);
   background-image: repeating-linear-gradient(
     to bottom,
     transparent,
     transparent 31px,
-    rgb(205 214 244 / 5%) 31px,
-    rgb(205 214 244 / 5%) 32px
+    rgb(235 219 178 / 5%) 31px,
+    rgb(235 219 178 / 5%) 32px
   );
 }
 
@@ -142,7 +142,7 @@ body {
 }
 
 [data-theme='dark'] .prose a:hover {
-  color: var(--zine-red-dark, #eba0ac);
+  color: var(--zine-red-dark, #cc241d);
 }
 
 .prose ul,
@@ -166,8 +166,8 @@ body {
 }
 
 [data-theme='dark'] .prose blockquote {
-  background: rgb(205 214 244 / 5%);
-  color: var(--zine-muted, #a6adc8);
+  background: rgb(235 219 178 / 5%);
+  color: var(--zine-muted, #bdae93);
 }
 
 .prose blockquote::before {
@@ -192,9 +192,9 @@ body {
 }
 
 [data-theme='dark'] .prose code {
-  background: rgb(205 214 244 / 8%);
-  color: var(--zine-ink, #cdd6f4);
-  border-left-color: var(--zine-muted, #a6adc8);
+  background: rgb(235 219 178 / 8%);
+  color: var(--zine-ink, #ebdbb2);
+  border-left-color: var(--zine-muted, #bdae93);
 }
 
 .prose pre {
@@ -280,8 +280,8 @@ body {
 }
 
 [data-theme='dark'] .prose th {
-  background: var(--zine-aged, #313244);
-  color: var(--zine-yellow, #f9e2af);
+  background: var(--zine-aged, #3c3836);
+  color: var(--zine-yellow, #fabd2f);
 }
 
 /* ── Zine sheets (paper blocks) ─────────────────────────────────────────── */
@@ -317,7 +317,7 @@ body {
 }
 
 [data-theme='dark'] .zine-marquee-banner::before {
-  color: var(--zine-blue, #89b4fa);
+  color: var(--zine-blue, #83a598);
 }
 
 .zine-marquee-text {
@@ -381,7 +381,7 @@ body {
 }
 
 [data-theme='dark'] .zine-highlight {
-  color: #1e1e2e;
+  color: #282828;
 }
 
 /* ── Layout utilities ───────────────────────────────────────────────────── */
